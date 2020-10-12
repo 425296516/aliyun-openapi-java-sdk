@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -74,6 +70,14 @@ public class DescribeInstanceMonitorDataResponse extends AcsResponse {
 		private Integer bPSRead;
 
 		private Integer bPSWrite;
+
+		private Float cPUCreditUsage;
+
+		private Float cPUCreditBalance;
+
+		private Float cPUAdvanceCreditBalance;
+
+		private Float cPUNotpaidSurplusCreditUsage;
 
 		private String timeStamp;
 
@@ -171,6 +175,38 @@ public class DescribeInstanceMonitorDataResponse extends AcsResponse {
 
 		public void setBPSWrite(Integer bPSWrite) {
 			this.bPSWrite = bPSWrite;
+		}
+
+		public Float getCPUCreditUsage() {
+			return this.cPUCreditUsage;
+		}
+
+		public void setCPUCreditUsage(Float cPUCreditUsage) {
+			this.cPUCreditUsage = cPUCreditUsage;
+		}
+
+		public Float getCPUCreditBalance() {
+			return this.cPUCreditBalance;
+		}
+
+		public void setCPUCreditBalance(Float cPUCreditBalance) {
+			this.cPUCreditBalance = cPUCreditBalance;
+		}
+
+		public Float getCPUAdvanceCreditBalance() {
+			return this.cPUAdvanceCreditBalance;
+		}
+
+		public void setCPUAdvanceCreditBalance(Float cPUAdvanceCreditBalance) {
+			this.cPUAdvanceCreditBalance = cPUAdvanceCreditBalance;
+		}
+
+		public Float getCPUNotpaidSurplusCreditUsage() {
+			return this.cPUNotpaidSurplusCreditUsage;
+		}
+
+		public void setCPUNotpaidSurplusCreditUsage(Float cPUNotpaidSurplusCreditUsage) {
+			this.cPUNotpaidSurplusCreditUsage = cPUNotpaidSurplusCreditUsage;
 		}
 
 		public String getTimeStamp() {

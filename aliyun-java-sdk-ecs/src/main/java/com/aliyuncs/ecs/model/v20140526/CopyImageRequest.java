@@ -1,67 +1,63 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
-	
-	public CopyImageRequest() {
-		super("Ecs", "2014-05-26", "CopyImage");
-	}
-
-	private Long ownerId;
-
-	private String resourceOwnerAccount;
+	   
 
 	private Long resourceOwnerId;
 
-	private String destinationImageName;
-
-	private String destinationDescription;
-
 	private String imageId;
+
+	private String encryptAlgorithm;
 
 	private String destinationRegionId;
 
+	private String resourceGroupId;
+
+	private List<Tag> tags;
+
+	private String resourceOwnerAccount;
+
+	private String destinationImageName;
+
 	private String ownerAccount;
 
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
+	private Long ownerId;
 
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		putQueryParameter("OwnerId", String.valueOf(ownerId));
-	}
+	private Boolean encrypted;
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
+	private String kMSKeyId;
 
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+	private String destinationDescription;
+	public CopyImageRequest() {
+		super("Ecs", "2014-05-26", "CopyImage", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
 	}
 
 	public Long getResourceOwnerId() {
@@ -70,25 +66,9 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 
 	public void setResourceOwnerId(Long resourceOwnerId) {
 		this.resourceOwnerId = resourceOwnerId;
-		putQueryParameter("ResourceOwnerId", String.valueOf(resourceOwnerId));
-	}
-
-	public String getDestinationImageName() {
-		return this.destinationImageName;
-	}
-
-	public void setDestinationImageName(String destinationImageName) {
-		this.destinationImageName = destinationImageName;
-		putQueryParameter("DestinationImageName", destinationImageName);
-	}
-
-	public String getDestinationDescription() {
-		return this.destinationDescription;
-	}
-
-	public void setDestinationDescription(String destinationDescription) {
-		this.destinationDescription = destinationDescription;
-		putQueryParameter("DestinationDescription", destinationDescription);
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
 	}
 
 	public String getImageId() {
@@ -97,7 +77,20 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 
 	public void setImageId(String imageId) {
 		this.imageId = imageId;
-		putQueryParameter("ImageId", imageId);
+		if(imageId != null){
+			putQueryParameter("ImageId", imageId);
+		}
+	}
+
+	public String getEncryptAlgorithm() {
+		return this.encryptAlgorithm;
+	}
+
+	public void setEncryptAlgorithm(String encryptAlgorithm) {
+		this.encryptAlgorithm = encryptAlgorithm;
+		if(encryptAlgorithm != null){
+			putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
+		}
 	}
 
 	public String getDestinationRegionId() {
@@ -106,7 +99,56 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 
 	public void setDestinationRegionId(String destinationRegionId) {
 		this.destinationRegionId = destinationRegionId;
-		putQueryParameter("DestinationRegionId", destinationRegionId);
+		if(destinationRegionId != null){
+			putQueryParameter("DestinationRegionId", destinationRegionId);
+		}
+	}
+
+	public String getResourceGroupId() {
+		return this.resourceGroupId;
+	}
+
+	public void setResourceGroupId(String resourceGroupId) {
+		this.resourceGroupId = resourceGroupId;
+		if(resourceGroupId != null){
+			putQueryParameter("ResourceGroupId", resourceGroupId);
+		}
+	}
+
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
+			}
+		}	
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getDestinationImageName() {
+		return this.destinationImageName;
+	}
+
+	public void setDestinationImageName(String destinationImageName) {
+		this.destinationImageName = destinationImageName;
+		if(destinationImageName != null){
+			putQueryParameter("DestinationImageName", destinationImageName);
+		}
 	}
 
 	public String getOwnerAccount() {
@@ -115,7 +157,76 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 
 	public void setOwnerAccount(String ownerAccount) {
 		this.ownerAccount = ownerAccount;
-		putQueryParameter("OwnerAccount", ownerAccount);
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public Boolean getEncrypted() {
+		return this.encrypted;
+	}
+
+	public void setEncrypted(Boolean encrypted) {
+		this.encrypted = encrypted;
+		if(encrypted != null){
+			putQueryParameter("Encrypted", encrypted.toString());
+		}
+	}
+
+	public String getKMSKeyId() {
+		return this.kMSKeyId;
+	}
+
+	public void setKMSKeyId(String kMSKeyId) {
+		this.kMSKeyId = kMSKeyId;
+		if(kMSKeyId != null){
+			putQueryParameter("KMSKeyId", kMSKeyId);
+		}
+	}
+
+	public String getDestinationDescription() {
+		return this.destinationDescription;
+	}
+
+	public void setDestinationDescription(String destinationDescription) {
+		this.destinationDescription = destinationDescription;
+		if(destinationDescription != null){
+			putQueryParameter("DestinationDescription", destinationDescription);
+		}
+	}
+
+	public static class Tag {
+
+		private String value;
+
+		private String key;
+
+		public String getValue() {
+			return this.value;
+		}
+
+		public void setValue(String value) {
+			this.value = value;
+		}
+
+		public String getKey() {
+			return this.key;
+		}
+
+		public void setKey(String key) {
+			this.key = key;
+		}
 	}
 
 	@Override

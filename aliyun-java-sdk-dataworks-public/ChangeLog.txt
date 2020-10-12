@@ -1,0 +1,87 @@
+2020-09-25 Version: 3.0.1
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-09-23 Version: 3.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-08-11 Version: 2.2.4
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-08-10 Version: 2.2.3
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-08-07 Version: 2.2.2
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-29 Version: 2.2.1
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-08 Version: 2.2.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-07 Version: 2.1.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-07 Version: 2.1.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-03 Version: 2.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-03 Version: 1.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-02 Version: 1.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-02 Version: 1.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-02 Version: 1.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-02 Version: 1.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-02 Version: 1.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-02 Version: 1.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-02 Version: 1.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-07-02 Version: 1.0.0
+- Generated 2020-05-18 for `dataworks-public`.
+
+2020-04-08 Version: 1.9.5
+- EMR Meta API.
+
+2020-04-08 Version: 1.9.4
+- EMR Meta API.
+
+2020-03-04 Version: 1.9.3
+- EMR Meta API.
+
+2020-02-04 Version: 1.9.2
+- EMR Meta API.
+
+2020-01-10 Version: 1.9.1
+- EMR Meta API.
+
+2020-01-10 Version: 1.9.0
+- EMR Meta API.
+
+2019-03-18 Version: 1.8.2
+1, Update Dependency
+
+2018-07-30 Version: 1.8.1
+1, nodePara
+
+2018-07-26 Version: 1.8.0
+1, manual biz dag api
+2, get manual biz dag instance info 
+3, supply data api
+4, get supply data instance info
+

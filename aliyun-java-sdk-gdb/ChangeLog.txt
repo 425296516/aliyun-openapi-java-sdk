@@ -1,0 +1,15 @@
+2020-09-02 Version: 2.0.0
+- Generated 2019-09-03 for `gdb`.
+
+2020-02-26 Version: 2020.02.26
+- Support Normandy.
+
+2019-06-12 Version: 1.1.0
+1, make more apis unavailable.
+2, more apis is not ready.
+
+2019-06-11 Version: 1.0.0
+1, Provide instance purchase function.
+2, Provide instance management.
+3, Provide account management.
+

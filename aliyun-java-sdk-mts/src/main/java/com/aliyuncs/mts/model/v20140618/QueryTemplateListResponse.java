@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.mts.model.v20140618;
 
 import java.util.List;
@@ -186,7 +182,17 @@ public class QueryTemplateListResponse extends AcsResponse {
 
 			private String qscale;
 
+			private String longShortMode;
+
 			private String remove;
+
+			private String crop;
+
+			private String pad;
+
+			private String maxFps;
+
+			private String resoPriority;
 
 			private BitrateBnd bitrateBnd;
 
@@ -310,12 +316,52 @@ public class QueryTemplateListResponse extends AcsResponse {
 				this.qscale = qscale;
 			}
 
+			public String getLongShortMode() {
+				return this.longShortMode;
+			}
+
+			public void setLongShortMode(String longShortMode) {
+				this.longShortMode = longShortMode;
+			}
+
 			public String getRemove() {
 				return this.remove;
 			}
 
 			public void setRemove(String remove) {
 				this.remove = remove;
+			}
+
+			public String getCrop() {
+				return this.crop;
+			}
+
+			public void setCrop(String crop) {
+				this.crop = crop;
+			}
+
+			public String getPad() {
+				return this.pad;
+			}
+
+			public void setPad(String pad) {
+				this.pad = pad;
+			}
+
+			public String getMaxFps() {
+				return this.maxFps;
+			}
+
+			public void setMaxFps(String maxFps) {
+				this.maxFps = maxFps;
+			}
+
+			public String getResoPriority() {
+				return this.resoPriority;
+			}
+
+			public void setResoPriority(String resoPriority) {
+				this.resoPriority = resoPriority;
 			}
 
 			public BitrateBnd getBitrateBnd() {
@@ -427,12 +473,82 @@ public class QueryTemplateListResponse extends AcsResponse {
 
 			private String transMode;
 
+			private String isCheckReso;
+
+			private String isCheckResoFail;
+
+			private String isCheckVideoBitrate;
+
+			private String isCheckAudioBitrate;
+
+			private String adjDarMethod;
+
+			private String isCheckVideoBitrateFail;
+
+			private String isCheckAudioBitrateFail;
+
 			public String getTransMode() {
 				return this.transMode;
 			}
 
 			public void setTransMode(String transMode) {
 				this.transMode = transMode;
+			}
+
+			public String getIsCheckReso() {
+				return this.isCheckReso;
+			}
+
+			public void setIsCheckReso(String isCheckReso) {
+				this.isCheckReso = isCheckReso;
+			}
+
+			public String getIsCheckResoFail() {
+				return this.isCheckResoFail;
+			}
+
+			public void setIsCheckResoFail(String isCheckResoFail) {
+				this.isCheckResoFail = isCheckResoFail;
+			}
+
+			public String getIsCheckVideoBitrate() {
+				return this.isCheckVideoBitrate;
+			}
+
+			public void setIsCheckVideoBitrate(String isCheckVideoBitrate) {
+				this.isCheckVideoBitrate = isCheckVideoBitrate;
+			}
+
+			public String getIsCheckAudioBitrate() {
+				return this.isCheckAudioBitrate;
+			}
+
+			public void setIsCheckAudioBitrate(String isCheckAudioBitrate) {
+				this.isCheckAudioBitrate = isCheckAudioBitrate;
+			}
+
+			public String getAdjDarMethod() {
+				return this.adjDarMethod;
+			}
+
+			public void setAdjDarMethod(String adjDarMethod) {
+				this.adjDarMethod = adjDarMethod;
+			}
+
+			public String getIsCheckVideoBitrateFail() {
+				return this.isCheckVideoBitrateFail;
+			}
+
+			public void setIsCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
+				this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
+			}
+
+			public String getIsCheckAudioBitrateFail() {
+				return this.isCheckAudioBitrateFail;
+			}
+
+			public void setIsCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
+				this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
 			}
 		}
 
@@ -441,6 +557,8 @@ public class QueryTemplateListResponse extends AcsResponse {
 			private Segment segment;
 
 			private Gif gif;
+
+			private Webp webp;
 
 			public Segment getSegment() {
 				return this.segment;
@@ -456,6 +574,14 @@ public class QueryTemplateListResponse extends AcsResponse {
 
 			public void setGif(Gif gif) {
 				this.gif = gif;
+			}
+
+			public Webp getWebp() {
+				return this.webp;
+			}
+
+			public void setWebp(Webp webp) {
+				this.webp = webp;
 			}
 
 			public static class Segment {
@@ -477,6 +603,10 @@ public class QueryTemplateListResponse extends AcsResponse {
 
 				private String finalDelay;
 
+				private String isCustomPalette;
+
+				private String ditherMode;
+
 				public String getLoop() {
 					return this.loop;
 				}
@@ -491,6 +621,35 @@ public class QueryTemplateListResponse extends AcsResponse {
 
 				public void setFinalDelay(String finalDelay) {
 					this.finalDelay = finalDelay;
+				}
+
+				public String getIsCustomPalette() {
+					return this.isCustomPalette;
+				}
+
+				public void setIsCustomPalette(String isCustomPalette) {
+					this.isCustomPalette = isCustomPalette;
+				}
+
+				public String getDitherMode() {
+					return this.ditherMode;
+				}
+
+				public void setDitherMode(String ditherMode) {
+					this.ditherMode = ditherMode;
+				}
+			}
+
+			public static class Webp {
+
+				private String loop;
+
+				public String getLoop() {
+					return this.loop;
+				}
+
+				public void setLoop(String loop) {
+					this.loop = loop;
 				}
 			}
 		}

@@ -1,0 +1,27 @@
+2020-07-31 Version: 1.0.3
+- Add ChangeVideoSize.
+
+2020-07-30 Version: 1.0.3
+- Add ChangeVideoSize.
+
+2020-07-30 Version: 1.0.3
+- Add ChangeVideoSize.
+
+2020-07-30 Version: 1.0.3
+- Add ChangeVideoSize.
+
+2020-07-30 Version: 1.0.3
+- Add ChangeVideoSize.
+
+2020-07-30 Version: 1.0.3
+- Add ChangeVideoSize.
+
+2020-04-26 Version: 1.0.2
+- SDK versioin 101.
+
+2020-03-25 Version: 1.0.1
+- SDK versioin 101.
+
+2020-03-23 Version: 1.0.0
+- SDK versioin 100.
+

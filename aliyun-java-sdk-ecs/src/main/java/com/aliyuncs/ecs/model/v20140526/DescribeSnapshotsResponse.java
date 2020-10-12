@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -83,6 +79,8 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 
 		private String snapshotId;
 
+		private String snapshotSN;
+
 		private String snapshotName;
 
 		private String progress;
@@ -91,7 +89,11 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 
 		private String sourceDiskId;
 
-		private SourceDiskType sourceDiskType;
+		private String sourceDiskType;
+
+		private Integer retentionDays;
+
+		private Boolean encrypted;
 
 		private String sourceDiskSize;
 
@@ -99,9 +101,25 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 
 		private String creationTime;
 
+		private String lastModifiedTime;
+
 		private String status;
 
 		private String usage;
+
+		private String sourceStorageType;
+
+		private Integer remainTime;
+
+		private String resourceGroupId;
+
+		private String kMSKeyId;
+
+		private String category;
+
+		private String snapshotType;
+
+		private List<Tag> tags;
 
 		public String getSnapshotId() {
 			return this.snapshotId;
@@ -109,6 +127,14 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 
 		public void setSnapshotId(String snapshotId) {
 			this.snapshotId = snapshotId;
+		}
+
+		public String getSnapshotSN() {
+			return this.snapshotSN;
+		}
+
+		public void setSnapshotSN(String snapshotSN) {
+			this.snapshotSN = snapshotSN;
 		}
 
 		public String getSnapshotName() {
@@ -143,12 +169,28 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 			this.sourceDiskId = sourceDiskId;
 		}
 
-		public SourceDiskType getSourceDiskType() {
+		public String getSourceDiskType() {
 			return this.sourceDiskType;
 		}
 
-		public void setSourceDiskType(SourceDiskType sourceDiskType) {
+		public void setSourceDiskType(String sourceDiskType) {
 			this.sourceDiskType = sourceDiskType;
+		}
+
+		public Integer getRetentionDays() {
+			return this.retentionDays;
+		}
+
+		public void setRetentionDays(Integer retentionDays) {
+			this.retentionDays = retentionDays;
+		}
+
+		public Boolean getEncrypted() {
+			return this.encrypted;
+		}
+
+		public void setEncrypted(Boolean encrypted) {
+			this.encrypted = encrypted;
 		}
 
 		public String getSourceDiskSize() {
@@ -175,6 +217,14 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 			this.creationTime = creationTime;
 		}
 
+		public String getLastModifiedTime() {
+			return this.lastModifiedTime;
+		}
+
+		public void setLastModifiedTime(String lastModifiedTime) {
+			this.lastModifiedTime = lastModifiedTime;
+		}
+
 		public String getStatus() {
 			return this.status;
 		}
@@ -191,37 +241,83 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 			this.usage = usage;
 		}
 
-		public enum SourceDiskType {
-		
-			SYSTEM("system"),
-			DATA("data"),;
-			
-		    private String stringValue;
-		
-			SourceDiskType(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static SourceDiskType getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (SourceDiskType sourceDiskType : SourceDiskType.values()) {
-					if(sourceDiskType.getStringValue().equals(stringValue)){
-						return sourceDiskType;
-					}
-				}
-		    	return null;
-		    }
+		public String getSourceStorageType() {
+			return this.sourceStorageType;
+		}
+
+		public void setSourceStorageType(String sourceStorageType) {
+			this.sourceStorageType = sourceStorageType;
+		}
+
+		public Integer getRemainTime() {
+			return this.remainTime;
+		}
+
+		public void setRemainTime(Integer remainTime) {
+			this.remainTime = remainTime;
+		}
+
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
+		public String getKMSKeyId() {
+			return this.kMSKeyId;
+		}
+
+		public void setKMSKeyId(String kMSKeyId) {
+			this.kMSKeyId = kMSKeyId;
+		}
+
+		public String getCategory() {
+			return this.category;
+		}
+
+		public void setCategory(String category) {
+			this.category = category;
+		}
+
+		public String getSnapshotType() {
+			return this.snapshotType;
+		}
+
+		public void setSnapshotType(String snapshotType) {
+			this.snapshotType = snapshotType;
+		}
+
+		public List<Tag> getTags() {
+			return this.tags;
+		}
+
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
+		}
+
+		public static class Tag {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
+			}
 		}
 	}
 

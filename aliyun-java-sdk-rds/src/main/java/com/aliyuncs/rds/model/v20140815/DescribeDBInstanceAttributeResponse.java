@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -51,15 +47,39 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 
 	public static class DBInstanceAttribute {
 
+		private String iPType;
+
+		private String dBInstanceDiskUsed;
+
+		private String guardDBInstanceName;
+
+		private Boolean canTempUpgrade;
+
+		private String tempUpgradeTimeStart;
+
+		private String tempUpgradeTimeEnd;
+
+		private String tempUpgradeRecoveryTime;
+
+		private String tempUpgradeRecoveryClass;
+
+		private Integer tempUpgradeRecoveryCpu;
+
+		private Integer tempUpgradeRecoveryMemory;
+
+		private String tempUpgradeRecoveryMaxIOPS;
+
+		private String tempUpgradeRecoveryMaxConnections;
+
+		private Integer insId;
+
 		private String dBInstanceId;
 
 		private String payType;
 
 		private String dBInstanceClassType;
 
-		private DBInstanceType dBInstanceType;
-
-		private Integer insId;
+		private String dBInstanceType;
 
 		private String regionId;
 
@@ -77,13 +97,15 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 
 		private Integer dBInstanceStorage;
 
-		private DBInstanceNetType dBInstanceNetType;
+		private String vpcCloudInstanceId;
 
-		private DBInstanceStatus dBInstanceStatus;
+		private String dBInstanceNetType;
+
+		private String dBInstanceStatus;
 
 		private String dBInstanceDescription;
 
-		private LockMode lockMode;
+		private String lockMode;
 
 		private String lockReason;
 
@@ -107,9 +129,13 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 
 		private String masterInstanceId;
 
+		private String dBInstanceCPU;
+
 		private String incrementSourceDBInstanceId;
 
 		private String guardDBInstanceId;
+
+		private String replicateId;
 
 		private String tempDBInstanceId;
 
@@ -119,11 +145,165 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 
 		private String instanceNetworkType;
 
+		private String dBInstanceStorageType;
+
+		private String advancedFeatures;
+
+		private String category;
+
+		private String accountType;
+
+		private String supportUpgradeAccountType;
+
+		private String supportCreateSuperAccount;
+
 		private String vpcId;
 
-		private ConnectionMode connectionMode;
+		private String vSwitchId;
+
+		private String connectionMode;
+
+		private String currentKernelVersion;
+
+		private String latestKernelVersion;
+
+		private String resourceGroupId;
+
+		private String readonlyInstanceSQLDelayedTime;
+
+		private String securityIPMode;
+
+		private String timeZone;
+
+		private String collation;
+
+		private String dispenseMode;
+
+		private String masterZone;
+
+		private String autoUpgradeMinorVersion;
+
+		private Integer proxyType;
+
+		private String consoleVersion;
+
+		private Boolean multipleTempUpgrade;
+
+		private String originConfiguration;
+
+		private String dedicatedHostGroupId;
+
+		private String superPermissionMode;
+
+		private List<SlaveZone> slaveZones;
 
 		private List<ReadOnlyDBInstanceId> readOnlyDBInstanceIds;
+
+		private Extra extra;
+
+		public String getIPType() {
+			return this.iPType;
+		}
+
+		public void setIPType(String iPType) {
+			this.iPType = iPType;
+		}
+
+		public String getDBInstanceDiskUsed() {
+			return this.dBInstanceDiskUsed;
+		}
+
+		public void setDBInstanceDiskUsed(String dBInstanceDiskUsed) {
+			this.dBInstanceDiskUsed = dBInstanceDiskUsed;
+		}
+
+		public String getGuardDBInstanceName() {
+			return this.guardDBInstanceName;
+		}
+
+		public void setGuardDBInstanceName(String guardDBInstanceName) {
+			this.guardDBInstanceName = guardDBInstanceName;
+		}
+
+		public Boolean getCanTempUpgrade() {
+			return this.canTempUpgrade;
+		}
+
+		public void setCanTempUpgrade(Boolean canTempUpgrade) {
+			this.canTempUpgrade = canTempUpgrade;
+		}
+
+		public String getTempUpgradeTimeStart() {
+			return this.tempUpgradeTimeStart;
+		}
+
+		public void setTempUpgradeTimeStart(String tempUpgradeTimeStart) {
+			this.tempUpgradeTimeStart = tempUpgradeTimeStart;
+		}
+
+		public String getTempUpgradeTimeEnd() {
+			return this.tempUpgradeTimeEnd;
+		}
+
+		public void setTempUpgradeTimeEnd(String tempUpgradeTimeEnd) {
+			this.tempUpgradeTimeEnd = tempUpgradeTimeEnd;
+		}
+
+		public String getTempUpgradeRecoveryTime() {
+			return this.tempUpgradeRecoveryTime;
+		}
+
+		public void setTempUpgradeRecoveryTime(String tempUpgradeRecoveryTime) {
+			this.tempUpgradeRecoveryTime = tempUpgradeRecoveryTime;
+		}
+
+		public String getTempUpgradeRecoveryClass() {
+			return this.tempUpgradeRecoveryClass;
+		}
+
+		public void setTempUpgradeRecoveryClass(String tempUpgradeRecoveryClass) {
+			this.tempUpgradeRecoveryClass = tempUpgradeRecoveryClass;
+		}
+
+		public Integer getTempUpgradeRecoveryCpu() {
+			return this.tempUpgradeRecoveryCpu;
+		}
+
+		public void setTempUpgradeRecoveryCpu(Integer tempUpgradeRecoveryCpu) {
+			this.tempUpgradeRecoveryCpu = tempUpgradeRecoveryCpu;
+		}
+
+		public Integer getTempUpgradeRecoveryMemory() {
+			return this.tempUpgradeRecoveryMemory;
+		}
+
+		public void setTempUpgradeRecoveryMemory(Integer tempUpgradeRecoveryMemory) {
+			this.tempUpgradeRecoveryMemory = tempUpgradeRecoveryMemory;
+		}
+
+		public String getTempUpgradeRecoveryMaxIOPS() {
+			return this.tempUpgradeRecoveryMaxIOPS;
+		}
+
+		public void setTempUpgradeRecoveryMaxIOPS(String tempUpgradeRecoveryMaxIOPS) {
+			this.tempUpgradeRecoveryMaxIOPS = tempUpgradeRecoveryMaxIOPS;
+		}
+
+		public String getTempUpgradeRecoveryMaxConnections() {
+			return this.tempUpgradeRecoveryMaxConnections;
+		}
+
+		public void setTempUpgradeRecoveryMaxConnections(String tempUpgradeRecoveryMaxConnections) {
+			this.tempUpgradeRecoveryMaxConnections = tempUpgradeRecoveryMaxConnections;
+		}
+
+		public Integer getInsId() {
+			return this.insId;
+		}
+
+		public void setInsId(Integer insId) {
+			this.insId = insId;
+		}
 
 		public String getDBInstanceId() {
 			return this.dBInstanceId;
@@ -149,20 +329,12 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 			this.dBInstanceClassType = dBInstanceClassType;
 		}
 
-		public DBInstanceType getDBInstanceType() {
+		public String getDBInstanceType() {
 			return this.dBInstanceType;
 		}
 
-		public void setDBInstanceType(DBInstanceType dBInstanceType) {
+		public void setDBInstanceType(String dBInstanceType) {
 			this.dBInstanceType = dBInstanceType;
-		}
-
-		public Integer getInsId() {
-			return this.insId;
-		}
-
-		public void setInsId(Integer insId) {
-			this.insId = insId;
 		}
 
 		public String getRegionId() {
@@ -229,19 +401,27 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 			this.dBInstanceStorage = dBInstanceStorage;
 		}
 
-		public DBInstanceNetType getDBInstanceNetType() {
+		public String getVpcCloudInstanceId() {
+			return this.vpcCloudInstanceId;
+		}
+
+		public void setVpcCloudInstanceId(String vpcCloudInstanceId) {
+			this.vpcCloudInstanceId = vpcCloudInstanceId;
+		}
+
+		public String getDBInstanceNetType() {
 			return this.dBInstanceNetType;
 		}
 
-		public void setDBInstanceNetType(DBInstanceNetType dBInstanceNetType) {
+		public void setDBInstanceNetType(String dBInstanceNetType) {
 			this.dBInstanceNetType = dBInstanceNetType;
 		}
 
-		public DBInstanceStatus getDBInstanceStatus() {
+		public String getDBInstanceStatus() {
 			return this.dBInstanceStatus;
 		}
 
-		public void setDBInstanceStatus(DBInstanceStatus dBInstanceStatus) {
+		public void setDBInstanceStatus(String dBInstanceStatus) {
 			this.dBInstanceStatus = dBInstanceStatus;
 		}
 
@@ -253,11 +433,11 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 			this.dBInstanceDescription = dBInstanceDescription;
 		}
 
-		public LockMode getLockMode() {
+		public String getLockMode() {
 			return this.lockMode;
 		}
 
-		public void setLockMode(LockMode lockMode) {
+		public void setLockMode(String lockMode) {
 			this.lockMode = lockMode;
 		}
 
@@ -349,6 +529,14 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 			this.masterInstanceId = masterInstanceId;
 		}
 
+		public String getDBInstanceCPU() {
+			return this.dBInstanceCPU;
+		}
+
+		public void setDBInstanceCPU(String dBInstanceCPU) {
+			this.dBInstanceCPU = dBInstanceCPU;
+		}
+
 		public String getIncrementSourceDBInstanceId() {
 			return this.incrementSourceDBInstanceId;
 		}
@@ -363,6 +551,14 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 
 		public void setGuardDBInstanceId(String guardDBInstanceId) {
 			this.guardDBInstanceId = guardDBInstanceId;
+		}
+
+		public String getReplicateId() {
+			return this.replicateId;
+		}
+
+		public void setReplicateId(String replicateId) {
+			this.replicateId = replicateId;
 		}
 
 		public String getTempDBInstanceId() {
@@ -397,6 +593,54 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 			this.instanceNetworkType = instanceNetworkType;
 		}
 
+		public String getDBInstanceStorageType() {
+			return this.dBInstanceStorageType;
+		}
+
+		public void setDBInstanceStorageType(String dBInstanceStorageType) {
+			this.dBInstanceStorageType = dBInstanceStorageType;
+		}
+
+		public String getAdvancedFeatures() {
+			return this.advancedFeatures;
+		}
+
+		public void setAdvancedFeatures(String advancedFeatures) {
+			this.advancedFeatures = advancedFeatures;
+		}
+
+		public String getCategory() {
+			return this.category;
+		}
+
+		public void setCategory(String category) {
+			this.category = category;
+		}
+
+		public String getAccountType() {
+			return this.accountType;
+		}
+
+		public void setAccountType(String accountType) {
+			this.accountType = accountType;
+		}
+
+		public String getSupportUpgradeAccountType() {
+			return this.supportUpgradeAccountType;
+		}
+
+		public void setSupportUpgradeAccountType(String supportUpgradeAccountType) {
+			this.supportUpgradeAccountType = supportUpgradeAccountType;
+		}
+
+		public String getSupportCreateSuperAccount() {
+			return this.supportCreateSuperAccount;
+		}
+
+		public void setSupportCreateSuperAccount(String supportCreateSuperAccount) {
+			this.supportCreateSuperAccount = supportCreateSuperAccount;
+		}
+
 		public String getVpcId() {
 			return this.vpcId;
 		}
@@ -405,12 +649,156 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 			this.vpcId = vpcId;
 		}
 
-		public ConnectionMode getConnectionMode() {
+		public String getVSwitchId() {
+			return this.vSwitchId;
+		}
+
+		public void setVSwitchId(String vSwitchId) {
+			this.vSwitchId = vSwitchId;
+		}
+
+		public String getConnectionMode() {
 			return this.connectionMode;
 		}
 
-		public void setConnectionMode(ConnectionMode connectionMode) {
+		public void setConnectionMode(String connectionMode) {
 			this.connectionMode = connectionMode;
+		}
+
+		public String getCurrentKernelVersion() {
+			return this.currentKernelVersion;
+		}
+
+		public void setCurrentKernelVersion(String currentKernelVersion) {
+			this.currentKernelVersion = currentKernelVersion;
+		}
+
+		public String getLatestKernelVersion() {
+			return this.latestKernelVersion;
+		}
+
+		public void setLatestKernelVersion(String latestKernelVersion) {
+			this.latestKernelVersion = latestKernelVersion;
+		}
+
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
+		public String getReadonlyInstanceSQLDelayedTime() {
+			return this.readonlyInstanceSQLDelayedTime;
+		}
+
+		public void setReadonlyInstanceSQLDelayedTime(String readonlyInstanceSQLDelayedTime) {
+			this.readonlyInstanceSQLDelayedTime = readonlyInstanceSQLDelayedTime;
+		}
+
+		public String getSecurityIPMode() {
+			return this.securityIPMode;
+		}
+
+		public void setSecurityIPMode(String securityIPMode) {
+			this.securityIPMode = securityIPMode;
+		}
+
+		public String getTimeZone() {
+			return this.timeZone;
+		}
+
+		public void setTimeZone(String timeZone) {
+			this.timeZone = timeZone;
+		}
+
+		public String getCollation() {
+			return this.collation;
+		}
+
+		public void setCollation(String collation) {
+			this.collation = collation;
+		}
+
+		public String getDispenseMode() {
+			return this.dispenseMode;
+		}
+
+		public void setDispenseMode(String dispenseMode) {
+			this.dispenseMode = dispenseMode;
+		}
+
+		public String getMasterZone() {
+			return this.masterZone;
+		}
+
+		public void setMasterZone(String masterZone) {
+			this.masterZone = masterZone;
+		}
+
+		public String getAutoUpgradeMinorVersion() {
+			return this.autoUpgradeMinorVersion;
+		}
+
+		public void setAutoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
+			this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+		}
+
+		public Integer getProxyType() {
+			return this.proxyType;
+		}
+
+		public void setProxyType(Integer proxyType) {
+			this.proxyType = proxyType;
+		}
+
+		public String getConsoleVersion() {
+			return this.consoleVersion;
+		}
+
+		public void setConsoleVersion(String consoleVersion) {
+			this.consoleVersion = consoleVersion;
+		}
+
+		public Boolean getMultipleTempUpgrade() {
+			return this.multipleTempUpgrade;
+		}
+
+		public void setMultipleTempUpgrade(Boolean multipleTempUpgrade) {
+			this.multipleTempUpgrade = multipleTempUpgrade;
+		}
+
+		public String getOriginConfiguration() {
+			return this.originConfiguration;
+		}
+
+		public void setOriginConfiguration(String originConfiguration) {
+			this.originConfiguration = originConfiguration;
+		}
+
+		public String getDedicatedHostGroupId() {
+			return this.dedicatedHostGroupId;
+		}
+
+		public void setDedicatedHostGroupId(String dedicatedHostGroupId) {
+			this.dedicatedHostGroupId = dedicatedHostGroupId;
+		}
+
+		public String getSuperPermissionMode() {
+			return this.superPermissionMode;
+		}
+
+		public void setSuperPermissionMode(String superPermissionMode) {
+			this.superPermissionMode = superPermissionMode;
+		}
+
+		public List<SlaveZone> getSlaveZones() {
+			return this.slaveZones;
+		}
+
+		public void setSlaveZones(List<SlaveZone> slaveZones) {
+			this.slaveZones = slaveZones;
 		}
 
 		public List<ReadOnlyDBInstanceId> getReadOnlyDBInstanceIds() {
@@ -421,189 +809,25 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 			this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
 		}
 
-		public enum DBInstanceType {
-		
-			GUARD("Guard"),
-			PRIMARY("Primary"),
-			READONLY("Readonly"),
-			TEMP("Temp"),;
-			
-		    private String stringValue;
-		
-			DBInstanceType(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static DBInstanceType getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (DBInstanceType dBInstanceType : DBInstanceType.values()) {
-					if(dBInstanceType.getStringValue().equals(stringValue)){
-						return dBInstanceType;
-					}
-				}
-		    	return null;
-		    }
+		public Extra getExtra() {
+			return this.extra;
 		}
 
-		public enum DBInstanceNetType {
-		
-			INTRANET("Intranet"),
-			INTERNET("Internet"),;
-			
-		    private String stringValue;
-		
-			DBInstanceNetType(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static DBInstanceNetType getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (DBInstanceNetType dBInstanceNetType : DBInstanceNetType.values()) {
-					if(dBInstanceNetType.getStringValue().equals(stringValue)){
-						return dBInstanceNetType;
-					}
-				}
-		    	return null;
-		    }
+		public void setExtra(Extra extra) {
+			this.extra = extra;
 		}
 
-		public enum DBInstanceStatus {
-		
-			TEMP_D_B_INSTANCE_CREATING("TempDBInstanceCreating"),
-			RUNNING("Running"),
-			DELETING("Deleting"),
-			D_B_INSTANCE_CLASS_CHANGING("DBInstanceClassChanging"),
-			CREATING("Creating"),
-			GUARD_D_B_INSTANCE_CREATING("GuardDBInstanceCreating"),
-			REBOOTING("Rebooting"),
-			GUARD_SWITCHING("GuardSwitching"),
-			LING_SWITCHING("LingSwitching"),
-			TRANSING("Transing"),
-			TRANSING_TO_OTHERS("TransingToOthers"),
-			IMPORTING_FROM_OTHERS("ImportingFromOthers"),
-			ENGINE_VERSION_UPGRADING("EngineVersionUpgrading"),
-			D_B_INSTANCE_NET_TYPE_CHANGING("DBInstanceNetTypeChanging"),
-			IMPORTING("Importing"),
-			RESTORING("Restoring"),;
-			
-		    private String stringValue;
-		
-			DBInstanceStatus(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static DBInstanceStatus getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (DBInstanceStatus dBInstanceStatus : DBInstanceStatus.values()) {
-					if(dBInstanceStatus.getStringValue().equals(stringValue)){
-						return dBInstanceStatus;
-					}
-				}
-		    	return null;
-		    }
-		}
+		public static class SlaveZone {
 
-		public enum LockMode {
-		
-			LOCK_BY_EXPIRATION("LockByExpiration"),
-			LOCK_BY_RESTORATION("LockByRestoration"),
-			LOCK_READ_INSTANCE_BY_DISK_QUOTA("LockReadInstanceByDiskQuota"),
-			MANUAL_LOCK("ManualLock"),
-			LOCK_BY_DISK_QUOTA("LockByDiskQuota"),
-			UNLOCK("Unlock"),;
-			
-		    private String stringValue;
-		
-			LockMode(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static LockMode getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (LockMode lockMode : LockMode.values()) {
-					if(lockMode.getStringValue().equals(stringValue)){
-						return lockMode;
-					}
-				}
-		    	return null;
-		    }
-		}
+			private String zoneId;
 
-		public enum ConnectionMode {
-		
-			STANDARD("Standard"),
-			SAFE("Safe"),;
-			
-		    private String stringValue;
-		
-			ConnectionMode(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static ConnectionMode getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (ConnectionMode connectionMode : ConnectionMode.values()) {
-					if(connectionMode.getStringValue().equals(stringValue)){
-						return connectionMode;
-					}
-				}
-		    	return null;
-		    }
+			public String getZoneId() {
+				return this.zoneId;
+			}
+
+			public void setZoneId(String zoneId) {
+				this.zoneId = zoneId;
+			}
 		}
 
 		public static class ReadOnlyDBInstanceId {
@@ -616,6 +840,49 @@ public class DescribeDBInstanceAttributeResponse extends AcsResponse {
 
 			public void setDBInstanceId(String dBInstanceId) {
 				this.dBInstanceId = dBInstanceId;
+			}
+		}
+
+		public static class Extra {
+
+			private String replicaGroupID;
+
+			private String replicaGroupStatus;
+
+			private String activeReplicaDBInstanceID;
+
+			private List<String> dBInstanceIds;
+
+			public String getReplicaGroupID() {
+				return this.replicaGroupID;
+			}
+
+			public void setReplicaGroupID(String replicaGroupID) {
+				this.replicaGroupID = replicaGroupID;
+			}
+
+			public String getReplicaGroupStatus() {
+				return this.replicaGroupStatus;
+			}
+
+			public void setReplicaGroupStatus(String replicaGroupStatus) {
+				this.replicaGroupStatus = replicaGroupStatus;
+			}
+
+			public String getActiveReplicaDBInstanceID() {
+				return this.activeReplicaDBInstanceID;
+			}
+
+			public void setActiveReplicaDBInstanceID(String activeReplicaDBInstanceID) {
+				this.activeReplicaDBInstanceID = activeReplicaDBInstanceID;
+			}
+
+			public List<String> getDBInstanceIds() {
+				return this.dBInstanceIds;
+			}
+
+			public void setDBInstanceIds(List<String> dBInstanceIds) {
+				this.dBInstanceIds = dBInstanceIds;
 			}
 		}
 	}

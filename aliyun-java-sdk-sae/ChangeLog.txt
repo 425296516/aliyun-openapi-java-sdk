@@ -1,0 +1,15 @@
+2020-08-05 Version: 1.2.0
+- Generated 2019-05-06 for `sae`.
+
+2019-12-12 Version: 1.1.0
+- Supported new features in public cloud.
+
+2019-08-28 Version: 1.0.1
+- Add NamespaceId for listApplication.
+
+2019-07-31 Version: 1.0.0
+- Initial release.
+
+2019-06-03 Version: 2.48.0-SNAPSHOT
+发布单接口规范化
+

@@ -1,23 +1,20 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.slb.model.v20140515;
 
+import java.util.List;
 import com.aliyuncs.AcsResponse;
 import com.aliyuncs.slb.transform.v20140515.DescribeLoadBalancerHTTPListenerAttributeResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
@@ -38,6 +35,8 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponse extends AcsRespon
 
 	private String status;
 
+	private String securityStatus;
+
 	private String xForwardedFor;
 
 	private String scheduler;
@@ -51,6 +50,8 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponse extends AcsRespon
 	private String cookie;
 
 	private String healthCheck;
+
+	private String healthCheckType;
 
 	private String healthCheckDomain;
 
@@ -67,6 +68,50 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponse extends AcsRespon
 	private Integer healthCheckConnectPort;
 
 	private String healthCheckHttpCode;
+
+	private String healthCheckMethod;
+
+	private String healthCheckHttpVersion;
+
+	private Integer maxConnection;
+
+	private String vServerGroupId;
+
+	private String gzip;
+
+	private String xForwardedFor_SLBIP;
+
+	private String xForwardedFor_SLBID;
+
+	private String xForwardedFor_proto;
+
+	private String aclId;
+
+	private String aclType;
+
+	private String aclStatus;
+
+	private String vpcIds;
+
+	private String listenerForward;
+
+	private Integer forwardPort;
+
+	private Integer requestTimeout;
+
+	private Integer idleTimeout;
+
+	private String description;
+
+	private String xForwardedFor_SLBPORT;
+
+	private String xForwardedFor_ClientSrcPort;
+
+	private Integer forwardCode;
+
+	private List<Rule> rules;
+
+	private List<String> aclIds;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -106,6 +151,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponse extends AcsRespon
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public String getSecurityStatus() {
+		return this.securityStatus;
+	}
+
+	public void setSecurityStatus(String securityStatus) {
+		this.securityStatus = securityStatus;
 	}
 
 	public String getXForwardedFor() {
@@ -162,6 +215,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponse extends AcsRespon
 
 	public void setHealthCheck(String healthCheck) {
 		this.healthCheck = healthCheck;
+	}
+
+	public String getHealthCheckType() {
+		return this.healthCheckType;
+	}
+
+	public void setHealthCheckType(String healthCheckType) {
+		this.healthCheckType = healthCheckType;
 	}
 
 	public String getHealthCheckDomain() {
@@ -226,6 +287,235 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponse extends AcsRespon
 
 	public void setHealthCheckHttpCode(String healthCheckHttpCode) {
 		this.healthCheckHttpCode = healthCheckHttpCode;
+	}
+
+	public String getHealthCheckMethod() {
+		return this.healthCheckMethod;
+	}
+
+	public void setHealthCheckMethod(String healthCheckMethod) {
+		this.healthCheckMethod = healthCheckMethod;
+	}
+
+	public String getHealthCheckHttpVersion() {
+		return this.healthCheckHttpVersion;
+	}
+
+	public void setHealthCheckHttpVersion(String healthCheckHttpVersion) {
+		this.healthCheckHttpVersion = healthCheckHttpVersion;
+	}
+
+	public Integer getMaxConnection() {
+		return this.maxConnection;
+	}
+
+	public void setMaxConnection(Integer maxConnection) {
+		this.maxConnection = maxConnection;
+	}
+
+	public String getVServerGroupId() {
+		return this.vServerGroupId;
+	}
+
+	public void setVServerGroupId(String vServerGroupId) {
+		this.vServerGroupId = vServerGroupId;
+	}
+
+	public String getGzip() {
+		return this.gzip;
+	}
+
+	public void setGzip(String gzip) {
+		this.gzip = gzip;
+	}
+
+	public String getXForwardedFor_SLBIP() {
+		return this.xForwardedFor_SLBIP;
+	}
+
+	public void setXForwardedFor_SLBIP(String xForwardedFor_SLBIP) {
+		this.xForwardedFor_SLBIP = xForwardedFor_SLBIP;
+	}
+
+	public String getXForwardedFor_SLBID() {
+		return this.xForwardedFor_SLBID;
+	}
+
+	public void setXForwardedFor_SLBID(String xForwardedFor_SLBID) {
+		this.xForwardedFor_SLBID = xForwardedFor_SLBID;
+	}
+
+	public String getXForwardedFor_proto() {
+		return this.xForwardedFor_proto;
+	}
+
+	public void setXForwardedFor_proto(String xForwardedFor_proto) {
+		this.xForwardedFor_proto = xForwardedFor_proto;
+	}
+
+	public String getAclId() {
+		return this.aclId;
+	}
+
+	public void setAclId(String aclId) {
+		this.aclId = aclId;
+	}
+
+	public String getAclType() {
+		return this.aclType;
+	}
+
+	public void setAclType(String aclType) {
+		this.aclType = aclType;
+	}
+
+	public String getAclStatus() {
+		return this.aclStatus;
+	}
+
+	public void setAclStatus(String aclStatus) {
+		this.aclStatus = aclStatus;
+	}
+
+	public String getVpcIds() {
+		return this.vpcIds;
+	}
+
+	public void setVpcIds(String vpcIds) {
+		this.vpcIds = vpcIds;
+	}
+
+	public String getListenerForward() {
+		return this.listenerForward;
+	}
+
+	public void setListenerForward(String listenerForward) {
+		this.listenerForward = listenerForward;
+	}
+
+	public Integer getForwardPort() {
+		return this.forwardPort;
+	}
+
+	public void setForwardPort(Integer forwardPort) {
+		this.forwardPort = forwardPort;
+	}
+
+	public Integer getRequestTimeout() {
+		return this.requestTimeout;
+	}
+
+	public void setRequestTimeout(Integer requestTimeout) {
+		this.requestTimeout = requestTimeout;
+	}
+
+	public Integer getIdleTimeout() {
+		return this.idleTimeout;
+	}
+
+	public void setIdleTimeout(Integer idleTimeout) {
+		this.idleTimeout = idleTimeout;
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getXForwardedFor_SLBPORT() {
+		return this.xForwardedFor_SLBPORT;
+	}
+
+	public void setXForwardedFor_SLBPORT(String xForwardedFor_SLBPORT) {
+		this.xForwardedFor_SLBPORT = xForwardedFor_SLBPORT;
+	}
+
+	public String getXForwardedFor_ClientSrcPort() {
+		return this.xForwardedFor_ClientSrcPort;
+	}
+
+	public void setXForwardedFor_ClientSrcPort(String xForwardedFor_ClientSrcPort) {
+		this.xForwardedFor_ClientSrcPort = xForwardedFor_ClientSrcPort;
+	}
+
+	public Integer getForwardCode() {
+		return this.forwardCode;
+	}
+
+	public void setForwardCode(Integer forwardCode) {
+		this.forwardCode = forwardCode;
+	}
+
+	public List<Rule> getRules() {
+		return this.rules;
+	}
+
+	public void setRules(List<Rule> rules) {
+		this.rules = rules;
+	}
+
+	public List<String> getAclIds() {
+		return this.aclIds;
+	}
+
+	public void setAclIds(List<String> aclIds) {
+		this.aclIds = aclIds;
+	}
+
+	public static class Rule {
+
+		private String ruleId;
+
+		private String ruleName;
+
+		private String domain;
+
+		private String url;
+
+		private String vServerGroupId;
+
+		public String getRuleId() {
+			return this.ruleId;
+		}
+
+		public void setRuleId(String ruleId) {
+			this.ruleId = ruleId;
+		}
+
+		public String getRuleName() {
+			return this.ruleName;
+		}
+
+		public void setRuleName(String ruleName) {
+			this.ruleName = ruleName;
+		}
+
+		public String getDomain() {
+			return this.domain;
+		}
+
+		public void setDomain(String domain) {
+			this.domain = domain;
+		}
+
+		public String getUrl() {
+			return this.url;
+		}
+
+		public void setUrl(String url) {
+			this.url = url;
+		}
+
+		public String getVServerGroupId() {
+			return this.vServerGroupId;
+		}
+
+		public void setVServerGroupId(String vServerGroupId) {
+			this.vServerGroupId = vServerGroupId;
+		}
 	}
 
 	@Override

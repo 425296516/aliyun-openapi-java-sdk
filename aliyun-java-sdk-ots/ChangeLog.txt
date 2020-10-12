@@ -1,0 +1,12 @@
+2020-09-01 Version: 4.1.0
+- Support OpenOtsService api.
+
+2020-09-01 Version: 4.1.0-SNAPSHOT
+- Generated 2016-06-20 for `Ots`.
+
+2019-03-18 Version: 4.0.1
+1, Update Dependency
+
+2018-08-08 Version: 4.0.0
+1, The official release 4.0.0
+

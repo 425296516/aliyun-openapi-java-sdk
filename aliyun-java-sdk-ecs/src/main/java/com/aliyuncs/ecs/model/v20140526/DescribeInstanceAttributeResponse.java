@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -45,9 +41,13 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 
 	private String instanceType;
 
+	private Integer cpu;
+
+	private Integer memory;
+
 	private String hostName;
 
-	private Status status;
+	private String status;
 
 	private String internetChargeType;
 
@@ -67,6 +67,14 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 
 	private String ioOptimized;
 
+	private String instanceChargeType;
+
+	private String expiredTime;
+
+	private String stoppedMode;
+
+	private String creditSpecification;
+
 	private List<LockReason> operationLocks;
 
 	private List<String> securityGroupIds;
@@ -78,6 +86,8 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 	private VpcAttributes vpcAttributes;
 
 	private EipAddress eipAddress;
+
+	private DedicatedHostAttribute dedicatedHostAttribute;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -143,6 +153,22 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.instanceType = instanceType;
 	}
 
+	public Integer getCpu() {
+		return this.cpu;
+	}
+
+	public void setCpu(Integer cpu) {
+		this.cpu = cpu;
+	}
+
+	public Integer getMemory() {
+		return this.memory;
+	}
+
+	public void setMemory(Integer memory) {
+		this.memory = memory;
+	}
+
 	public String getHostName() {
 		return this.hostName;
 	}
@@ -151,11 +177,11 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.hostName = hostName;
 	}
 
-	public Status getStatus() {
+	public String getStatus() {
 		return this.status;
 	}
 
-	public void setStatus(Status status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
@@ -231,6 +257,38 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.ioOptimized = ioOptimized;
 	}
 
+	public String getInstanceChargeType() {
+		return this.instanceChargeType;
+	}
+
+	public void setInstanceChargeType(String instanceChargeType) {
+		this.instanceChargeType = instanceChargeType;
+	}
+
+	public String getExpiredTime() {
+		return this.expiredTime;
+	}
+
+	public void setExpiredTime(String expiredTime) {
+		this.expiredTime = expiredTime;
+	}
+
+	public String getStoppedMode() {
+		return this.stoppedMode;
+	}
+
+	public void setStoppedMode(String stoppedMode) {
+		this.stoppedMode = stoppedMode;
+	}
+
+	public String getCreditSpecification() {
+		return this.creditSpecification;
+	}
+
+	public void setCreditSpecification(String creditSpecification) {
+		this.creditSpecification = creditSpecification;
+	}
+
 	public List<LockReason> getOperationLocks() {
 		return this.operationLocks;
 	}
@@ -279,42 +337,12 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.eipAddress = eipAddress;
 	}
 
-	public enum Status {
-	
-	DELETED("Deleted"),
-	STOPPED("Stopped"),
-	TRANSFERRING("Transferring"),
-	RUNNING("Running"),
-	RESETTING("Resetting"),
-	STARTING("Starting"),
-	STOPPING("Stopping"),;
-		
-	    private String stringValue;
-	
-		Status(String stringValue) {
-	        setStringValue(stringValue);
-	    }
-	
-	    public String getStringValue() {
-	        return stringValue;
-	    }
-	
-	    public void setStringValue(String stringValue) {
-	        this.stringValue = stringValue;
-	    }
-	    
-	    public static Status getEnum(String stringValue){
-	    	if(null == stringValue){
-	    		return null;
-	    	}
-	    	
-	    	for (Status status : Status.values()) {
-				if(status.getStringValue().equals(stringValue)){
-					return status;
-				}
-			}
-	    	return null;
-	    }
+	public DedicatedHostAttribute getDedicatedHostAttribute() {
+		return this.dedicatedHostAttribute;
+	}
+
+	public void setDedicatedHostAttribute(DedicatedHostAttribute dedicatedHostAttribute) {
+		this.dedicatedHostAttribute = dedicatedHostAttribute;
 	}
 
 	public static class LockReason {
@@ -413,6 +441,29 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 
 		public void setInternetChargeType(String internetChargeType) {
 			this.internetChargeType = internetChargeType;
+		}
+	}
+
+	public static class DedicatedHostAttribute {
+
+		private String dedicatedHostId;
+
+		private String dedicatedHostName;
+
+		public String getDedicatedHostId() {
+			return this.dedicatedHostId;
+		}
+
+		public void setDedicatedHostId(String dedicatedHostId) {
+			this.dedicatedHostId = dedicatedHostId;
+		}
+
+		public String getDedicatedHostName() {
+			return this.dedicatedHostName;
+		}
+
+		public void setDedicatedHostName(String dedicatedHostName) {
+			this.dedicatedHostName = dedicatedHostName;
 		}
 	}
 

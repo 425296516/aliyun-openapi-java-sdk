@@ -1,0 +1,68 @@
+2020-08-20 Version: 5.0.78.19.4
+- ConfigureSynchronizationJob and ConfigureMigrationJob and ConfigureSubscriptionInstance convert query string param to form.
+
+2020-08-12 Version: 5.0.34.19.3
+- Fix MigrationJob status.
+- MigrationJob add createTime.
+
+2020-03-11 Version: 5.0.34.19.2
+- Synchronization support source and destination database.
+- Synchronization add delayMillis.
+
+2020-02-13 Version: 5.0.26.19.1
+- Add api.
+
+2020-02-13 Version: 5.0.26.19.1
+- Add api.
+
+2020-02-13 Version: 5.0.26.19.1
+- Add api.
+
+2020-02-13 Version: 5.0.26.19.1
+- Add api.
+
+2020-02-12 Version: 2.0.20
+- Fixed oracle SID.
+
+2020-01-10 Version: 2.0.18
+- Support RAM policy.
+
+2020-01-10 Version: 3.1.0
+- Supported RAM fro DTS.
+
+2020-01-10 Version: 3.1.0
+- Supported RAM fro DTS.
+
+2019-11-21 Version: 2.0.17
+- Support switchSourceEndpoint cross account.
+
+2019-11-21 Version: 2.0.16
+- Support Alert Configuration.
+
+2019-09-03 Version: 2.0.16
+- Support Alert Configuration.
+
+2019-09-02 Version: 2.0.15
+- Support Alert Configuration.
+
+2019-08-30 Version: 2.0.15
+- Support Alert Configuration.
+
+2019-07-17 Version: 2.0.14
+- Support PolarDB subscription.
+
+2019-07-03 Version: 2.0.13
+- Support PolarDB subscription.
+
+2019-06-25 Version: 2.0.12
+- New Subscribe Increase return information `subscribeTopic`,`subscriptionHost` and so on.
+
+2019-06-25 Version: 2.0.11
+- New Subscribe Increase return information `subscribeTopic`,`subscriptionHost` and so on.
+
+2019-06-20 Version: 2.0.11
+- Supported for new Subscribe.
+
+2019-03-18 Version: 3.0.0
+1, Release DTS 2018-08-01
+

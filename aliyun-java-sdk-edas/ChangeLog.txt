@@ -1,0 +1,129 @@
+2020-09-17 Version: 3.12.3
+- Fixed bugs for ListComponents.
+- Supported more search condition for ListApplication.
+
+2020-09-14 Version: 3.12.2
+- Fixed bugs for ListComponents.
+- Supported more search condition for ListApplication.
+
+2020-09-14 Version: 3.12.1
+- Fixed bugs for ListComponents.
+- Supported more search condition for ListApplication.
+
+2020-09-07 Version: 3.12.0
+- Add API ScaleoutApplicationWithNewInstances.
+
+2020-08-13 Version: 3.8.1
+- Fix GetServiceListPage bug.
+
+2020-08-13 Version: 3.8.1
+- Fix GetServiceListPage bug.
+
+2020-08-07 Version: 3.5.0
+- Add new Api CreateIDCImportCommand.
+
+2020-07-28 Version: 3.4.1
+- Generated 2017-08-01 for `Edas`.
+
+2020-07-28 Version: 3.4.1
+- Generated 2017-08-01 for `Edas`.
+
+2020-07-28 Version: 3.4.1
+- Generated 2017-08-01 for `Edas`.
+
+2020-07-28 Version: 3.4.1
+- Generated 2017-08-01 for `Edas`.
+
+2020-05-20 Version: 3.4.0
+- Add supportting for deploy K8s application across zones.
+- Add supportting for choosing K8s application runtime class.
+
+2020-04-28 Version: 3.0.5
+- Generated 2017-08-01 for `Edas`.
+
+2020-04-09 Version: 3.0.4
+- Generated 2017-08-01 for `Edas`.
+
+2020-03-04 Version: 3.0.3
+- Add UpdateK8sResource API.
+
+2020-03-04 Version: 2.57.3
+- Generated 2017-08-01 for `Edas`.
+
+2019-12-24 Version: 2.57.2
+- Generated 2017-08-01 for `Edas`.
+
+2019-12-24 Version: 2.57.1
+- Generated 2017-08-01 for `Edas`.
+
+2019-12-17 Version: 2.57.0
+- Support for OAM Application.
+
+2019-11-25 Version: 2.53.4
+- Generated 2017-08-01 for `Edas`.
+
+2019-10-25 Version: 2.53.3
+- Generated 2017-08-01 for `Edas`.
+
+2019-10-23 Version: 2.53.2
+- Generated 2017-08-01 for `Edas`.
+
+2019-09-23 Version: 2.53.1
+- Generated 2017-08-01 for `Edas`.
+
+2019-09-23 Version: 2.53.0
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-27 Version: 2.52.1
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-27 Version: 2.53.0
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-27 Version: 2.53.0
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-27 Version: 2.52.0
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-14 Version: 2.51.0
+- Support kubernetes application using war and jar package.
+
+2019-08-14 Version: 2.46.7
+- Increase the elastic expansion pop interface.
+- Increase the service method list pop interface.
+
+2019-07-11 Version: 2.46.6
+- Generated 2017-08-01 for `Edas`.
+
+2019-05-13 Version: 2.46.4
+1, Add 'ReleaseType' field into DeployApplication API
+
+2019-05-13 Version: 2.46.4
+1, Add 'ReleaseType' field into DeployApplication API
+
+2019-05-13 Version: 2.46.2
+1, Release ContinuePipeline API.
+
+2019-05-08 Version: 2.46.1
+1, Add ChangeDeployGroup API
+
+2019-03-28 Version: 2.43.0
+1, EDAS serverless support Pandora application deployment in war/jar mode
+
+2019-03-12 Version: 2.42.1
+1, Add application name support for config center APIs.
+2, Add GetCluster API.
+3, Support debug switch in user region APIs.
+
+2019-03-01 Version: 2.41.7
+1, Add API QueryRegionConfig
+2, Add API SynchronizeResource
+
+2019-01-31 Version: 2.41.0
+1, support jdk/webContainer/packageType parameters  for InsertApplicationRequest
+
+2018-12-19 Version: 2.37.0
+1, Add api: InstallAgent.
+2, Add parameter debugEnable of ListUserDefineRegion.
+

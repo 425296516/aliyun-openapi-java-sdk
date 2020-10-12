@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -36,6 +32,8 @@ public class DescribeDisksResponse extends AcsResponse {
 	private Integer pageNumber;
 
 	private Integer pageSize;
+
+	private String nextToken;
 
 	private List<Disk> disks;
 
@@ -71,6 +69,14 @@ public class DescribeDisksResponse extends AcsResponse {
 		this.pageSize = pageSize;
 	}
 
+	public String getNextToken() {
+		return this.nextToken;
+	}
+
+	public void setNextToken(String nextToken) {
+		this.nextToken = nextToken;
+	}
+
 	public List<Disk> getDisks() {
 		return this.disks;
 	}
@@ -91,15 +97,17 @@ public class DescribeDisksResponse extends AcsResponse {
 
 		private String description;
 
-		private Type type;
+		private String type;
 
-		private Category category;
+		private String category;
 
 		private Integer size;
 
 		private String imageId;
 
 		private String sourceSnapshotId;
+
+		private String autoSnapshotPolicyId;
 
 		private String productCode;
 
@@ -117,6 +125,8 @@ public class DescribeDisksResponse extends AcsResponse {
 
 		private Boolean enableAutoSnapshot;
 
+		private Boolean enableAutomatedSnapshotPolicy;
+
 		private String creationTime;
 
 		private String attachedTime;
@@ -125,7 +135,37 @@ public class DescribeDisksResponse extends AcsResponse {
 
 		private String diskChargeType;
 
+		private String expiredTime;
+
+		private String resourceGroupId;
+
+		private Boolean encrypted;
+
+		private String storageSetId;
+
+		private Integer storageSetPartitionNumber;
+
+		private Integer mountInstanceNum;
+
+		private Integer iOPS;
+
+		private Integer iOPSRead;
+
+		private Integer iOPSWrite;
+
+		private String kMSKeyId;
+
+		private String performanceLevel;
+
+		private String bdfId;
+
+		private String serialNumber;
+
 		private List<OperationLock> operationLocks;
+
+		private List<MountInstance> mountInstances;
+
+		private List<Tag> tags;
 
 		public String getDiskId() {
 			return this.diskId;
@@ -167,19 +207,19 @@ public class DescribeDisksResponse extends AcsResponse {
 			this.description = description;
 		}
 
-		public Type getType() {
+		public String getType() {
 			return this.type;
 		}
 
-		public void setType(Type type) {
+		public void setType(String type) {
 			this.type = type;
 		}
 
-		public Category getCategory() {
+		public String getCategory() {
 			return this.category;
 		}
 
-		public void setCategory(Category category) {
+		public void setCategory(String category) {
 			this.category = category;
 		}
 
@@ -205,6 +245,14 @@ public class DescribeDisksResponse extends AcsResponse {
 
 		public void setSourceSnapshotId(String sourceSnapshotId) {
 			this.sourceSnapshotId = sourceSnapshotId;
+		}
+
+		public String getAutoSnapshotPolicyId() {
+			return this.autoSnapshotPolicyId;
+		}
+
+		public void setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+			this.autoSnapshotPolicyId = autoSnapshotPolicyId;
 		}
 
 		public String getProductCode() {
@@ -271,6 +319,14 @@ public class DescribeDisksResponse extends AcsResponse {
 			this.enableAutoSnapshot = enableAutoSnapshot;
 		}
 
+		public Boolean getEnableAutomatedSnapshotPolicy() {
+			return this.enableAutomatedSnapshotPolicy;
+		}
+
+		public void setEnableAutomatedSnapshotPolicy(Boolean enableAutomatedSnapshotPolicy) {
+			this.enableAutomatedSnapshotPolicy = enableAutomatedSnapshotPolicy;
+		}
+
 		public String getCreationTime() {
 			return this.creationTime;
 		}
@@ -303,6 +359,110 @@ public class DescribeDisksResponse extends AcsResponse {
 			this.diskChargeType = diskChargeType;
 		}
 
+		public String getExpiredTime() {
+			return this.expiredTime;
+		}
+
+		public void setExpiredTime(String expiredTime) {
+			this.expiredTime = expiredTime;
+		}
+
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
+		public Boolean getEncrypted() {
+			return this.encrypted;
+		}
+
+		public void setEncrypted(Boolean encrypted) {
+			this.encrypted = encrypted;
+		}
+
+		public String getStorageSetId() {
+			return this.storageSetId;
+		}
+
+		public void setStorageSetId(String storageSetId) {
+			this.storageSetId = storageSetId;
+		}
+
+		public Integer getStorageSetPartitionNumber() {
+			return this.storageSetPartitionNumber;
+		}
+
+		public void setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
+			this.storageSetPartitionNumber = storageSetPartitionNumber;
+		}
+
+		public Integer getMountInstanceNum() {
+			return this.mountInstanceNum;
+		}
+
+		public void setMountInstanceNum(Integer mountInstanceNum) {
+			this.mountInstanceNum = mountInstanceNum;
+		}
+
+		public Integer getIOPS() {
+			return this.iOPS;
+		}
+
+		public void setIOPS(Integer iOPS) {
+			this.iOPS = iOPS;
+		}
+
+		public Integer getIOPSRead() {
+			return this.iOPSRead;
+		}
+
+		public void setIOPSRead(Integer iOPSRead) {
+			this.iOPSRead = iOPSRead;
+		}
+
+		public Integer getIOPSWrite() {
+			return this.iOPSWrite;
+		}
+
+		public void setIOPSWrite(Integer iOPSWrite) {
+			this.iOPSWrite = iOPSWrite;
+		}
+
+		public String getKMSKeyId() {
+			return this.kMSKeyId;
+		}
+
+		public void setKMSKeyId(String kMSKeyId) {
+			this.kMSKeyId = kMSKeyId;
+		}
+
+		public String getPerformanceLevel() {
+			return this.performanceLevel;
+		}
+
+		public void setPerformanceLevel(String performanceLevel) {
+			this.performanceLevel = performanceLevel;
+		}
+
+		public String getBdfId() {
+			return this.bdfId;
+		}
+
+		public void setBdfId(String bdfId) {
+			this.bdfId = bdfId;
+		}
+
+		public String getSerialNumber() {
+			return this.serialNumber;
+		}
+
+		public void setSerialNumber(String serialNumber) {
+			this.serialNumber = serialNumber;
+		}
+
 		public List<OperationLock> getOperationLocks() {
 			return this.operationLocks;
 		}
@@ -311,71 +471,20 @@ public class DescribeDisksResponse extends AcsResponse {
 			this.operationLocks = operationLocks;
 		}
 
-		public enum Type {
-		
-			SYSTEM("system"),
-			DATA("data"),;
-			
-		    private String stringValue;
-		
-			Type(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static Type getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (Type type : Type.values()) {
-					if(type.getStringValue().equals(stringValue)){
-						return type;
-					}
-				}
-		    	return null;
-		    }
+		public List<MountInstance> getMountInstances() {
+			return this.mountInstances;
 		}
 
-		public enum Category {
-		
-			EPHEMERAL_SSD("ephemeral_ssd"),
-			EPHEMERAL("ephemeral"),
-			CLOUD("cloud"),;
-			
-		    private String stringValue;
-		
-			Category(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static Category getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (Category category : Category.values()) {
-					if(category.getStringValue().equals(stringValue)){
-						return category;
-					}
-				}
-		    	return null;
-		    }
+		public void setMountInstances(List<MountInstance> mountInstances) {
+			this.mountInstances = mountInstances;
+		}
+
+		public List<Tag> getTags() {
+			return this.tags;
+		}
+
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
 		}
 
 		public static class OperationLock {
@@ -388,6 +497,62 @@ public class DescribeDisksResponse extends AcsResponse {
 
 			public void setLockReason(String lockReason) {
 				this.lockReason = lockReason;
+			}
+		}
+
+		public static class MountInstance {
+
+			private String instanceId;
+
+			private String device;
+
+			private String attachedTime;
+
+			public String getInstanceId() {
+				return this.instanceId;
+			}
+
+			public void setInstanceId(String instanceId) {
+				this.instanceId = instanceId;
+			}
+
+			public String getDevice() {
+				return this.device;
+			}
+
+			public void setDevice(String device) {
+				this.device = device;
+			}
+
+			public String getAttachedTime() {
+				return this.attachedTime;
+			}
+
+			public void setAttachedTime(String attachedTime) {
+				this.attachedTime = attachedTime;
+			}
+		}
+
+		public static class Tag {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
 			}
 		}
 	}

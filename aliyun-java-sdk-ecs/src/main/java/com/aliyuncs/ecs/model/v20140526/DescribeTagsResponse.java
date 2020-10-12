@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -31,7 +27,11 @@ public class DescribeTagsResponse extends AcsResponse {
 
 	private String requestId;
 
-	private String nextToken;
+	private Integer pageSize;
+
+	private Integer pageNumber;
+
+	private Integer totalCount;
 
 	private List<Tag> tags;
 
@@ -43,12 +43,28 @@ public class DescribeTagsResponse extends AcsResponse {
 		this.requestId = requestId;
 	}
 
-	public String getNextToken() {
-		return this.nextToken;
+	public Integer getPageSize() {
+		return this.pageSize;
 	}
 
-	public void setNextToken(String nextToken) {
-		this.nextToken = nextToken;
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+	}
+
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
+	}
+
+	public Integer getTotalCount() {
+		return this.totalCount;
+	}
+
+	public void setTotalCount(Integer totalCount) {
+		this.totalCount = totalCount;
 	}
 
 	public List<Tag> getTags() {
@@ -65,6 +81,8 @@ public class DescribeTagsResponse extends AcsResponse {
 
 		private String tagValue;
 
+		private ResourceTypeCount resourceTypeCount;
+
 		public String getTagKey() {
 			return this.tagKey;
 		}
@@ -79,6 +97,137 @@ public class DescribeTagsResponse extends AcsResponse {
 
 		public void setTagValue(String tagValue) {
 			this.tagValue = tagValue;
+		}
+
+		public ResourceTypeCount getResourceTypeCount() {
+			return this.resourceTypeCount;
+		}
+
+		public void setResourceTypeCount(ResourceTypeCount resourceTypeCount) {
+			this.resourceTypeCount = resourceTypeCount;
+		}
+
+		public static class ResourceTypeCount {
+
+			private Integer instance;
+
+			private Integer disk;
+
+			private Integer volume;
+
+			private Integer image;
+
+			private Integer snapshot;
+
+			private Integer securitygroup;
+
+			private Integer launchTemplate;
+
+			private Integer eni;
+
+			private Integer ddh;
+
+			private Integer keyPair;
+
+			private Integer snapshotPolicy;
+
+			private Integer reservedInstance;
+
+			public Integer getInstance() {
+				return this.instance;
+			}
+
+			public void setInstance(Integer instance) {
+				this.instance = instance;
+			}
+
+			public Integer getDisk() {
+				return this.disk;
+			}
+
+			public void setDisk(Integer disk) {
+				this.disk = disk;
+			}
+
+			public Integer getVolume() {
+				return this.volume;
+			}
+
+			public void setVolume(Integer volume) {
+				this.volume = volume;
+			}
+
+			public Integer getImage() {
+				return this.image;
+			}
+
+			public void setImage(Integer image) {
+				this.image = image;
+			}
+
+			public Integer getSnapshot() {
+				return this.snapshot;
+			}
+
+			public void setSnapshot(Integer snapshot) {
+				this.snapshot = snapshot;
+			}
+
+			public Integer getSecuritygroup() {
+				return this.securitygroup;
+			}
+
+			public void setSecuritygroup(Integer securitygroup) {
+				this.securitygroup = securitygroup;
+			}
+
+			public Integer getLaunchTemplate() {
+				return this.launchTemplate;
+			}
+
+			public void setLaunchTemplate(Integer launchTemplate) {
+				this.launchTemplate = launchTemplate;
+			}
+
+			public Integer getEni() {
+				return this.eni;
+			}
+
+			public void setEni(Integer eni) {
+				this.eni = eni;
+			}
+
+			public Integer getDdh() {
+				return this.ddh;
+			}
+
+			public void setDdh(Integer ddh) {
+				this.ddh = ddh;
+			}
+
+			public Integer getKeyPair() {
+				return this.keyPair;
+			}
+
+			public void setKeyPair(Integer keyPair) {
+				this.keyPair = keyPair;
+			}
+
+			public Integer getSnapshotPolicy() {
+				return this.snapshotPolicy;
+			}
+
+			public void setSnapshotPolicy(Integer snapshotPolicy) {
+				this.snapshotPolicy = snapshotPolicy;
+			}
+
+			public Integer getReservedInstance() {
+				return this.reservedInstance;
+			}
+
+			public void setReservedInstance(Integer reservedInstance) {
+				this.reservedInstance = reservedInstance;
+			}
 		}
 	}
 

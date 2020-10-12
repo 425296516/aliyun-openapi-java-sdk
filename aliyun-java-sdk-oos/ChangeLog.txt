@@ -1,0 +1,44 @@
+2020-09-07 Version: 1.3.0
+- Support parameter APIs.
+
+2020-07-03 Version: 1.2.0
+- Add ListResourceExecutionStatus API.
+- ListExecutions API supports filtering by resource id.
+- TriggerExecution API supports TimerTrigger.
+
+2020-04-29 Version: 1.1.4
+- Add ListTemplateVersions API.
+- GenerateExecutionPolicy supports TemplateVersion.
+- CreateTemplate and UpdateTemplate support VersionName.
+
+
+2020-04-13 Version: 1.1.3
+- Fix ListTaskExecutions SDK error.
+
+2020-04-01 Version: 1.1.2
+- Parameters is string in StartExecution Response.
+
+2020-04-01 Version: 1.1.1
+- Counters and Parameters are changed to Map in ListExections and StartExecution.
+
+2020-02-21 Version: 1.1.0
+- Support TAG API.
+
+2019-08-22 Version: 1.0.8
+- Generated 2019-06-01 for `oos`.
+
+2019-08-19 Version: 1.0.7
+- Generated 2019-06-01 for `oos`.
+
+2019-08-14 Version: 1.0.6
+- Generated 2019-06-01 for `oos`.
+
+2019-08-12 Version: 1.0.5
+- Generated 2019-06-01 for `oos`.
+
+2019-07-08 Version: 1.0.1
+- ActionName change to OOSActionName from ListActions API param and response.
+
+2019-06-20 Version: 1.0.0
+- OOS SDK first release for managing of templates, executions and actions.
+

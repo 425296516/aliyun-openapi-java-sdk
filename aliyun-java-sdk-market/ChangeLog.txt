@@ -1,0 +1,102 @@
+2020-05-12 Version: 2.0.32
+- BugFix for DescribeProjectMessages not returned the totalCount property.
+
+2020-05-12 Version: 2.0.32
+- BugFix for DescribeProjectMessages not returned the totalCount property.
+
+2020-05-11 Version: 2.0.31
+- Bugfix for DescribeProjectAttachments Integer AttachmentType updated to String AttachmentType.
+
+2020-04-29 Version: 2.0.30
+- Supported the Marketplace Delivery Center Project Api.
+- About Project info.
+
+2020-02-07 Version: 2.0.30
+- Update describeInstance.
+
+2019-11-13 Version: 2.0.29
+- Update createOrder.
+- Update describePrice.
+
+2019-10-16 Version: 2.0.28
+- Update describePrice.
+- Update describeOrder.
+
+2019-10-16 Version: 2.0.27
+- Update describePrice.
+- Update describeOrder.
+
+2019-10-16 Version: 2.0.26
+- Update describePrice.
+- Update describeOrder.
+
+2019-10-09 Version: 2.0.25
+- Update describeInstance.
+
+2019-09-05 Version: 2.0.24
+- Generated 2015-11-01 for `Market`.
+
+2019-09-04 Version: 2.0.23
+- Generated 2015-11-01 for `Market`.
+
+2019-08-28 Version: 2.0.17
+- Add rate OpenAPI.
+
+2019-08-27 Version: 2.0.23
+- Fixed endpoint data init.
+
+2019-07-30 Version: 2.0.22
+- Generated 2015-11-01 for `Market`.
+
+2019-07-25 Version: 2.0.21
+- Update describeInstance.
+
+2019-07-25 Version: 2.0.20
+- Update describeInstance.
+
+2019-07-25 Version: 2.0.19
+- Update describeInstance.
+
+2019-07-25 Version: 2.0.18
+- Update describeInstance.
+
+2019-06-25 Version: 2.0.17
+- Add rate OpenAPI.
+
+2019-04-15 Version: 2.0.15
+1, Contract event notify support.
+
+2019-04-15 Version: 2.0.7
+1, Support contract event notify.
+
+2019-03-13 Version: 2.0.14
+1, Distinguish between system and service parameters
+
+2018-09-05 Version: 2.0.13
+1, Modify DescribeProducts Interface.
+2, Modify Identification require false for ActivateLicense
+
+2018-09-03 Version: 2.0.12
+1, add DescribeProducts interface
+2, modify DescribePrice implement
+
+2018-09-03 Version: 2.0.11
+1, Add DescribeProducts interface.
+2, Modify DescribeProductPrice implements.
+
+2018-08-22 Version: 2.0.10
+1, add DescribePrice implement
+2, add DescribeProducts interface
+
+2018-05-15 Version: 2.0.9
+1, add instanceId for createorder
+
+
+2018-05-14 Version: 2.0.8
+1, add instanceIds for createorder
+
+
+2018-04-18 Version: 2.0.7
+1, describeproduct add response parameters usecount and score
+
+

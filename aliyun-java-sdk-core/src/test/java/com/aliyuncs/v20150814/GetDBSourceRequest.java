@@ -23,41 +23,39 @@ import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
- * @version 
  */
 public class GetDBSourceRequest extends RoaAcsRequest<GetDBSourceResponse> {
-	
-	public GetDBSourceRequest() {
-		super("Cms", "2015-08-14", "GetDBSource");
-		setUriPattern("/projects/[ProjectName]/sources/[SourceName]");
-		setMethod(MethodType.GET);
-	}
 
-	private String projectName;
+    private String projectName;
+    private String sourceName;
 
-	private String sourceName;
+    public GetDBSourceRequest() {
+        super("Cms", "2015-08-14", "GetDBSource");
+        setUriPattern("/projects/[ProjectName]/sources/[SourceName]");
+        setMethod(MethodType.GET);
+    }
 
-	public String getProjectName() {
-		return this.projectName;
-	}
+    public String getProjectName() {
+        return this.projectName;
+    }
 
-	public void setProjectName(String projectName) {
-		this.projectName = projectName;
-		putPathParameter("ProjectName", projectName);
-	}
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+        putPathParameter("ProjectName", projectName);
+    }
 
-	public String getSourceName() {
-		return this.sourceName;
-	}
+    public String getSourceName() {
+        return this.sourceName;
+    }
 
-	public void setSourceName(String sourceName) {
-		this.sourceName = sourceName;
-		putPathParameter("SourceName", sourceName);
-	}
+    public void setSourceName(String sourceName) {
+        this.sourceName = sourceName;
+        putPathParameter("SourceName", sourceName);
+    }
 
-	@Override
-	public Class<GetDBSourceResponse> getResponseClass() {
-		return GetDBSourceResponse.class;
-	}
+    @Override
+    public Class<GetDBSourceResponse> getResponseClass() {
+        return GetDBSourceResponse.class;
+    }
 
 }

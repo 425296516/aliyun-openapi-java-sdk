@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -97,6 +93,8 @@ public class DescribeImagesResponse extends AcsResponse {
 
 		private String imageName;
 
+		private String imageFamily;
+
 		private String imageVersion;
 
 		private String description;
@@ -105,9 +103,15 @@ public class DescribeImagesResponse extends AcsResponse {
 
 		private String imageOwnerAlias;
 
+		private Boolean isSupportIoOptimized;
+
+		private Boolean isSupportCloudinit;
+
 		private String oSName;
 
-		private Architecture architecture;
+		private String oSNameEn;
+
+		private String architecture;
 
 		private String status;
 
@@ -127,7 +131,11 @@ public class DescribeImagesResponse extends AcsResponse {
 
 		private Boolean isCopied;
 
+		private String resourceGroupId;
+
 		private List<DiskDeviceMapping> diskDeviceMappings;
+
+		private List<Tag> tags;
 
 		public String getProgress() {
 			return this.progress;
@@ -151,6 +159,14 @@ public class DescribeImagesResponse extends AcsResponse {
 
 		public void setImageName(String imageName) {
 			this.imageName = imageName;
+		}
+
+		public String getImageFamily() {
+			return this.imageFamily;
+		}
+
+		public void setImageFamily(String imageFamily) {
+			this.imageFamily = imageFamily;
 		}
 
 		public String getImageVersion() {
@@ -185,6 +201,22 @@ public class DescribeImagesResponse extends AcsResponse {
 			this.imageOwnerAlias = imageOwnerAlias;
 		}
 
+		public Boolean getIsSupportIoOptimized() {
+			return this.isSupportIoOptimized;
+		}
+
+		public void setIsSupportIoOptimized(Boolean isSupportIoOptimized) {
+			this.isSupportIoOptimized = isSupportIoOptimized;
+		}
+
+		public Boolean getIsSupportCloudinit() {
+			return this.isSupportCloudinit;
+		}
+
+		public void setIsSupportCloudinit(Boolean isSupportCloudinit) {
+			this.isSupportCloudinit = isSupportCloudinit;
+		}
+
 		public String getOSName() {
 			return this.oSName;
 		}
@@ -193,11 +225,19 @@ public class DescribeImagesResponse extends AcsResponse {
 			this.oSName = oSName;
 		}
 
-		public Architecture getArchitecture() {
+		public String getOSNameEn() {
+			return this.oSNameEn;
+		}
+
+		public void setOSNameEn(String oSNameEn) {
+			this.oSNameEn = oSNameEn;
+		}
+
+		public String getArchitecture() {
 			return this.architecture;
 		}
 
-		public void setArchitecture(Architecture architecture) {
+		public void setArchitecture(String architecture) {
 			this.architecture = architecture;
 		}
 
@@ -273,6 +313,14 @@ public class DescribeImagesResponse extends AcsResponse {
 			this.isCopied = isCopied;
 		}
 
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
 		public List<DiskDeviceMapping> getDiskDeviceMappings() {
 			return this.diskDeviceMappings;
 		}
@@ -281,37 +329,12 @@ public class DescribeImagesResponse extends AcsResponse {
 			this.diskDeviceMappings = diskDeviceMappings;
 		}
 
-		public enum Architecture {
-		
-			X86_64("x86_64"),
-			I386("i386"),;
-			
-		    private String stringValue;
-		
-			Architecture(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static Architecture getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (Architecture architecture : Architecture.values()) {
-					if(architecture.getStringValue().equals(stringValue)){
-						return architecture;
-					}
-				}
-		    	return null;
-		    }
+		public List<Tag> getTags() {
+			return this.tags;
+		}
+
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
 		}
 
 		public static class DiskDeviceMapping {
@@ -321,6 +344,18 @@ public class DescribeImagesResponse extends AcsResponse {
 			private String size;
 
 			private String device;
+
+			private String type;
+
+			private String format;
+
+			private String importOSSBucket;
+
+			private String importOSSObject;
+
+			private String progress;
+
+			private Integer remainTime;
 
 			public String getSnapshotId() {
 				return this.snapshotId;
@@ -344,6 +379,77 @@ public class DescribeImagesResponse extends AcsResponse {
 
 			public void setDevice(String device) {
 				this.device = device;
+			}
+
+			public String getType() {
+				return this.type;
+			}
+
+			public void setType(String type) {
+				this.type = type;
+			}
+
+			public String getFormat() {
+				return this.format;
+			}
+
+			public void setFormat(String format) {
+				this.format = format;
+			}
+
+			public String getImportOSSBucket() {
+				return this.importOSSBucket;
+			}
+
+			public void setImportOSSBucket(String importOSSBucket) {
+				this.importOSSBucket = importOSSBucket;
+			}
+
+			public String getImportOSSObject() {
+				return this.importOSSObject;
+			}
+
+			public void setImportOSSObject(String importOSSObject) {
+				this.importOSSObject = importOSSObject;
+			}
+
+			public String getProgress() {
+				return this.progress;
+			}
+
+			public void setProgress(String progress) {
+				this.progress = progress;
+			}
+
+			public Integer getRemainTime() {
+				return this.remainTime;
+			}
+
+			public void setRemainTime(Integer remainTime) {
+				this.remainTime = remainTime;
+			}
+		}
+
+		public static class Tag {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
 			}
 		}
 	}

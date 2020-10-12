@@ -1,0 +1,40 @@
+2019-04-25 Version: 1.0.7
+1, support mode of configFileVolume
+
+2019-04-23 Version: 1.0.6
+1, support mode of configFileVolume
+
+2019-04-10 Version: 1.0.6
+1, support metric
+2, support emptyDirVolume memory medium
+
+2019-03-20 Version: 1.0.5
+1, support template api.
+2, support hostAliases/clientToken
+
+2019-03-13 Version: 1.0.4
+1, Add application name support for config center APIs.
+2, Add GetCluster API.
+3, Support debug switch in user region APIs.
+
+2019-03-13 Version: 1.0.4
+1, Add application name support for config center APIs.
+2, Add GetCluster API.
+3, Support debug switch in user region APIs.
+
+2019-03-13 Version: 1.0.4
+1, support restart/update for eci.
+2, support describePrice and exec api.
+3, support subpath for volumemount
+
+2018-12-29 Version: 1.0.3
+1, Add probe for container.
+2, Add securityContext for container.
+3, Add dnsConfig for pod.
+3, Add unmarshall tool for ECI
+
+2018-11-07 Version: 1.0.0
+1, The beta version SDK of ECI.
+2, Only supports Java and Python.
+3, Go will be supported soon
+

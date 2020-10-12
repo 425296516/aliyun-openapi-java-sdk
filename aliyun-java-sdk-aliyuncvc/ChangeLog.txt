@@ -1,0 +1,130 @@
+2020-09-25 Version: 1.0.10.1
+- Public beta version.
+- Add Api Overseas.
+
+2020-09-25 Version: 1.0.10
+- Public beta version.
+- Add Api Overseas.
+
+2020-08-18 Version: 1.0.9.9
+- Public beta version.
+- Add Api Overseas.
+
+2020-08-17 Version: 1.0.9.8
+- Public beta version.
+- Add Api Overseas.
+
+2020-07-17 Version: 1.0.9.7
+- Public beta version.
+- Add Api Overseas.
+
+2020-06-23 Version: 1.0.9.6
+- Public beta version.
+- Add Api Overseas.
+
+2020-06-22 Version: 1.0.9.5
+- Public beta version.
+- Add Api Overseas.
+
+2020-06-18 Version: 1.0.9.4
+- Public beta version.
+- Add Api Overseas.
+
+2020-06-18 Version: 1.0.9.4
+- Public beta version.
+- Add Api Overseas.
+
+2020-06-18 Version: 1.0.9.4
+- Public beta version.
+- Add Api Overseas.
+
+2020-06-12 Version: 1.0.9.3
+- Public beta version.
+- Add Api Overseas.
+
+2020-06-12 Version: 1.0.9.2
+- Public beta version.
+- Add Api Overseas.
+
+2020-06-11 Version: 1.0.9.1
+- Public beta version.
+- Add Api Overseas.
+
+2020-06-10 Version: 1.0.9.1
+- Public beta version.
+- Add Api Overseas.
+
+2020-05-20 Version: 1.0.9
+- Public beta version.
+- Add Api Overseas.
+
+2020-05-18 Version: 1.0.8.1
+- Public beta version.
+- Add Api Overseas.
+
+2020-05-15 Version: 1.0.8
+- Public beta version.
+- Add Api Overseas.
+
+2020-05-13 Version: 1.0.7.1
+- Public beta version.
+- Add Api Overseas.
+
+2020-05-05 Version: 1.0.7
+- Public beta version.
+- Add Api Overseas.
+
+2020-04-08 Version: 1.0.6
+- Public beta version.
+- Add Api Overseas.
+
+2020-04-02 Version: 1.0.4-hk
+- Public beta version.
+- Add Api Overseas.
+
+2020-03-04 Version: 1.0.3
+- Public beta version.
+- Add Api GetMeetingMebers.
+
+2019-11-14 Version: 1.0.2
+- Initial construction.
+- Public beta version.
+- Supported AliyunController for Interface.
+- Supported ConsoleController for Interface.
+- Supported AccountController for Interface.
+
+2019-10-31 Version: 1.0.1
+- Initial construction.
+- Public beta version.
+- Supported AliyunController for Interface.
+- Supported ConsoleController for Interface.
+- Supported AccountController for Interface.
+
+2019-10-31 Version: 1.0.1
+- Initial construction.
+- Public beta version.
+- Supported AliyunController for Interface.
+- Supported ConsoleController for Interface.
+- Supported AccountController for Interface.
+
+2019-10-31 Version: 1.0.1
+- Initial construction.
+- Public beta version.
+- Supported AliyunController for Interface.
+- Supported ConsoleController for Interface.
+- Supported AccountController for Interface.
+
+2019-10-31 Version: 1.0.0
+- Initial construction.
+- Public beta version.
+- Supported AliyunController for Interface.
+- Supported ConsoleController for Interface.
+- Supported AccountController for Interface.
+
+2019-10-25 Version: 1.0.0
+- Initial construction.
+- Public beta version.
+- Supported AliyunController for Interface.
+- Supported ConsoleController for Interface.
+- Supported AccountController for Interface.
+

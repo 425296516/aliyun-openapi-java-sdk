@@ -1,0 +1,77 @@
+2020-09-24 Version: 1.1.4
+- Support Conference Call.
+
+2020-09-22 Version: 1.1.3
+- Upgrade hotline num.
+
+2020-09-14 Version: 1.1.2
+- Generated 2020-07-02 for `scsp`.
+
+2020-09-10 Version: 1.1.1
+- Support GetHotlineWaitingNumber in SDK.
+- Support TransferCallToSkillGroup.
+- Support JoinThirdCall.
+- Support HangupThirdCall.
+- Support FetchCall.
+- Support HoldCall.
+- Add GetHotlineCallAction.
+
+2020-09-03 Version: 1.1.0
+- Generated 2020-07-02 for `scsp`.
+
+2020-09-03 Version: 1.1.0
+- Generated 2020-07-02 for `scsp`.
+
+2020-09-02 Version: 1.0.9
+- Support QueryHotlineSession in SDK.
+
+2020-09-01 Version: 1.0.8
+- Generated 2020-07-02 for `scsp`.
+
+2020-08-31 Version: 1.0.7
+- Generated 2020-07-02 for `scsp`.
+
+2020-08-13 Version: 1.0.6
+- Support ListHotlineRecord.
+
+2020-08-06 Version: 1.0.5
+- Support CreateSkillGroup.
+- Update ListSkillGroup.
+- Update GetLoginUser.
+
+2020-07-31 Version: 1.0.4
+- Generated 2020-07-02 for `scsp`.
+
+2020-07-30 Version: 1.0.4
+- Support ListSkillGroup.
+- Support GetHotlineAgentDetail.
+- Support SuspendHotlineService.
+- Support ListOutboundPhoneNumber.
+- Support ListAgentBySkillGroupId.
+
+2020-07-21 Version: 1.0.3
+- Support Aliyun and RAM AK and SK.
+
+2020-07-09 Version: 1.0.2
+- Support Hotline OpenAPI.
+
+2020-07-07 Version: 1.0.1
+- Support CreateSkillGroup.
+- Support QuerySkillGroups.
+- Support RemoveSkillGroup.
+- Support UpdateSkillGroup.
+- Add SkillGroupIds in CreateAgent.
+- Add SkillGroupIds in UpdateAgent.
+
+2020-07-02 Version: 1.0.0
+- Support CreateAgent API.
+- Support DeleteAgent API.
+- Support UpdateAgent API.
+- Support GetAgent API.
+
+2020-07-02 Version: 1.0.0
+- Support CreateAgent API.
+- Support DeleteAgent API.
+- Support UpdateAgent API.
+- Support GetAgent API.
+

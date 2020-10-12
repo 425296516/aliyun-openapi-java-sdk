@@ -3,7 +3,7 @@
     <groupId>com.aliyun</groupId>
     <artifactId>aliyun-java-sdk-batchcompute</artifactId>
     <packaging>jar</packaging>
-    <version>2.1.1</version>
+    <version>6.2.4</version>
     <name>aliyun-java-sdk-batchcompute</name>
     <url>http://www.aliyun.com</url>
     <description>Aliyun Open API SDK for Java
@@ -14,16 +14,28 @@
         版权所有 （C）阿里云计算有限公司
 
         http://www.aliyun.com</description>
+
+<distributionManagement>
+    <snapshotRepository>
+        <id>sonatype-nexus-snapshots</id>
+        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+        <id>sonatype-nexus-staging</id>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+</distributionManagement>
+
     <licenses>
         <license>
-            <name></name>
-            <url></url>
-            <distribution></distribution>
+            <name/>
+            <url/>
+            <distribution/>
         </license>
     </licenses>
     <scm>
-        <url></url>
-        <connection></connection>
+        <url/>
+        <connection/>
     </scm>
     <developers>
         <developer>
@@ -37,19 +49,29 @@
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-core</artifactId>
             <optional>true</optional>
-            <version>2.1.9</version>
+            <version>4.1.2</version>
         </dependency>
+
         <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.2</version>
+            <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+             <version>2.10.0.pr1</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -75,10 +97,14 @@
                         </additionalClasspathElement>
                     </additionalClasspathElements>
                     <includes>
-                        <include>**/batchcompute/functiontest/*.java</include>
-                        <include>**/batchcompute/modelunittest/*.java</include>
-                        <include>**/batchcompute/transformunittest/*.java</include>
+                        <include>**/batchcompute/functiontest/**/*.java</include>
+                        <include>**/batchcompute/modelunittest/**/*.java</include>
+                        <include>**/batchcompute/transformunittest/**/*.java</include>
+
                     </includes>
+                    <excludes>
+                        <exclude>**/batchcompute/functiontest/v20151111/ClusterInstanceTest.java</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
 
@@ -148,6 +174,31 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+				    <execution>
+					<id>sign-artifacts</id>
+					<phase>verify</phase>
+					 <goals>
+					     <goal>sign</goal>
+					 </goals>
+				    </execution>
+				</executions>
+			 </plugin>
+			 <plugin>
+			     <groupId>org.sonatype.plugins</groupId>
+			      <artifactId>nexus-staging-maven-plugin</artifactId>
+			      <version>1.6.3</version>
+				  <extensions>true</extensions>
+				  <configuration>
+				      <serverId>sonatype-nexus-staging</serverId>
+				      <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+				      <autoReleaseAfterClose>true</autoReleaseAfterClose>
+			      </configuration>
+			 </plugin>
         </plugins>
     </build>
 </project>

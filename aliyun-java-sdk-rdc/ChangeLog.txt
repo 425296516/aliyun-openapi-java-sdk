@@ -1,0 +1,27 @@
+2020-06-12 Version: 1.9.20
+- Fix UpdateWorkitem.
+
+2019-08-08 Version: 1.9.1
+- Fix UpdateWorkitem.
+
+2019-08-08 Version: 1.9.0
+- Modify UpdateWorkitem.
+
+2019-06-17 Version: 1.8.5
+- Add addRamMember api
+
+2019-06-13 Version: 1.8.4
+- Generated 2018-01-04, 2018-04-26, 2018-08-16, 2018-08-21 for `Rdc`
+
+2019-06-11 Version: 1.8.1
+Enable add new user in rdc company via sdk
+
+2019-06-11 Version: 1.6.1
+Add SyncUserToRdc, GetJoinCode, JoinCompany, ApproveJoinCompany for add new user into rdc
+
+2019-06-11 Version: 1.8.0
+- Generated 2018-08-21 for `Rdc`
+
+2019-03-05 Version: 1.5.0
+1, Add both api, Workitem and Project
+

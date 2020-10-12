@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -57,7 +53,7 @@ public class DescribeDatabasesResponse extends AcsResponse {
 
 		private String engine;
 
-		private DBStatus dBStatus;
+		private String dBStatus;
 
 		private String characterSetName;
 
@@ -89,11 +85,11 @@ public class DescribeDatabasesResponse extends AcsResponse {
 			this.engine = engine;
 		}
 
-		public DBStatus getDBStatus() {
+		public String getDBStatus() {
 			return this.dBStatus;
 		}
 
-		public void setDBStatus(DBStatus dBStatus) {
+		public void setDBStatus(String dBStatus) {
 			this.dBStatus = dBStatus;
 		}
 
@@ -121,45 +117,13 @@ public class DescribeDatabasesResponse extends AcsResponse {
 			this.accounts = accounts;
 		}
 
-		public enum DBStatus {
-		
-			DELETING("Deleting"),
-			RUNNING("Running"),
-			CREATING("Creating"),;
-			
-		    private String stringValue;
-		
-			DBStatus(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static DBStatus getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (DBStatus dBStatus : DBStatus.values()) {
-					if(dBStatus.getStringValue().equals(stringValue)){
-						return dBStatus;
-					}
-				}
-		    	return null;
-		    }
-		}
-
 		public static class AccountPrivilegeInfo {
 
 			private String account;
 
 			private String accountPrivilege;
+
+			private String accountPrivilegeDetail;
 
 			public String getAccount() {
 				return this.account;
@@ -175,6 +139,14 @@ public class DescribeDatabasesResponse extends AcsResponse {
 
 			public void setAccountPrivilege(String accountPrivilege) {
 				this.accountPrivilege = accountPrivilege;
+			}
+
+			public String getAccountPrivilegeDetail() {
+				return this.accountPrivilegeDetail;
+			}
+
+			public void setAccountPrivilegeDetail(String accountPrivilegeDetail) {
+				this.accountPrivilegeDetail = accountPrivilegeDetail;
 			}
 		}
 	}

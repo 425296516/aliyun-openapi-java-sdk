@@ -1,168 +1,151 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.aliyuncs.profile;
 
-import static org.junit.Assert.*;
-
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import org.junit.Assert;
+import com.aliyuncs.auth.Credential;
+import com.aliyuncs.auth.ICredentialProvider;
+import com.aliyuncs.auth.StaticCredentialsProvider;
+import com.aliyuncs.endpoint.DefaultEndpointResolver;
+import com.aliyuncs.endpoint.ResolveEndpointRequest;
+import com.aliyuncs.exceptions.ClientException;
+import com.aliyuncs.http.HttpClientConfig;
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
+import org.slf4j.Logger;
 
-import com.aliyuncs.AcsError;
-import com.aliyuncs.DefaultAcsClient;
-import com.aliyuncs.http.FormatType;
-import com.aliyuncs.http.HttpResponse;
-import com.aliyuncs.regions.Endpoint;
-import com.aliyuncs.regions.ProductDomain;
-import com.sun.org.apache.regexp.internal.recompile;
+import static com.aliyuncs.utils.LogUtils.DEFAULT_LOG_FORMAT;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
 
 public class DefaultProfileTest {
 
-	@Test
-	public void test() {
-		testProfileCredential();
-	}
+    @Before
+    public void testSingleDefaultProfile() {
+        DefaultProfile profile1 = DefaultProfile.getProfile();
+        DefaultProfile profile2 = DefaultProfile.getProfile();
+        assertTrue(profile2.equals(profile1));
+    }
 
-	private void testProfileCredential() {
-		IClientProfile iprofile = DefaultProfile.getProfile("cn-beijing", "testid", "testsecret");
-		assertEquals("cn-beijing", iprofile.getRegionId());
-		assertEquals("testid", iprofile.getCredential().getAccessKeyId());
-		assertEquals("testsecret", iprofile.getCredential().getAccessSecret());
-	}
-	
-	@Test
-	public void addEndpoint_Test() throws Exception {
-		try {
-			IClientProfile clientProfile = DefaultProfile.getProfile();
-			clientProfile.getEndpoints();
-			Method method = DefaultProfile.class.getDeclaredMethod("addEndpoint_", String.class, String.class, String.class, String.class);
-			method.setAccessible(true);
-			method.invoke(DefaultProfile.class, "cn-shanghai", "cn-shanghai", "Oss","oss-admin.aliyuncs.com");
-			List<Endpoint> endpoints = clientProfile.getEndpoints();
-			boolean success = false;
-			for (Endpoint endpoint : endpoints) {
-				if("cn-shanghai".equals(endpoint.getName())){
-					ProductDomain productDomain = getProductDomain(endpoint.getProductDomains(), "oss-admin.aliyuncs.com","Oss");
-					String regionId = getRegionId(endpoint.getRegionIds(), "cn-shanghai");
-					if(null != productDomain && null != regionId){
-						success = true;
-					}
-				}
-			}
-			Assert.assertTrue(success);
-		} catch (Exception e) {
-			Assert.fail();
-		}	
-	}
-	
-	private String getRegionId(Set<String> regionIds,String regionId) {
-		for (String r : regionIds) {
-			if(r.equals(regionId)){
-				return r;
-			}
-		}
-		return null;
-	}
-	
-	private ProductDomain getProductDomain(List<ProductDomain> productDomains, String domainName, String productName) {
-		for (ProductDomain productDomain : productDomains) {
-			if(domainName.equals(productDomain.getDomianName()) && productName.equals(productDomain.getProductName())){
-				return productDomain;
-			}
-		}
-		return null;
-	}
-	
-	@Test
-	public void updateEndpointTest() {
-		try {
-			Set<String> regions = new HashSet<String>();	
-			
-			List<ProductDomain> productDomains = new ArrayList<ProductDomain>();
-			productDomains.add(new ProductDomain("Ecs", "ecs.aliyuncs.com"));
-			productDomains.add(new ProductDomain("Rds", "rds.aliyuncs.com"));
-			productDomains.add(new ProductDomain("Oss", "oss.aliyuncs.com"));
-	
-			Endpoint endpoint = new Endpoint("cn-hangzhou", regions, productDomains);
-			
-			Method method = DefaultProfile.class.getDeclaredMethod("updateEndpoint", String.class, String.class, String.class,Endpoint.class);
-			method.setAccessible(true);
-			
-			method.invoke(DefaultProfile.class, "cn-hangzhou", "Oss", "oss-admin.aliyuncs.com", endpoint);
-			
-			Method method_findProductDomain = DefaultProfile.class.getDeclaredMethod("findProductDomain", List.class, String.class);
-			method_findProductDomain.setAccessible(true);
-			ProductDomain productDomain =(ProductDomain)method_findProductDomain.invoke(DefaultProfile.class, productDomains, "Oss");
-			Assert.assertTrue("Oss".equals(productDomain.getProductName()));
-			Assert.assertTrue("oss-admin.aliyuncs.com".equals(productDomain.getDomianName()));
-			
-			productDomain =(ProductDomain)method_findProductDomain.invoke(DefaultProfile.class, productDomains, "Oss");
-			Assert.assertTrue("Oss".equals(productDomain.getProductName()));
-			Assert.assertTrue("oss-admin.aliyuncs.com".equals(productDomain.getDomianName()));
-			
-			Assert.assertTrue("cn-hangzhou".equals(endpoint.getName()));
-			
-		} catch (Exception e) {
-			Assert.fail();
-		}	
-	}
-	
-	@Test
-	public void findEndpointByNameTest() {
-		try {
-			DefaultProfile.addEndpoint("cn-hangzhou", "cn-hangzhou", "Ecs", "ecs.aliyuncs.com");
-			DefaultProfile.addEndpoint("cn-hangzhou", "cn-beijing", "Ecs", "ecs.aliyuncs.com");
-			DefaultProfile.addEndpoint("cn-hangzhou", "cn-shanghai", "Ecs", "ecs.aliyuncs.com");
-			Method method = DefaultProfile.class.getDeclaredMethod("findEndpointByRegionId", String.class);
-			method.setAccessible(true);
-			
-			Endpoint endpoint =(Endpoint)method.invoke(DefaultProfile.class, "cn-hangzhou");
-			Assert.assertTrue("cn-hangzhou".equals(endpoint.getName()));
-			
-		} catch (Exception e) {
-			Assert.fail();
-		}	
-	}
-	
-	@Test
-	public void findProductDomainTest(){
-		try {
-			List<ProductDomain> productDomains = new ArrayList<ProductDomain>();
-			productDomains.add(new ProductDomain("Ecs", "ecs.aliyuncs.com"));
-			productDomains.add(new ProductDomain("Rds", "rds.aliyuncs.com"));
-			productDomains.add(new ProductDomain("Ocs", "ocs.aliyuncs.com"));
-			
-			Method method = DefaultProfile.class.getDeclaredMethod("findProductDomain", List.class, String.class);
-			method.setAccessible(true);
-			ProductDomain productDomain =(ProductDomain)method.invoke(DefaultProfile.class, productDomains, "Ecs");
-			Assert.assertTrue("Ecs".equals(productDomain.getProductName()));
-			Assert.assertTrue("ecs.aliyuncs.com".equals(productDomain.getDomianName()));
-		} catch (Exception e) {
-			Assert.fail();
-		}
-	}
-	
+    @SuppressWarnings("deprecation")
+    @Test
+    public void testGetCredential() {
+        DefaultProfile profile = DefaultProfile.getProfile("regionId");
+        assertNull(profile.getCredential());
+        StaticCredentialsProvider credentialsProvider = mock(StaticCredentialsProvider.class);
+        profile.setCredentialsProvider(credentialsProvider);
+        assertTrue(profile.getCredential() instanceof Credential);
 
-	
+        ICredentialProvider iCredentialProvider = mock(ICredentialProvider.class);
+        profile = DefaultProfile.getProfile("regionId", iCredentialProvider);
+        Credential credential = mock(Credential.class);
+        Mockito.when(iCredentialProvider.fresh()).thenReturn(credential);
+        assertTrue(profile.getCredential() == credential);
+        profile.setCredentialsProvider(credentialsProvider);
+        assertTrue(profile.getCredential() == credential);
+    }
+
+    @Test
+    public void getRegionId() {
+        DefaultProfile profile = DefaultProfile.getProfile("regionId");
+        assertEquals("regionId", profile.getRegionId());
+    }
+
+    @Test
+    public void getFormat() {
+        DefaultProfile profile = DefaultProfile.getProfile("regionId");
+        assertNull(profile.getFormat());
+    }
+
+    @SuppressWarnings("deprecation")
+    @Test
+    public void testGetSigner() {
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou");
+        assertNull(profile.getSigner());
+    }
+
+    @Test
+    public void testGetSetCertPath() {
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou");
+        assertNull(profile.getCertPath());
+        profile.setCertPath("certPath");
+        assertEquals("certPath", profile.getCertPath());
+
+        profile.enableUsingVpcEndpoint();
+        assertTrue(profile.isUsingVpcEndpoint());
+    }
+
+    @Test
+    public void testGetSetLogger() {
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou");
+        assertNull(profile.getLogger());
+        Logger logger = mock(Logger.class);
+        profile.setLogger(logger);
+        assertEquals(logger, profile.getLogger());
+    }
+
+    @Test
+    public void testGetSetLogFormat() {
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou");
+        assertEquals(DEFAULT_LOG_FORMAT, profile.getLogFormat());
+        profile.setLogFormat("{uri} {request}");
+        assertEquals("{uri} {request}", profile.getLogFormat());
+    }
+
+    @Test
+    public void testIsUsingInternalLocationService() {
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou");
+        assertFalse(profile.isUsingInternalLocationService());
+        profile.enableUsingInternalLocationService();
+        assertTrue(profile.isUsingInternalLocationService());
+    }
+
+    @Test
+    public void testHttpClientConfig() {
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou");
+        assertTrue(profile.getHttpClientConfig() instanceof HttpClientConfig);
+        profile.setHttpClientConfig(null);
+        assertNull(profile.getHttpClientConfig());
+    }
+
+    @SuppressWarnings("deprecation")
+    @Test
+    public void testProfileConstructor() {
+        DefaultProfile profile1 = DefaultProfile.getProfile("cn-hangzhou");
+        assertEquals("cn-hangzhou", profile1.getRegionId());
+        assertNull(profile1.getCredential());
+
+        ICredentialProvider icredential = mock(ICredentialProvider.class);
+        DefaultProfile profile2 = DefaultProfile.getProfile("cn-shanghai", icredential);
+        assertEquals("cn-shanghai", profile2.getRegionId());
+        assertTrue(profile1 != profile2);
+
+        DefaultProfile profile;
+        profile = DefaultProfile.getProfile("cn-qingdao", "accessKeyId", "secret");
+        assertEquals("cn-qingdao", profile.getRegionId());
+        assertEquals("accessKeyId", profile.getCredential().getAccessKeyId());
+        assertEquals("secret", profile.getCredential().getAccessSecret());
+
+        profile = DefaultProfile.getProfile("cn-nanjing", "accessKeyId", "accessSecret", "stsToken");
+        assertEquals("cn-nanjing", profile.getRegionId());
+        assertEquals("accessKeyId", profile.getCredential().getAccessKeyId());
+        assertEquals("accessSecret", profile.getCredential().getAccessSecret());
+        assertEquals("stsToken", profile.getCredential().getSecurityToken());
+    }
+
+    @Test
+    public void deprecatedTest() {
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou");
+        profile.setUsingInternalLocationService();
+        assertTrue(profile.isUsingInternalLocationService());
+
+    }
+
+    @SuppressWarnings("deprecation")
+    @Test
+    public void testAddEndpoint() throws ClientException {
+        DefaultProfile.addEndpoint("endpointName", "regionId", "product", "domain");
+        ResolveEndpointRequest request = mock(ResolveEndpointRequest.class);
+        request.regionId = "regionId";
+        assertTrue(DefaultEndpointResolver.predefinedEndpointResolver.isRegionIdValid(request));
+    }
+
 }

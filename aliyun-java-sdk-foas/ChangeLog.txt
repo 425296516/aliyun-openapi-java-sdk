@@ -1,0 +1,56 @@
+2020-08-19 Version: 2.8.0
+- Add autoscale param for CommitJob api.
+- Add pause with checkpoint param for ModifyInstanceState api.
+- Add return value autoScaleParams for GetInstance api.
+- Add return value globalJobConfig for GetProject api.
+- Add globalJobConfig param for UpdateProject api.
+
+2020-07-01 Version: 2.7.0
+- Add return value GetClusterQueueInfo api.
+
+2020-06-24 Version: 2.7.0
+- Add return value GetClusterQueueInfo api.
+
+2020-03-05 Version: 2.6.0
+- Add UpdateQueue api.
+
+2019-09-11 Version: 2.3.4
+- Fixed setUriPattern method not exist.
+
+2019-09-11 Version: 2.3.4
+- Fixed setUriPattern method not exist.
+
+2019-09-05 Version: 2.3.3
+- Generated 2018-11-11 for `foas`.
+
+2019-08-27 Version: 2.3.1
+- Fixed endpoint data init.
+
+2019-07-29 Version: 2.3.0
+- Add return parameter of api getProject,getJob,ListProject,ListJob.
+- Add authentication of ListProject api when use sub account.
+
+2019-07-01 Version: 2.2.0
+- Add autoscale api.
+- ListJob api add perameter isShowFullField.
+
+2019-06-10 Version: 2.1.0
+1,add CreateCellClusterOrder api.
+2,GetProject api add return parameter region.
+3,ListProject api add return parameter region.
+
+2019-04-16 Version: 2.0.1
+1, add output parameters for ListCluster api.
+
+2019-04-04 Version: 2.0.0
+1, add api of cluster operation.
+2, add api of project operation.
+
+2019-03-05 Version: 1.1.0
+1, add ListProject api.
+2, GetRefPackageJobRequest api add pageSize and pageIndex parameter.
+3, GetPackageResponse api add tag return value.
+
+2019-01-25 Version: 1.0.0
+1, the first version 1.0.0 of aliyun-java-sdk-foas
+

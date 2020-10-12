@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -89,6 +85,8 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 
 		private String creationTime;
 
+		private String resourceGroupId;
+
 		private List<RouteEntry> routeEntrys;
 
 		public String getVRouterId() {
@@ -123,6 +121,14 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 			this.creationTime = creationTime;
 		}
 
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
 		public List<RouteEntry> getRouteEntrys() {
 			return this.routeEntrys;
 		}
@@ -142,6 +148,10 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 			private String status;
 
 			private String instanceId;
+
+			private String nextHopType;
+
+			private List<NextHop> nextHops;
 
 			public String getRouteTableId() {
 				return this.routeTableId;
@@ -181,6 +191,65 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 
 			public void setInstanceId(String instanceId) {
 				this.instanceId = instanceId;
+			}
+
+			public String getNextHopType() {
+				return this.nextHopType;
+			}
+
+			public void setNextHopType(String nextHopType) {
+				this.nextHopType = nextHopType;
+			}
+
+			public List<NextHop> getNextHops() {
+				return this.nextHops;
+			}
+
+			public void setNextHops(List<NextHop> nextHops) {
+				this.nextHops = nextHops;
+			}
+
+			public static class NextHop {
+
+				private String nextHopType;
+
+				private String nextHopId;
+
+				private Integer enabled;
+
+				private Integer weight;
+
+				public String getNextHopType() {
+					return this.nextHopType;
+				}
+
+				public void setNextHopType(String nextHopType) {
+					this.nextHopType = nextHopType;
+				}
+
+				public String getNextHopId() {
+					return this.nextHopId;
+				}
+
+				public void setNextHopId(String nextHopId) {
+					this.nextHopId = nextHopId;
+				}
+
+				public Integer getEnabled() {
+					return this.enabled;
+				}
+
+				public void setEnabled(Integer enabled) {
+					this.enabled = enabled;
+				}
+
+				public Integer getWeight() {
+					return this.weight;
+				}
+
+				public void setWeight(Integer weight) {
+					this.weight = weight;
+				}
 			}
 		}
 	}

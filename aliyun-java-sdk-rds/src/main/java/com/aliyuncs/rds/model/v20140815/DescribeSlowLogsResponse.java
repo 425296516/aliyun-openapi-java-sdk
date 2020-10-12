@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -30,6 +26,8 @@ import com.aliyuncs.transform.UnmarshallerContext;
 public class DescribeSlowLogsResponse extends AcsResponse {
 
 	private String requestId;
+
+	private String dBInstanceId;
 
 	private String engine;
 
@@ -51,6 +49,14 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 
 	public void setRequestId(String requestId) {
 		this.requestId = requestId;
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
 	}
 
 	public String getEngine() {
@@ -113,7 +119,9 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 
 		private Long slowLogId;
 
-		private Long sQLId;
+		private String sQLHASH;
+
+		private String sQLIdStr;
 
 		private String dBName;
 
@@ -159,12 +167,20 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 			this.slowLogId = slowLogId;
 		}
 
-		public Long getSQLId() {
-			return this.sQLId;
+		public String getSQLHASH() {
+			return this.sQLHASH;
 		}
 
-		public void setSQLId(Long sQLId) {
-			this.sQLId = sQLId;
+		public void setSQLHASH(String sQLHASH) {
+			this.sQLHASH = sQLHASH;
+		}
+
+		public String getSQLIdStr() {
+			return this.sQLIdStr;
+		}
+
+		public void setSQLIdStr(String sQLIdStr) {
+			this.sQLIdStr = sQLIdStr;
 		}
 
 		public String getDBName() {

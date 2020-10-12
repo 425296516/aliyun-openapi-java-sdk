@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ossadmin.model.v20130712;
 
 import com.aliyuncs.RpcAcsRequest;
@@ -27,42 +23,26 @@ import com.aliyuncs.RpcAcsRequest;
 public class PutBucketLimitRequest extends RpcAcsRequest<PutBucketLimitResponse> {
 	
 	public PutBucketLimitRequest() {
-		super("OssAdmin", "2013-07-12", "PutBucketLimit");
+		super("OssAdmin", "2013-07-12", "PutBucketLimit", "ossadmin");
 	}
 
 	private String uid;
+
+	private String ownerAccount;
 
 	private String bid;
 
 	private Integer bucketLimit;
 
-	private String ownerAccount;
-
-	public String getuid() {
+	public String getUid() {
 		return this.uid;
 	}
 
-	public void setuid(String uid) {
+	public void setUid(String uid) {
 		this.uid = uid;
-		putQueryParameter("uid", uid);
-	}
-
-	public String getbid() {
-		return this.bid;
-	}
-
-	public void setbid(String bid) {
-		this.bid = bid;
-		putQueryParameter("bid", bid);
-	}
-
-	public Integer getBucketLimit() {
-		return this.bucketLimit;
-	}
-
-	public void setBucketLimit(Integer bucketLimit) {
-		this.bucketLimit = bucketLimit;
-		putQueryParameter("BucketLimit", String.valueOf(bucketLimit));
+		if(uid != null){
+			putQueryParameter("uid", uid);
+		}
 	}
 
 	public String getOwnerAccount() {
@@ -71,7 +51,31 @@ public class PutBucketLimitRequest extends RpcAcsRequest<PutBucketLimitResponse>
 
 	public void setOwnerAccount(String ownerAccount) {
 		this.ownerAccount = ownerAccount;
-		putQueryParameter("OwnerAccount", ownerAccount);
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public String getBid() {
+		return this.bid;
+	}
+
+	public void setBid(String bid) {
+		this.bid = bid;
+		if(bid != null){
+			putQueryParameter("bid", bid);
+		}
+	}
+
+	public Integer getBucketLimit() {
+		return this.bucketLimit;
+	}
+
+	public void setBucketLimit(Integer bucketLimit) {
+		this.bucketLimit = bucketLimit;
+		if(bucketLimit != null){
+			putQueryParameter("BucketLimit", bucketLimit.toString());
+		}
 	}
 
 	@Override

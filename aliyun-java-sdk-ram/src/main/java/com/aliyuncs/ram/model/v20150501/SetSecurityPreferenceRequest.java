@@ -1,38 +1,53 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ram.model.v20150501;
 
 import com.aliyuncs.RpcAcsRequest;
 import com.aliyuncs.http.ProtocolType;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ram.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class SetSecurityPreferenceRequest extends RpcAcsRequest<SetSecurityPreferenceResponse> {
-	
-	public SetSecurityPreferenceRequest() {
-		super("Ram", "2015-05-01", "SetSecurityPreference");
-		setProtocol(ProtocolType.HTTPS);
-	}
+	   
 
 	private Boolean enableSaveMFATicket;
+
+	private String loginNetworkMasks;
+
+	private Boolean allowUserToChangePassword;
+
+	private Boolean allowUserToManagePublicKeys;
+
+	private Integer loginSessionDuration;
+
+	private Boolean allowUserToManageAccessKeys;
+
+	private Boolean allowUserToManageMFADevices;
+	public SetSecurityPreferenceRequest() {
+		super("Ram", "2015-05-01", "SetSecurityPreference", "Ram");
+		setProtocol(ProtocolType.HTTPS);
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
 
 	public Boolean getEnableSaveMFATicket() {
 		return this.enableSaveMFATicket;
@@ -40,7 +55,75 @@ public class SetSecurityPreferenceRequest extends RpcAcsRequest<SetSecurityPrefe
 
 	public void setEnableSaveMFATicket(Boolean enableSaveMFATicket) {
 		this.enableSaveMFATicket = enableSaveMFATicket;
-		putQueryParameter("EnableSaveMFATicket", String.valueOf(enableSaveMFATicket));
+		if(enableSaveMFATicket != null){
+			putQueryParameter("EnableSaveMFATicket", enableSaveMFATicket.toString());
+		}
+	}
+
+	public String getLoginNetworkMasks() {
+		return this.loginNetworkMasks;
+	}
+
+	public void setLoginNetworkMasks(String loginNetworkMasks) {
+		this.loginNetworkMasks = loginNetworkMasks;
+		if(loginNetworkMasks != null){
+			putQueryParameter("LoginNetworkMasks", loginNetworkMasks);
+		}
+	}
+
+	public Boolean getAllowUserToChangePassword() {
+		return this.allowUserToChangePassword;
+	}
+
+	public void setAllowUserToChangePassword(Boolean allowUserToChangePassword) {
+		this.allowUserToChangePassword = allowUserToChangePassword;
+		if(allowUserToChangePassword != null){
+			putQueryParameter("AllowUserToChangePassword", allowUserToChangePassword.toString());
+		}
+	}
+
+	public Boolean getAllowUserToManagePublicKeys() {
+		return this.allowUserToManagePublicKeys;
+	}
+
+	public void setAllowUserToManagePublicKeys(Boolean allowUserToManagePublicKeys) {
+		this.allowUserToManagePublicKeys = allowUserToManagePublicKeys;
+		if(allowUserToManagePublicKeys != null){
+			putQueryParameter("AllowUserToManagePublicKeys", allowUserToManagePublicKeys.toString());
+		}
+	}
+
+	public Integer getLoginSessionDuration() {
+		return this.loginSessionDuration;
+	}
+
+	public void setLoginSessionDuration(Integer loginSessionDuration) {
+		this.loginSessionDuration = loginSessionDuration;
+		if(loginSessionDuration != null){
+			putQueryParameter("LoginSessionDuration", loginSessionDuration.toString());
+		}
+	}
+
+	public Boolean getAllowUserToManageAccessKeys() {
+		return this.allowUserToManageAccessKeys;
+	}
+
+	public void setAllowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
+		this.allowUserToManageAccessKeys = allowUserToManageAccessKeys;
+		if(allowUserToManageAccessKeys != null){
+			putQueryParameter("AllowUserToManageAccessKeys", allowUserToManageAccessKeys.toString());
+		}
+	}
+
+	public Boolean getAllowUserToManageMFADevices() {
+		return this.allowUserToManageMFADevices;
+	}
+
+	public void setAllowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
+		this.allowUserToManageMFADevices = allowUserToManageMFADevices;
+		if(allowUserToManageMFADevices != null){
+			putQueryParameter("AllowUserToManageMFADevices", allowUserToManageMFADevices.toString());
+		}
 	}
 
 	@Override

@@ -1,0 +1,18 @@
+2020-08-31 Version: 1.3.1
+- Add new feature.
+
+2020-08-31 Version: 1.3.2
+- Add historyCheck.
+
+2020-02-13 Version: 1.2.10
+- Add spec for secCheckConfig.
+
+2019-07-01 Version: 1.2.9
+- Add sample lib query interface.
+
+2019-07-01 Version: 1.2.8
+- Add sample lib query interface.
+
+2019-07-01 Version: 1.2.8
+- Add sample lib query interface.
+

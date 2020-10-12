@@ -1,0 +1,70 @@
+2020-10-10 Version: 1.2.6
+- Support new param IoMaxSpec for order related interface.
+
+2020-03-02 Version: 1.2.5
+- Add API GetAllowedIpList.
+- Add API UpdateAllowedIp.
+
+2019-12-25 Version: 1.2.4
+- Support specify partition number when create topic.
+
+2019-12-23 Version: 1.2.3
+- Support sasl and acl.
+
+2019-12-18 Version: 1.2.2
+- Support MetadataProductList.
+
+2019-12-17 Version: 1.2.1
+- Support MetadataProductList.
+
+2019-12-11 Version: 1.2.0
+- Support createPostOrder.
+- Support tags.
+
+2019-12-11 Version: 1.2.0
+- Support createPostOrder.
+- Support tags.
+
+2019-12-11 Version: 1.2.0
+- Support createPostOrder.
+- Support tags.
+
+2019-11-27 Version: 1.2.0
+- Support region router.
+- Add some new APIs.
+
+2019-09-18 Version: 1.1.0
+- Optimize error code.
+
+2019-08-27 Version: 1.0.11
+- Fixed endpoint data init.
+
+2019-08-19 Version: 1.0.10
+- Optimize topic create parameters.
+
+2019-08-19 Version: 1.0.9
+- Optimize topic create parameters.
+
+2019-08-06 Version: 1.0.9
+- Add DeleteTopic method.
+- Add DeleteConsumerGroup method.
+
+2019-06-20 Version: 1.0.8
+- Support more return values when invoke GetTopicList.
+
+2019-06-20 Version: 1.0.7
+- Support more return values when invoke GetTopicList.
+
+2019-06-19 Version: 1.0.6
+- CreateTopic support more param.
+- Add getInstanceId method.
+
+2019-03-14 Version: 1.0.5
+1, update the core version
+
+2018-10-25 Version: 1.0.1
+1, GetConsumerProgressResponse.OffsetListItem add partition property
+
+2018-10-25 Version: 1.0.0
+1, GetConsumerProgressResponse.OffsetListItem add partition property
+

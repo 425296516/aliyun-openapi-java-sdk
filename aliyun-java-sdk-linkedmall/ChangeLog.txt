@@ -1,0 +1,235 @@
+2020-08-12 Version: 2.12.11
+- Modify interface field,eg SettleOrder,CreateWithholdTrade,QueryWithholdTrade,RefundOrder.
+
+2020-08-06 Version: 2.12.10
+- Add item Promotion query interface.
+
+2020-08-05 Version: 2.12.9
+- Add order settle service.
+
+2020-07-09 Version: 2.12.8
+- Add accountType for customer service.
+
+2020-07-09 Version: 2.12.7
+- Add accountType for renderOrder.
+
+2020-07-09 Version: 2.12.7
+- Add accountType for renderOrder.
+
+2020-07-09 Version: 2.12.7
+- Add accountType for renderOrder.
+
+2020-07-09 Version: 2.12.7
+- Add accountType for renderOrder.
+
+2020-07-06 Version: 2.12.6
+- Modify QueryBizItemList, add user label.
+
+2020-06-24 Version: 2.12.5
+- Add QueryOrderCommissionRate.
+- Modify QueryLogistics, add company code.
+- Modify QueryBizItemList, add grade price.
+
+2020-04-20 Version: 2.12.4
+- Add RenderH5Order Interface.
+
+2020-04-03 Version: 2.12.3
+- Support lmItemId.
+- Support STSToken.
+
+2020-03-25 Version: 2.12.2
+- Support new parameter for method QueryUnfinishedSessions4Items.
+
+2020-03-23 Version: 2.12.1
+- Support new parameter for method QueryUnfinishedSessions.
+
+2020-02-25 Version: 2.12.0
+- Support activity v2.
+
+2020-02-20 Version: 2.11.0
+- Support set accountType.
+
+2020-02-05 Version: 2.10.0
+- Support VirtualProductOrder.
+
+2019-12-29 Version: 2.9.8
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-12-29 Version: 2.9.7
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-12-27 Version: 2.9.6
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-12-27 Version: 2.9.5
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-12-27 Version: 2.9.5
+- Support set accountType.
+
+2019-12-27 Version: 2.9.4
+- Support set accountType.
+
+2019-12-26 Version: 2.9.4
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-12-26 Version: 2.9.2
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-12-25 Version: 2.9.3
+- Support merchant sync item info.
+
+2019-12-25 Version: 2.9.2
+- Support merchant sync item info.
+
+2019-12-25 Version: 2.9.1
+- Support merchant sync item info.
+
+2019-12-24 Version: 2.9.1
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-12-20 Version: 2.9.0
+- Support miniapp.
+- Support account type.
+
+2019-11-20 Version: 2.8.4
+- Support anonymous account for enableOrder.
+
+2019-11-20 Version: 2.8.3
+- Support anonymous account for enableOrder.
+
+2019-11-19 Version: 2.8.3
+- Sku cansell.
+- Support center inventory.
+
+2019-11-19 Version: 2.8.2
+- Sku cansell.
+- Support center inventory.
+
+2019-11-19 Version: 2.8.2
+- Sku cansell.
+- Support center inventory.
+
+2019-11-18 Version: 2.8.2
+- Add seller refuse reason for queryRefundDetail.
+
+2019-10-08 Version: 2.8.1
+- Fix bug about ListItemActivities.
+- Add new response value for QueryBizItemList.
+
+2019-10-08 Version: 2.8.0
+- Add new interface -ListItemActivities.
+
+2019-09-05 Version: 2.7.1
+- QueryItemList supports parameters itemIds and lmItemIds.
+
+2019-08-30 Version: 2.7.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-08-28 Version: 2.6.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-08-28 Version: 2.5.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-08-28 Version: 2.4.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-08-28 Version: 2.4.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-08-26 Version: 2.5.1
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-08-01 Version: 2.5.0
+- Support anonymous account.
+
+2019-07-30 Version: 2.4.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-07-19 Version: 2.3.2
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-25 Version: 2.3.1
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-21 Version: 2.3.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-19 Version: 2.2.2
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-19 Version: 2.2.1
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-19 Version: 2.2.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-19 Version: 2.3.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-19 Version: 2.2.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-19 Version: 2.1.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-19 Version: 2.1.0
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-06-19 Version: 2.0.27
+- Generated 2018-01-16 for `linkedmall`.
+
+2019-05-24 Version: 2.0.25
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2019-05-13 Version: 2.0.20
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2019-04-30 Version: 2.0.19
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2019-04-30 Version: 2.0.18
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2019-04-29 Version: 2.0.16
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2019-03-25 Version: 2.0.11
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2018-12-29 Version: 2.0.4
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2018-12-28 Version: 2.0.3
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2018-12-17 Version: 2.0.2
+1, Correct some parameters type
+
+2018-10-19 Version: 2.0.1
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2018-10-19 Version: 2.0.0
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+

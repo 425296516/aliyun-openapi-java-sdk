@@ -1,0 +1,54 @@
+2020-09-22 Version: 1.2.1
+- Generated 2018-01-11 for `rtc`.
+
+2020-03-25 Version: 1.2.0
+- Supported describe appkey for rtc application.
+- Supported set property for rtc channel.
+- Fixed the missing error code description for rtc removeterminal.
+
+2020-02-12 Version: 1.1.2
+- Support mau.
+
+2019-11-25 Version: 1.1.1
+- One or more people can be subscribed when creating tasks.
+
+2019-09-18 Version: 1.1.0
+- Support to update layout in task for MPU.
+
+2019-06-27 Version: 1.0.4
+- Added setting of crop_mode parameter.
+
+2019-05-07 Version: 1.0.3
+1, Add TaskProfile to specify the capability of mpu task. Also the TaskProfile is related to cost
+
+2019-03-15 Version: 1.0.2
+1,  Update Dependency
+
+2018-11-08 Version: 1.0.1
+1, Update Version.
+
+
+2018-11-07 Version: 1.0.0
+1, Add API CreateTemplate,DeleteTemplate,GetAllTemplate,GetTemplateInfo.
+2, Add API  GetTaskStatus,StartTask,StopTask.
+3, Add API GetTaskParam,UpdateTaskParam.
+
+
+2018-10-09 Version: 0.8.1
+1, Fix SDK download bug.
+
+2018-09-13 Version: 1.0.0
+1, Add CreateChannelToken.
+
+
+2018-07-26 Version: 0.8.1
+1, Add RemoveTerminals API.
+
+2018-07-25 Version: 0.8.1
+1, Add RemoveTerminals API.
+
+
+2018-06-22 Version: 0.8.0
+1, rtc openapi
+
+

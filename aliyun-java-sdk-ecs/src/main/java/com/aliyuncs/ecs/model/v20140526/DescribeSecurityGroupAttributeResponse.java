@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -40,6 +36,8 @@ public class DescribeSecurityGroupAttributeResponse extends AcsResponse {
 	private String securityGroupName;
 
 	private String vpcId;
+
+	private String innerAccessPolicy;
 
 	private List<Permission> permissions;
 
@@ -91,6 +89,14 @@ public class DescribeSecurityGroupAttributeResponse extends AcsResponse {
 		this.vpcId = vpcId;
 	}
 
+	public String getInnerAccessPolicy() {
+		return this.innerAccessPolicy;
+	}
+
+	public void setInnerAccessPolicy(String innerAccessPolicy) {
+		this.innerAccessPolicy = innerAccessPolicy;
+	}
+
 	public List<Permission> getPermissions() {
 		return this.permissions;
 	}
@@ -105,9 +111,15 @@ public class DescribeSecurityGroupAttributeResponse extends AcsResponse {
 
 		private String portRange;
 
+		private String sourcePortRange;
+
 		private String sourceGroupId;
 
+		private String sourceGroupName;
+
 		private String sourceCidrIp;
+
+		private String ipv6SourceCidrIp;
 
 		private String policy;
 
@@ -117,11 +129,21 @@ public class DescribeSecurityGroupAttributeResponse extends AcsResponse {
 
 		private String destGroupId;
 
+		private String destGroupName;
+
 		private String destCidrIp;
+
+		private String ipv6DestCidrIp;
 
 		private String destGroupOwnerAccount;
 
 		private String priority;
+
+		private String direction;
+
+		private String description;
+
+		private String createTime;
 
 		public String getIpProtocol() {
 			return this.ipProtocol;
@@ -139,6 +161,14 @@ public class DescribeSecurityGroupAttributeResponse extends AcsResponse {
 			this.portRange = portRange;
 		}
 
+		public String getSourcePortRange() {
+			return this.sourcePortRange;
+		}
+
+		public void setSourcePortRange(String sourcePortRange) {
+			this.sourcePortRange = sourcePortRange;
+		}
+
 		public String getSourceGroupId() {
 			return this.sourceGroupId;
 		}
@@ -147,12 +177,28 @@ public class DescribeSecurityGroupAttributeResponse extends AcsResponse {
 			this.sourceGroupId = sourceGroupId;
 		}
 
+		public String getSourceGroupName() {
+			return this.sourceGroupName;
+		}
+
+		public void setSourceGroupName(String sourceGroupName) {
+			this.sourceGroupName = sourceGroupName;
+		}
+
 		public String getSourceCidrIp() {
 			return this.sourceCidrIp;
 		}
 
 		public void setSourceCidrIp(String sourceCidrIp) {
 			this.sourceCidrIp = sourceCidrIp;
+		}
+
+		public String getIpv6SourceCidrIp() {
+			return this.ipv6SourceCidrIp;
+		}
+
+		public void setIpv6SourceCidrIp(String ipv6SourceCidrIp) {
+			this.ipv6SourceCidrIp = ipv6SourceCidrIp;
 		}
 
 		public String getPolicy() {
@@ -187,12 +233,28 @@ public class DescribeSecurityGroupAttributeResponse extends AcsResponse {
 			this.destGroupId = destGroupId;
 		}
 
+		public String getDestGroupName() {
+			return this.destGroupName;
+		}
+
+		public void setDestGroupName(String destGroupName) {
+			this.destGroupName = destGroupName;
+		}
+
 		public String getDestCidrIp() {
 			return this.destCidrIp;
 		}
 
 		public void setDestCidrIp(String destCidrIp) {
 			this.destCidrIp = destCidrIp;
+		}
+
+		public String getIpv6DestCidrIp() {
+			return this.ipv6DestCidrIp;
+		}
+
+		public void setIpv6DestCidrIp(String ipv6DestCidrIp) {
+			this.ipv6DestCidrIp = ipv6DestCidrIp;
 		}
 
 		public String getDestGroupOwnerAccount() {
@@ -209,6 +271,30 @@ public class DescribeSecurityGroupAttributeResponse extends AcsResponse {
 
 		public void setPriority(String priority) {
 			this.priority = priority;
+		}
+
+		public String getDirection() {
+			return this.direction;
+		}
+
+		public void setDirection(String direction) {
+			this.direction = direction;
+		}
+
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		public String getCreateTime() {
+			return this.createTime;
+		}
+
+		public void setCreateTime(String createTime) {
+			this.createTime = createTime;
 		}
 	}
 

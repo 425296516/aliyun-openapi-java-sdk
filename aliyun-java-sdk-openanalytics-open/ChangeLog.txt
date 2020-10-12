@@ -1,0 +1,51 @@
+2020-08-18 Version: 1.0.10
+- Open GetJobDetail and GetJobStatus APIs.
+
+2020-08-18 Version: 1.0.9
+- Open GetJobStatus and GetJobDetail API.
+
+2020-07-28 Version: 1.0.9
+- Add support DLA userName bing to ram sub uid.
+
+2020-07-27 Version: 1.0.8
+- Fix signature error in list virtual API.
+- Fix signature error in list spark job API.
+
+2020-07-16 Version: 1.0.7
+- Fix signature error in virtual cluster API.
+- Fix signature error in spark job API.
+- Add support for DMS.
+
+2020-05-14 Version: 1.0.6
+- Support spark API.
+
+2020-05-07 Version: 1.0.5
+- Add new interfaces.
+
+2020-05-07 Version: 1.8
+- Add new interfaces.
+
+2020-05-07 Version: 1.8
+- Add new interfaces.
+
+2020-05-07 Version: 1.8
+- Add new interfaces.
+
+2020-05-06 Version: 1.8
+- Add new interfaces.
+
+2020-04-30 Version: 1.8
+- Add new interfaces.
+
+2019-12-05 Version: 1.0.4
+- Generated 2018-06-19 for `openanalytics-open`.
+
+2019-12-04 Version: 1.0.3
+- Generated 2018-06-19 for `openanalytics-open`.
+
+2019-11-26 Version: 1.0.3.pre
+- Generated 2018-06-19 for `openanalytics-open`.
+
+2019-11-15 Version: 1.0.3.pre
+- Generated 2018-06-19 for `openanalytics-open`.
+

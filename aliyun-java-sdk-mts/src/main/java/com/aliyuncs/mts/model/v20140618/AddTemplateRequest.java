@@ -1,89 +1,56 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.mts.model.v20140618;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.mts.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class AddTemplateRequest extends RpcAcsRequest<AddTemplateResponse> {
-	
-	public AddTemplateRequest() {
-		super("Mts", "2014-06-18", "AddTemplate");
-	}
-
-	private Long ownerId;
-
-	private String resourceOwnerAccount;
-
-	private Long resourceOwnerId;
-
-	private String name;
+	   
 
 	private String container;
 
-	private String video;
+	private Long resourceOwnerId;
 
-	private String audio;
+	private String video;
 
 	private String transConfig;
 
-	private String muxConfig;
+	private String audio;
+
+	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
+	private String muxConfig;
 
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		putQueryParameter("OwnerId", String.valueOf(ownerId));
-	}
+	private Long ownerId;
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-	}
-
-	public Long getResourceOwnerId() {
-		return this.resourceOwnerId;
-	}
-
-	public void setResourceOwnerId(Long resourceOwnerId) {
-		this.resourceOwnerId = resourceOwnerId;
-		putQueryParameter("ResourceOwnerId", String.valueOf(resourceOwnerId));
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-		putQueryParameter("Name", name);
+	private String name;
+	public AddTemplateRequest() {
+		super("Mts", "2014-06-18", "AddTemplate");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
 	}
 
 	public String getContainer() {
@@ -92,7 +59,20 @@ public class AddTemplateRequest extends RpcAcsRequest<AddTemplateResponse> {
 
 	public void setContainer(String container) {
 		this.container = container;
-		putQueryParameter("Container", container);
+		if(container != null){
+			putQueryParameter("Container", container);
+		}
+	}
+
+	public Long getResourceOwnerId() {
+		return this.resourceOwnerId;
+	}
+
+	public void setResourceOwnerId(Long resourceOwnerId) {
+		this.resourceOwnerId = resourceOwnerId;
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
 	}
 
 	public String getVideo() {
@@ -101,16 +81,9 @@ public class AddTemplateRequest extends RpcAcsRequest<AddTemplateResponse> {
 
 	public void setVideo(String video) {
 		this.video = video;
-		putQueryParameter("Video", video);
-	}
-
-	public String getAudio() {
-		return this.audio;
-	}
-
-	public void setAudio(String audio) {
-		this.audio = audio;
-		putQueryParameter("Audio", audio);
+		if(video != null){
+			putQueryParameter("Video", video);
+		}
 	}
 
 	public String getTransConfig() {
@@ -119,16 +92,31 @@ public class AddTemplateRequest extends RpcAcsRequest<AddTemplateResponse> {
 
 	public void setTransConfig(String transConfig) {
 		this.transConfig = transConfig;
-		putQueryParameter("TransConfig", transConfig);
+		if(transConfig != null){
+			putQueryParameter("TransConfig", transConfig);
+		}
 	}
 
-	public String getMuxConfig() {
-		return this.muxConfig;
+	public String getAudio() {
+		return this.audio;
 	}
 
-	public void setMuxConfig(String muxConfig) {
-		this.muxConfig = muxConfig;
-		putQueryParameter("MuxConfig", muxConfig);
+	public void setAudio(String audio) {
+		this.audio = audio;
+		if(audio != null){
+			putQueryParameter("Audio", audio);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
 	}
 
 	public String getOwnerAccount() {
@@ -137,7 +125,42 @@ public class AddTemplateRequest extends RpcAcsRequest<AddTemplateResponse> {
 
 	public void setOwnerAccount(String ownerAccount) {
 		this.ownerAccount = ownerAccount;
-		putQueryParameter("OwnerAccount", ownerAccount);
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public String getMuxConfig() {
+		return this.muxConfig;
+	}
+
+	public void setMuxConfig(String muxConfig) {
+		this.muxConfig = muxConfig;
+		if(muxConfig != null){
+			putQueryParameter("MuxConfig", muxConfig);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
+		}
 	}
 
 	@Override

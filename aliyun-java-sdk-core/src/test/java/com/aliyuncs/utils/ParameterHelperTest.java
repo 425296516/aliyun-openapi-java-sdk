@@ -1,69 +1,117 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.aliyuncs.utils;
 
-import java.text.ParseException;
-import java.util.Calendar;
-import java.util.Date;
-
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.io.UnsupportedEncodingException;
+import java.text.ParseException;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 public class ParameterHelperTest {
+    @Before
+    public void init() {
+        new ParameterHelper();
+    }
 
-	@Test
-	public void parseISO8601DateTest() throws ParseException {
-		Assert.assertNull(ParameterHelper.parseISO8601(null));
-		String iso8601Date = "2014-12-22T10:33:40Z";
-		Date date =  ParameterHelper.parseISO8601(iso8601Date);
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(date);
-		Assert.assertEquals(2014, calendar.get(Calendar.YEAR));
-		Assert.assertEquals(11, calendar.get(Calendar.MONTH));
-		Assert.assertEquals(22, calendar.get(Calendar.DATE));
-		Assert.assertEquals(6, calendar.get(Calendar.HOUR));
-		Assert.assertEquals(33, calendar.get(Calendar.MINUTE));
-		Assert.assertEquals(40, calendar.get(Calendar.SECOND));
+    @Test
+    public void getUniqueNonce() {
+        String nonce = ParameterHelper.getUniqueNonce();
+        Assert.assertNotEquals(nonce, ParameterHelper.getUniqueNonce());
+    }
 
-		Assert.assertTrue(iso8601Date.equals(ParameterHelper.getISO8601Time(date)));
-	}
-	
-	@Test
-	public void parseRFC2616DateTest() throws ParseException {
-		Assert.assertNull(ParameterHelper.parseRFC2616(null));
-		String rfc2616Date = "Wed, 16 Jan 2013 19:01:18 GMT";
-		Date date =  ParameterHelper.parseRFC2616(rfc2616Date);
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(date);
-		Assert.assertEquals(2013, calendar.get(Calendar.YEAR));
-		Assert.assertEquals(0, calendar.get(Calendar.MONTH));
-		Assert.assertEquals(17, calendar.get(Calendar.DATE));
-		Assert.assertEquals(3, calendar.get(Calendar.HOUR));
-		Assert.assertEquals(01, calendar.get(Calendar.MINUTE));
-		Assert.assertEquals(18, calendar.get(Calendar.SECOND));
-		System.out.println(ParameterHelper.getRFC2616Date(date));
-		Assert.assertTrue(rfc2616Date.equals(ParameterHelper.getRFC2616Date(date)));
-	}
-	
-	@Test
-	public void getUniqueNonceTest() {
-		Assert.assertNotNull(ParameterHelper.getUniqueNonce());
-		Assert.assertFalse(ParameterHelper.getUniqueNonce().equals(ParameterHelper.getUniqueNonce()));
-	}
+    @Test
+    public void validateParameterTest() {
+        ParameterHelper.validateParameter("  ", "regionId");
+        ParameterHelper.validateParameter("", "regionId");
+        ParameterHelper.validateParameter(null, "regionId");
+        ParameterHelper.validateParameter("cn-hangzhou", "regionId");
+        try {
+            ParameterHelper.validateParameter("test.test", "regionId");
+            Assert.fail();
+        } catch (Exception e) {
+            Assert.assertEquals("The parameter regionId not match with " + ParameterHelper.PATTERN, e.getMessage());
+        }
+    }
+
+    @Test
+    public void getRFC2616Date() throws ParseException {
+        Date d2 = ParameterHelper.parseRFC2616("Tue, 18 Dec 2018 16:13:15 GMT");
+        Assert.assertEquals("Tue, 18 Dec 2018 16:13:15 GMT", ParameterHelper.getRFC2616Date(d2));
+    }
+
+    @Test
+    public void getISO8601Time() throws ParseException {
+        Date d2 = ParameterHelper.parseISO8601("2018-12-18T16:39:38Z");
+        Assert.assertEquals("2018-12-18T16:39:38Z", ParameterHelper.getISO8601Time(d2));
+    }
+
+    @Test
+    public void parseISO8601() throws ParseException {
+        Date d = ParameterHelper.parseISO8601(null);
+        Assert.assertNull(d);
+        Assert.assertNull(ParameterHelper.parseISO8601(""));
+        Assert.assertNull(ParameterHelper.parseISO8601("123"));
+        Date d2 = ParameterHelper.parseISO8601("2018-12-18T16:39:38Z");
+        Assert.assertEquals(1545151178000L, d2.getTime());
+    }
+
+    @Test
+    public void parseRFC2616() throws ParseException {
+        // the null cases
+        Assert.assertNull(ParameterHelper.parseRFC2616(null));
+        Assert.assertNull(ParameterHelper.parseRFC2616(""));
+        Assert.assertNull(ParameterHelper.parseRFC2616("123"));
+        Date d2 = ParameterHelper.parseRFC2616("Tue, 18 Dec 2018 16:13:15 GMT");
+        Assert.assertEquals(1545149595000L, d2.getTime());
+    }
+
+    @Test
+    public void parse() throws ParseException {
+        Assert.assertNull(ParameterHelper.parse(null));
+        Assert.assertNull(ParameterHelper.parse(""));
+        Assert.assertNull(ParameterHelper.parse("123"));
+        Date d2 = ParameterHelper.parse("2018-12-18T16:39:38Z");
+        Assert.assertEquals(1545151178000L, d2.getTime());
+        Date d3 = ParameterHelper.parse("Tue, 18 Dec 2018 16:13:15 GMT");
+        Assert.assertEquals(1545149595000L, d3.getTime());
+    }
+
+    @Test
+    public void testMd5() throws UnsupportedEncodingException {
+        String encoding = "UTF-8";
+        String source = "<Product name=\"Yundun\" domain=\"yundun.aliyuncs.com\"/>";
+        String md5 = ParameterHelper.md5Sum(source.getBytes(encoding));
+        Assert.assertEquals("+J93MVb8RzUp4M+yNoFtLg==", md5);
+        Assert.assertNull(ParameterHelper.md5Sum(null));
+    }
+
+    @Test
+    public void testGetJsonData() throws UnsupportedEncodingException {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("key", "value");
+        byte[] output = ParameterHelper.getJsonData(params);
+        Assert.assertEquals("{\"key\":\"value\"}", new String(output));
+    }
+
+    @Test
+    public void testGetFormData() throws UnsupportedEncodingException {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("key", "value");
+        byte[] output = ParameterHelper.getFormData(params);
+        Assert.assertEquals("key=value", new String(output));
+        params.put("key2", "value2");
+        Assert.assertEquals("key2=value2&key=value", new String(ParameterHelper.getFormData(params)));
+    }
+
+    @Test
+    public void testGetXmlData() throws UnsupportedEncodingException {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("key", "value");
+        byte[] output = ParameterHelper.getXmlData(params);
+        Assert.assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\"?><key>value</key>", new String(output));
+    }
+
 }

@@ -1,0 +1,33 @@
+2020-06-05 Version: 1.0.7
+- Generated 2019-03-01 for `LinkWAN`.
+
+2020-05-19 Version: 1.0.6
+- Generated 2019-03-01 for `LinkWAN`.
+
+2019-10-31 Version: 1.0.5
+- Generated 2019-03-01 for `LinkWAN`.
+
+2019-10-14 Version: 1.0.4
+- Generated 2019-03-01 for `LinkWAN`.
+
+2019-02-20 Version: 1.0.3
+1, Modify the NotificationId parameter type of the GetNotification API from Long to String.
+2, Modify the Ascending parameter type of the ListNotifications API from String to Boolean.
+3, Add API UpdateOwnedLocalJoinPermission.
+4, Add API UpdateRoamingJoinPermission.
+5, Add API UpdateOwnedLocalJoinPermissionEnablingState.
+6, Add API UpdateRoamingJoinPermissionEnablingState.
+7, Add parameter JoinPermissionName and UseDefaultJoinEui to request of API CreateLocalJoinPermission.
+8, Add parameter JoinPermissionName to request of API ApplyRoamingJoinPermission.
+
+2019-01-18 Version: 1.0.2
+1, fix bug: EndpointResolvingError
+
+2019-01-18 Version: 1.0.1
+1, fix bug: the 'Success' return value type is String but not Boolean, for CreateGateway and DeleteGateway method
+2, fix bug: the 'Longitude', 'Latitude' return value type is Long but not Float, for GetGateway method
+
+2019-01-18 Version: 1.0.1
+1, fix bug: the 'Success' return value type is String but not Boolean, for CreateGateway and DeleteGateway method
+2, fix bug: the 'Longitude', 'Latitude' return value type is Long but not Float, for GetGateway method
+

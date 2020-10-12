@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -97,7 +93,19 @@ public class DescribeTasksResponse extends AcsResponse {
 
 		private String expectedFinishTime;
 
-		private Status status;
+		private String status;
+
+		private String taskErrorCode;
+
+		private String taskErrorMessage;
+
+		private String stepsInfo;
+
+		private Integer remain;
+
+		private String stepProgressInfo;
+
+		private String currentStepName;
 
 		public String getDBName() {
 			return this.dBName;
@@ -163,48 +171,60 @@ public class DescribeTasksResponse extends AcsResponse {
 			this.expectedFinishTime = expectedFinishTime;
 		}
 
-		public Status getStatus() {
+		public String getStatus() {
 			return this.status;
 		}
 
-		public void setStatus(Status status) {
+		public void setStatus(String status) {
 			this.status = status;
 		}
 
-		public enum Status {
-		
-			PROCESSING("Processing"),
-			NO_START("NoStart"),
-			FAILED("Failed"),
-			SUCCESS("Success"),
-			PENDING("Pending"),;
-			
-		    private String stringValue;
-		
-			Status(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static Status getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (Status status : Status.values()) {
-					if(status.getStringValue().equals(stringValue)){
-						return status;
-					}
-				}
-		    	return null;
-		    }
+		public String getTaskErrorCode() {
+			return this.taskErrorCode;
+		}
+
+		public void setTaskErrorCode(String taskErrorCode) {
+			this.taskErrorCode = taskErrorCode;
+		}
+
+		public String getTaskErrorMessage() {
+			return this.taskErrorMessage;
+		}
+
+		public void setTaskErrorMessage(String taskErrorMessage) {
+			this.taskErrorMessage = taskErrorMessage;
+		}
+
+		public String getStepsInfo() {
+			return this.stepsInfo;
+		}
+
+		public void setStepsInfo(String stepsInfo) {
+			this.stepsInfo = stepsInfo;
+		}
+
+		public Integer getRemain() {
+			return this.remain;
+		}
+
+		public void setRemain(Integer remain) {
+			this.remain = remain;
+		}
+
+		public String getStepProgressInfo() {
+			return this.stepProgressInfo;
+		}
+
+		public void setStepProgressInfo(String stepProgressInfo) {
+			this.stepProgressInfo = stepProgressInfo;
+		}
+
+		public String getCurrentStepName() {
+			return this.currentStepName;
+		}
+
+		public void setCurrentStepName(String currentStepName) {
+			this.currentStepName = currentStepName;
 		}
 	}
 

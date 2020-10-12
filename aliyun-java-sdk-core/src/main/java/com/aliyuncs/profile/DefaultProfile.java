@@ -1,176 +1,208 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package com.aliyuncs.profile;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import com.aliyuncs.auth.Credential;
-import com.aliyuncs.auth.ICredentialProvider;
-import com.aliyuncs.auth.ISigner;
-import com.aliyuncs.auth.ShaHmac1;
+import com.aliyuncs.auth.*;
+import com.aliyuncs.endpoint.DefaultEndpointResolver;
 import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.http.FormatType;
-import com.aliyuncs.regions.Endpoint;
-import com.aliyuncs.regions.IEndpointsProvider;
-import com.aliyuncs.regions.InternalEndpointsParser;
-import com.aliyuncs.regions.ProductDomain;
+import com.aliyuncs.http.HttpClientConfig;
+import com.aliyuncs.utils.ParameterHelper;
+import org.slf4j.Logger;
 
+import static com.aliyuncs.utils.LogUtils.DEFAULT_LOG_FORMAT;
+
+@SuppressWarnings("deprecation")
 public class DefaultProfile implements IClientProfile {
+    private static DefaultProfile profile = null;
+    private String regionId = null;
+    private FormatType acceptFormat = null;
+    private ICredentialProvider icredential = null;
+    private Credential credential;
+    private String certPath;
+    private HttpClientConfig httpClientConfig = HttpClientConfig.getDefault();
+    private boolean usingInternalLocationService = false;
+    private boolean usingVpcEndpoint = false;
+    private Logger logger;
+    private String logFormat = DEFAULT_LOG_FORMAT;
+    private boolean isCloseTrace = false;
 
-	private static DefaultProfile profile = null;
-	private static List<Endpoint> endpoints = null;
-	
-	private Credential credential = null;
-	private String regionId = null;
-	private FormatType acceptFormat = null;
-	private ISigner isigner = null;
-	private IEndpointsProvider iendpoints = null;
-	private ICredentialProvider icredential = null;
-	
-	private DefaultProfile() {
-		this.iendpoints = new InternalEndpointsParser();
-	}
-	
-	private DefaultProfile(String region, Credential creden) {
-		iendpoints = new InternalEndpointsParser();
-		credential = creden;
-		regionId = region;
-	}
-	
-	private DefaultProfile(ICredentialProvider icredential) {
-		this.icredential = icredential;
-		this.iendpoints = new InternalEndpointsParser();
-	}
-	
-	private DefaultProfile(String region, ICredentialProvider icredential) {
-		regionId = region;
-		this.icredential = icredential;
-		this.iendpoints = new InternalEndpointsParser();
-	}
-	
-	private DefaultProfile(ICredentialProvider icredential, String region, FormatType format) {
-		regionId = region;
-		acceptFormat = format;
-		this.icredential = icredential;
-		this.iendpoints = new InternalEndpointsParser();
-	}
-	
-	public synchronized ISigner getSigner() {
-		if (null == isigner)
-			isigner = new ShaHmac1();
-		return isigner;
-	}
+    private DefaultProfile() {
+    }
 
-	public synchronized String getRegionId() {
-		return regionId;
-	}
+    private DefaultProfile(String regionId) {
+        this.regionId = regionId;
+    }
 
-	public synchronized FormatType getFormat() {
-		return acceptFormat;
-	}
+    private DefaultProfile(String regionId, Credential creden) {
+        this.credential = creden;
+        this.regionId = regionId;
+    }
 
-	public synchronized Credential getCredential() {
-		if (null == credential && null != icredential)
-			credential = icredential.fresh();
-		return credential;
-	}
+    private DefaultProfile(String region, ICredentialProvider icredential) {
+        this.regionId = region;
+        this.icredential = icredential;
+    }
 
-	public synchronized List<Endpoint> getEndpoints() throws ClientException {
-		if (null == endpoints)
-			endpoints = iendpoints.getEndpoints();
-		return endpoints;
-	}
+    public synchronized static DefaultProfile getProfile() {
+        if (null == profile) {
+            profile = new DefaultProfile();
+        }
+        return profile;
+    }
 
-	public synchronized static DefaultProfile getProfile() {
-		if (null == profile)
-			profile = new DefaultProfile();
-		
-		return profile;
-	}
-	
-	public synchronized static DefaultProfile getProfile(String regionId, ICredentialProvider icredential) {
-		profile = new DefaultProfile(regionId, icredential);
-		return profile;
-	}
-	
-	public synchronized static DefaultProfile getProfile(String regionId, String accessKeyId, String secret) {
-		Credential creden = new Credential(accessKeyId, secret);
-		profile = new DefaultProfile(regionId, creden);
-		return profile;
-	}
+    public synchronized static DefaultProfile getProfile(String regionId, ICredentialProvider icredential) {
+        profile = new DefaultProfile(regionId, icredential);
+        return profile;
+    }
 
-	public synchronized static void addEndpoint(String endpointName, String regionId, String product, String domain) throws ClientException {
-		if(null == endpoints){
-			endpoints = getProfile().getEndpoints();
-		}
-		Endpoint endpoint = findEndpointByRegionId(regionId);
-		if(null == endpoint){
-			addEndpoint_(endpointName, regionId, product, domain);
-		} else {
-			updateEndpoint(regionId, product, domain, endpoint); 
-		}
-	}
+    public synchronized static DefaultProfile getProfile(String regionId, String accessKeyId, String secret) {
+        Credential creden = new Credential(accessKeyId, secret);
+        profile = new DefaultProfile(regionId, creden);
+        return profile;
+    }
 
-	private static void addEndpoint_(String endpointName, String regionId, String product, String domain) {
-		Set<String> regions = new HashSet<String>();
-		regions.add(regionId);
-		
-		List<ProductDomain> productDomains = new ArrayList<ProductDomain>();
-		productDomains.add(new ProductDomain(product, domain));
-		Endpoint endpoint = new Endpoint(endpointName, regions, productDomains);
-		endpoints.add(endpoint);
-	}
+    public synchronized static DefaultProfile getProfile(String regionId, String accessKeyId, String secret,
+                                                         String stsToken) {
+        Credential creden = new Credential(accessKeyId, secret, stsToken);
+        profile = new DefaultProfile(regionId, creden);
+        return profile;
+    }
 
-	private static void updateEndpoint(String regionId, String product, String domain, Endpoint endpoint) {
-		Set<String> regionIds = endpoint.getRegionIds();
-		regionIds.add(regionId);
-		
-		List<ProductDomain> productDomains = endpoint.getProductDomains();
-		ProductDomain productDomain = findProductDomain(productDomains, product);
-		if(null == productDomain){
-			productDomains.add(new ProductDomain(product, domain));
-		}
-		else {
-			productDomain.setDomianName(domain);
-		}
-	}
-	
-	private static Endpoint findEndpointByRegionId(String regionId) {
-		for (Endpoint endpoint : endpoints) {
-			if(endpoint.getRegionIds().contains(regionId)){
-				return endpoint;
-			}
-		}
-		return null;
-	}
-	
-	private static ProductDomain findProductDomain(List<ProductDomain> productDomains, String product){
-		for (ProductDomain productDomain : productDomains) {
-			if(productDomain.getProductName().equals(product)){
-				return productDomain;
-			}
-		}
-		return null;
-	}
+    public synchronized static DefaultProfile getProfile(String regionId) {
+        return new DefaultProfile(regionId);
+    }
 
+    /**
+     * @Deprecated : Use addEndpoint(String regionId, String product, String endpoint) instead of this
+     */
+    @Deprecated
+    public synchronized static void addEndpoint(String endpointName, String regionId, String product, String domain)
+            throws ClientException {
+        addEndpoint(endpointName, regionId, product, domain, true);
+    }
 
+    /**
+     * @Deprecated : Use addEndpoint(String regionId, String product, String endpoint) instead of this
+     */
+    @Deprecated
+    public synchronized static void addEndpoint(String endpointName, String regionId, String product, String domain,
+                                                boolean isNeverExpire) {
+        // endpointName, isNeverExpire take no effect
+        addEndpoint(regionId, product, domain);
+    }
+
+    public synchronized static void addEndpoint(String regionId, String product, String endpoint) {
+        ParameterHelper.validateParameter(regionId, "regionId");
+        DefaultEndpointResolver.predefinedEndpointResolver.putEndpointEntry(regionId, product, endpoint);
+    }
+
+    @Override
+    public synchronized String getRegionId() {
+        return regionId;
+    }
+
+    @Override
+    public synchronized FormatType getFormat() {
+        return acceptFormat;
+    }
+
+    @Override
+    public synchronized Credential getCredential() {
+        if (null == credential && null != icredential) {
+            credential = icredential.fresh();
+        }
+        return credential;
+    }
+
+    @Override
+    @Deprecated
+    public ISigner getSigner() {
+        return null;
+    }
+
+    @Override
+    public void setCredentialsProvider(AlibabaCloudCredentialsProvider credentialsProvider) {
+        if (credential != null) {
+            return;
+        }
+        credential = new CredentialsBackupCompatibilityAdaptor(credentialsProvider);
+    }
+
+    @Override
+    public String getCertPath() {
+        return certPath;
+    }
+
+    @Override
+    public void setCertPath(String certPath) {
+        this.certPath = certPath;
+    }
+
+    @Override
+    public HttpClientConfig getHttpClientConfig() {
+        return httpClientConfig;
+    }
+
+    @Override
+    public void setHttpClientConfig(HttpClientConfig httpClientConfig) {
+        this.httpClientConfig = httpClientConfig;
+    }
+
+    @Override
+    public void enableUsingInternalLocationService() {
+        usingInternalLocationService = true;
+    }
+
+    @Override
+    public boolean isUsingInternalLocationService() {
+        return usingInternalLocationService;
+    }
+
+    @Override
+    public boolean isUsingVpcEndpoint() {
+        return usingVpcEndpoint;
+    }
+
+    @Override
+    public void enableUsingVpcEndpoint() {
+        this.usingVpcEndpoint = true;
+    }
+
+    /**
+     * @deprecated : use enableUsingInternalLocationService instead of this.
+     */
+    @Override
+    @Deprecated
+    public void setUsingInternalLocationService() {
+        enableUsingInternalLocationService();
+    }
+
+    @Override
+    public Logger getLogger() {
+        return logger;
+    }
+
+    @Override
+    public void setLogger(Logger logger) {
+        this.logger = logger;
+    }
+
+    @Override
+    public String getLogFormat() {
+        return logFormat;
+    }
+
+    @Override
+    public void setLogFormat(String logFormat) {
+        this.logFormat = logFormat;
+    }
+
+    @Override
+    public boolean isCloseTrace() {
+        return isCloseTrace;
+    }
+
+    @Override
+    public void setCloseTrace(boolean closeTrace) {
+        isCloseTrace = closeTrace;
+    }
 }

@@ -1,42 +1,45 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ram.model.v20150501;
 
 import com.aliyuncs.RpcAcsRequest;
 import com.aliyuncs.http.ProtocolType;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ram.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class DetachPolicyFromRoleRequest extends RpcAcsRequest<DetachPolicyFromRoleResponse> {
-	
-	public DetachPolicyFromRoleRequest() {
-		super("Ram", "2015-05-01", "DetachPolicyFromRole");
-		setProtocol(ProtocolType.HTTPS);
-	}
+	   
 
 	private String policyType;
 
-	private String policyName;
-
 	private String roleName;
+
+	private String policyName;
+	public DetachPolicyFromRoleRequest() {
+		super("Ram", "2015-05-01", "DetachPolicyFromRole", "Ram");
+		setProtocol(ProtocolType.HTTPS);
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
 
 	public String getPolicyType() {
 		return this.policyType;
@@ -44,16 +47,9 @@ public class DetachPolicyFromRoleRequest extends RpcAcsRequest<DetachPolicyFromR
 
 	public void setPolicyType(String policyType) {
 		this.policyType = policyType;
-		putQueryParameter("PolicyType", policyType);
-	}
-
-	public String getPolicyName() {
-		return this.policyName;
-	}
-
-	public void setPolicyName(String policyName) {
-		this.policyName = policyName;
-		putQueryParameter("PolicyName", policyName);
+		if(policyType != null){
+			putQueryParameter("PolicyType", policyType);
+		}
 	}
 
 	public String getRoleName() {
@@ -62,7 +58,20 @@ public class DetachPolicyFromRoleRequest extends RpcAcsRequest<DetachPolicyFromR
 
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
-		putQueryParameter("RoleName", roleName);
+		if(roleName != null){
+			putQueryParameter("RoleName", roleName);
+		}
+	}
+
+	public String getPolicyName() {
+		return this.policyName;
+	}
+
+	public void setPolicyName(String policyName) {
+		this.policyName = policyName;
+		if(policyName != null){
+			putQueryParameter("PolicyName", policyName);
+		}
 	}
 
 	@Override

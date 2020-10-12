@@ -1,0 +1,27 @@
+2020-07-10 Version: 1.0.9
+- Sdk for 109.
+
+2020-07-01 Version: 1.0.8
+- SDK version 108.
+
+2020-03-23 Version: 1.0.7
+- SDK version 107.
+
+2020-03-23 Version: 1.0.7
+- SDK version 107.
+
+2020-02-27 Version: 1.0.6
+- Sixth version.
+
+2020-02-27 Version: 1.0.6
+- Sixth version.
+
+2019-12-30 Version: 1.0.2
+- Disable Base64 string data support.
+
+2019-12-29 Version: 1.0.1
+- Add new api.
+
+2019-11-22 Version: 1.0.0
+- First version.
+

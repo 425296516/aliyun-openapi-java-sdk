@@ -1,0 +1,172 @@
+2020-08-24 Version: 2.7.8
+- Edit QueryMetricByPage api.
+
+2020-08-21 Version: 2.7.7
+- Add QueryMetricByPage api.
+- Add GetAppApiByPage api.
+
+2020-08-17 Version: 2.7.6
+- Add GetTrace api.
+- Edit Aler api.
+
+2020-08-11 Version: 2.7.5
+- Add contacts to contact group.
+
+2020-07-31 Version: 2.6.12
+- Edit GetStack api.
+
+2020-07-24 Version: 2.6.11
+- Edit ListTraceApp api with add tags.
+- Edit SearchTraceAppByName api with add tags.
+- Edut SearchTraceAppByPage api with add tags.
+
+2020-07-15 Version: 2.6.10
+- Edit ListTraceApp api.
+- Edit SearchTraceAppByName api.
+- Edut SearchTraceAppByPage api.
+
+2020-07-15 Version: 2.6.8
+- Edit ListTraceApp api.
+- Edit SearchTraceAppByName api.
+- Edut SearchTraceAppByPage api.
+
+2020-06-24 Version: 2.6.9
+- ConfigApp.
+
+2020-06-24 Version: 2.6.9
+- ConfigApp.
+
+2020-06-24 Version: 2.6.9
+- ConfigApp.
+
+2020-06-23 Version: 2.6.8
+- Support ConfigApp.
+
+2020-06-23 Version: 2.6.5
+- Support ConfigApp.
+
+2020-06-22 Version: 2.6.7
+- Add GetMultipleTrace api.
+- Add SearchTracesByPage api.
+- Add GetStack api.
+
+2020-06-02 Version: 2.6.6
+- Edit SearchTraces api.
+
+2020-05-20 Version: 2.6.5
+- Edit GetTrace and SearchTraces api.
+
+2020-04-30 Version: 2.6.4
+- Build 20190808 release sdk.
+
+2020-04-30 Version: 2.6.3
+- Build 20190808 release sdk.
+
+2020-04-30 Version: 2.6.2
+- Add prometheus ListDashboards api.
+
+2020-04-29 Version: 2.5.10
+- Add prometheus ListDashboards api.
+
+2020-04-29 Version: 2.6.1
+- Build 20190808 release sdk.
+
+2020-04-27 Version: 2.6.0
+- Build 20190808 release sdk.
+
+2020-04-27 Version: 2.5.8
+- Build 20190808 release sdk.
+
+2020-04-09 Version: 2.5.9
+- Add prometheus api AddGrafana and AddIntegration.
+
+2020-04-03 Version: 2.5.8
+- Add trace api.
+- Add prometheus api.
+
+2020-02-12 Version: 2.5.7
+- Prometheus list clusters.
+
+2020-01-07 Version: 2.5.6
+- Update Alert Apis.
+
+2020-01-07 Version: 2.5.5
+- Update Alert Apis.
+
+2020-01-06 Version: 2.5.4
+- Update Alert Apis.
+
+2020-01-03 Version: 2.5.4
+- Update Alert Apis.
+
+2020-01-02 Version: 2.5.4
+- Alert Apis.
+
+2019-08-27 Version: 2.5.3
+- Fixed endpoint data init.
+
+2019-08-22 Version: 2.5.2
+- Api release 2019-08-08 public sdk 2-5-2 sdk release 20190822 shichun-fsc.
+
+2019-08-13 Version: 2.5.1
+- Optimize return code.
+- Edit QueryDataset.
+
+2019-08-13 Version: 2.5.0
+- Rebuild latest version.
+
+2019-08-12 Version: 2.5.0
+- Api release 2019-08-08 public sdk.
+
+2019-07-08 Version: 2.4.8
+- Add api `get token`.
+
+2019-06-12 Version: 2.4.7
+add serviceip for ‘SearchTracesCount’
+
+2019-05-31 Version: 2.4.4
+1, add api 'search traces count' 
+2, add page index for api 'searchTraces'
+
+2019-05-27 Version: 2.4.5
+1, add page search for searchTraces
+2, add api 'searchTracesCount'
+
+2019-03-25 Version: 2.4.3
+1, add tag object list for SearchTraces
+
+2019-03-25 Version: 2.4.3
+1, add tag object list for SearchTraces
+
+2019-03-25 Version: 2.4.2
+1, add tag object list for api SearchTraces
+
+2019-03-21 Version: 2.4.1
+1, Add three api for xtrace search(GetSpanNames,GetTagKey,GetTagVal)
+
+
+2019-01-30 Version: 2.4.0
+1, add 'getServices' api.
+2, change result object for 'get trace' api .
+
+2019-01-09 Version: 2.3.0
+1, add apis (SearchTraces and GetTrace)
+
+2018-12-21 Version: 2.3.0
+1, ARMS SDK 2018-12-19 go sdk upload
+
+2018-10-16 Version: 2.2.0
+1, This version add MetricQuery interface to support retcode and apm metric query.
+
+2018-10-16 Version: 2.2.0
+1, This version add MetricQuery interface to support retcode and apm metric query.
+
+2017-12-20 Version: 2.0.1
+1, support tile dataset
+2, use dimension value type to replace isDrillDown
+
+2017-12-20 Version: 2.0.0
+1, support tile dataset
+2, use dimension value type to replace isDrillDown
+
+

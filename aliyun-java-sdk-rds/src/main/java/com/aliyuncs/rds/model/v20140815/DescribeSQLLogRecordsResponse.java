@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -31,7 +27,7 @@ public class DescribeSQLLogRecordsResponse extends AcsResponse {
 
 	private String requestId;
 
-	private Integer totalRecordCount;
+	private Long totalRecordCount;
 
 	private Integer pageNumber;
 
@@ -47,11 +43,11 @@ public class DescribeSQLLogRecordsResponse extends AcsResponse {
 		this.requestId = requestId;
 	}
 
-	public Integer getTotalRecordCount() {
+	public Long getTotalRecordCount() {
 		return this.totalRecordCount;
 	}
 
-	public void setTotalRecordCount(Integer totalRecordCount) {
+	public void setTotalRecordCount(Long totalRecordCount) {
 		this.totalRecordCount = totalRecordCount;
 	}
 
@@ -94,6 +90,8 @@ public class DescribeSQLLogRecordsResponse extends AcsResponse {
 		private Long returnRowCounts;
 
 		private String executeTime;
+
+		private String threadID;
 
 		public String getDBName() {
 			return this.dBName;
@@ -149,6 +147,14 @@ public class DescribeSQLLogRecordsResponse extends AcsResponse {
 
 		public void setExecuteTime(String executeTime) {
 			this.executeTime = executeTime;
+		}
+
+		public String getThreadID() {
+			return this.threadID;
+		}
+
+		public void setThreadID(String threadID) {
+			this.threadID = threadID;
 		}
 	}
 

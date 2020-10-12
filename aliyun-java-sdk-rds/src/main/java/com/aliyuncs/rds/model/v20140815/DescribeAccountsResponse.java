@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -31,6 +27,10 @@ public class DescribeAccountsResponse extends AcsResponse {
 
 	private String requestId;
 
+	private String systemAdminAccountStatus;
+
+	private String systemAdminAccountFirstActivationTime;
+
 	private List<DBInstanceAccount> accounts;
 
 	public String getRequestId() {
@@ -39,6 +39,22 @@ public class DescribeAccountsResponse extends AcsResponse {
 
 	public void setRequestId(String requestId) {
 		this.requestId = requestId;
+	}
+
+	public String getSystemAdminAccountStatus() {
+		return this.systemAdminAccountStatus;
+	}
+
+	public void setSystemAdminAccountStatus(String systemAdminAccountStatus) {
+		this.systemAdminAccountStatus = systemAdminAccountStatus;
+	}
+
+	public String getSystemAdminAccountFirstActivationTime() {
+		return this.systemAdminAccountFirstActivationTime;
+	}
+
+	public void setSystemAdminAccountFirstActivationTime(String systemAdminAccountFirstActivationTime) {
+		this.systemAdminAccountFirstActivationTime = systemAdminAccountFirstActivationTime;
 	}
 
 	public List<DBInstanceAccount> getAccounts() {
@@ -55,9 +71,13 @@ public class DescribeAccountsResponse extends AcsResponse {
 
 		private String accountName;
 
-		private AccountStatus accountStatus;
+		private String accountStatus;
+
+		private String accountType;
 
 		private String accountDescription;
+
+		private String privExceeded;
 
 		private List<DatabasePrivilege> databasePrivileges;
 
@@ -77,12 +97,20 @@ public class DescribeAccountsResponse extends AcsResponse {
 			this.accountName = accountName;
 		}
 
-		public AccountStatus getAccountStatus() {
+		public String getAccountStatus() {
 			return this.accountStatus;
 		}
 
-		public void setAccountStatus(AccountStatus accountStatus) {
+		public void setAccountStatus(String accountStatus) {
 			this.accountStatus = accountStatus;
+		}
+
+		public String getAccountType() {
+			return this.accountType;
+		}
+
+		public void setAccountType(String accountType) {
+			this.accountType = accountType;
 		}
 
 		public String getAccountDescription() {
@@ -93,6 +121,14 @@ public class DescribeAccountsResponse extends AcsResponse {
 			this.accountDescription = accountDescription;
 		}
 
+		public String getPrivExceeded() {
+			return this.privExceeded;
+		}
+
+		public void setPrivExceeded(String privExceeded) {
+			this.privExceeded = privExceeded;
+		}
+
 		public List<DatabasePrivilege> getDatabasePrivileges() {
 			return this.databasePrivileges;
 		}
@@ -101,44 +137,13 @@ public class DescribeAccountsResponse extends AcsResponse {
 			this.databasePrivileges = databasePrivileges;
 		}
 
-		public enum AccountStatus {
-		
-			AVAILABLE("Available"),
-			UNAVAILABLE("Unavailable"),;
-			
-		    private String stringValue;
-		
-			AccountStatus(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static AccountStatus getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (AccountStatus accountStatus : AccountStatus.values()) {
-					if(accountStatus.getStringValue().equals(stringValue)){
-						return accountStatus;
-					}
-				}
-		    	return null;
-		    }
-		}
-
 		public static class DatabasePrivilege {
 
 			private String dBName;
 
 			private String accountPrivilege;
+
+			private String accountPrivilegeDetail;
 
 			public String getDBName() {
 				return this.dBName;
@@ -154,6 +159,14 @@ public class DescribeAccountsResponse extends AcsResponse {
 
 			public void setAccountPrivilege(String accountPrivilege) {
 				this.accountPrivilege = accountPrivilege;
+			}
+
+			public String getAccountPrivilegeDetail() {
+				return this.accountPrivilegeDetail;
+			}
+
+			public void setAccountPrivilegeDetail(String accountPrivilegeDetail) {
+				this.accountPrivilegeDetail = accountPrivilegeDetail;
 			}
 		}
 	}

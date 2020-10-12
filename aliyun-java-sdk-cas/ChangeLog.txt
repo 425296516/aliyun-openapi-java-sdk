@@ -1,0 +1,18 @@
+2020-07-28 Version: 2020.07.15
+- Publish SDK For Go and Java.
+- Add a certificate package.
+
+2020-06-23 Version: 2020.06.23
+- Publish SDK For Java python.
+- New Version Base on 2020-04-07.
+- For Certificate Package.
+
+2020-04-15 Version: 2020.04.07
+- Publish SDK For Java python.
+- Base on 2020-04-07.
+- For Certificate Package.
+
+2020-01-14 Version: 20180713_0114
+- Publish SDK For Java python, PHP.
+- Base on 2018-07-13.
+

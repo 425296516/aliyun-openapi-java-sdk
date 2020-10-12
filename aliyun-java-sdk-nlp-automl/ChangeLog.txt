@@ -1,0 +1,27 @@
+2020-09-08 Version: 0.0.8
+- Modify CreateAsyncPredict add new parameters.
+
+2020-05-26 Version: 0.0.7
+- Add smartcall service api.
+
+2020-05-26 Version: 0.0.6
+- Add smartcall service api.
+
+2020-04-15 Version: 0.0.5
+- Add pre train service api.
+
+2020-03-09 Version: 0.0.4
+- NlpAutoml update contract api.
+
+2019-12-26 Version: 0.0.3
+- NlpAutoml add async api.
+
+2019-11-21 Version: 0.0.2
+- Update Nlp Automl SDK.
+
+2019-11-15 Version: 0.0.1
+- Nlp Automl SDK.
+
+2019-11-15 Version: 0.0.1
+- Nlp Automl SDK.
+

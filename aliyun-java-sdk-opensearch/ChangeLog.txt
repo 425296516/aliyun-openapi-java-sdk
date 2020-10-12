@@ -1,0 +1,34 @@
+2020-08-18 Version: 0.7.0
+- Add API RenewAppGroup.
+
+2020-08-14 Version: 0.6.0
+- Add POP-Model-related APIs.
+
+2020-07-31 Version: 0.5.0
+- Add ABTest-related APIs.
+- Add UserAnalyzer-related APIs.
+- Add API ListSortExpressions.
+- Fix property tag_label of response of ListInterventionDictionaryEntries.
+
+2020-07-30 Version: 0.5.0
+- Add ABTest-related APIs.
+- Add UserAnalyzer-related APIs.
+- Add API ListSortExpressions.
+- Fix property tag_label of response of ListInterventionDictionaryEntries.
+
+2020-07-16 Version: 0.4.0
+- Add more OpenAPIs related to QueryProcessor, FirstRank, SecondRank, etc.
+
+2020-07-08 Version: 0.3.0
+- Support hotword and hint.
+
+2020-06-29 Version: 0.2.1
+- Fix response structure of DescribeApp.
+
+2020-05-27 Version: 0.2.0
+- Add app-group-management and quota-updating APIs.
+- Add app management APIs.
+
+2020-04-03 Version: 0.1.0
+- Support sort script.
+

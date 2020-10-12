@@ -1,0 +1,42 @@
+2020-09-23 Version: 4.8.1
+- Some new parameters are supported.
+
+2020-06-24 Version: 4.8.0
+- Generated 2015-12-15 for `CS`.
+
+2020-06-23 Version: 0.1.0
+- Generated 2015-12-15 for `CS`.
+
+2020-01-15 Version: 4.0.5
+- Support Workflow csk.
+
+2019-12-05 Version: 4.7.15
+- Add new api DeleteClusterNodes.
+
+2019-05-16 Version: 4.7.14
+1, Update SDK Version
+2, Change api UpgradeClusterAddons, UpgradeClusterComponents, DescribeClusterAddonsVersion to public
+
+
+2019-05-16 Version: 4.7.13
+1, Update SDK Version
+2, Change api UpgradeClusterAddons, UpgradeClusterComponents, DescribeClusterAddonsVersion to public
+
+
+2019-05-16 Version: 4.7.12
+1, Update SDK version
+2, Add api DescribeClusterAddonsVersion
+
+
+2019-05-16 Version: 4.7.11
+1, Add new api,DescribeClusterAddonsVersion
+
+2019-03-19 Version: 2.9.1
+1, Update Dependency
+
+2018-02-27 Version: 2.9.0
+1, add new api DescribeClusters,DescribeClusterLogs,DescribeClusterNodes,UpgradeClusterComponents
+
+2018-02-27 Version: 2.9.0
+1, add new api DescribeClusters,DescribeClusterLogs,DescribeClusterNodes,UpgradeClusterComponents
+

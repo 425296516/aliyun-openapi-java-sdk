@@ -18,8 +18,7 @@
  */
 package com.aliyuncs.batchcompute.util;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.File;
 import java.util.Properties;
 
 /**
@@ -29,7 +28,9 @@ public class Config {
 
     private Config() {
 
+        String homestr = System.getProperty("user.home");
         String[] arr = new String[]{
+                homestr + File.separator + ".aliyun-java-sdk-batchcompute-test.properties",
                 "resources/config_test.properties",
                 "resources/config.properties"
         };
@@ -38,6 +39,7 @@ public class Config {
         regionId = (String) prop.get("regionId");
         accessId = (String) prop.get("accessId");
         accessKey = (String) prop.get("accessKey");
+        ecsImageId = (String) prop.get("escImageId");
 
     }
 
@@ -62,9 +64,14 @@ public class Config {
         return accessKey;
     }
 
+    public String getEcsImageId() {
+        return ecsImageId;
+    }
+
 
     private String regionId;
     private String accessId;
     private String accessKey;
+    private String ecsImageId;
 
 }

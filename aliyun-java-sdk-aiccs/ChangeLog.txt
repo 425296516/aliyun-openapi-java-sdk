@@ -1,0 +1,54 @@
+2020-09-27 Version: 1.0.9
+- Get agent info realtime.
+
+2020-09-24 Version: 1.0.9
+- Support Conference Call.
+
+2020-09-24 Version: 1.0.9
+- Support Conference Call.
+
+2020-09-22 Version: 1.0.8
+- Upgrade hotline num API.
+
+2020-09-17 Version: 1.0.8
+- Upgrade hotline session API.
+
+2020-09-16 Version: 1.0.7
+- Upgrade hotline session API.
+
+2020-09-10 Version: 1.0.6
+- Support GetHotlineWaitingNumber in SDK.
+- Support TransferCallToSkillGroup.
+- Support JoinThirdCall.
+- Support HangupThirdCall.
+- Support FetchCall.
+- Support HoldCall.
+
+2020-09-03 Version: 1.0.5
+- Upgrade hotline session API.
+- Support sub ram account.
+
+2020-09-03 Version: 1.0.5
+- Upgrade hotline session API.
+- Support sub ram account.
+
+2020-09-02 Version: 1.0.4
+- Upgrade hotline session API.
+
+2020-09-01 Version: 1.0.3
+- Build sdk.
+- Add hotline session API.
+
+2020-09-01 Version: 1.0.3
+- Build sdk.
+- Add hotline session API.
+
+2020-08-18 Version: 1.0.2
+- Build sdk.
+
+2020-07-02 Version: 1.0.0
+- Build sdk.
+
+2020-07-02 Version: 1.0.0
+- Build sdk.
+

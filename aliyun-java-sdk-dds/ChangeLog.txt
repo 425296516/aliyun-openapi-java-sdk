@@ -1,0 +1,53 @@
+2020-08-13 Version: 3.3.0
+- DescribePrice update amount parameters type, float to string.
+- Add ResourceGroupId parameter to support resource group.
+
+2020-07-02 Version: 3.2.0
+- CreateShardingDBInstance add ProtocolType, to support DynamoDB.
+- DescribeDBInstances add return ResourceGroupId.
+
+2020-05-27 Version: 3.1.2
+- Added cn-heyuan endpoint url.
+- Added cn-wulanchabu endpoint url.
+
+2020-04-15 Version: 3.1.1
+- CreateNode API add return NodeId.
+
+2020-04-09 Version: 3.1.0
+- Add DescribePrice API.
+
+2020-04-09 Version: 3.1.0
+- Add DescribePrice API.
+
+2020-03-11 Version: 3.0.0
+- Update structure for DescribeAvailableResource without compatible.
+
+2020-01-13 Version: 2.0.7
+- New API DescribeAvailableResource.
+
+2020-01-03 Version: 2.0.6
+- New API DescribeAvailableResource.
+
+2019-04-18 Version: 2.0.5
+1, Add CreateAccount
+
+2019-02-15 Version: 2.0.4
+1, Modify DescribeDBInstances LastDowngradeTime DataType
+
+2018-12-11 Version: 2.0.3
+1, Modify DescribeDBInstances OpenApi lastDowngradeTime dataType. 
+2, Upgrade SDK Version to 2.0.3.
+
+2018-10-31 Version: 2.0.2
+1, The DescribeDBInstanceAttribute add replicaSets response value.
+2, The DescribeDBInstances support engine query.
+
+2018-08-22 Version: 2.0.1
+1, upgrade mongodb sdk.
+
+2017-11-14 Version: 1.0.0
+1, MongoDB SDK 1.0.0
+
+2017-11-14 Version: 1.0.0
+1, MongoDB SDK 1.0.0
+

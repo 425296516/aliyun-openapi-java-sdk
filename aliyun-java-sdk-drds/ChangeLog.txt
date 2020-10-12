@@ -1,0 +1,87 @@
+2020-09-01 Version: 202009031
+- Generated 2019-01-23 for `Drds`.
+
+2020-09-01 Version: 201710161
+- Generated 2017-10-16 for `Drds`.
+
+2020-09-01 Version: 20200901
+- Generated 2019-01-23 for `Drds`.
+
+2020-09-01 Version: 20200901
+- Generated 2019-01-23 for `Drds`.
+
+2020-09-01 Version: 20190123
+- Generated 2019-01-23 for `Drds`.
+
+2020-09-01 Version: 20190123
+- Generated 2019-01-23 for `Drds`.
+
+2020-08-17 Version: 20190123
+- Generated 2019-01-23 for `Drds`.
+
+2020-08-17 Version: 2019-01-23
+- Generated 2019-01-23 for `Drds`.
+
+2020-08-17 Version: 2019-01-23
+- Generated 2019-01-23 for `Drds`.
+
+2020-05-22 Version: 4.7.2-inner
+- Generated 2019-01-23, 2017-10-16 for `Drds`.
+
+2020-03-03 Version: 4.6.1
+- Supported DescribeDrdsInstance.
+
+2020-01-16 Version: 4.6.0
+- Fix create drds instance issue.
+
+2020-01-16 Version: 4.5.0
+- Support normandy api.
+
+2020-01-15 Version: 4.5.0
+- Support normandy api.
+
+2019-12-03 Version: 4.4.3
+- Generated 2019-01-23 for `Drds`.
+
+2019-11-29 Version: 4.4.2
+- Generated 2019-01-23 for `Drds`.
+
+2019-11-27 Version: 4.4.1
+- Supported DescribeDrdsComponents.
+
+2019-09-03 Version: 4.4.0
+- Support get DRDS user info and instance info.
+
+2019-08-30 Version: 4.3.0
+- Support latest DRDS Open API for version 2019-01-23 and 2017-10-16.
+
+2019-08-30 Version: 4.2.0
+- Support latest DRDS Open API for version 2019-01-23.
+
+2019-08-06 Version: 4.1.0
+- Support latest DRDS Open API for version 2019-01-23.
+
+2019-04-11 Version: 4.0.0
+1, A new 2019-01-23 version on which DRDS new Console based.
+
+2019-04-03 Version: 4.0.0
+1, A new 2019-01-23 version on which DRDS new Console based.
+
+2019-02-20 Version: 2.6.3
+1, createInstance support vpcId and vswitchId
+
+2018-12-18 Version: 2.6.0
+1, Add DescribeDrdsInstanceDbMonitor.
+2, Add DescribeDrdsInstanceMonitor.
+3, Update CreateDrdsInstance
+
+2018-07-26 Version: 2.5.1
+1, add groupName parameter for DescribeShardDbs interface.
+
+2018-05-23 Version: 2.5.0
+1, Add CreateDrdsAccount API, to support creating account for all databases of a DRDS instance.
+
+2017-10-17 Version: 2.3.0
+1, 修改了CreateDrdsInstance接口，增加了instanceSeries入参，用来创建多规格实例指定其系列
+2, 修改了DescribeRegions接口，增加了对实例系列集合的返回值：specList、seriesName
+

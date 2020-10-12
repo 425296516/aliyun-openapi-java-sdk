@@ -1,71 +1,59 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttributeResponse> {
-	
-	public ModifyDiskAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyDiskAttribute");
-	}
-
-	private Long ownerId;
-
-	private String resourceOwnerAccount;
+	   
 
 	private Long resourceOwnerId;
 
-	private String diskId;
+	private String description;
 
 	private String diskName;
 
-	private String description;
+	private Boolean deleteAutoSnapshot;
+
+	private List<String> diskIdss;
+
+	private String diskId;
 
 	private Boolean deleteWithInstance;
 
-	private Boolean deleteAutoSnapshot;
-
 	private Boolean enableAutoSnapshot;
+
+	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		putQueryParameter("OwnerId", String.valueOf(ownerId));
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+	private Long ownerId;
+	public ModifyDiskAttributeRequest() {
+		super("Ecs", "2014-05-26", "ModifyDiskAttribute", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
 	}
 
 	public Long getResourceOwnerId() {
@@ -74,25 +62,9 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 
 	public void setResourceOwnerId(Long resourceOwnerId) {
 		this.resourceOwnerId = resourceOwnerId;
-		putQueryParameter("ResourceOwnerId", String.valueOf(resourceOwnerId));
-	}
-
-	public String getDiskId() {
-		return this.diskId;
-	}
-
-	public void setDiskId(String diskId) {
-		this.diskId = diskId;
-		putQueryParameter("DiskId", diskId);
-	}
-
-	public String getDiskName() {
-		return this.diskName;
-	}
-
-	public void setDiskName(String diskName) {
-		this.diskName = diskName;
-		putQueryParameter("DiskName", diskName);
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
 	}
 
 	public String getDescription() {
@@ -101,16 +73,20 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 
 	public void setDescription(String description) {
 		this.description = description;
-		putQueryParameter("Description", description);
+		if(description != null){
+			putQueryParameter("Description", description);
+		}
 	}
 
-	public Boolean getDeleteWithInstance() {
-		return this.deleteWithInstance;
+	public String getDiskName() {
+		return this.diskName;
 	}
 
-	public void setDeleteWithInstance(Boolean deleteWithInstance) {
-		this.deleteWithInstance = deleteWithInstance;
-		putQueryParameter("DeleteWithInstance", String.valueOf(deleteWithInstance));
+	public void setDiskName(String diskName) {
+		this.diskName = diskName;
+		if(diskName != null){
+			putQueryParameter("DiskName", diskName);
+		}
 	}
 
 	public Boolean getDeleteAutoSnapshot() {
@@ -119,7 +95,44 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 
 	public void setDeleteAutoSnapshot(Boolean deleteAutoSnapshot) {
 		this.deleteAutoSnapshot = deleteAutoSnapshot;
-		putQueryParameter("DeleteAutoSnapshot", String.valueOf(deleteAutoSnapshot));
+		if(deleteAutoSnapshot != null){
+			putQueryParameter("DeleteAutoSnapshot", deleteAutoSnapshot.toString());
+		}
+	}
+
+	public List<String> getDiskIdss() {
+		return this.diskIdss;
+	}
+
+	public void setDiskIdss(List<String> diskIdss) {
+		this.diskIdss = diskIdss;	
+		if (diskIdss != null) {
+			for (int i = 0; i < diskIdss.size(); i++) {
+				putQueryParameter("DiskIds." + (i + 1) , diskIdss.get(i));
+			}
+		}	
+	}
+
+	public String getDiskId() {
+		return this.diskId;
+	}
+
+	public void setDiskId(String diskId) {
+		this.diskId = diskId;
+		if(diskId != null){
+			putQueryParameter("DiskId", diskId);
+		}
+	}
+
+	public Boolean getDeleteWithInstance() {
+		return this.deleteWithInstance;
+	}
+
+	public void setDeleteWithInstance(Boolean deleteWithInstance) {
+		this.deleteWithInstance = deleteWithInstance;
+		if(deleteWithInstance != null){
+			putQueryParameter("DeleteWithInstance", deleteWithInstance.toString());
+		}
 	}
 
 	public Boolean getEnableAutoSnapshot() {
@@ -128,7 +141,20 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 
 	public void setEnableAutoSnapshot(Boolean enableAutoSnapshot) {
 		this.enableAutoSnapshot = enableAutoSnapshot;
-		putQueryParameter("EnableAutoSnapshot", String.valueOf(enableAutoSnapshot));
+		if(enableAutoSnapshot != null){
+			putQueryParameter("EnableAutoSnapshot", enableAutoSnapshot.toString());
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
 	}
 
 	public String getOwnerAccount() {
@@ -137,7 +163,20 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 
 	public void setOwnerAccount(String ownerAccount) {
 		this.ownerAccount = ownerAccount;
-		putQueryParameter("OwnerAccount", ownerAccount);
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
 	}
 
 	@Override
