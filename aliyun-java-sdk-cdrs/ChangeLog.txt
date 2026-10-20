@@ -1,0 +1,39 @@
+2021-01-29 Version: 1.0.0
+- Update Monitor Api.
+
+2021-01-29 Version: 1.0.0
+- Update Monitor Api.
+
+2021-01-22 Version: 1.0.9
+- Update Function.
+
+2021-01-19 Version: 1.0.8
+- Update Function.
+
+2021-01-15 Version: 1.0.7
+- Update Function.
+
+2021-01-15 Version: 1.0.6
+- Update Function.
+
+2021-01-14 Version: 1.0.5
+- Add function.
+
+2021-01-14 Version: 1.0.4
+- Update function.
+
+2021-01-06 Version: 1.0.3
+- Add API.
+
+2020-12-23 Version: 1.0.0
+- CDRS First edition.
+
+2020-12-15 Version: 1.0.0
+- CDRS First edition.
+
+2020-12-15 Version: 1.0.0
+- CDRS First edition.
+
+2020-12-14 Version: 1.0.0
+- CDRS First edition.
+

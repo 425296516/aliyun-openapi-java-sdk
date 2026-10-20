@@ -1,24 +1,21 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
+import java.util.Map;
 import com.aliyuncs.AcsResponse;
 import com.aliyuncs.rds.transform.v20140815.DescribeDatabasesResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
@@ -51,51 +48,43 @@ public class DescribeDatabasesResponse extends AcsResponse {
 
 	public static class Database {
 
-		private String dBName;
-
-		private String dBInstanceId;
-
-		private String engine;
-
-		private DBStatus dBStatus;
-
 		private String characterSetName;
+
+		private String collate;
+
+		private String connLimit;
+
+		private String ctype;
 
 		private String dBDescription;
 
+		private String dBInstanceId;
+
+		private String dBName;
+
+		private String dBStatus;
+
+		private String engine;
+
+		private Integer pageNumber;
+
+		private Integer pageSize;
+
+		private String resourceGroupId;
+
+		private String tablespace;
+
+		private Integer totalCount;
+
+		private Boolean duckDBEnabled;
+
 		private List<AccountPrivilegeInfo> accounts;
 
-		public String getDBName() {
-			return this.dBName;
-		}
+		private List<Map<Object,Object>> advancedInfo;
 
-		public void setDBName(String dBName) {
-			this.dBName = dBName;
-		}
+		private List<Map<Object,Object>> basicInfo;
 
-		public String getDBInstanceId() {
-			return this.dBInstanceId;
-		}
-
-		public void setDBInstanceId(String dBInstanceId) {
-			this.dBInstanceId = dBInstanceId;
-		}
-
-		public String getEngine() {
-			return this.engine;
-		}
-
-		public void setEngine(String engine) {
-			this.engine = engine;
-		}
-
-		public DBStatus getDBStatus() {
-			return this.dBStatus;
-		}
-
-		public void setDBStatus(DBStatus dBStatus) {
-			this.dBStatus = dBStatus;
-		}
+		private List<Map<Object,Object>> runtimeInfo;
 
 		public String getCharacterSetName() {
 			return this.characterSetName;
@@ -103,6 +92,30 @@ public class DescribeDatabasesResponse extends AcsResponse {
 
 		public void setCharacterSetName(String characterSetName) {
 			this.characterSetName = characterSetName;
+		}
+
+		public String getCollate() {
+			return this.collate;
+		}
+
+		public void setCollate(String collate) {
+			this.collate = collate;
+		}
+
+		public String getConnLimit() {
+			return this.connLimit;
+		}
+
+		public void setConnLimit(String connLimit) {
+			this.connLimit = connLimit;
+		}
+
+		public String getCtype() {
+			return this.ctype;
+		}
+
+		public void setCtype(String ctype) {
+			this.ctype = ctype;
 		}
 
 		public String getDBDescription() {
@@ -113,6 +126,86 @@ public class DescribeDatabasesResponse extends AcsResponse {
 			this.dBDescription = dBDescription;
 		}
 
+		public String getDBInstanceId() {
+			return this.dBInstanceId;
+		}
+
+		public void setDBInstanceId(String dBInstanceId) {
+			this.dBInstanceId = dBInstanceId;
+		}
+
+		public String getDBName() {
+			return this.dBName;
+		}
+
+		public void setDBName(String dBName) {
+			this.dBName = dBName;
+		}
+
+		public String getDBStatus() {
+			return this.dBStatus;
+		}
+
+		public void setDBStatus(String dBStatus) {
+			this.dBStatus = dBStatus;
+		}
+
+		public String getEngine() {
+			return this.engine;
+		}
+
+		public void setEngine(String engine) {
+			this.engine = engine;
+		}
+
+		public Integer getPageNumber() {
+			return this.pageNumber;
+		}
+
+		public void setPageNumber(Integer pageNumber) {
+			this.pageNumber = pageNumber;
+		}
+
+		public Integer getPageSize() {
+			return this.pageSize;
+		}
+
+		public void setPageSize(Integer pageSize) {
+			this.pageSize = pageSize;
+		}
+
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
+		public String getTablespace() {
+			return this.tablespace;
+		}
+
+		public void setTablespace(String tablespace) {
+			this.tablespace = tablespace;
+		}
+
+		public Integer getTotalCount() {
+			return this.totalCount;
+		}
+
+		public void setTotalCount(Integer totalCount) {
+			this.totalCount = totalCount;
+		}
+
+		public Boolean getDuckDBEnabled() {
+			return this.duckDBEnabled;
+		}
+
+		public void setDuckDBEnabled(Boolean duckDBEnabled) {
+			this.duckDBEnabled = duckDBEnabled;
+		}
+
 		public List<AccountPrivilegeInfo> getAccounts() {
 			return this.accounts;
 		}
@@ -121,38 +214,28 @@ public class DescribeDatabasesResponse extends AcsResponse {
 			this.accounts = accounts;
 		}
 
-		public enum DBStatus {
-		
-			DELETING("Deleting"),
-			RUNNING("Running"),
-			CREATING("Creating"),;
-			
-		    private String stringValue;
-		
-			DBStatus(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static DBStatus getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (DBStatus dBStatus : DBStatus.values()) {
-					if(dBStatus.getStringValue().equals(stringValue)){
-						return dBStatus;
-					}
-				}
-		    	return null;
-		    }
+		public List<Map<Object,Object>> getAdvancedInfo() {
+			return this.advancedInfo;
+		}
+
+		public void setAdvancedInfo(List<Map<Object,Object>> advancedInfo) {
+			this.advancedInfo = advancedInfo;
+		}
+
+		public List<Map<Object,Object>> getBasicInfo() {
+			return this.basicInfo;
+		}
+
+		public void setBasicInfo(List<Map<Object,Object>> basicInfo) {
+			this.basicInfo = basicInfo;
+		}
+
+		public List<Map<Object,Object>> getRuntimeInfo() {
+			return this.runtimeInfo;
+		}
+
+		public void setRuntimeInfo(List<Map<Object,Object>> runtimeInfo) {
+			this.runtimeInfo = runtimeInfo;
 		}
 
 		public static class AccountPrivilegeInfo {
@@ -160,6 +243,8 @@ public class DescribeDatabasesResponse extends AcsResponse {
 			private String account;
 
 			private String accountPrivilege;
+
+			private String accountPrivilegeDetail;
 
 			public String getAccount() {
 				return this.account;
@@ -175,6 +260,14 @@ public class DescribeDatabasesResponse extends AcsResponse {
 
 			public void setAccountPrivilege(String accountPrivilege) {
 				this.accountPrivilege = accountPrivilege;
+			}
+
+			public String getAccountPrivilegeDetail() {
+				return this.accountPrivilegeDetail;
+			}
+
+			public void setAccountPrivilegeDetail(String accountPrivilegeDetail) {
+				this.accountPrivilegeDetail = accountPrivilegeDetail;
 			}
 		}
 	}

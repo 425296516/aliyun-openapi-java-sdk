@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -29,31 +25,15 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeTasksResponse extends AcsResponse {
 
-	private String requestId;
-
-	private Integer totalRecordCount;
-
 	private Integer pageNumber;
 
 	private Integer pageRecordCount;
 
+	private String requestId;
+
+	private Integer totalRecordCount;
+
 	private List<TaskProgressInfo> items;
-
-	public String getRequestId() {
-		return this.requestId;
-	}
-
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
-
-	public Integer getTotalRecordCount() {
-		return this.totalRecordCount;
-	}
-
-	public void setTotalRecordCount(Integer totalRecordCount) {
-		this.totalRecordCount = totalRecordCount;
-	}
 
 	public Integer getPageNumber() {
 		return this.pageNumber;
@@ -71,6 +51,22 @@ public class DescribeTasksResponse extends AcsResponse {
 		this.pageRecordCount = pageRecordCount;
 	}
 
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public Integer getTotalRecordCount() {
+		return this.totalRecordCount;
+	}
+
+	public void setTotalRecordCount(Integer totalRecordCount) {
+		this.totalRecordCount = totalRecordCount;
+	}
+
 	public List<TaskProgressInfo> getItems() {
 		return this.items;
 	}
@@ -81,31 +77,35 @@ public class DescribeTasksResponse extends AcsResponse {
 
 	public static class TaskProgressInfo {
 
-		private String dBName;
-
 		private String beginTime;
 
-		private String progressInfo;
+		private String currentStepName;
 
-		private String finishTime;
-
-		private String taskAction;
-
-		private String taskId;
-
-		private String progress;
+		private String dBName;
 
 		private String expectedFinishTime;
 
-		private Status status;
+		private String finishTime;
 
-		public String getDBName() {
-			return this.dBName;
-		}
+		private String progress;
 
-		public void setDBName(String dBName) {
-			this.dBName = dBName;
-		}
+		private String progressInfo;
+
+		private Integer remain;
+
+		private String status;
+
+		private String stepProgressInfo;
+
+		private String stepsInfo;
+
+		private String taskAction;
+
+		private String taskErrorCode;
+
+		private String taskErrorMessage;
+
+		private String taskId;
 
 		public String getBeginTime() {
 			return this.beginTime;
@@ -115,44 +115,20 @@ public class DescribeTasksResponse extends AcsResponse {
 			this.beginTime = beginTime;
 		}
 
-		public String getProgressInfo() {
-			return this.progressInfo;
+		public String getCurrentStepName() {
+			return this.currentStepName;
 		}
 
-		public void setProgressInfo(String progressInfo) {
-			this.progressInfo = progressInfo;
+		public void setCurrentStepName(String currentStepName) {
+			this.currentStepName = currentStepName;
 		}
 
-		public String getFinishTime() {
-			return this.finishTime;
+		public String getDBName() {
+			return this.dBName;
 		}
 
-		public void setFinishTime(String finishTime) {
-			this.finishTime = finishTime;
-		}
-
-		public String getTaskAction() {
-			return this.taskAction;
-		}
-
-		public void setTaskAction(String taskAction) {
-			this.taskAction = taskAction;
-		}
-
-		public String getTaskId() {
-			return this.taskId;
-		}
-
-		public void setTaskId(String taskId) {
-			this.taskId = taskId;
-		}
-
-		public String getProgress() {
-			return this.progress;
-		}
-
-		public void setProgress(String progress) {
-			this.progress = progress;
+		public void setDBName(String dBName) {
+			this.dBName = dBName;
 		}
 
 		public String getExpectedFinishTime() {
@@ -163,48 +139,92 @@ public class DescribeTasksResponse extends AcsResponse {
 			this.expectedFinishTime = expectedFinishTime;
 		}
 
-		public Status getStatus() {
+		public String getFinishTime() {
+			return this.finishTime;
+		}
+
+		public void setFinishTime(String finishTime) {
+			this.finishTime = finishTime;
+		}
+
+		public String getProgress() {
+			return this.progress;
+		}
+
+		public void setProgress(String progress) {
+			this.progress = progress;
+		}
+
+		public String getProgressInfo() {
+			return this.progressInfo;
+		}
+
+		public void setProgressInfo(String progressInfo) {
+			this.progressInfo = progressInfo;
+		}
+
+		public Integer getRemain() {
+			return this.remain;
+		}
+
+		public void setRemain(Integer remain) {
+			this.remain = remain;
+		}
+
+		public String getStatus() {
 			return this.status;
 		}
 
-		public void setStatus(Status status) {
+		public void setStatus(String status) {
 			this.status = status;
 		}
 
-		public enum Status {
-		
-			PROCESSING("Processing"),
-			NO_START("NoStart"),
-			FAILED("Failed"),
-			SUCCESS("Success"),
-			PENDING("Pending"),;
-			
-		    private String stringValue;
-		
-			Status(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static Status getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (Status status : Status.values()) {
-					if(status.getStringValue().equals(stringValue)){
-						return status;
-					}
-				}
-		    	return null;
-		    }
+		public String getStepProgressInfo() {
+			return this.stepProgressInfo;
+		}
+
+		public void setStepProgressInfo(String stepProgressInfo) {
+			this.stepProgressInfo = stepProgressInfo;
+		}
+
+		public String getStepsInfo() {
+			return this.stepsInfo;
+		}
+
+		public void setStepsInfo(String stepsInfo) {
+			this.stepsInfo = stepsInfo;
+		}
+
+		public String getTaskAction() {
+			return this.taskAction;
+		}
+
+		public void setTaskAction(String taskAction) {
+			this.taskAction = taskAction;
+		}
+
+		public String getTaskErrorCode() {
+			return this.taskErrorCode;
+		}
+
+		public void setTaskErrorCode(String taskErrorCode) {
+			this.taskErrorCode = taskErrorCode;
+		}
+
+		public String getTaskErrorMessage() {
+			return this.taskErrorMessage;
+		}
+
+		public void setTaskErrorMessage(String taskErrorMessage) {
+			this.taskErrorMessage = taskErrorMessage;
+		}
+
+		public String getTaskId() {
+			return this.taskId;
+		}
+
+		public void setTaskId(String taskId) {
+			this.taskId = taskId;
 		}
 	}
 

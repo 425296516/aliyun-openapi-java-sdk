@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -51,95 +47,39 @@ public class DescribeInstanceMonitorDataResponse extends AcsResponse {
 
 	public static class InstanceMonitorData {
 
-		private String instanceId;
-
-		private Integer cPU;
-
-		private Integer intranetRX;
-
-		private Integer intranetTX;
-
-		private Integer intranetBandwidth;
-
-		private Integer internetRX;
-
-		private Integer internetTX;
-
-		private Integer internetBandwidth;
-
 		private Integer iOPSRead;
+
+		private Float cPUCreditUsage;
 
 		private Integer iOPSWrite;
 
-		private Integer bPSRead;
+		private Integer intranetBandwidth;
 
-		private Integer bPSWrite;
+		private String instanceId;
+
+		private Integer intranetTX;
+
+		private Integer cPU;
+
+		private Float cPUAdvanceCreditBalance;
+
+		private Integer bPSRead;
 
 		private String timeStamp;
 
-		public String getInstanceId() {
-			return this.instanceId;
-		}
+		private Integer intranetRX;
 
-		public void setInstanceId(String instanceId) {
-			this.instanceId = instanceId;
-		}
+		private Integer internetBandwidth;
 
-		public Integer getCPU() {
-			return this.cPU;
-		}
+		private Float cPUNotpaidSurplusCreditUsage;
 
-		public void setCPU(Integer cPU) {
-			this.cPU = cPU;
-		}
+		private Float cPUCreditBalance;
 
-		public Integer getIntranetRX() {
-			return this.intranetRX;
-		}
+		private Integer internetTX;
 
-		public void setIntranetRX(Integer intranetRX) {
-			this.intranetRX = intranetRX;
-		}
+		private Integer bPSWrite;
 
-		public Integer getIntranetTX() {
-			return this.intranetTX;
-		}
-
-		public void setIntranetTX(Integer intranetTX) {
-			this.intranetTX = intranetTX;
-		}
-
-		public Integer getIntranetBandwidth() {
-			return this.intranetBandwidth;
-		}
-
-		public void setIntranetBandwidth(Integer intranetBandwidth) {
-			this.intranetBandwidth = intranetBandwidth;
-		}
-
-		public Integer getInternetRX() {
-			return this.internetRX;
-		}
-
-		public void setInternetRX(Integer internetRX) {
-			this.internetRX = internetRX;
-		}
-
-		public Integer getInternetTX() {
-			return this.internetTX;
-		}
-
-		public void setInternetTX(Integer internetTX) {
-			this.internetTX = internetTX;
-		}
-
-		public Integer getInternetBandwidth() {
-			return this.internetBandwidth;
-		}
-
-		public void setInternetBandwidth(Integer internetBandwidth) {
-			this.internetBandwidth = internetBandwidth;
-		}
+		private Integer internetRX;
 
 		public Integer getIOPSRead() {
 			return this.iOPSRead;
@@ -147,6 +87,14 @@ public class DescribeInstanceMonitorDataResponse extends AcsResponse {
 
 		public void setIOPSRead(Integer iOPSRead) {
 			this.iOPSRead = iOPSRead;
+		}
+
+		public Float getCPUCreditUsage() {
+			return this.cPUCreditUsage;
+		}
+
+		public void setCPUCreditUsage(Float cPUCreditUsage) {
+			this.cPUCreditUsage = cPUCreditUsage;
 		}
 
 		public Integer getIOPSWrite() {
@@ -157,12 +105,100 @@ public class DescribeInstanceMonitorDataResponse extends AcsResponse {
 			this.iOPSWrite = iOPSWrite;
 		}
 
+		public Integer getIntranetBandwidth() {
+			return this.intranetBandwidth;
+		}
+
+		public void setIntranetBandwidth(Integer intranetBandwidth) {
+			this.intranetBandwidth = intranetBandwidth;
+		}
+
+		public String getInstanceId() {
+			return this.instanceId;
+		}
+
+		public void setInstanceId(String instanceId) {
+			this.instanceId = instanceId;
+		}
+
+		public Integer getIntranetTX() {
+			return this.intranetTX;
+		}
+
+		public void setIntranetTX(Integer intranetTX) {
+			this.intranetTX = intranetTX;
+		}
+
+		public Integer getCPU() {
+			return this.cPU;
+		}
+
+		public void setCPU(Integer cPU) {
+			this.cPU = cPU;
+		}
+
+		public Float getCPUAdvanceCreditBalance() {
+			return this.cPUAdvanceCreditBalance;
+		}
+
+		public void setCPUAdvanceCreditBalance(Float cPUAdvanceCreditBalance) {
+			this.cPUAdvanceCreditBalance = cPUAdvanceCreditBalance;
+		}
+
 		public Integer getBPSRead() {
 			return this.bPSRead;
 		}
 
 		public void setBPSRead(Integer bPSRead) {
 			this.bPSRead = bPSRead;
+		}
+
+		public String getTimeStamp() {
+			return this.timeStamp;
+		}
+
+		public void setTimeStamp(String timeStamp) {
+			this.timeStamp = timeStamp;
+		}
+
+		public Integer getIntranetRX() {
+			return this.intranetRX;
+		}
+
+		public void setIntranetRX(Integer intranetRX) {
+			this.intranetRX = intranetRX;
+		}
+
+		public Integer getInternetBandwidth() {
+			return this.internetBandwidth;
+		}
+
+		public void setInternetBandwidth(Integer internetBandwidth) {
+			this.internetBandwidth = internetBandwidth;
+		}
+
+		public Float getCPUNotpaidSurplusCreditUsage() {
+			return this.cPUNotpaidSurplusCreditUsage;
+		}
+
+		public void setCPUNotpaidSurplusCreditUsage(Float cPUNotpaidSurplusCreditUsage) {
+			this.cPUNotpaidSurplusCreditUsage = cPUNotpaidSurplusCreditUsage;
+		}
+
+		public Float getCPUCreditBalance() {
+			return this.cPUCreditBalance;
+		}
+
+		public void setCPUCreditBalance(Float cPUCreditBalance) {
+			this.cPUCreditBalance = cPUCreditBalance;
+		}
+
+		public Integer getInternetTX() {
+			return this.internetTX;
+		}
+
+		public void setInternetTX(Integer internetTX) {
+			this.internetTX = internetTX;
 		}
 
 		public Integer getBPSWrite() {
@@ -173,12 +209,12 @@ public class DescribeInstanceMonitorDataResponse extends AcsResponse {
 			this.bPSWrite = bPSWrite;
 		}
 
-		public String getTimeStamp() {
-			return this.timeStamp;
+		public Integer getInternetRX() {
+			return this.internetRX;
 		}
 
-		public void setTimeStamp(String timeStamp) {
-			this.timeStamp = timeStamp;
+		public void setInternetRX(Integer internetRX) {
+			this.internetRX = internetRX;
 		}
 	}
 

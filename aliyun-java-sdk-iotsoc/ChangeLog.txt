@@ -1,0 +1,10 @@
+2021-12-17 Version: 1.0.4-SNAPSHOT
+- Support vulnerability fix.
+- Add lost 2018 api.
+
+2021-12-17 Version: 1.0.3
+- Support vulnerability fix.
+
+2020-05-18 Version: 1.0.2
+- Release.
+

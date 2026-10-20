@@ -1,0 +1,282 @@
+2024-12-12 Version: 1.53.15
+- Supported Pageable of ListDataLakeDatabase API.
+
+2024-11-27 Version: 1.53.14
+- Support ListDataLakeCatalog, ListDataLakeDatabase, ListDataLakeTablebaseInfo, GetDataLakeCatalog, GetDataLakeDatabase, GetDataLakeTable API.
+
+2024-08-02 Version: 1.53.13
+- Support switch login user
+
+2024-04-26 Version: 1.53.12
+- Supported ApproveOrder request parameter NewApproverList.
+- Add ListSensitiveColumnInfo API.
+- Supported GetDataCorrectOrderDetail return ConfigDetail Information.
+
+2024-04-18 Version: 1.53.11
+- Supported ApproveOrder request parameter NewApproverList.
+- Add ListSensitiveColumnInfo API.
+- Supported GetDataCorrectOrderDetail return ConfigDetail Information.
+
+2024-03-27 Version: 1.53.10
+- AddInstance, ModifyInstance add ssl param
+
+2024-01-23 Version: 1.53.9
+- Support AddInstance, ModifyInstance
+
+2023-12-06 Version: 1.53.8
+- Support CreateProcCorrectOrder request param of ExecMode.
+
+2023-10-19 Version: 1.53.7
+- Support CreateAuthorityTemplate, UpdateAuthorityTemplate, GetAuthorityTemplateItem, GetAuthorityTemplate return TenantId information.
+
+2023-10-12 Version: 1.53.6
+- Support GetOrderBaseInfo to response AttachmentKey and OriginAttachmentName information.
+
+2023-10-11 Version: 1.53.5
+- Support CreateProcCorrectAPI.
+
+2023-10-10 Version: 1.53.4
+- Support CreateProcCorrectAPI.
+
+2023-09-28 Version: 1.53.3
+- Support CreateProcCorrectAPI.
+
+2023-09-20 Version: 1.53.2
+- Support CreateProcCorrectAPI.
+
+2023-07-12 Version: 1.53.1
+- Change API CreateDataArchiveOrder and GetDataArchiveCount to public.
+
+2023-07-10 Version: 1.53.0
+- Change API CreateDataArchiveOrder and GetDataArchiveCount to public.
+
+2023-07-10 Version: 1.52.3
+- Change API CreateDataArchiveOrder and GetDataArchiveCount to public.
+
+2023-07-07 Version: 1.52.2
+- Add new API CreateDataArchiveOrder. 
+
+2023-07-07 Version: 1.52.1
+- Add new API CreateDataArchiveOrder. 
+
+2023-07-06 Version: 1.52.0
+- Modify GetDataArchiveOrderDetail API. Add output parameter: TempTableNameMap.
+
+2023-06-30 Version: 1.51.0
+- Modify ListTaskFlowsByPage API. Add output parameter: DagOwnerId.
+- Modify ReRunTaskFlowInstance, ReSumeTaskFlowInstance: input parameter DagVersion is not required.
+
+2023-05-26 Version: 1.49.0
+- Modify ListTaskFlowsByPage API. Add output parameters: CronBeginDate, CronEndDate. Modified input parameter CronParam as ScheduleParam.
+
+2023-05-15 Version: 1.48.0
+- Support SkipDataCorrectRowCheck API.
+
+2023-04-27 Version: 1.47.0
+- Support GetDataExportPreCheckDetail API.
+- Modify GetOpLog API.
+
+2023-04-24 Version: 1.46.0
+- Supported GetDatabaseExportOrderDetail,CreateDatabaseExportOrder,CreateDataExportOrder API.
+- Supported CreateDataTrackOrder,GetDataTrackJobDegree,GetDataTrackJobTableMeta,GetDataTrackOrderDetail,SearchDataTrackResult,DownloadDataTrackResult,QueryDataTrackResultDownloadStatus API.
+
+2023-04-11 Version: 1.45.0
+- Supported ListDataImportSQLPreCheckDetail,GetDataImportSQL,ListDataImportSQLType API.
+
+2023-01-13 Version: 1.44.0
+- Supported GetProxy, ListProxies to return RegionId information.
+- Supported SearchDatabase to return CatalogName information.
+
+2022-12-21 Version: 1.43.0
+- Supported GetProxyAccess API.
+
+2022-12-02 Version: 1.42.0
+- Supported GetStructSyncOrderDetail OrderId param required.
+
+2022-11-23 Version: 1.41.0
+- Supported GetDataCronClearConfig,GetDataCorrectRollbackFile,GetOrderAttachmentFile API.
+
+2022-10-28 Version: 1.40.0
+- Support BuyPayAsYouGoOrder, RefundPayAsYouGoOrder, ListEffectiveOrders, ListClassificationTemplates.
+- Modify RegisterInstance, UpdateInstance, ListInstances, GetInstance, GetApprovalDetail.
+
+2022-09-19 Version: 1.39.0
+- Supported UpdateTaskConfig, ListTaskFlowConstants, UpdateTaskFlowConstants, CheckServiceLinkedRoleForDeleting, ResumeTaskFlowInstance, ListServerGroups, ListTaskFlowsByPage, UpdateTaskContent, UpdateScenario, ListScenarios, DeleteScenario, CreateScenario, BackFill, UpdateTaskTimeVariables, UpdateTaskFlowTimeVariables, ListTaskFlowTimeVariables, UpdateTaskFlowCooperators, GetRuleNumLimitOfSLA, GetIntervalLimitOfSLA, UpdateSLARules, ListDefaultSLARules, ListSLARules, MoveTaskFlowToScenario, ListServers, ListTaskFlowInstance, UpdateTaskName, ListTaskFlowCooperators, GetTaskFlowNotification, UpdateTaskOutput, GetTask, UpdateTaskFlowNotification, DeleteTaskFlowEdgesByCondition, ListTaskFlowEdgesByCondition, UpdateTaskFlowEdges, AddTaskFlowEdges, GetTaskFlowGraph, UpdateTaskFlowRelations, UpdateTaskFlowNameAndDesc, UpdateTaskFlowOwner, UpdateTaskFlowSchedule, ListTasksInTaskFlow, PublishAndDeployTaskFlow, StopTaskFlowInstance, SuspendTaskFlowInstance, ReRunTaskFlowInstance, MakeTaskFlowInstanceSuccess, DeleteTask, CreateTask, CreateTaskFlow API.
+
+2022-07-27 Version: 1.38.0
+- Support ListProxies API to return protocolType, protocolPort and remove mysqlPort.
+- Support GetProxy API to return protocolType, protocolPort and remove mysqlPort.
+
+2022-06-08 Version: 1.37.0
+- Support GetDataCorrectOrderDetail API to return execMode type.
+- Support CreateDataCorrectOrder, CreateFreeLockCorrectOrder API submit with execMode type.
+
+
+2022-04-21 Version: 1.36.0
+- Add API OfflineTaskFlow.
+
+2022-04-15 Version: 1.35.0
+- Rename the return of ListTaskFlow API.
+
+2022-04-12 Version: 1.34.0
+- Remove redundant input for API ListTaskFlow.
+
+2022-04-06 Version: 1.33.0
+- Support output dagName, dagOwnerId for api listTaskFlowAndScenario.
+- Change output DbType to DwDbType for api GetLhSpaceByName.
+
+2022-03-31 Version: 1.32.0
+- Supported ListTaskFlow, ListTaskFlowInstance, GetTaskInstanceRelation, GetLhSpaceByName, DeleteLakeHouseSpace, DeleteTaskFlow API.
+
+2022-03-24 Version: 1.31.0
+- Supported CreateLakeHouseSpace,AddLhMembers,DeleteLhMembers,ListLhTaskFlowAndScenario,ChangeLhDagOwner,ReDeployLhDagVersion API.
+
+2022-03-18 Version: 1.30.0
+- Supported CreateStandardGroup, ListStandardGroups API.
+
+2022-03-10 Version: 1.29.0
+- Disabled Spark Job API.
+
+2022-01-21 Version: 1.28.0
+- Supported RestartDataCorrectSQLJob,PauseDataCorrectSQLJob API.
+- Supported ListDataCorrectPreCheckSQL to return tableNames information.
+
+2022-01-07 Version: 1.27.0
+- Supported GetSparkJobDetail,GetSparkJobExecutorLogs,KillSparkJob,GetSparkJobDriverLog,GetSparkJobLog,SubmitSparkJob API.
+
+2021-12-20 Version: 1.26.0
+- Supported ListLogicDatabases to return Alias information.
+- Supported ListDBTaskSQLJobDetail to return sql execute startTime and endTime information.
+
+2021-11-29 Version: 1.25.0
+- Supported ListLogicTableRouteConfig, AddLogicTableRouteConfig, DeleteLogicTableRouteConfig API.
+- Supported ModifyDataCorrectExecSQL, RetryDataCorrectPreCheck API.
+- Supported GetDBTaskSQLJobLog API.
+- Supported ListDBTaskSQLJobDetail to return execute log information.
+
+2021-11-18 Version: 1.24.0
+- Support ListInstanceLoginAuditLog, ListProxySQLExecAuditLog API.
+- Support GetOpLog API to return OpUserId information.
+
+2021-11-04 Version: 1.23.0
+- Support ListSQLExecAuditLog API.
+- Support ListUsers, GetUser API to return information of Email, Webhook and DingRobot.
+- Support GetApprovalDetail API to return information of CreateTime.
+
+2021-10-25 Version: 1.22.0
+- Support ListInstances and GetInstance API to return StandardGroup information.
+- Support ListUserPermissions, GrantUserPermission, GrantUserPermission to operate instance permission.
+- Support ChangeColumnSecLevel API.
+- Support CreateLogicDatabase, EditLogicDatabase, DeleteLogicDatabase API.
+
+2021-08-12 Version: 1.21.0
+- Support CreateProxy, DeleteProxy, GetProxy, ListProxies, CreateProxyAccess, DeleteProxyAccess, ListProxyAccesses, InspectProxyAccessSecret Safety Protection Management APIs.
+
+2021-07-06 Version: 1.20.0
+- Support ListDataCorrectPreCheckDB,ListDataCorrectPreCheckSQL Order API.
+
+2021-06-28 Version: 1.19.0
+- Support GetSQLReviewOptimizeDetail,ListSQLReviewOriginSQL Order API.
+
+2021-06-10 Version: 1.18.0
+- Support SQLReview Order API.
+
+2021-04-22 Version: 1.17.0
+- Support GetPhysicalDatabase API.
+
+2021-04-12 Version: 1.16.0
+- Support GetDBTopology API.
+
+2021-03-30 Version: 1.15.0
+- Support ListDDLPublishRecords API.
+- Fixed GetMetaTableColumn, GetMetaTableDetailInfo API response param DataLength lack of precision.
+
+2021-03-10 Version: 1.14.0
+- Support CreateDataCorrectOrder, CreateDataImportOrder, CreateFreeLockCorrectOrder, CreateDataCronClearOrder API.
+- Support GetDataCorrectTaskDetail API.
+- Support GetTableTopology API.
+- Support CreateOrder API to apply order attachment.
+
+2021-03-01 Version: 1.13.0
+- Support TableStructSync Order API.
+- Support Upload File API.
+- Support GetOwnerApplyOrderDetail, GetPermApplyOrderDetail API.
+- Support ListDBTaskSQLJob, ListDBTaskSQLJobDetail API.
+- Support GetDataCorrectSQLFile API.
+
+2021-01-14 Version: 1.12.0
+- Fixed ListUsers, GetUser, EnableUser, RegisterUser, DisableUser, DeleteUser API parameter of uid data type error, from number into string.
+- Supported ListInstances, GetInstance API to return Owner information.
+- Supported SetOwners API to set INSTANCE owner.
+
+2020-10-12 Version: 1.11.1
+- Supported ApproveOrder to add comment message.
+
+2020-09-29 Version: 1.11.0
+- Supported regional API.
+
+2020-09-19 Version: 1.10.0
+- Support query user tenant list and current active tenant.
+- Support query table meta information via table GUID.
+
+2020-09-11 Version: 1.9.0
+- Support execute database script via open api.
+
+2020-04-23 Version: 1.8.1
+- GetUser API return user execute query count information.
+
+2020-04-14 Version: 1.8.0
+- Support ListSensitiveColumns, ListSensitiveColumnsDetail API.
+- ListUsers API return user execute query count information.
+- Fix ListWorkFlowTemplates to return create user information.
+- UpdateUser API support to update user max execute query count.
+
+2020-02-25 Version: 1.7.0
+- Fix ListWorkFlowTemplates, ListWorkFlowNodes API Go SDK build error.
+
+2020-02-15 Version: 1.6.0
+- Supported ListWorkFlowTemplates, ListWorkFlowNodes API.
+
+2020-02-13 Version: 1.5.2
+- Fix GetDataCorrectOrderDetail API return empty database information.
+
+2020-01-15 Version: 1.5.1
+- Fix SignatureDoesNotMatch issue of GetOrderBaseInfo API.
+
+2019-12-20 Version: 1.5.0
+- Supported Authorization API, includes GrantUserPermission, RevokeUserPermission, ListDatabaseUserPermssions, ListUserPermissions.
+- Supported Database or Table Metadata synchronization API, includes SyncInstanceMeta, SyncDatabaseMeta.
+- Supported Database or Table Owner set up API.
+- Supported GetUser API to get information of one DMS user.
+- Supported set Dingding mobile number with RegisterUser API.
+
+2019-11-28 Version: 1.4.0
+- Support Order Basis API, include CreateOrder, CloseOrder, ListOrders, GetOrderBaseInfo.
+- Support Order Approval API, include SubmitOrderApproval, ApproveOrder, GetApprovalDetail.
+- Support DataCorrect Order Operation API, include ExecuteDataCorrect, GetDataCorrectOrderDetail, GetDataCorrectBackupFiles.
+- Support DDL Order Operation API, include CreatePublishGroupTask.
+- Support DataExport Operation API, include ExecuteDataExport, GetDataExportOrderDetail, GetDataExportDownloadURL.
+
+2019-10-22 Version: 1.3.0
+- Fix ListDatabases CatalogName dataType integer to string.
+- Remove GetLogicDatabase invalid output param named TotalCount.
+- Remove ListIndexes invalid output param named ColumnList.
+- Support SearchTable API to filter searchTarget.
+
+2019-10-17 Version: 1.2.0
+- Support instance manage API, includes UpdateInstance and DeleteInstance.
+- Support user manage API, includes ListUsers and UpdateUser.
+- Support meta data information API, includes ListInstances, ListDatabases, ListLogicDatabases, ListTables, ListLogicTables, ListColumns, ListIndexes.
+- Support meta data search API, inclues SearchDatabase, SearcTable.
+- Support RegisterInstance API to set datalinkName and useDsql option.
+
+2018-12-29 Version: 1.1.0
+1, Add EnableUser interface, Support admin user to enable another user.
+2, Add DisableUser Interface, Support admin user to disable another user.
+3, Add DeleteUser Interface, Support admin user to delete another user.
+
+2018-11-26 Version: 1.0.0
+1, Add RegisterInstance interface, Support admin or DBA user to register new db instance.
+2, Add RegisterUser Interface, Support admin user to register new user.
+3, Add GetOpLog Interface, Support admin user to get operation log.
+

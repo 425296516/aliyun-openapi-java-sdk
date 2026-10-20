@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -29,78 +25,140 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeInstanceAttributeResponse extends AcsResponse {
 
-	private String requestId;
+	private String description;
 
-	private String instanceId;
+	private Boolean enableNetworkEncryption;
 
-	private String instanceName;
+	private Integer memory;
+
+	private String instanceChargeType;
+
+	private Integer cpu;
+
+	private String instanceNetworkType;
+
+	private Boolean enableJumboFrame;
+
+	private String expiredTime;
 
 	private String imageId;
 
-	private String regionId;
+	private String instanceType;
+
+	private String vlanId;
+
+	private String hostName;
+
+	private String status;
+
+	private String ioOptimized;
+
+	private String requestId;
 
 	private String zoneId;
 
 	private String clusterId;
 
-	private String instanceType;
+	private String instanceId;
 
-	private String hostName;
-
-	private Status status;
+	private String stoppedMode;
 
 	private String internetChargeType;
 
-	private Integer internetMaxBandwidthIn;
+	private String instanceName;
 
 	private Integer internetMaxBandwidthOut;
 
-	private String vlanId;
-
 	private String serialNumber;
+
+	private Integer internetMaxBandwidthIn;
 
 	private String creationTime;
 
-	private String description;
+	private String regionId;
 
-	private String instanceNetworkType;
-
-	private String ioOptimized;
+	private String creditSpecification;
 
 	private List<LockReason> operationLocks;
-
-	private List<String> securityGroupIds;
 
 	private List<String> publicIpAddress;
 
 	private List<String> innerIpAddress;
 
-	private VpcAttributes vpcAttributes;
+	private List<String> securityGroupIds;
 
 	private EipAddress eipAddress;
 
-	public String getRequestId() {
-		return this.requestId;
+	private DedicatedHostAttribute dedicatedHostAttribute;
+
+	private VpcAttributes vpcAttributes;
+
+	private NetworkOptions networkOptions;
+
+	private SecurityOptions securityOptions;
+
+	public String getDescription() {
+		return this.description;
 	}
 
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public String getInstanceId() {
-		return this.instanceId;
+	public Boolean getEnableNetworkEncryption() {
+		return this.enableNetworkEncryption;
 	}
 
-	public void setInstanceId(String instanceId) {
-		this.instanceId = instanceId;
+	public void setEnableNetworkEncryption(Boolean enableNetworkEncryption) {
+		this.enableNetworkEncryption = enableNetworkEncryption;
 	}
 
-	public String getInstanceName() {
-		return this.instanceName;
+	public Integer getMemory() {
+		return this.memory;
 	}
 
-	public void setInstanceName(String instanceName) {
-		this.instanceName = instanceName;
+	public void setMemory(Integer memory) {
+		this.memory = memory;
+	}
+
+	public String getInstanceChargeType() {
+		return this.instanceChargeType;
+	}
+
+	public void setInstanceChargeType(String instanceChargeType) {
+		this.instanceChargeType = instanceChargeType;
+	}
+
+	public Integer getCpu() {
+		return this.cpu;
+	}
+
+	public void setCpu(Integer cpu) {
+		this.cpu = cpu;
+	}
+
+	public String getInstanceNetworkType() {
+		return this.instanceNetworkType;
+	}
+
+	public void setInstanceNetworkType(String instanceNetworkType) {
+		this.instanceNetworkType = instanceNetworkType;
+	}
+
+	public Boolean getEnableJumboFrame() {
+		return this.enableJumboFrame;
+	}
+
+	public void setEnableJumboFrame(Boolean enableJumboFrame) {
+		this.enableJumboFrame = enableJumboFrame;
+	}
+
+	public String getExpiredTime() {
+		return this.expiredTime;
+	}
+
+	public void setExpiredTime(String expiredTime) {
+		this.expiredTime = expiredTime;
 	}
 
 	public String getImageId() {
@@ -111,12 +169,52 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.imageId = imageId;
 	}
 
-	public String getRegionId() {
-		return this.regionId;
+	public String getInstanceType() {
+		return this.instanceType;
 	}
 
-	public void setRegionId(String regionId) {
-		this.regionId = regionId;
+	public void setInstanceType(String instanceType) {
+		this.instanceType = instanceType;
+	}
+
+	public String getVlanId() {
+		return this.vlanId;
+	}
+
+	public void setVlanId(String vlanId) {
+		this.vlanId = vlanId;
+	}
+
+	public String getHostName() {
+		return this.hostName;
+	}
+
+	public void setHostName(String hostName) {
+		this.hostName = hostName;
+	}
+
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getIoOptimized() {
+		return this.ioOptimized;
+	}
+
+	public void setIoOptimized(String ioOptimized) {
+		this.ioOptimized = ioOptimized;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
 	}
 
 	public String getZoneId() {
@@ -135,28 +233,20 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.clusterId = clusterId;
 	}
 
-	public String getInstanceType() {
-		return this.instanceType;
+	public String getInstanceId() {
+		return this.instanceId;
 	}
 
-	public void setInstanceType(String instanceType) {
-		this.instanceType = instanceType;
+	public void setInstanceId(String instanceId) {
+		this.instanceId = instanceId;
 	}
 
-	public String getHostName() {
-		return this.hostName;
+	public String getStoppedMode() {
+		return this.stoppedMode;
 	}
 
-	public void setHostName(String hostName) {
-		this.hostName = hostName;
-	}
-
-	public Status getStatus() {
-		return this.status;
-	}
-
-	public void setStatus(Status status) {
-		this.status = status;
+	public void setStoppedMode(String stoppedMode) {
+		this.stoppedMode = stoppedMode;
 	}
 
 	public String getInternetChargeType() {
@@ -167,12 +257,12 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.internetChargeType = internetChargeType;
 	}
 
-	public Integer getInternetMaxBandwidthIn() {
-		return this.internetMaxBandwidthIn;
+	public String getInstanceName() {
+		return this.instanceName;
 	}
 
-	public void setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
-		this.internetMaxBandwidthIn = internetMaxBandwidthIn;
+	public void setInstanceName(String instanceName) {
+		this.instanceName = instanceName;
 	}
 
 	public Integer getInternetMaxBandwidthOut() {
@@ -183,20 +273,20 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.internetMaxBandwidthOut = internetMaxBandwidthOut;
 	}
 
-	public String getVlanId() {
-		return this.vlanId;
-	}
-
-	public void setVlanId(String vlanId) {
-		this.vlanId = vlanId;
-	}
-
 	public String getSerialNumber() {
 		return this.serialNumber;
 	}
 
 	public void setSerialNumber(String serialNumber) {
 		this.serialNumber = serialNumber;
+	}
+
+	public Integer getInternetMaxBandwidthIn() {
+		return this.internetMaxBandwidthIn;
+	}
+
+	public void setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+		this.internetMaxBandwidthIn = internetMaxBandwidthIn;
 	}
 
 	public String getCreationTime() {
@@ -207,28 +297,20 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.creationTime = creationTime;
 	}
 
-	public String getDescription() {
-		return this.description;
+	public String getRegionId() {
+		return this.regionId;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setRegionId(String regionId) {
+		this.regionId = regionId;
 	}
 
-	public String getInstanceNetworkType() {
-		return this.instanceNetworkType;
+	public String getCreditSpecification() {
+		return this.creditSpecification;
 	}
 
-	public void setInstanceNetworkType(String instanceNetworkType) {
-		this.instanceNetworkType = instanceNetworkType;
-	}
-
-	public String getIoOptimized() {
-		return this.ioOptimized;
-	}
-
-	public void setIoOptimized(String ioOptimized) {
-		this.ioOptimized = ioOptimized;
+	public void setCreditSpecification(String creditSpecification) {
+		this.creditSpecification = creditSpecification;
 	}
 
 	public List<LockReason> getOperationLocks() {
@@ -237,14 +319,6 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 
 	public void setOperationLocks(List<LockReason> operationLocks) {
 		this.operationLocks = operationLocks;
-	}
-
-	public List<String> getSecurityGroupIds() {
-		return this.securityGroupIds;
-	}
-
-	public void setSecurityGroupIds(List<String> securityGroupIds) {
-		this.securityGroupIds = securityGroupIds;
 	}
 
 	public List<String> getPublicIpAddress() {
@@ -263,12 +337,12 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.innerIpAddress = innerIpAddress;
 	}
 
-	public VpcAttributes getVpcAttributes() {
-		return this.vpcAttributes;
+	public List<String> getSecurityGroupIds() {
+		return this.securityGroupIds;
 	}
 
-	public void setVpcAttributes(VpcAttributes vpcAttributes) {
-		this.vpcAttributes = vpcAttributes;
+	public void setSecurityGroupIds(List<String> securityGroupIds) {
+		this.securityGroupIds = securityGroupIds;
 	}
 
 	public EipAddress getEipAddress() {
@@ -279,42 +353,36 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		this.eipAddress = eipAddress;
 	}
 
-	public enum Status {
-	
-	DELETED("Deleted"),
-	STOPPED("Stopped"),
-	TRANSFERRING("Transferring"),
-	RUNNING("Running"),
-	RESETTING("Resetting"),
-	STARTING("Starting"),
-	STOPPING("Stopping"),;
-		
-	    private String stringValue;
-	
-		Status(String stringValue) {
-	        setStringValue(stringValue);
-	    }
-	
-	    public String getStringValue() {
-	        return stringValue;
-	    }
-	
-	    public void setStringValue(String stringValue) {
-	        this.stringValue = stringValue;
-	    }
-	    
-	    public static Status getEnum(String stringValue){
-	    	if(null == stringValue){
-	    		return null;
-	    	}
-	    	
-	    	for (Status status : Status.values()) {
-				if(status.getStringValue().equals(stringValue)){
-					return status;
-				}
-			}
-	    	return null;
-	    }
+	public DedicatedHostAttribute getDedicatedHostAttribute() {
+		return this.dedicatedHostAttribute;
+	}
+
+	public void setDedicatedHostAttribute(DedicatedHostAttribute dedicatedHostAttribute) {
+		this.dedicatedHostAttribute = dedicatedHostAttribute;
+	}
+
+	public VpcAttributes getVpcAttributes() {
+		return this.vpcAttributes;
+	}
+
+	public void setVpcAttributes(VpcAttributes vpcAttributes) {
+		this.vpcAttributes = vpcAttributes;
+	}
+
+	public NetworkOptions getNetworkOptions() {
+		return this.networkOptions;
+	}
+
+	public void setNetworkOptions(NetworkOptions networkOptions) {
+		this.networkOptions = networkOptions;
+	}
+
+	public SecurityOptions getSecurityOptions() {
+		return this.securityOptions;
+	}
+
+	public void setSecurityOptions(SecurityOptions securityOptions) {
+		this.securityOptions = securityOptions;
 	}
 
 	public static class LockReason {
@@ -327,6 +395,72 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 
 		public void setLockReason(String lockReason) {
 			this.lockReason = lockReason;
+		}
+	}
+
+	public static class EipAddress {
+
+		private Integer bandwidth;
+
+		private String allocationId;
+
+		private String ipAddress;
+
+		private String internetChargeType;
+
+		public Integer getBandwidth() {
+			return this.bandwidth;
+		}
+
+		public void setBandwidth(Integer bandwidth) {
+			this.bandwidth = bandwidth;
+		}
+
+		public String getAllocationId() {
+			return this.allocationId;
+		}
+
+		public void setAllocationId(String allocationId) {
+			this.allocationId = allocationId;
+		}
+
+		public String getIpAddress() {
+			return this.ipAddress;
+		}
+
+		public void setIpAddress(String ipAddress) {
+			this.ipAddress = ipAddress;
+		}
+
+		public String getInternetChargeType() {
+			return this.internetChargeType;
+		}
+
+		public void setInternetChargeType(String internetChargeType) {
+			this.internetChargeType = internetChargeType;
+		}
+	}
+
+	public static class DedicatedHostAttribute {
+
+		private String dedicatedHostId;
+
+		private String dedicatedHostName;
+
+		public String getDedicatedHostId() {
+			return this.dedicatedHostId;
+		}
+
+		public void setDedicatedHostId(String dedicatedHostId) {
+			this.dedicatedHostId = dedicatedHostId;
+		}
+
+		public String getDedicatedHostName() {
+			return this.dedicatedHostName;
+		}
+
+		public void setDedicatedHostName(String dedicatedHostName) {
+			this.dedicatedHostName = dedicatedHostName;
 		}
 	}
 
@@ -373,46 +507,49 @@ public class DescribeInstanceAttributeResponse extends AcsResponse {
 		}
 	}
 
-	public static class EipAddress {
+	public static class NetworkOptions {
 
-		private String allocationId;
+		private Boolean enableJumboFrame;
 
-		private String ipAddress;
+		private Boolean enableNetworkEncryption;
 
-		private Integer bandwidth;
+		private String bandwidthWeighting;
 
-		private String internetChargeType;
-
-		public String getAllocationId() {
-			return this.allocationId;
+		public Boolean getEnableJumboFrame() {
+			return this.enableJumboFrame;
 		}
 
-		public void setAllocationId(String allocationId) {
-			this.allocationId = allocationId;
+		public void setEnableJumboFrame(Boolean enableJumboFrame) {
+			this.enableJumboFrame = enableJumboFrame;
 		}
 
-		public String getIpAddress() {
-			return this.ipAddress;
+		public Boolean getEnableNetworkEncryption() {
+			return this.enableNetworkEncryption;
 		}
 
-		public void setIpAddress(String ipAddress) {
-			this.ipAddress = ipAddress;
+		public void setEnableNetworkEncryption(Boolean enableNetworkEncryption) {
+			this.enableNetworkEncryption = enableNetworkEncryption;
 		}
 
-		public Integer getBandwidth() {
-			return this.bandwidth;
+		public String getBandwidthWeighting() {
+			return this.bandwidthWeighting;
 		}
 
-		public void setBandwidth(Integer bandwidth) {
-			this.bandwidth = bandwidth;
+		public void setBandwidthWeighting(String bandwidthWeighting) {
+			this.bandwidthWeighting = bandwidthWeighting;
+		}
+	}
+
+	public static class SecurityOptions {
+
+		private Boolean enableSecureBoot;
+
+		public Boolean getEnableSecureBoot() {
+			return this.enableSecureBoot;
 		}
 
-		public String getInternetChargeType() {
-			return this.internetChargeType;
-		}
-
-		public void setInternetChargeType(String internetChargeType) {
-			this.internetChargeType = internetChargeType;
+		public void setEnableSecureBoot(Boolean enableSecureBoot) {
+			this.enableSecureBoot = enableSecureBoot;
 		}
 	}
 

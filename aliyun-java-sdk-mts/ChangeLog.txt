@@ -1,0 +1,155 @@
+2026-02-25 Version: 3.3.68
+- Add Tags And DolbyVision for MediaInfoJob.
+- Add SpecialConfig param for SubmitUrlUploadJob.
+
+2025-10-27 Version: 3.3.67
+- Add FileMd5 for SubmitMediaInfoJob and QueryMediaInfoJobList.
+
+2025-06-20 Version: 3.3.66
+- Add DurationInaccurate flag to SubmitMediaInfoJob and QueryMediaInfoJobList for media duration accuracy tracking.
+
+2025-06-20 Version: 3.3.65
+- Add DurationInaccurate flag to SubmitMediaInfoJob and QueryMediaInfoJobList for media duration accuracy tracking.
+
+2025-05-14 Version: 3.3.64
+- Update water-mark params.
+
+2024-07-23 Version: 3.3.63
+- Update water-mark params
+
+2024-07-11 Version: 3.3.62
+- SubmitSnapshotJob suport timeArray.
+
+2024-07-10 Version: 3.3.61
+- SubmitSnapshotJob suport timeArray.
+
+2024-07-05 Version: 3.3.60
+- SubmitSnapshotJob suport timeArray.
+
+2024-04-24 Version: 3.3.59
+- SubmitSnapshotJob suport timeArray.
+
+2023-07-05 Version: 3.3.58
+- Add CreateCustomGroup api sdk.
+
+2023-02-14 Version: 3.3.56
+- Update QueryFpShotJobList add duration.
+
+2023-02-08 Version: 3.3.55
+- Update QueryFpShotJobList.
+
+2022-09-14 Version: 3.3.54
+- Update ListFpShotFiles.
+
+2022-08-30 Version: 3.3.51
+- Update ListFpShotFiles and ImAudit.
+
+2022-03-28 Version: 3.3.45
+- Update ListFpShotDB and CreateFpShotDB.
+
+2022-03-10 Version: 3.3.44
+- Add SubmitSyncFpShotJob.
+
+2022-01-28 Version: 3.3.41
+- Update BindInputBucket.
+
+2021-12-30 Version: 3.3.40
+- Add faceCustomParamsConfig params for AddSmarttagTemplate,UpdateSmarttagTemplate,QuerySmarttagTemplateList interface.
+
+2021-12-07 Version: 3.3.39
+- Support params for QuerySmarttagJob Api.
+- Support params for AddSmarttagTemplate,UpdateSmarttagTemplate,QuerySmarttagTemplateList Api.
+
+2021-09-28 Version: 3.3.33
+- Add ListFpShotImportJob.
+
+2021-09-16 Version: 3.3.31
+- Add externalUrl for SubmitMediaCensorJob.
+
+2021-09-14 Version: 3.3.28
+- Add URL for SubmitCensorJob.
+
+2021-09-13 Version: 3.3.27
+- Add ImportFpShotJob.
+
+2021-09-01 Version: 3.3.25
+- SubmitURLUploadJob, support S3 Storage.
+
+2021-08-11 Version: 3.3.23
+- SubmitURLUploadJob.
+- GetJobInfo.
+
+2021-08-09 Version: 3.3.21
+- SubmitURLUploadJob.
+
+2021-08-06 Version: 3.3.20
+- SubmitURLUploadJob.
+
+2021-07-19 Version: 3.3.19-inner
+- SubmitVideoQualityJob.
+- QueryVideoQualityJob.
+
+2021-07-09 Version: 3.3.18-inner
+- PAIAPI.
+
+2021-05-18 Version: 3.3.16-inner
+- PAIAPI.
+
+2021-05-13 Version: 3.3.15-inner
+- PAIAPI.
+
+2021-03-18 Version: 3.3.13-inner
+- Add pai_public api.
+
+2021-01-25 Version: 3.3.12-inner
+- VideoQualitySubmit and Query.
+
+2020-10-21 Version: 2.7.6
+- Add custom person interfaces, support registration, update etc.
+- Optimize updateSmarttagTemplate interface, set some parameters as optional.
+
+2020-04-20 Version: 2.7.5
+- Add TemplateId.
+
+2020-04-16 Version: 2.7.4
+- Modify `SubmitSmarttagJob`.
+
+2019-11-20 Version: 2.7.3
+- Generated 2014-06-18 for `Mts`.
+
+2019-06-20 Version: 2.7.2
+- Support audio media info for audio dna compare.
+
+2019-06-20 Version: 2.6.2
+- Support audio media info for audio dna compare.
+
+2019-03-15 Version: 2.6.1
+1, Update Dependency
+
+2019-03-15 Version: 2.6.1
+1, Update Dependency
+
+2018-08-05 Version: 2.6.0
+1, Add Interface SubmitSubtitleJob
+2, Support convert ttml、stl subtitle to vtt
+
+2018-01-16 Version: 2.5.2
+1,  Add TriggerMode param in AddMediaWorkflow.
+2, Add TriggerMode param in QueryMediaWorkflowList/SearchMediaWorkflow/UpdateMediaWorkflow.
+3, Add interface UpdateMediaWorkflowTriggerMode.
+
+2017-12-26 Version: 2.5.1
+1, Add video AI service interface.
+
+2017-11-16 Version: 2.5.0
+1, BindInputBucket/BindOutputBucket/UnBindInputBucket，添加RoleArn参数，支持bucket托管及解除托管。
+2, 工作流定义中支持对转码输入、输出、拼接输入、截图输入及输出设置RoleArn，支持托管bucket
+
+2017-11-16 Version: 2.4.0
+1, 这是一个发布日志样例。
+2, 请严格按照这种格式编辑。
+3, 格式：序号 + 逗号 + 空格 + 说明
+
+2017-09-28 Version: 2.3.0
+1, 增加了PlayInfo接口，通过MediaId获取播放链接等信息。
+

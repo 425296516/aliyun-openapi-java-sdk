@@ -1,0 +1,69 @@
+2024-08-15 Version: 2.0.25
+- Generated 2020-09-30 for `ecd`.
+
+2024-02-26 Version: 2.0.24
+- Generated 2020-09-30 for `ecd`.
+
+2023-06-09 Version: 2.0.23
+- Add CommonDesktopSetting.
+
+2023-05-12 Version: 2.0.22
+- Support desktop group auto scale.
+
+2023-04-07 Version: 2.0.21
+- Support desktop group auto scale.
+
+2023-03-21 Version: 2.0.20
+- Support desktop group auto scale.
+
+2023-02-01 Version: 2.0.19
+- Support desktop group auto scale.
+
+2023-01-16 Version: 2.0.18
+- Support desktop group auto scale.
+
+2023-01-13 Version: 2.0.17
+- Support desktop group auto scale.
+
+2023-01-06 Version: 2.0.16
+- Support desktop group auto scale.
+
+2022-12-13 Version: 2.0.15
+- Support desktop group auto scale.
+
+2022-09-28 Version: 2.0.14
+- Support remote coordinate control.
+
+2022-09-16 Version: 2.0.13
+- Support remote coordinate control.
+
+2022-09-09 Version: 2.0.9
+- Support user customized desktop list.
+
+2022-08-11 Version: 2.0.8
+- ModifydesktopGroup接口.
+
+2022-08-11 Version: 2.0.7
+- ModifydesktopGroup接口.
+
+2022-08-10 Version: 2.0.6
+- 开发SetDesktopGroupTimer和SetDesktopGroupTimerStatus接口.
+
+2022-07-07 Version: 2.0.5
+- Support asp remote coordinate
+
+2022-06-14 Version: 2.0.4
+- Support ResetDesktops.
+
+2022-05-13 Version: 2.0.2
+- DescribeUserConnectionRecords add some filter
+
+2021-12-28 Version: 2.0.1
+- Publish on 20211228.
+
+2021-08-26 Version: 1.0.0
+- Fix ErrorCode1.
+
+2021-06-28 Version: 1.1.2
+- Generated 2020-09-30 for `ecd`.
+

@@ -1,0 +1,60 @@
+2022-12-15 Version: 1.0.18
+- Update DetectVehicleICongestion DetectVehicleIllegalParking.
+
+2022-10-17 Version: 1.0.17
+- Update DetectVehicleICongestion DetectVehicleIllegalParking.
+
+2022-09-29 Version: 1.0.16
+- Update DetectVehicleICongestion DetectVehicleIllegalParking.
+
+2021-11-15 Version: 1.0.15
+- Update DetectVehicleICongestion DetectVehicleIllegalParking.
+
+2021-11-03 Version: 1.0.14
+- Release DetectKitchenAnimals DetectWorkwear.
+
+2021-04-08 Version: 1.0.13
+- Add DetectIPCVideoObject.
+
+2021-04-08 Version: 1.0.12
+- Add DetectIPCVideoObject.
+
+2021-04-08 Version: 1.0.12
+- Release DetectVideoIPCObject.
+
+2021-02-18 Version: 1.0.11
+- Update DetectVehicleIllegalParking DetectVehicleICongestion.
+
+2021-02-04 Version: 1.0.11
+- Update DetectVehicleIllegalParking DetectVehicleICongestion.
+
+2021-02-01 Version: 1.0.10
+- Release DetectVehicleIllegalParking DetectVehicleICongestion.
+
+2021-02-01 Version: 1.0.10
+- Release DetectVehicleIllegalParking DetectVehicleICongestion.
+
+2021-02-01 Version: 1.0.10
+- Release DetectVehicleIllegalParking DetectVehicleICongestion.
+
+2020-11-16 Version: 1.0.9
+- Update objectdet.
+
+2020-08-19 Version: 1.0.8
+- Add GenerateVehicleRepairPlan GetVehicleRepairPlan.
+
+2020-03-23 Version: 1.0.7
+- SDK version 107.
+
+2020-02-27 Version: 1.0.6
+- Sixth sdk version.
+
+2019-12-30 Version: 1.0.2
+- Disable Base64 string data support.
+
+2019-12-29 Version: 1.0.1
+- Add new api.
+
+2019-12-18 Version: 1.0.0
+- First sdk version.
+

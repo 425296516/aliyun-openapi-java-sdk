@@ -1,0 +1,116 @@
+2026-05-15 Version: 3.1.18
+- Suport Api for User management.
+
+2026-04-17 Version: 3.1.17
+- Suport Api for User management.
+
+2024-05-15 Version: 3.1.16
+- Add LtsSpec and LtsNum parameter in CreateLindormInstance API.
+
+2024-01-16 Version: 3.1.15
+- Update Tea.
+
+2023-12-12 Version: 3.1.14
+- CreateLindormInstance api support auto renew
+
+2023-11-29 Version: 3.1.13
+- SwitchLSQLV3MySQLService
+
+2023-11-23 Version: 3.1.12
+- Generated 2020-06-15 for `hitsdb`.
+
+2023-11-22 Version: 3.1.11
+- Lindorm open api.
+
+2023-08-15 Version: 3.0.11
+- Update endpoints.
+
+2023-06-28 Version: 3.0.10
+- Update Lindorm SDK.
+
+2023-03-07 Version: 3.0.9
+- Lindorm open api.
+
+2022-11-15 Version: 3.0.8
+- Add renew and modify instance pay type api.
+
+2022-10-19 Version: 3.0.7
+- Update Lindorm OpenAPI.
+
+2022-08-16 Version: 3.0.6
+- Update Lindorm OpenAPI.
+
+2022-08-15 Version: 3.0.5
+- update Lindorm OpenAPI.
+
+2022-04-06 Version: 3.0.4
+- Add ListTagResources api.
+- Add TagResources api.
+- Add UntagResources api.
+
+2022-03-07 Version: 3.0.3
+- Create Lindorm Open api.
+
+2022-01-25 Version: 3.0.2
+- Create Lindorm Open api.
+
+2021-12-30 Version: 3.0.1
+- Create Lindorm Open api.
+
+2021-08-04 Version: 3.0.0
+- Create Lindorm Open api.
+
+2021-08-04 Version: 2.0.0
+- Create Lindorm Open api.
+
+2021-07-21 Version: 1.7.12
+- Create Lindorm Open api.
+
+2021-07-21 Version: 1.7.2
+- Create Lindorm Open api.
+
+2021-06-24 Version: 1.7.1
+- Create Lindorm Open api.
+
+2021-06-09 Version: 1.6.11
+- Create Lindorm Open api.
+
+2021-06-09 Version: 1.6.1
+- Create Lindorm Open api.
+
+2021-05-28 Version: 1.5.11
+- Create Lindorm Open api.
+
+2021-05-28 Version: 1.5.1
+- Create Lindorm Open api.
+
+2021-05-12 Version: 1.1.0
+- Create Lindorm Open api.
+
+2021-04-20 Version: 1.0.2
+- Create Lindorm Open api.
+
+2021-01-14 Version: 1.0.1
+- Create Lindorm Open api.
+
+2020-12-23 Version: 1.0.1
+- Create Lindorm Open api.
+
+2020-12-23 Version: 1.0.1
+- Create TSDB Open api.
+
+2020-11-24 Version: 1.0.1
+- Create TSDB Open api.
+
+2020-11-24 Version: 1.0.0
+- Create TSDB Open api.
+
+2020-11-24 Version: 1.0.0
+- Create lindorm Open api.
+
+2020-11-24 Version: 1.0.0
+- Create lindorm Open api.
+
+2020-01-16 Version: 0.0.6
+- Support create instance open api.
+

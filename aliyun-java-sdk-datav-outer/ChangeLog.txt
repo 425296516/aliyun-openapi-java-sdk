@@ -1,0 +1,46 @@
+2022-03-18 Version: 1.9.4
+- Add DeleteWorkspace api.
+
+2022-02-10 Version: 1.9.3
+- SetScreen support meta.
+
+2021-09-22 Version: 1.9.2
+- GiveScreen add workspaceId.
+
+2021-09-15 Version: 1.9.1
+- Add set screen.
+
+2021-09-14 Version: 1.9.0
+- Support add workspace member.
+- Support remove workspace member.
+- Support Give Screen.
+
+2020-12-17 Version: 1.0.3
+- Support DeleteDatasourceUserAssociation.
+- Support SetDatasourceUserAssociation.
+- Support GetDatasourceUserAssociation.
+
+2020-09-24 Version: 1.0.2
+- Generated 2019-04-02 for `datav-outer`.
+
+2020-06-02 Version: 1.0.0
+- Generated 2019-04-02 for `datav-outer`.
+
+2020-06-02 Version: 1.8
+- Generated 2019-04-02 for `datav-outer`.
+
+2020-06-02 Version: 1.8
+- Generated 2019-04-02 for `datav-outer`.
+
+2020-06-02 Version: 1.8
+- Generated 2019-04-02 for `datav-outer`.
+
+2020-06-02 Version: 1.8
+- Generated 2019-04-02 for `datav-outer`.
+
+2020-06-02 Version: 1.8
+- Generated 2019-04-02 for `datav-outer`.
+
+2020-05-26 Version: 1.8
+- Generated 2019-04-02 for `datav-outer`.
+

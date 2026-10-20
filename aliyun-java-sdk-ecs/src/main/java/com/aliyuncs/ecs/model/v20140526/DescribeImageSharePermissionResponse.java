@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -29,37 +25,21 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeImageSharePermissionResponse extends AcsResponse {
 
-	private String requestId;
-
-	private String regionId;
-
 	private Integer totalCount;
 
-	private Integer pageNumber;
+	private String requestId;
 
 	private Integer pageSize;
 
+	private Integer pageNumber;
+
 	private String imageId;
+
+	private String regionId;
 
 	private List<ShareGroup> shareGroups;
 
 	private List<Account> accounts;
-
-	public String getRequestId() {
-		return this.requestId;
-	}
-
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
-
-	public String getRegionId() {
-		return this.regionId;
-	}
-
-	public void setRegionId(String regionId) {
-		this.regionId = regionId;
-	}
 
 	public Integer getTotalCount() {
 		return this.totalCount;
@@ -69,12 +49,12 @@ public class DescribeImageSharePermissionResponse extends AcsResponse {
 		this.totalCount = totalCount;
 	}
 
-	public Integer getPageNumber() {
-		return this.pageNumber;
+	public String getRequestId() {
+		return this.requestId;
 	}
 
-	public void setPageNumber(Integer pageNumber) {
-		this.pageNumber = pageNumber;
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
 	}
 
 	public Integer getPageSize() {
@@ -85,12 +65,28 @@ public class DescribeImageSharePermissionResponse extends AcsResponse {
 		this.pageSize = pageSize;
 	}
 
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
+	}
+
 	public String getImageId() {
 		return this.imageId;
 	}
 
 	public void setImageId(String imageId) {
 		this.imageId = imageId;
+	}
+
+	public String getRegionId() {
+		return this.regionId;
+	}
+
+	public void setRegionId(String regionId) {
+		this.regionId = regionId;
 	}
 
 	public List<ShareGroup> getShareGroups() {
@@ -126,12 +122,22 @@ public class DescribeImageSharePermissionResponse extends AcsResponse {
 
 		private String aliyunId;
 
+		private String sharedTime;
+
 		public String getAliyunId() {
 			return this.aliyunId;
 		}
 
 		public void setAliyunId(String aliyunId) {
 			this.aliyunId = aliyunId;
+		}
+
+		public String getSharedTime() {
+			return this.sharedTime;
+		}
+
+		public void setSharedTime(String sharedTime) {
+			this.sharedTime = sharedTime;
 		}
 	}
 

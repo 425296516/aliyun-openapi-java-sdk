@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -29,44 +25,30 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeSlowLogsResponse extends AcsResponse {
 
-	private String requestId;
-
-	private String engine;
-
-	private String startTime;
+	private String dBInstanceId;
 
 	private String endTime;
 
-	private Integer totalRecordCount;
+	private String engine;
 
 	private Integer pageNumber;
 
 	private Integer pageRecordCount;
 
+	private String requestId;
+
+	private String startTime;
+
+	private Integer totalRecordCount;
+
 	private List<SQLSlowLog> items;
 
-	public String getRequestId() {
-		return this.requestId;
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
 	}
 
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
-
-	public String getEngine() {
-		return this.engine;
-	}
-
-	public void setEngine(String engine) {
-		this.engine = engine;
-	}
-
-	public String getStartTime() {
-		return this.startTime;
-	}
-
-	public void setStartTime(String startTime) {
-		this.startTime = startTime;
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
 	}
 
 	public String getEndTime() {
@@ -77,12 +59,12 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 		this.endTime = endTime;
 	}
 
-	public Integer getTotalRecordCount() {
-		return this.totalRecordCount;
+	public String getEngine() {
+		return this.engine;
 	}
 
-	public void setTotalRecordCount(Integer totalRecordCount) {
-		this.totalRecordCount = totalRecordCount;
+	public void setEngine(String engine) {
+		this.engine = engine;
 	}
 
 	public Integer getPageNumber() {
@@ -101,6 +83,30 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 		this.pageRecordCount = pageRecordCount;
 	}
 
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public String getStartTime() {
+		return this.startTime;
+	}
+
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+
+	public Integer getTotalRecordCount() {
+		return this.totalRecordCount;
+	}
+
+	public void setTotalRecordCount(Integer totalRecordCount) {
+		this.totalRecordCount = totalRecordCount;
+	}
+
 	public List<SQLSlowLog> getItems() {
 		return this.items;
 	}
@@ -111,60 +117,154 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 
 	public static class SQLSlowLog {
 
-		private Long slowLogId;
+		private Long avgExecutionTime;
 
-		private Long sQLId;
+		private Long avgIOWriteCounts;
+
+		private Long avgLastRowsAffectedCounts;
+
+		private Long avgLogicalReadCounts;
+
+		private Long avgPhysicalReadCounts;
+
+		private Long avgRowsAffectedCounts;
+
+		private String createTime;
 
 		private String dBName;
 
-		private String sQLText;
+		private Long maxExecutionTime;
+
+		private Long maxExecutionTimeMS;
+
+		private Long maxIOWriteCounts;
+
+		private Long maxLastRowsAffectedCounts;
+
+		private Long maxLockTime;
+
+		private Long maxLockTimeMS;
+
+		private Long maxLogicalReadCounts;
+
+		private Long maxPhysicalReadCounts;
+
+		private Long maxRowsAffectedCounts;
+
+		private Long minIOWriteCounts;
+
+		private Long minLastRowsAffectedCounts;
+
+		private Long minLogicalReadCounts;
+
+		private Long minPhysicalReadCounts;
+
+		private Long minRowsAffectedCounts;
 
 		private Long mySQLTotalExecutionCounts;
 
 		private Long mySQLTotalExecutionTimes;
 
-		private Long totalLockTimes;
-
-		private Long maxLockTime;
+		private Long parseMaxRowCount;
 
 		private Long parseTotalRowCounts;
 
-		private Long parseMaxRowCount;
-
-		private Long returnTotalRowCounts;
+		private String reportTime;
 
 		private Long returnMaxRowCount;
 
-		private String createTime;
+		private Long returnTotalRowCounts;
+
+		private String sQLHASH;
+
+		private String sQLIdStr;
+
+		private Long sQLServerAvgCpuTime;
+
+		private Long sQLServerAvgExecutionTime;
+
+		private Long sQLServerMaxCpuTime;
+
+		private Long sQLServerMinCpuTime;
+
+		private Long sQLServerMinExecutionTime;
+
+		private Long sQLServerTotalCpuTime;
 
 		private Long sQLServerTotalExecutionCounts;
 
 		private Long sQLServerTotalExecutionTimes;
 
+		private String sQLText;
+
+		private Long slowLogId;
+
+		private Long totalIOWriteCounts;
+
+		private Long totalLastRowsAffectedCounts;
+
+		private Long totalLockTimes;
+
 		private Long totalLogicalReadCounts;
 
 		private Long totalPhysicalReadCounts;
 
-		private String reportTime;
+		private Long totalRowsAffectedCounts;
 
-		private Long maxExecutionTime;
-
-		private Long avgExecutionTime;
-
-		public Long getSlowLogId() {
-			return this.slowLogId;
+		public Long getAvgExecutionTime() {
+			return this.avgExecutionTime;
 		}
 
-		public void setSlowLogId(Long slowLogId) {
-			this.slowLogId = slowLogId;
+		public void setAvgExecutionTime(Long avgExecutionTime) {
+			this.avgExecutionTime = avgExecutionTime;
 		}
 
-		public Long getSQLId() {
-			return this.sQLId;
+		public Long getAvgIOWriteCounts() {
+			return this.avgIOWriteCounts;
 		}
 
-		public void setSQLId(Long sQLId) {
-			this.sQLId = sQLId;
+		public void setAvgIOWriteCounts(Long avgIOWriteCounts) {
+			this.avgIOWriteCounts = avgIOWriteCounts;
+		}
+
+		public Long getAvgLastRowsAffectedCounts() {
+			return this.avgLastRowsAffectedCounts;
+		}
+
+		public void setAvgLastRowsAffectedCounts(Long avgLastRowsAffectedCounts) {
+			this.avgLastRowsAffectedCounts = avgLastRowsAffectedCounts;
+		}
+
+		public Long getAvgLogicalReadCounts() {
+			return this.avgLogicalReadCounts;
+		}
+
+		public void setAvgLogicalReadCounts(Long avgLogicalReadCounts) {
+			this.avgLogicalReadCounts = avgLogicalReadCounts;
+		}
+
+		public Long getAvgPhysicalReadCounts() {
+			return this.avgPhysicalReadCounts;
+		}
+
+		public void setAvgPhysicalReadCounts(Long avgPhysicalReadCounts) {
+			this.avgPhysicalReadCounts = avgPhysicalReadCounts;
+		}
+
+		public Long getAvgRowsAffectedCounts() {
+			return this.avgRowsAffectedCounts;
+		}
+
+		public void setAvgRowsAffectedCounts(Long avgRowsAffectedCounts) {
+			this.avgRowsAffectedCounts = avgRowsAffectedCounts;
+		}
+
+		public String getCreateTime() {
+			return this.createTime;
+		}
+
+		public void setCreateTime(String createTime) {
+			this.createTime = createTime;
 		}
 
 		public String getDBName() {
@@ -175,12 +275,116 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 			this.dBName = dBName;
 		}
 
-		public String getSQLText() {
-			return this.sQLText;
+		public Long getMaxExecutionTime() {
+			return this.maxExecutionTime;
 		}
 
-		public void setSQLText(String sQLText) {
-			this.sQLText = sQLText;
+		public void setMaxExecutionTime(Long maxExecutionTime) {
+			this.maxExecutionTime = maxExecutionTime;
+		}
+
+		public Long getMaxExecutionTimeMS() {
+			return this.maxExecutionTimeMS;
+		}
+
+		public void setMaxExecutionTimeMS(Long maxExecutionTimeMS) {
+			this.maxExecutionTimeMS = maxExecutionTimeMS;
+		}
+
+		public Long getMaxIOWriteCounts() {
+			return this.maxIOWriteCounts;
+		}
+
+		public void setMaxIOWriteCounts(Long maxIOWriteCounts) {
+			this.maxIOWriteCounts = maxIOWriteCounts;
+		}
+
+		public Long getMaxLastRowsAffectedCounts() {
+			return this.maxLastRowsAffectedCounts;
+		}
+
+		public void setMaxLastRowsAffectedCounts(Long maxLastRowsAffectedCounts) {
+			this.maxLastRowsAffectedCounts = maxLastRowsAffectedCounts;
+		}
+
+		public Long getMaxLockTime() {
+			return this.maxLockTime;
+		}
+
+		public void setMaxLockTime(Long maxLockTime) {
+			this.maxLockTime = maxLockTime;
+		}
+
+		public Long getMaxLockTimeMS() {
+			return this.maxLockTimeMS;
+		}
+
+		public void setMaxLockTimeMS(Long maxLockTimeMS) {
+			this.maxLockTimeMS = maxLockTimeMS;
+		}
+
+		public Long getMaxLogicalReadCounts() {
+			return this.maxLogicalReadCounts;
+		}
+
+		public void setMaxLogicalReadCounts(Long maxLogicalReadCounts) {
+			this.maxLogicalReadCounts = maxLogicalReadCounts;
+		}
+
+		public Long getMaxPhysicalReadCounts() {
+			return this.maxPhysicalReadCounts;
+		}
+
+		public void setMaxPhysicalReadCounts(Long maxPhysicalReadCounts) {
+			this.maxPhysicalReadCounts = maxPhysicalReadCounts;
+		}
+
+		public Long getMaxRowsAffectedCounts() {
+			return this.maxRowsAffectedCounts;
+		}
+
+		public void setMaxRowsAffectedCounts(Long maxRowsAffectedCounts) {
+			this.maxRowsAffectedCounts = maxRowsAffectedCounts;
+		}
+
+		public Long getMinIOWriteCounts() {
+			return this.minIOWriteCounts;
+		}
+
+		public void setMinIOWriteCounts(Long minIOWriteCounts) {
+			this.minIOWriteCounts = minIOWriteCounts;
+		}
+
+		public Long getMinLastRowsAffectedCounts() {
+			return this.minLastRowsAffectedCounts;
+		}
+
+		public void setMinLastRowsAffectedCounts(Long minLastRowsAffectedCounts) {
+			this.minLastRowsAffectedCounts = minLastRowsAffectedCounts;
+		}
+
+		public Long getMinLogicalReadCounts() {
+			return this.minLogicalReadCounts;
+		}
+
+		public void setMinLogicalReadCounts(Long minLogicalReadCounts) {
+			this.minLogicalReadCounts = minLogicalReadCounts;
+		}
+
+		public Long getMinPhysicalReadCounts() {
+			return this.minPhysicalReadCounts;
+		}
+
+		public void setMinPhysicalReadCounts(Long minPhysicalReadCounts) {
+			this.minPhysicalReadCounts = minPhysicalReadCounts;
+		}
+
+		public Long getMinRowsAffectedCounts() {
+			return this.minRowsAffectedCounts;
+		}
+
+		public void setMinRowsAffectedCounts(Long minRowsAffectedCounts) {
+			this.minRowsAffectedCounts = minRowsAffectedCounts;
 		}
 
 		public Long getMySQLTotalExecutionCounts() {
@@ -199,20 +403,12 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 			this.mySQLTotalExecutionTimes = mySQLTotalExecutionTimes;
 		}
 
-		public Long getTotalLockTimes() {
-			return this.totalLockTimes;
+		public Long getParseMaxRowCount() {
+			return this.parseMaxRowCount;
 		}
 
-		public void setTotalLockTimes(Long totalLockTimes) {
-			this.totalLockTimes = totalLockTimes;
-		}
-
-		public Long getMaxLockTime() {
-			return this.maxLockTime;
-		}
-
-		public void setMaxLockTime(Long maxLockTime) {
-			this.maxLockTime = maxLockTime;
+		public void setParseMaxRowCount(Long parseMaxRowCount) {
+			this.parseMaxRowCount = parseMaxRowCount;
 		}
 
 		public Long getParseTotalRowCounts() {
@@ -223,20 +419,12 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 			this.parseTotalRowCounts = parseTotalRowCounts;
 		}
 
-		public Long getParseMaxRowCount() {
-			return this.parseMaxRowCount;
+		public String getReportTime() {
+			return this.reportTime;
 		}
 
-		public void setParseMaxRowCount(Long parseMaxRowCount) {
-			this.parseMaxRowCount = parseMaxRowCount;
-		}
-
-		public Long getReturnTotalRowCounts() {
-			return this.returnTotalRowCounts;
-		}
-
-		public void setReturnTotalRowCounts(Long returnTotalRowCounts) {
-			this.returnTotalRowCounts = returnTotalRowCounts;
+		public void setReportTime(String reportTime) {
+			this.reportTime = reportTime;
 		}
 
 		public Long getReturnMaxRowCount() {
@@ -247,12 +435,76 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 			this.returnMaxRowCount = returnMaxRowCount;
 		}
 
-		public String getCreateTime() {
-			return this.createTime;
+		public Long getReturnTotalRowCounts() {
+			return this.returnTotalRowCounts;
 		}
 
-		public void setCreateTime(String createTime) {
-			this.createTime = createTime;
+		public void setReturnTotalRowCounts(Long returnTotalRowCounts) {
+			this.returnTotalRowCounts = returnTotalRowCounts;
+		}
+
+		public String getSQLHASH() {
+			return this.sQLHASH;
+		}
+
+		public void setSQLHASH(String sQLHASH) {
+			this.sQLHASH = sQLHASH;
+		}
+
+		public String getSQLIdStr() {
+			return this.sQLIdStr;
+		}
+
+		public void setSQLIdStr(String sQLIdStr) {
+			this.sQLIdStr = sQLIdStr;
+		}
+
+		public Long getSQLServerAvgCpuTime() {
+			return this.sQLServerAvgCpuTime;
+		}
+
+		public void setSQLServerAvgCpuTime(Long sQLServerAvgCpuTime) {
+			this.sQLServerAvgCpuTime = sQLServerAvgCpuTime;
+		}
+
+		public Long getSQLServerAvgExecutionTime() {
+			return this.sQLServerAvgExecutionTime;
+		}
+
+		public void setSQLServerAvgExecutionTime(Long sQLServerAvgExecutionTime) {
+			this.sQLServerAvgExecutionTime = sQLServerAvgExecutionTime;
+		}
+
+		public Long getSQLServerMaxCpuTime() {
+			return this.sQLServerMaxCpuTime;
+		}
+
+		public void setSQLServerMaxCpuTime(Long sQLServerMaxCpuTime) {
+			this.sQLServerMaxCpuTime = sQLServerMaxCpuTime;
+		}
+
+		public Long getSQLServerMinCpuTime() {
+			return this.sQLServerMinCpuTime;
+		}
+
+		public void setSQLServerMinCpuTime(Long sQLServerMinCpuTime) {
+			this.sQLServerMinCpuTime = sQLServerMinCpuTime;
+		}
+
+		public Long getSQLServerMinExecutionTime() {
+			return this.sQLServerMinExecutionTime;
+		}
+
+		public void setSQLServerMinExecutionTime(Long sQLServerMinExecutionTime) {
+			this.sQLServerMinExecutionTime = sQLServerMinExecutionTime;
+		}
+
+		public Long getSQLServerTotalCpuTime() {
+			return this.sQLServerTotalCpuTime;
+		}
+
+		public void setSQLServerTotalCpuTime(Long sQLServerTotalCpuTime) {
+			this.sQLServerTotalCpuTime = sQLServerTotalCpuTime;
 		}
 
 		public Long getSQLServerTotalExecutionCounts() {
@@ -271,6 +523,46 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 			this.sQLServerTotalExecutionTimes = sQLServerTotalExecutionTimes;
 		}
 
+		public String getSQLText() {
+			return this.sQLText;
+		}
+
+		public void setSQLText(String sQLText) {
+			this.sQLText = sQLText;
+		}
+
+		public Long getSlowLogId() {
+			return this.slowLogId;
+		}
+
+		public void setSlowLogId(Long slowLogId) {
+			this.slowLogId = slowLogId;
+		}
+
+		public Long getTotalIOWriteCounts() {
+			return this.totalIOWriteCounts;
+		}
+
+		public void setTotalIOWriteCounts(Long totalIOWriteCounts) {
+			this.totalIOWriteCounts = totalIOWriteCounts;
+		}
+
+		public Long getTotalLastRowsAffectedCounts() {
+			return this.totalLastRowsAffectedCounts;
+		}
+
+		public void setTotalLastRowsAffectedCounts(Long totalLastRowsAffectedCounts) {
+			this.totalLastRowsAffectedCounts = totalLastRowsAffectedCounts;
+		}
+
+		public Long getTotalLockTimes() {
+			return this.totalLockTimes;
+		}
+
+		public void setTotalLockTimes(Long totalLockTimes) {
+			this.totalLockTimes = totalLockTimes;
+		}
+
 		public Long getTotalLogicalReadCounts() {
 			return this.totalLogicalReadCounts;
 		}
@@ -287,28 +579,12 @@ public class DescribeSlowLogsResponse extends AcsResponse {
 			this.totalPhysicalReadCounts = totalPhysicalReadCounts;
 		}
 
-		public String getReportTime() {
-			return this.reportTime;
+		public Long getTotalRowsAffectedCounts() {
+			return this.totalRowsAffectedCounts;
 		}
 
-		public void setReportTime(String reportTime) {
-			this.reportTime = reportTime;
-		}
-
-		public Long getMaxExecutionTime() {
-			return this.maxExecutionTime;
-		}
-
-		public void setMaxExecutionTime(Long maxExecutionTime) {
-			this.maxExecutionTime = maxExecutionTime;
-		}
-
-		public Long getAvgExecutionTime() {
-			return this.avgExecutionTime;
-		}
-
-		public void setAvgExecutionTime(Long avgExecutionTime) {
-			this.avgExecutionTime = avgExecutionTime;
+		public void setTotalRowsAffectedCounts(Long totalRowsAffectedCounts) {
+			this.totalRowsAffectedCounts = totalRowsAffectedCounts;
 		}
 	}
 

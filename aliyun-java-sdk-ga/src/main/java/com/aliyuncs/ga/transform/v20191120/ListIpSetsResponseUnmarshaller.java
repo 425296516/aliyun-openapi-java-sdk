@@ -1,0 +1,70 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.ga.transform.v20191120;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.aliyuncs.ga.model.v20191120.ListIpSetsResponse;
+import com.aliyuncs.ga.model.v20191120.ListIpSetsResponse.IpSetsItem;
+import com.aliyuncs.ga.model.v20191120.ListIpSetsResponse.IpSetsItem.ServiceManagedInfosItem;
+import com.aliyuncs.transform.UnmarshallerContext;
+
+
+public class ListIpSetsResponseUnmarshaller {
+
+	public static ListIpSetsResponse unmarshall(ListIpSetsResponse listIpSetsResponse, UnmarshallerContext _ctx) {
+		
+		listIpSetsResponse.setRequestId(_ctx.stringValue("ListIpSetsResponse.RequestId"));
+		listIpSetsResponse.setTotalCount(_ctx.integerValue("ListIpSetsResponse.TotalCount"));
+		listIpSetsResponse.setPageSize(_ctx.integerValue("ListIpSetsResponse.PageSize"));
+		listIpSetsResponse.setPageNumber(_ctx.integerValue("ListIpSetsResponse.PageNumber"));
+
+		List<IpSetsItem> ipSets = new ArrayList<IpSetsItem>();
+		for (int i = 0; i < _ctx.lengthValue("ListIpSetsResponse.IpSets.Length"); i++) {
+			IpSetsItem ipSetsItem = new IpSetsItem();
+			ipSetsItem.setAccelerateRegionId(_ctx.stringValue("ListIpSetsResponse.IpSets["+ i +"].AccelerateRegionId"));
+			ipSetsItem.setIpVersion(_ctx.stringValue("ListIpSetsResponse.IpSets["+ i +"].IpVersion"));
+			ipSetsItem.setBandwidth(_ctx.integerValue("ListIpSetsResponse.IpSets["+ i +"].Bandwidth"));
+			ipSetsItem.setIspType(_ctx.stringValue("ListIpSetsResponse.IpSets["+ i +"].IspType"));
+			ipSetsItem.setState(_ctx.stringValue("ListIpSetsResponse.IpSets["+ i +"].State"));
+			ipSetsItem.setIpSetId(_ctx.stringValue("ListIpSetsResponse.IpSets["+ i +"].IpSetId"));
+			ipSetsItem.setServiceId(_ctx.stringValue("ListIpSetsResponse.IpSets["+ i +"].ServiceId"));
+			ipSetsItem.setServiceManaged(_ctx.booleanValue("ListIpSetsResponse.IpSets["+ i +"].ServiceManaged"));
+
+			List<String> ipAddressList = new ArrayList<String>();
+			for (int j = 0; j < _ctx.lengthValue("ListIpSetsResponse.IpSets["+ i +"].IpAddressList.Length"); j++) {
+				ipAddressList.add(_ctx.stringValue("ListIpSetsResponse.IpSets["+ i +"].IpAddressList["+ j +"]"));
+			}
+			ipSetsItem.setIpAddressList(ipAddressList);
+
+			List<ServiceManagedInfosItem> serviceManagedInfos = new ArrayList<ServiceManagedInfosItem>();
+			for (int j = 0; j < _ctx.lengthValue("ListIpSetsResponse.IpSets["+ i +"].ServiceManagedInfos.Length"); j++) {
+				ServiceManagedInfosItem serviceManagedInfosItem = new ServiceManagedInfosItem();
+				serviceManagedInfosItem.setAction(_ctx.stringValue("ListIpSetsResponse.IpSets["+ i +"].ServiceManagedInfos["+ j +"].Action"));
+				serviceManagedInfosItem.setChildType(_ctx.stringValue("ListIpSetsResponse.IpSets["+ i +"].ServiceManagedInfos["+ j +"].ChildType"));
+				serviceManagedInfosItem.setIsManaged(_ctx.booleanValue("ListIpSetsResponse.IpSets["+ i +"].ServiceManagedInfos["+ j +"].IsManaged"));
+
+				serviceManagedInfos.add(serviceManagedInfosItem);
+			}
+			ipSetsItem.setServiceManagedInfos(serviceManagedInfos);
+
+			ipSets.add(ipSetsItem);
+		}
+		listIpSetsResponse.setIpSets(ipSets);
+	 
+	 	return listIpSetsResponse;
+	}
+}

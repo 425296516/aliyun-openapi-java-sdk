@@ -1,0 +1,288 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.dds.model.v20151201;
+
+import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.dds.Endpoint;
+
+/**
+ * @author auto create
+ * @version 
+ */
+public class CreateNodeRequest extends RpcAcsRequest<CreateNodeResponse> {
+	   
+
+	private Long resourceOwnerId;
+
+	private String nodeType;
+
+	private String clientToken;
+
+	private Integer readonlyReplicas;
+
+	private String couponNo;
+
+	private String nodeClass;
+
+	private Boolean shardDirect;
+
+	private String accountName;
+
+	private String dBInstanceId;
+
+	private String businessInfo;
+
+	private Boolean autoPay;
+
+	private String resourceOwnerAccount;
+
+	private Integer nodeStorage;
+
+	private String ownerAccount;
+
+	private Long ownerId;
+
+	private String searchDBInstanceClass;
+
+	private String accountPassword;
+
+	private Integer searchNodeCount;
+
+	private Integer searchStorage;
+	public CreateNodeRequest() {
+		super("Dds", "2015-12-01", "CreateNode", "dds");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
+
+	public Long getResourceOwnerId() {
+		return this.resourceOwnerId;
+	}
+
+	public void setResourceOwnerId(Long resourceOwnerId) {
+		this.resourceOwnerId = resourceOwnerId;
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getNodeType() {
+		return this.nodeType;
+	}
+
+	public void setNodeType(String nodeType) {
+		this.nodeType = nodeType;
+		if(nodeType != null){
+			putQueryParameter("NodeType", nodeType);
+		}
+	}
+
+	public String getClientToken() {
+		return this.clientToken;
+	}
+
+	public void setClientToken(String clientToken) {
+		this.clientToken = clientToken;
+		if(clientToken != null){
+			putQueryParameter("ClientToken", clientToken);
+		}
+	}
+
+	public Integer getReadonlyReplicas() {
+		return this.readonlyReplicas;
+	}
+
+	public void setReadonlyReplicas(Integer readonlyReplicas) {
+		this.readonlyReplicas = readonlyReplicas;
+		if(readonlyReplicas != null){
+			putQueryParameter("ReadonlyReplicas", readonlyReplicas.toString());
+		}
+	}
+
+	public String getCouponNo() {
+		return this.couponNo;
+	}
+
+	public void setCouponNo(String couponNo) {
+		this.couponNo = couponNo;
+		if(couponNo != null){
+			putQueryParameter("CouponNo", couponNo);
+		}
+	}
+
+	public String getNodeClass() {
+		return this.nodeClass;
+	}
+
+	public void setNodeClass(String nodeClass) {
+		this.nodeClass = nodeClass;
+		if(nodeClass != null){
+			putQueryParameter("NodeClass", nodeClass);
+		}
+	}
+
+	public Boolean getShardDirect() {
+		return this.shardDirect;
+	}
+
+	public void setShardDirect(Boolean shardDirect) {
+		this.shardDirect = shardDirect;
+		if(shardDirect != null){
+			putQueryParameter("ShardDirect", shardDirect.toString());
+		}
+	}
+
+	public String getAccountName() {
+		return this.accountName;
+	}
+
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
+		if(accountName != null){
+			putQueryParameter("AccountName", accountName);
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
+		}
+	}
+
+	public String getBusinessInfo() {
+		return this.businessInfo;
+	}
+
+	public void setBusinessInfo(String businessInfo) {
+		this.businessInfo = businessInfo;
+		if(businessInfo != null){
+			putQueryParameter("BusinessInfo", businessInfo);
+		}
+	}
+
+	public Boolean getAutoPay() {
+		return this.autoPay;
+	}
+
+	public void setAutoPay(Boolean autoPay) {
+		this.autoPay = autoPay;
+		if(autoPay != null){
+			putQueryParameter("AutoPay", autoPay.toString());
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public Integer getNodeStorage() {
+		return this.nodeStorage;
+	}
+
+	public void setNodeStorage(Integer nodeStorage) {
+		this.nodeStorage = nodeStorage;
+		if(nodeStorage != null){
+			putQueryParameter("NodeStorage", nodeStorage.toString());
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getSearchDBInstanceClass() {
+		return this.searchDBInstanceClass;
+	}
+
+	public void setSearchDBInstanceClass(String searchDBInstanceClass) {
+		this.searchDBInstanceClass = searchDBInstanceClass;
+		if(searchDBInstanceClass != null){
+			putQueryParameter("SearchDBInstanceClass", searchDBInstanceClass);
+		}
+	}
+
+	public String getAccountPassword() {
+		return this.accountPassword;
+	}
+
+	public void setAccountPassword(String accountPassword) {
+		this.accountPassword = accountPassword;
+		if(accountPassword != null){
+			putQueryParameter("AccountPassword", accountPassword);
+		}
+	}
+
+	public Integer getSearchNodeCount() {
+		return this.searchNodeCount;
+	}
+
+	public void setSearchNodeCount(Integer searchNodeCount) {
+		this.searchNodeCount = searchNodeCount;
+		if(searchNodeCount != null){
+			putQueryParameter("SearchNodeCount", searchNodeCount.toString());
+		}
+	}
+
+	public Integer getSearchStorage() {
+		return this.searchStorage;
+	}
+
+	public void setSearchStorage(Integer searchStorage) {
+		this.searchStorage = searchStorage;
+		if(searchStorage != null){
+			putQueryParameter("SearchStorage", searchStorage.toString());
+		}
+	}
+
+	@Override
+	public Class<CreateNodeResponse> getResponseClass() {
+		return CreateNodeResponse.class;
+	}
+
+}

@@ -1,0 +1,60 @@
+2024-07-24 Version: 3.6.4
+- Generated 2019-09-10 for `ROS`.
+
+2024-01-29 Version: 3.6.3
+- CreateStack support BusinessInfo parameter. 
+
+2023-02-10 Version: 3.6.2
+- A new PhysicsResourceId field is added to the Resources returned by the PreviewStack interface.
+- Added StackId parameter to the GetTemplateParameterConstraints API.
+
+2021-07-20 Version: 3.6.1
+- GetStack supports resource progress.
+- ValidateTemplate supports Outputs.
+
+2021-01-21 Version: 3.6.0
+- The creation and update APIs of the stack supports specifing tags, and the query and list APIs supports obtaining tags.
+
+2020-12-17 Version: 3.5.0
+- Support template version.
+- Support to share template.
+- Stack and StackGroup support TemplateId and TemplateVersion.
+- Add GenerateTemplatePolicy which can generate RAM policy by template.
+
+2020-12-02 Version: 3.4.0
+- Supported stack instance supports the specified stack TimeoutInMinutes and DisableRollback.
+- Supported specified stack CreateOption.
+
+2020-07-29 Version: 3.3.1
+- Rollback support for version 2015-09-01.
+
+2020-07-29 Version: 3.3.0
+- Supported list stack operation risks.
+- Supported replacement option on updating stack.
+- Supported import resource.
+
+2020-04-03 Version: 3.2.1
+- Support deletion protection.
+- ContinueCreateStack enhancement.
+
+2020-03-20 Version: 3.2.0
+- Support tag.
+- Support stack group.
+- Support drift detection.
+- Support RoleName, RetainResources.
+
+2019-10-22 Version: 3.1.0
+- Add API CreateTemplate.
+- Add API DeleteTemplate.
+- Add API UpdateTemplate.
+- Add API ListTemplates.
+
+2019-08-30 Version: 3.0.1
+- Release Apis of Version 2019-09-10.
+
+2019-08-30 Version: 3.0.0
+- Release Apis of Version 2019-09-10.
+
+2019-01-22 Version: 2.2.8
+1, support Stack Policy setting .
+

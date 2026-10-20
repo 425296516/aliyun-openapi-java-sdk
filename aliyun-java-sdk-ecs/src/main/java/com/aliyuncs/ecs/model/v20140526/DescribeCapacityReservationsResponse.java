@@ -1,0 +1,434 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.ecs.model.v20140526;
+
+import java.util.List;
+import com.aliyuncs.AcsResponse;
+import com.aliyuncs.ecs.transform.v20140526.DescribeCapacityReservationsResponseUnmarshaller;
+import com.aliyuncs.transform.UnmarshallerContext;
+
+/**
+ * @author auto create
+ * @version 
+ */
+public class DescribeCapacityReservationsResponse extends AcsResponse {
+
+	private Integer totalCount;
+
+	private String nextToken;
+
+	private String requestId;
+
+	private Integer maxResults;
+
+	private List<CapacityReservationItem> capacityReservationSet;
+
+	public Integer getTotalCount() {
+		return this.totalCount;
+	}
+
+	public void setTotalCount(Integer totalCount) {
+		this.totalCount = totalCount;
+	}
+
+	public String getNextToken() {
+		return this.nextToken;
+	}
+
+	public void setNextToken(String nextToken) {
+		this.nextToken = nextToken;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public Integer getMaxResults() {
+		return this.maxResults;
+	}
+
+	public void setMaxResults(Integer maxResults) {
+		this.maxResults = maxResults;
+	}
+
+	public List<CapacityReservationItem> getCapacityReservationSet() {
+		return this.capacityReservationSet;
+	}
+
+	public void setCapacityReservationSet(List<CapacityReservationItem> capacityReservationSet) {
+		this.capacityReservationSet = capacityReservationSet;
+	}
+
+	public static class CapacityReservationItem {
+
+		private String status;
+
+		private String description;
+
+		private String endTime;
+
+		private String resourceGroupId;
+
+		private String platform;
+
+		private String privatePoolOptionsName;
+
+		private String instanceChargeType;
+
+		private String startTime;
+
+		private String startTimeType;
+
+		private String unlockedTime;
+
+		private String privatePoolOptionsMatchCriteria;
+
+		private String timeSlot;
+
+		private String savingPlanId;
+
+		private String capacityReservationOwnerId;
+
+		private String privatePoolOptionsId;
+
+		private String deliveryTime;
+
+		private String endTimeType;
+
+		private String reservedInstanceId;
+
+		private String regionId;
+
+		private List<AllocatedResource> allocatedResources;
+
+		private List<Tag> tags;
+
+		public String getStatus() {
+			return this.status;
+		}
+
+		public void setStatus(String status) {
+			this.status = status;
+		}
+
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		public String getEndTime() {
+			return this.endTime;
+		}
+
+		public void setEndTime(String endTime) {
+			this.endTime = endTime;
+		}
+
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
+		public String getPlatform() {
+			return this.platform;
+		}
+
+		public void setPlatform(String platform) {
+			this.platform = platform;
+		}
+
+		public String getPrivatePoolOptionsName() {
+			return this.privatePoolOptionsName;
+		}
+
+		public void setPrivatePoolOptionsName(String privatePoolOptionsName) {
+			this.privatePoolOptionsName = privatePoolOptionsName;
+		}
+
+		public String getInstanceChargeType() {
+			return this.instanceChargeType;
+		}
+
+		public void setInstanceChargeType(String instanceChargeType) {
+			this.instanceChargeType = instanceChargeType;
+		}
+
+		public String getStartTime() {
+			return this.startTime;
+		}
+
+		public void setStartTime(String startTime) {
+			this.startTime = startTime;
+		}
+
+		public String getStartTimeType() {
+			return this.startTimeType;
+		}
+
+		public void setStartTimeType(String startTimeType) {
+			this.startTimeType = startTimeType;
+		}
+
+		public String getUnlockedTime() {
+			return this.unlockedTime;
+		}
+
+		public void setUnlockedTime(String unlockedTime) {
+			this.unlockedTime = unlockedTime;
+		}
+
+		public String getPrivatePoolOptionsMatchCriteria() {
+			return this.privatePoolOptionsMatchCriteria;
+		}
+
+		public void setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
+			this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
+		}
+
+		public String getTimeSlot() {
+			return this.timeSlot;
+		}
+
+		public void setTimeSlot(String timeSlot) {
+			this.timeSlot = timeSlot;
+		}
+
+		public String getSavingPlanId() {
+			return this.savingPlanId;
+		}
+
+		public void setSavingPlanId(String savingPlanId) {
+			this.savingPlanId = savingPlanId;
+		}
+
+		public String getCapacityReservationOwnerId() {
+			return this.capacityReservationOwnerId;
+		}
+
+		public void setCapacityReservationOwnerId(String capacityReservationOwnerId) {
+			this.capacityReservationOwnerId = capacityReservationOwnerId;
+		}
+
+		public String getPrivatePoolOptionsId() {
+			return this.privatePoolOptionsId;
+		}
+
+		public void setPrivatePoolOptionsId(String privatePoolOptionsId) {
+			this.privatePoolOptionsId = privatePoolOptionsId;
+		}
+
+		public String getDeliveryTime() {
+			return this.deliveryTime;
+		}
+
+		public void setDeliveryTime(String deliveryTime) {
+			this.deliveryTime = deliveryTime;
+		}
+
+		public String getEndTimeType() {
+			return this.endTimeType;
+		}
+
+		public void setEndTimeType(String endTimeType) {
+			this.endTimeType = endTimeType;
+		}
+
+		public String getReservedInstanceId() {
+			return this.reservedInstanceId;
+		}
+
+		public void setReservedInstanceId(String reservedInstanceId) {
+			this.reservedInstanceId = reservedInstanceId;
+		}
+
+		public String getRegionId() {
+			return this.regionId;
+		}
+
+		public void setRegionId(String regionId) {
+			this.regionId = regionId;
+		}
+
+		public List<AllocatedResource> getAllocatedResources() {
+			return this.allocatedResources;
+		}
+
+		public void setAllocatedResources(List<AllocatedResource> allocatedResources) {
+			this.allocatedResources = allocatedResources;
+		}
+
+		public List<Tag> getTags() {
+			return this.tags;
+		}
+
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
+		}
+
+		public static class AllocatedResource {
+
+			private Integer usedAmount;
+
+			private Integer availableAmount;
+
+			private String zoneId;
+
+			private Integer totalAmount;
+
+			private Integer failedAmount;
+
+			private String instanceType;
+
+			private Integer lockedAmount;
+
+			private List<CapacityReservationUsage> capacityReservationUsages;
+
+			public Integer getUsedAmount() {
+				return this.usedAmount;
+			}
+
+			public void setUsedAmount(Integer usedAmount) {
+				this.usedAmount = usedAmount;
+			}
+
+			public Integer getAvailableAmount() {
+				return this.availableAmount;
+			}
+
+			public void setAvailableAmount(Integer availableAmount) {
+				this.availableAmount = availableAmount;
+			}
+
+			public String getZoneId() {
+				return this.zoneId;
+			}
+
+			public void setZoneId(String zoneId) {
+				this.zoneId = zoneId;
+			}
+
+			public Integer getTotalAmount() {
+				return this.totalAmount;
+			}
+
+			public void setTotalAmount(Integer totalAmount) {
+				this.totalAmount = totalAmount;
+			}
+
+			public Integer getFailedAmount() {
+				return this.failedAmount;
+			}
+
+			public void setFailedAmount(Integer failedAmount) {
+				this.failedAmount = failedAmount;
+			}
+
+			public String getInstanceType() {
+				return this.instanceType;
+			}
+
+			public void setInstanceType(String instanceType) {
+				this.instanceType = instanceType;
+			}
+
+			public Integer getLockedAmount() {
+				return this.lockedAmount;
+			}
+
+			public void setLockedAmount(Integer lockedAmount) {
+				this.lockedAmount = lockedAmount;
+			}
+
+			public List<CapacityReservationUsage> getCapacityReservationUsages() {
+				return this.capacityReservationUsages;
+			}
+
+			public void setCapacityReservationUsages(List<CapacityReservationUsage> capacityReservationUsages) {
+				this.capacityReservationUsages = capacityReservationUsages;
+			}
+
+			public static class CapacityReservationUsage {
+
+				private Integer usedAmount;
+
+				private String accountId;
+
+				private String serviceName;
+
+				public Integer getUsedAmount() {
+					return this.usedAmount;
+				}
+
+				public void setUsedAmount(Integer usedAmount) {
+					this.usedAmount = usedAmount;
+				}
+
+				public String getAccountId() {
+					return this.accountId;
+				}
+
+				public void setAccountId(String accountId) {
+					this.accountId = accountId;
+				}
+
+				public String getServiceName() {
+					return this.serviceName;
+				}
+
+				public void setServiceName(String serviceName) {
+					this.serviceName = serviceName;
+				}
+			}
+		}
+
+		public static class Tag {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
+			}
+		}
+	}
+
+	@Override
+	public DescribeCapacityReservationsResponse getInstance(UnmarshallerContext context) {
+		return	DescribeCapacityReservationsResponseUnmarshaller.unmarshall(this, context);
+	}
+}

@@ -1,0 +1,175 @@
+2026-01-07 Version: 3.0.25
+- Generated 2020-10-28 for `mPaaS`.
+
+2025-11-14 Version: 3.0.24
+- Generated 2020-10-28 for `mPaaS`.
+
+2025-08-25 Version: 2.1.12
+- Generated 2020-07-10 for `mPaaS`.
+
+2025-06-03 Version: 3.0.23
+- Generated 2020-10-28 for `mPaaS`.
+
+2025-04-24 Version: 3.0.22
+- Generated 2020-10-28 for `mPaaS`.
+
+2025-04-23 Version: 3.0.21
+- Generated 2020-10-28 for `mPaaS`.
+
+2025-04-23 Version: 3.0.20
+- Generated 2020-10-28 for `mPaaS`.
+
+2025-02-20 Version: 3.0.19
+- Generated 2020-10-28 for `mPaaS`.
+
+2024-09-20 Version: 3.0.18
+- Generated 2020-10-28 for `mPaaS`.
+
+2024-06-06 Version: 3.0.17
+- Generated 2020-10-28 for `mPaaS`.
+
+2024-05-31 Version: 3.0.16
+- Generated 2020-10-28 for `mPaaS`.
+
+2024-05-31 Version: 3.0.15
+- Generated 2020-10-28 for `mPaaS`.
+
+2024-05-27 Version: 3.0.14
+- Generated 2020-10-28 for `mPaaS`.
+
+2024-05-23 Version: 2.1.11
+- Add Mds pagination.
+
+2024-03-14 Version: 4.0.2
+- Add paging params to request and response.
+
+2024-02-27 Version: 2.1.10
+- Add vivo classification.
+
+2024-01-23 Version: 3.0.13
+- GoInit.
+
+2023-11-28 Version: 3.0.12
+- GoInit.
+
+2023-07-19 Version: 3.0.11
+- Support  paging query for list in MDS.
+
+2023-03-31 Version: 3.0.10
+- Support vivo classification.
+
+2022-11-29 Version: 3.0.9
+- Support vivo classification.
+
+2022-08-29 Version: 4.0.1
+- Support for Goverment Cloud.
+
+2022-08-29 Version: 4.0.0
+- Support for Goverment Cloud.
+
+2022-06-24 Version: 3.0.8
+- Support vivo classification.
+
+2022-06-24 Version: 2.1.9
+- Add vivo classification.
+
+2022-03-17 Version: 3.0.7
+- Support SMS.
+
+2022-03-17 Version: 3.0.7
+- Support SMS.
+
+2022-03-17 Version: 3.0.7
+- Support SMS.
+
+2022-03-17 Version: 3.0.7
+- Support SMS.
+
+2022-03-17 Version: 3.0.7
+- Support SMS.
+
+2022-03-17 Version: 2.1.8
+- Support SMS.
+
+2022-01-14 Version: 2.1.7
+- Support More Enhance Options.
+
+2022-01-11 Version: 2.1.6
+- Add androidChannel.
+
+2021-08-30 Version: 3.0.6
+- Supported revoke for push.
+- Supported scheduler for push.
+
+2021-08-24 Version: 2.1.5
+- Supported revoke for push.
+- Supported scheduler for push.
+
+2021-08-20 Version: 3.0.5
+- Add mds nebula openapi.
+
+2021-08-09 Version: 2.1.5-beta
+- Supported for test.
+
+2021-07-27 Version: 2.1.4
+- Supported revoke for push.
+- Supported scheduler for push.
+
+2021-07-27 Version: 2.1.3
+- Supported revoke for push.
+- Supported scheduler for push.
+
+2021-07-20 Version: 2.1.2
+- Add mss openapi.
+
+2021-05-19 Version: 2.1.1
+- Supported rich text for push.
+
+2021-05-19 Version: 3.0.4
+- Supported rich text for push.
+
+2021-03-24 Version: 3.0.3
+- Add Enhance Options for MSA.
+
+2021-03-08 Version: 2.1.0
+- Add mds openapi.
+
+2021-01-28 Version: 3.0.2
+- Push add bind unbind report api.
+
+2021-01-28 Version: 3.0.2
+- Push add bind unbind report api.
+
+2020-12-21 Version: 3.0.1
+- Update mpaas push sdk.
+
+2020-12-21 Version: 3.0.0
+- Update mpaas push sdk.
+
+2020-12-21 Version: 3.0.0
+- Update mpaas push sdk.
+
+2020-12-21 Version: 3.0.0
+- Update mpaas push sdk.
+
+2020-11-26 Version: 3.0.0
+- Add feijin.
+
+2020-11-26 Version: 3.0.0
+- Add feijin.
+
+2020-10-30 Version: 2.0.0
+- Java sdk.
+
+2020-08-14 Version: 1.1.1
+- Add mds openapi.
+
+2020-07-29 Version: 1.2.0.0
+- Supported Mas Tinyapp Analysis.
+
+2020-05-29 Version: 1.1.0
+- Add mds openapi.
+
+2019-12-27 Version: 1.0.0.0
+- Sdk for mPaaS public Api.
+

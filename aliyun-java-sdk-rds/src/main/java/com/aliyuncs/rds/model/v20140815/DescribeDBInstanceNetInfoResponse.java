@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -29,11 +25,21 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeDBInstanceNetInfoResponse extends AcsResponse {
 
-	private String requestId;
-
 	private String instanceNetworkType;
 
+	private String requestId;
+
+	private String securityIPMode;
+
 	private List<DBInstanceNetInfo> dBInstanceNetInfos;
+
+	public String getInstanceNetworkType() {
+		return this.instanceNetworkType;
+	}
+
+	public void setInstanceNetworkType(String instanceNetworkType) {
+		this.instanceNetworkType = instanceNetworkType;
+	}
 
 	public String getRequestId() {
 		return this.requestId;
@@ -43,12 +49,12 @@ public class DescribeDBInstanceNetInfoResponse extends AcsResponse {
 		this.requestId = requestId;
 	}
 
-	public String getInstanceNetworkType() {
-		return this.instanceNetworkType;
+	public String getSecurityIPMode() {
+		return this.securityIPMode;
 	}
 
-	public void setInstanceNetworkType(String instanceNetworkType) {
-		this.instanceNetworkType = instanceNetworkType;
+	public void setSecurityIPMode(String securityIPMode) {
+		this.securityIPMode = securityIPMode;
 	}
 
 	public List<DBInstanceNetInfo> getDBInstanceNetInfos() {
@@ -61,19 +67,43 @@ public class DescribeDBInstanceNetInfoResponse extends AcsResponse {
 
 	public static class DBInstanceNetInfo {
 
+		private String babelfishPort;
+
 		private String connectionString;
+
+		private String connectionStringType;
+
+		private String distributionType;
+
+		private String expiredTime;
 
 		private String iPAddress;
 
 		private String iPType;
 
+		private String maxDelayTime;
+
+		private String pGBouncerPort;
+
 		private String port;
+
+		private String upgradeable;
 
 		private String vPCId;
 
 		private String vSwitchId;
 
+		private List<DBInstanceWeight> dBInstanceWeights;
+
 		private List<SecurityIPGroup> securityIPGroups;
+
+		public String getBabelfishPort() {
+			return this.babelfishPort;
+		}
+
+		public void setBabelfishPort(String babelfishPort) {
+			this.babelfishPort = babelfishPort;
+		}
 
 		public String getConnectionString() {
 			return this.connectionString;
@@ -81,6 +111,30 @@ public class DescribeDBInstanceNetInfoResponse extends AcsResponse {
 
 		public void setConnectionString(String connectionString) {
 			this.connectionString = connectionString;
+		}
+
+		public String getConnectionStringType() {
+			return this.connectionStringType;
+		}
+
+		public void setConnectionStringType(String connectionStringType) {
+			this.connectionStringType = connectionStringType;
+		}
+
+		public String getDistributionType() {
+			return this.distributionType;
+		}
+
+		public void setDistributionType(String distributionType) {
+			this.distributionType = distributionType;
+		}
+
+		public String getExpiredTime() {
+			return this.expiredTime;
+		}
+
+		public void setExpiredTime(String expiredTime) {
+			this.expiredTime = expiredTime;
 		}
 
 		public String getIPAddress() {
@@ -99,12 +153,36 @@ public class DescribeDBInstanceNetInfoResponse extends AcsResponse {
 			this.iPType = iPType;
 		}
 
+		public String getMaxDelayTime() {
+			return this.maxDelayTime;
+		}
+
+		public void setMaxDelayTime(String maxDelayTime) {
+			this.maxDelayTime = maxDelayTime;
+		}
+
+		public String getPGBouncerPort() {
+			return this.pGBouncerPort;
+		}
+
+		public void setPGBouncerPort(String pGBouncerPort) {
+			this.pGBouncerPort = pGBouncerPort;
+		}
+
 		public String getPort() {
 			return this.port;
 		}
 
 		public void setPort(String port) {
 			this.port = port;
+		}
+
+		public String getUpgradeable() {
+			return this.upgradeable;
+		}
+
+		public void setUpgradeable(String upgradeable) {
+			this.upgradeable = upgradeable;
 		}
 
 		public String getVPCId() {
@@ -123,12 +201,73 @@ public class DescribeDBInstanceNetInfoResponse extends AcsResponse {
 			this.vSwitchId = vSwitchId;
 		}
 
+		public List<DBInstanceWeight> getDBInstanceWeights() {
+			return this.dBInstanceWeights;
+		}
+
+		public void setDBInstanceWeights(List<DBInstanceWeight> dBInstanceWeights) {
+			this.dBInstanceWeights = dBInstanceWeights;
+		}
+
 		public List<SecurityIPGroup> getSecurityIPGroups() {
 			return this.securityIPGroups;
 		}
 
 		public void setSecurityIPGroups(List<SecurityIPGroup> securityIPGroups) {
 			this.securityIPGroups = securityIPGroups;
+		}
+
+		public static class DBInstanceWeight {
+
+			private String availability;
+
+			private String dBInstanceId;
+
+			private String dBInstanceType;
+
+			private String role;
+
+			private String weight;
+
+			public String getAvailability() {
+				return this.availability;
+			}
+
+			public void setAvailability(String availability) {
+				this.availability = availability;
+			}
+
+			public String getDBInstanceId() {
+				return this.dBInstanceId;
+			}
+
+			public void setDBInstanceId(String dBInstanceId) {
+				this.dBInstanceId = dBInstanceId;
+			}
+
+			public String getDBInstanceType() {
+				return this.dBInstanceType;
+			}
+
+			public void setDBInstanceType(String dBInstanceType) {
+				this.dBInstanceType = dBInstanceType;
+			}
+
+			public String getRole() {
+				return this.role;
+			}
+
+			public void setRole(String role) {
+				this.role = role;
+			}
+
+			public String getWeight() {
+				return this.weight;
+			}
+
+			public void setWeight(String weight) {
+				this.weight = weight;
+			}
 		}
 
 		public static class SecurityIPGroup {

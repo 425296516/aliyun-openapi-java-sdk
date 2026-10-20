@@ -1,0 +1,60 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.ecd.transform.v20200930;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.aliyuncs.ecd.model.v20200930.DescribeSnapshotsResponse;
+import com.aliyuncs.ecd.model.v20200930.DescribeSnapshotsResponse.Snapshot;
+import com.aliyuncs.transform.UnmarshallerContext;
+
+
+public class DescribeSnapshotsResponseUnmarshaller {
+
+	public static DescribeSnapshotsResponse unmarshall(DescribeSnapshotsResponse describeSnapshotsResponse, UnmarshallerContext _ctx) {
+		
+		describeSnapshotsResponse.setRequestId(_ctx.stringValue("DescribeSnapshotsResponse.RequestId"));
+		describeSnapshotsResponse.setNextToken(_ctx.stringValue("DescribeSnapshotsResponse.NextToken"));
+
+		List<Snapshot> snapshots = new ArrayList<Snapshot>();
+		for (int i = 0; i < _ctx.lengthValue("DescribeSnapshotsResponse.Snapshots.Length"); i++) {
+			Snapshot snapshot = new Snapshot();
+			snapshot.setCreationTime(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].CreationTime"));
+			snapshot.setStatus(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].Status"));
+			snapshot.setSnapshotType(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].SnapshotType"));
+			snapshot.setSnapshotName(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].SnapshotName"));
+			snapshot.setProgress(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].Progress"));
+			snapshot.setDescription(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].Description"));
+			snapshot.setSnapshotId(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].SnapshotId"));
+			snapshot.setRemainTime(_ctx.integerValue("DescribeSnapshotsResponse.Snapshots["+ i +"].RemainTime"));
+			snapshot.setSourceDiskSize(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].SourceDiskSize"));
+			snapshot.setSourceDiskType(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].SourceDiskType"));
+			snapshot.setDesktopId(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].DesktopId"));
+			snapshot.setDesktopName(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].DesktopName"));
+			snapshot.setDesktopStatus(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].DesktopStatus"));
+			snapshot.setCreator(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].Creator"));
+			snapshot.setProtocolType(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].ProtocolType"));
+			snapshot.setVolumeEncryptionEnabled(_ctx.booleanValue("DescribeSnapshotsResponse.Snapshots["+ i +"].VolumeEncryptionEnabled"));
+			snapshot.setVolumeEncryptionKey(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].VolumeEncryptionKey"));
+			snapshot.setDeletionTime(_ctx.stringValue("DescribeSnapshotsResponse.Snapshots["+ i +"].DeletionTime"));
+
+			snapshots.add(snapshot);
+		}
+		describeSnapshotsResponse.setSnapshots(snapshots);
+	 
+	 	return describeSnapshotsResponse;
+	}
+}

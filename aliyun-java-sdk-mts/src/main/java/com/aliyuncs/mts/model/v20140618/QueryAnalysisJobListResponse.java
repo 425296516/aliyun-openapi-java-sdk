@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.mts.model.v20140618;
 
 import java.util.List;
@@ -61,68 +57,38 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 
 	public static class AnalysisJob {
 
-		private String id;
-
-		private String userData;
-
-		private String state;
-
-		private String code;
-
-		private String message;
+		private String creationTime;
 
 		private Long percent;
 
-		private String creationTime;
+		private String state;
 
-		private String pipelineId;
+		private String message;
 
 		private String priority;
 
-		private List<Template> templateList;
+		private String userData;
 
-		private InputFile inputFile;
+		private String code;
+
+		private String pipelineId;
+
+		private String id;
+
+		private List<Template> templateList;
 
 		private AnalysisConfig analysisConfig;
 
-		public String getId() {
-			return this.id;
+		private MNSMessageResult mNSMessageResult;
+
+		private InputFile inputFile;
+
+		public String getCreationTime() {
+			return this.creationTime;
 		}
 
-		public void setId(String id) {
-			this.id = id;
-		}
-
-		public String getUserData() {
-			return this.userData;
-		}
-
-		public void setUserData(String userData) {
-			this.userData = userData;
-		}
-
-		public String getState() {
-			return this.state;
-		}
-
-		public void setState(String state) {
-			this.state = state;
-		}
-
-		public String getCode() {
-			return this.code;
-		}
-
-		public void setCode(String code) {
-			this.code = code;
-		}
-
-		public String getMessage() {
-			return this.message;
-		}
-
-		public void setMessage(String message) {
-			this.message = message;
+		public void setCreationTime(String creationTime) {
+			this.creationTime = creationTime;
 		}
 
 		public Long getPercent() {
@@ -133,20 +99,20 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 			this.percent = percent;
 		}
 
-		public String getCreationTime() {
-			return this.creationTime;
+		public String getState() {
+			return this.state;
 		}
 
-		public void setCreationTime(String creationTime) {
-			this.creationTime = creationTime;
+		public void setState(String state) {
+			this.state = state;
 		}
 
-		public String getPipelineId() {
-			return this.pipelineId;
+		public String getMessage() {
+			return this.message;
 		}
 
-		public void setPipelineId(String pipelineId) {
-			this.pipelineId = pipelineId;
+		public void setMessage(String message) {
+			this.message = message;
 		}
 
 		public String getPriority() {
@@ -157,20 +123,44 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 			this.priority = priority;
 		}
 
+		public String getUserData() {
+			return this.userData;
+		}
+
+		public void setUserData(String userData) {
+			this.userData = userData;
+		}
+
+		public String getCode() {
+			return this.code;
+		}
+
+		public void setCode(String code) {
+			this.code = code;
+		}
+
+		public String getPipelineId() {
+			return this.pipelineId;
+		}
+
+		public void setPipelineId(String pipelineId) {
+			this.pipelineId = pipelineId;
+		}
+
+		public String getId() {
+			return this.id;
+		}
+
+		public void setId(String id) {
+			this.id = id;
+		}
+
 		public List<Template> getTemplateList() {
 			return this.templateList;
 		}
 
 		public void setTemplateList(List<Template> templateList) {
 			this.templateList = templateList;
-		}
-
-		public InputFile getInputFile() {
-			return this.inputFile;
-		}
-
-		public void setInputFile(InputFile inputFile) {
-			this.inputFile = inputFile;
 		}
 
 		public AnalysisConfig getAnalysisConfig() {
@@ -181,30 +171,46 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 			this.analysisConfig = analysisConfig;
 		}
 
+		public MNSMessageResult getMNSMessageResult() {
+			return this.mNSMessageResult;
+		}
+
+		public void setMNSMessageResult(MNSMessageResult mNSMessageResult) {
+			this.mNSMessageResult = mNSMessageResult;
+		}
+
+		public InputFile getInputFile() {
+			return this.inputFile;
+		}
+
+		public void setInputFile(InputFile inputFile) {
+			this.inputFile = inputFile;
+		}
+
 		public static class Template {
-
-			private String id;
-
-			private String name;
 
 			private String state;
 
-			private Container container;
+			private String name;
+
+			private String id;
 
 			private Video video;
-
-			private Audio audio;
 
 			private TransConfig transConfig;
 
 			private MuxConfig muxConfig;
 
-			public String getId() {
-				return this.id;
+			private Audio audio;
+
+			private Container container;
+
+			public String getState() {
+				return this.state;
 			}
 
-			public void setId(String id) {
-				this.id = id;
+			public void setState(String state) {
+				this.state = state;
 			}
 
 			public String getName() {
@@ -215,20 +221,12 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 				this.name = name;
 			}
 
-			public String getState() {
-				return this.state;
+			public String getId() {
+				return this.id;
 			}
 
-			public void setState(String state) {
-				this.state = state;
-			}
-
-			public Container getContainer() {
-				return this.container;
-			}
-
-			public void setContainer(Container container) {
-				this.container = container;
+			public void setId(String id) {
+				this.id = id;
 			}
 
 			public Video getVideo() {
@@ -237,14 +235,6 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 
 			public void setVideo(Video video) {
 				this.video = video;
-			}
-
-			public Audio getAudio() {
-				return this.audio;
-			}
-
-			public void setAudio(Audio audio) {
-				this.audio = audio;
 			}
 
 			public TransConfig getTransConfig() {
@@ -263,52 +253,79 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 				this.muxConfig = muxConfig;
 			}
 
-			public static class Container {
+			public Audio getAudio() {
+				return this.audio;
+			}
 
-				private String format;
+			public void setAudio(Audio audio) {
+				this.audio = audio;
+			}
 
-				public String getFormat() {
-					return this.format;
-				}
+			public Container getContainer() {
+				return this.container;
+			}
 
-				public void setFormat(String format) {
-					this.format = format;
-				}
+			public void setContainer(Container container) {
+				this.container = container;
 			}
 
 			public static class Video {
 
+				private String bufsize;
+
+				private String degrain;
+
+				private String pixFmt;
+
 				private String codec;
-
-				private String profile;
-
-				private String bitrate;
-
-				private String crf;
-
-				private String width;
 
 				private String height;
 
-				private String fps;
+				private String qscale;
+
+				private String bitrate;
+
+				private String maxrate;
+
+				private String profile;
+
+				private String crf;
 
 				private String gop;
+
+				private String width;
+
+				private String fps;
 
 				private String preset;
 
 				private String scanMode;
 
-				private String bufsize;
-
-				private String maxrate;
-
-				private String pixFmt;
-
-				private String degrain;
-
-				private String qscale;
-
 				private BitrateBnd bitrateBnd;
+
+				public String getBufsize() {
+					return this.bufsize;
+				}
+
+				public void setBufsize(String bufsize) {
+					this.bufsize = bufsize;
+				}
+
+				public String getDegrain() {
+					return this.degrain;
+				}
+
+				public void setDegrain(String degrain) {
+					this.degrain = degrain;
+				}
+
+				public String getPixFmt() {
+					return this.pixFmt;
+				}
+
+				public void setPixFmt(String pixFmt) {
+					this.pixFmt = pixFmt;
+				}
 
 				public String getCodec() {
 					return this.codec;
@@ -316,38 +333,6 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 
 				public void setCodec(String codec) {
 					this.codec = codec;
-				}
-
-				public String getProfile() {
-					return this.profile;
-				}
-
-				public void setProfile(String profile) {
-					this.profile = profile;
-				}
-
-				public String getBitrate() {
-					return this.bitrate;
-				}
-
-				public void setBitrate(String bitrate) {
-					this.bitrate = bitrate;
-				}
-
-				public String getCrf() {
-					return this.crf;
-				}
-
-				public void setCrf(String crf) {
-					this.crf = crf;
-				}
-
-				public String getWidth() {
-					return this.width;
-				}
-
-				public void setWidth(String width) {
-					this.width = width;
 				}
 
 				public String getHeight() {
@@ -358,12 +343,44 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 					this.height = height;
 				}
 
-				public String getFps() {
-					return this.fps;
+				public String getQscale() {
+					return this.qscale;
 				}
 
-				public void setFps(String fps) {
-					this.fps = fps;
+				public void setQscale(String qscale) {
+					this.qscale = qscale;
+				}
+
+				public String getBitrate() {
+					return this.bitrate;
+				}
+
+				public void setBitrate(String bitrate) {
+					this.bitrate = bitrate;
+				}
+
+				public String getMaxrate() {
+					return this.maxrate;
+				}
+
+				public void setMaxrate(String maxrate) {
+					this.maxrate = maxrate;
+				}
+
+				public String getProfile() {
+					return this.profile;
+				}
+
+				public void setProfile(String profile) {
+					this.profile = profile;
+				}
+
+				public String getCrf() {
+					return this.crf;
+				}
+
+				public void setCrf(String crf) {
+					this.crf = crf;
 				}
 
 				public String getGop() {
@@ -372,6 +389,22 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 
 				public void setGop(String gop) {
 					this.gop = gop;
+				}
+
+				public String getWidth() {
+					return this.width;
+				}
+
+				public void setWidth(String width) {
+					this.width = width;
+				}
+
+				public String getFps() {
+					return this.fps;
+				}
+
+				public void setFps(String fps) {
+					this.fps = fps;
 				}
 
 				public String getPreset() {
@@ -388,46 +421,6 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 
 				public void setScanMode(String scanMode) {
 					this.scanMode = scanMode;
-				}
-
-				public String getBufsize() {
-					return this.bufsize;
-				}
-
-				public void setBufsize(String bufsize) {
-					this.bufsize = bufsize;
-				}
-
-				public String getMaxrate() {
-					return this.maxrate;
-				}
-
-				public void setMaxrate(String maxrate) {
-					this.maxrate = maxrate;
-				}
-
-				public String getPixFmt() {
-					return this.pixFmt;
-				}
-
-				public void setPixFmt(String pixFmt) {
-					this.pixFmt = pixFmt;
-				}
-
-				public String getDegrain() {
-					return this.degrain;
-				}
-
-				public void setDegrain(String degrain) {
-					this.degrain = degrain;
-				}
-
-				public String getQscale() {
-					return this.qscale;
-				}
-
-				public void setQscale(String qscale) {
-					this.qscale = qscale;
 				}
 
 				public BitrateBnd getBitrateBnd() {
@@ -462,69 +455,6 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 				}
 			}
 
-			public static class Audio {
-
-				private String codec;
-
-				private String profile;
-
-				private String samplerate;
-
-				private String bitrate;
-
-				private String channels;
-
-				private String qscale;
-
-				public String getCodec() {
-					return this.codec;
-				}
-
-				public void setCodec(String codec) {
-					this.codec = codec;
-				}
-
-				public String getProfile() {
-					return this.profile;
-				}
-
-				public void setProfile(String profile) {
-					this.profile = profile;
-				}
-
-				public String getSamplerate() {
-					return this.samplerate;
-				}
-
-				public void setSamplerate(String samplerate) {
-					this.samplerate = samplerate;
-				}
-
-				public String getBitrate() {
-					return this.bitrate;
-				}
-
-				public void setBitrate(String bitrate) {
-					this.bitrate = bitrate;
-				}
-
-				public String getChannels() {
-					return this.channels;
-				}
-
-				public void setChannels(String channels) {
-					this.channels = channels;
-				}
-
-				public String getQscale() {
-					return this.qscale;
-				}
-
-				public void setQscale(String qscale) {
-					this.qscale = qscale;
-				}
-			}
-
 			public static class TransConfig {
 
 				private String transMode;
@@ -540,9 +470,17 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 
 			public static class MuxConfig {
 
+				private Gif gif;
+
 				private Segment segment;
 
-				private Gif gif;
+				public Gif getGif() {
+					return this.gif;
+				}
+
+				public void setGif(Gif gif) {
+					this.gif = gif;
+				}
 
 				public Segment getSegment() {
 					return this.segment;
@@ -552,12 +490,27 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 					this.segment = segment;
 				}
 
-				public Gif getGif() {
-					return this.gif;
-				}
+				public static class Gif {
 
-				public void setGif(Gif gif) {
-					this.gif = gif;
+					private String finalDelay;
+
+					private String loop;
+
+					public String getFinalDelay() {
+						return this.finalDelay;
+					}
+
+					public void setFinalDelay(String finalDelay) {
+						this.finalDelay = finalDelay;
+					}
+
+					public String getLoop() {
+						return this.loop;
+					}
+
+					public void setLoop(String loop) {
+						this.loop = loop;
+					}
 				}
 
 				public static class Segment {
@@ -572,62 +525,82 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 						this.duration = duration;
 					}
 				}
+			}
 
-				public static class Gif {
+			public static class Audio {
 
-					private String loop;
+				private String profile;
 
-					private String finalDelay;
+				private String codec;
 
-					public String getLoop() {
-						return this.loop;
-					}
+				private String samplerate;
 
-					public void setLoop(String loop) {
-						this.loop = loop;
-					}
+				private String qscale;
 
-					public String getFinalDelay() {
-						return this.finalDelay;
-					}
+				private String channels;
 
-					public void setFinalDelay(String finalDelay) {
-						this.finalDelay = finalDelay;
-					}
+				private String bitrate;
+
+				public String getProfile() {
+					return this.profile;
+				}
+
+				public void setProfile(String profile) {
+					this.profile = profile;
+				}
+
+				public String getCodec() {
+					return this.codec;
+				}
+
+				public void setCodec(String codec) {
+					this.codec = codec;
+				}
+
+				public String getSamplerate() {
+					return this.samplerate;
+				}
+
+				public void setSamplerate(String samplerate) {
+					this.samplerate = samplerate;
+				}
+
+				public String getQscale() {
+					return this.qscale;
+				}
+
+				public void setQscale(String qscale) {
+					this.qscale = qscale;
+				}
+
+				public String getChannels() {
+					return this.channels;
+				}
+
+				public void setChannels(String channels) {
+					this.channels = channels;
+				}
+
+				public String getBitrate() {
+					return this.bitrate;
+				}
+
+				public void setBitrate(String bitrate) {
+					this.bitrate = bitrate;
 				}
 			}
-		}
 
-		public static class InputFile {
+			public static class Container {
 
-			private String bucket;
+				private String format;
 
-			private String location;
+				public String getFormat() {
+					return this.format;
+				}
 
-			private String object;
-
-			public String getBucket() {
-				return this.bucket;
-			}
-
-			public void setBucket(String bucket) {
-				this.bucket = bucket;
-			}
-
-			public String getLocation() {
-				return this.location;
-			}
-
-			public void setLocation(String location) {
-				this.location = location;
-			}
-
-			public String getObject() {
-				return this.object;
-			}
-
-			public void setObject(String object) {
-				this.object = object;
+				public void setFormat(String format) {
+					this.format = format;
+				}
 			}
 		}
 
@@ -655,17 +628,9 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 
 			public static class QualityControl {
 
-				private String rateQuality;
-
 				private String methodStreaming;
 
-				public String getRateQuality() {
-					return this.rateQuality;
-				}
-
-				public void setRateQuality(String rateQuality) {
-					this.rateQuality = rateQuality;
-				}
+				private String rateQuality;
 
 				public String getMethodStreaming() {
 					return this.methodStreaming;
@@ -673,6 +638,14 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 
 				public void setMethodStreaming(String methodStreaming) {
 					this.methodStreaming = methodStreaming;
+				}
+
+				public String getRateQuality() {
+					return this.rateQuality;
+				}
+
+				public void setRateQuality(String rateQuality) {
+					this.rateQuality = rateQuality;
 				}
 			}
 
@@ -700,22 +673,22 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 
 				public static class Crop {
 
-					private String mode;
+					private String top;
 
 					private String width;
 
 					private String height;
 
-					private String top;
-
 					private String left;
 
-					public String getMode() {
-						return this.mode;
+					private String mode;
+
+					public String getTop() {
+						return this.top;
 					}
 
-					public void setMode(String mode) {
-						this.mode = mode;
+					public void setTop(String top) {
+						this.top = top;
 					}
 
 					public String getWidth() {
@@ -734,14 +707,6 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 						this.height = height;
 					}
 
-					public String getTop() {
-						return this.top;
-					}
-
-					public void setTop(String top) {
-						this.top = top;
-					}
-
 					public String getLeft() {
 						return this.left;
 					}
@@ -749,7 +714,81 @@ public class QueryAnalysisJobListResponse extends AcsResponse {
 					public void setLeft(String left) {
 						this.left = left;
 					}
+
+					public String getMode() {
+						return this.mode;
+					}
+
+					public void setMode(String mode) {
+						this.mode = mode;
+					}
 				}
+			}
+		}
+
+		public static class MNSMessageResult {
+
+			private String messageId;
+
+			private String errorMessage;
+
+			private String errorCode;
+
+			public String getMessageId() {
+				return this.messageId;
+			}
+
+			public void setMessageId(String messageId) {
+				this.messageId = messageId;
+			}
+
+			public String getErrorMessage() {
+				return this.errorMessage;
+			}
+
+			public void setErrorMessage(String errorMessage) {
+				this.errorMessage = errorMessage;
+			}
+
+			public String getErrorCode() {
+				return this.errorCode;
+			}
+
+			public void setErrorCode(String errorCode) {
+				this.errorCode = errorCode;
+			}
+		}
+
+		public static class InputFile {
+
+			private String object;
+
+			private String location;
+
+			private String bucket;
+
+			public String getObject() {
+				return this.object;
+			}
+
+			public void setObject(String object) {
+				this.object = object;
+			}
+
+			public String getLocation() {
+				return this.location;
+			}
+
+			public void setLocation(String location) {
+				this.location = location;
+			}
+
+			public String getBucket() {
+				return this.bucket;
+			}
+
+			public void setBucket(String bucket) {
+				this.bucket = bucket;
 			}
 		}
 	}

@@ -1,0 +1,54 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.copyright.transform.v20190123;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.aliyuncs.copyright.model.v20190123.ListUserProduceOperateLogsResponse;
+import com.aliyuncs.copyright.model.v20190123.ListUserProduceOperateLogsResponse.OpateLogs;
+import com.aliyuncs.transform.UnmarshallerContext;
+
+
+public class ListUserProduceOperateLogsResponseUnmarshaller {
+
+	public static ListUserProduceOperateLogsResponse unmarshall(ListUserProduceOperateLogsResponse listUserProduceOperateLogsResponse, UnmarshallerContext _ctx) {
+		
+		listUserProduceOperateLogsResponse.setRequestId(_ctx.stringValue("ListUserProduceOperateLogsResponse.RequestId"));
+		listUserProduceOperateLogsResponse.setPageNum(_ctx.integerValue("ListUserProduceOperateLogsResponse.PageNum"));
+		listUserProduceOperateLogsResponse.setSuccess(_ctx.booleanValue("ListUserProduceOperateLogsResponse.Success"));
+		listUserProduceOperateLogsResponse.setTotalItemNum(_ctx.integerValue("ListUserProduceOperateLogsResponse.TotalItemNum"));
+		listUserProduceOperateLogsResponse.setPageSize(_ctx.integerValue("ListUserProduceOperateLogsResponse.PageSize"));
+		listUserProduceOperateLogsResponse.setTotalPageNum(_ctx.integerValue("ListUserProduceOperateLogsResponse.TotalPageNum"));
+
+		List<OpateLogs> data = new ArrayList<OpateLogs>();
+		for (int i = 0; i < _ctx.lengthValue("ListUserProduceOperateLogsResponse.Data.Length"); i++) {
+			OpateLogs opateLogs = new OpateLogs();
+			opateLogs.setOperateTime(_ctx.longValue("ListUserProduceOperateLogsResponse.Data["+ i +"].OperateTime"));
+			opateLogs.setOperateUserType(_ctx.stringValue("ListUserProduceOperateLogsResponse.Data["+ i +"].OperateUserType"));
+			opateLogs.setBizId(_ctx.stringValue("ListUserProduceOperateLogsResponse.Data["+ i +"].BizId"));
+			opateLogs.setNote(_ctx.stringValue("ListUserProduceOperateLogsResponse.Data["+ i +"].Note"));
+			opateLogs.setOperateName(_ctx.stringValue("ListUserProduceOperateLogsResponse.Data["+ i +"].OperateName"));
+			opateLogs.setBizStatus(_ctx.integerValue("ListUserProduceOperateLogsResponse.Data["+ i +"].BizStatus"));
+			opateLogs.setToBizStatus(_ctx.integerValue("ListUserProduceOperateLogsResponse.Data["+ i +"].ToBizStatus"));
+			opateLogs.setBizType(_ctx.stringValue("ListUserProduceOperateLogsResponse.Data["+ i +"].BizType"));
+
+			data.add(opateLogs);
+		}
+		listUserProduceOperateLogsResponse.setData(data);
+	 
+	 	return listUserProduceOperateLogsResponse;
+	}
+}

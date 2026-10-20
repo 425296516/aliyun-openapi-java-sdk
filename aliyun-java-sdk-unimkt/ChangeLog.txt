@@ -1,0 +1,132 @@
+2024-01-10 Version: 2.8.2
+- Add UpdateUnionTask method.
+
+2023-03-27 Version: 2.8.1
+- Add DeleteUnionBrand.
+
+2023-03-27 Version: 2.8.0
+- Add DeleteUnionBrand.
+
+2022-10-27 Version: 2.7.0
+- Supported ChargeType for CreateUnionTask.
+- Add StopUnionTask.
+- Add StartUnionTask.
+
+2022-10-13 Version: 2.6.0
+- Supported AnchorId for CreateUnionTask.
+
+2022-06-24 Version: 2.4.11
+- OpenBankCard add PlaceOrderNum.
+
+2022-06-24 Version: 2.4.10
+- OpenBankCard add PlaceOrderNum.
+
+2022-05-12 Version: 2.5.0
+- Union Task API.
+
+2022-03-16 Version: 2.4.8
+- Union Task API.
+
+2022-02-23 Version: 2.4.7
+- Union Task API.
+
+2021-12-08 Version: 2.4.4-SNAPSHOT
+- Feature.
+
+2021-11-25 Version: 2.4.3
+- GetUnionTaskStatus add channelId.
+
+2021-11-15 Version: 2.3.8
+- Feature.
+
+2021-11-15 Version: 2.4.2
+- Feature.
+
+2021-11-02 Version: 2.4.1
+- Feature.
+
+2021-11-02 Version: 2.3.7
+- Feature.
+
+2021-09-06 Version: 2.4.0
+- Supported for custom creative union task.
+
+2021-09-06 Version: 2.3.6
+- Generated 2019-07-24, 2018-12-07, 2018-12-12 for `UniMkt`.
+
+2021-05-12 Version: 2.3.5
+- Supported AAA for BBB.
+
+2021-05-12 Version: 2.3.4
+- Add industry scene param for media list interface.
+
+2021-04-29 Version: 2.3.3
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2021-04-28 Version: 2.2.1
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2021-04-14 Version: 2.3.2
+- Add param QueryType for QueryIncomeTrend and QueryIncomData.
+
+2021-03-25 Version: 2.3.0
+- Support Query Tenant List.
+- Remove Query AdSlot Template List.
+
+2021-03-16 Version: 2.3.1
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2021-02-24 Version: 2.2.0
+- Support ad slot management.
+
+2021-01-20 Version: 2.1.0
+- Support media management.
+
+2020-08-18 Version: 2.0.24
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2020-08-05 Version: 2.0.23
+- Generated 2018-12-12 for `UniMkt`.
+
+2020-07-30 Version: 2.0.22
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2020-07-30 Version: 2.0.21
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2020-07-14 Version: 2.0.20
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2020-07-14 Version: 1.0.2
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2020-05-13 Version: 1.0.1
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2020-05-07 Version: 1.0.1
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2020-02-12 Version: 1.0.3
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2020-02-12 Version: 1.0.2
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2019-12-27 Version: 1.0.2
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2019-12-24 Version: 1.0.1
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2019-12-24 Version: 1.0.0
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2019-12-24 Version: 1.0.0
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2019-12-24 Version: 1.0.0
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+2019-11-26 Version: 1.0.0
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+

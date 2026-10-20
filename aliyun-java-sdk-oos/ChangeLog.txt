@@ -1,0 +1,95 @@
+2024-03-25 Version: 1.5.14
+- Generated 2019-06-01 for `oos`.
+
+2023-07-28 Version: 1.5.13
+- PatchBaseline Support Tags.
+
+2023-07-25 Version: 1.5.12
+- PatchBaseline Support Tags.
+
+2023-07-07 Version: 1.5.11
+- ListApplicationGroups rename parameter Product to ResourceProduct
+
+2023-02-06 Version: 1.5.10
+- ListApplicationGroups rename parameter Product to ResourceProduct
+
+2022-11-07 Version: 1.5.9
+- Update StartExecution add Parameter TemplateURL.
+   Update StartExecution Parameter TemplateName to optional.
+   Update ValidateTemplateContent add Parameter TemplateURL.
+   Update ValidateTemplateContent Parameter TemplateConten to optional.
+
+2022-10-12 Version: 1.5.8
+- Add Force Option for DeleteApplication API.
+
+2022-09-19 Version: 1.5.7
+- Add ops item APIs.
+
+2022-07-27 Version: 1.5.6
+ - Update.
+
+2022-07-26 Version: 1.5.5
+- Add cmsGroupId parameter to CreateApplicationGroupRequest.
+
+2021-12-30 Version: 1.5.4
+- Supported UpdateApplication.
+
+2021-10-18 Version: 1.5.3
+- Supported UpdateApplication.
+
+2021-03-19 Version: 1.5.0
+- StateConfiguration in CreateStateConfigurationResponse changes from list to single object.
+
+2021-02-07 Version: 1.4.0
+- Support patch manager apis.
+
+2020-12-02 Version: 1.3.2
+- Support TemplateContent.
+
+2020-10-28 Version: 1.3.1
+- Support GetParameters, GetParametersByPath, GetSecretParameters, GetSecretParametersByPath.
+
+2020-09-07 Version: 1.3.0
+- Support parameter APIs.
+
+2020-07-03 Version: 1.2.0
+- Add ListResourceExecutionStatus API.
+- ListExecutions API supports filtering by resource id.
+- TriggerExecution API supports TimerTrigger.
+
+2020-04-29 Version: 1.1.4
+- Add ListTemplateVersions API.
+- GenerateExecutionPolicy supports TemplateVersion.
+- CreateTemplate and UpdateTemplate support VersionName.
+
+
+2020-04-13 Version: 1.1.3
+- Fix ListTaskExecutions SDK error.
+
+2020-04-01 Version: 1.1.2
+- Parameters is string in StartExecution Response.
+
+2020-04-01 Version: 1.1.1
+- Counters and Parameters are changed to Map in ListExections and StartExecution.
+
+2020-02-21 Version: 1.1.0
+- Support TAG API.
+
+2019-08-22 Version: 1.0.8
+- Generated 2019-06-01 for `oos`.
+
+2019-08-19 Version: 1.0.7
+- Generated 2019-06-01 for `oos`.
+
+2019-08-14 Version: 1.0.6
+- Generated 2019-06-01 for `oos`.
+
+2019-08-12 Version: 1.0.5
+- Generated 2019-06-01 for `oos`.
+
+2019-07-08 Version: 1.0.1
+- ActionName change to OOSActionName from ListActions API param and response.
+
+2019-06-20 Version: 1.0.0
+- OOS SDK first release for managing of templates, executions and actions.
+

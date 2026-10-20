@@ -1,0 +1,106 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.hbr.model.v20170908;
+
+import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.hbr.Endpoint;
+
+/**
+ * @author auto create
+ * @version 
+ */
+public class DeleteBackupPlanRequest extends RpcAcsRequest<DeleteBackupPlanResponse> {
+	   
+
+	private String vaultId;
+
+	private String edition;
+
+	private Boolean requireNoRunningJobs;
+
+	private String planId;
+
+	private String sourceType;
+	public DeleteBackupPlanRequest() {
+		super("hbr", "2017-09-08", "DeleteBackupPlan", "hbr");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
+
+	public String getVaultId() {
+		return this.vaultId;
+	}
+
+	public void setVaultId(String vaultId) {
+		this.vaultId = vaultId;
+		if(vaultId != null){
+			putQueryParameter("VaultId", vaultId);
+		}
+	}
+
+	public String getEdition() {
+		return this.edition;
+	}
+
+	public void setEdition(String edition) {
+		this.edition = edition;
+		if(edition != null){
+			putQueryParameter("Edition", edition);
+		}
+	}
+
+	public Boolean getRequireNoRunningJobs() {
+		return this.requireNoRunningJobs;
+	}
+
+	public void setRequireNoRunningJobs(Boolean requireNoRunningJobs) {
+		this.requireNoRunningJobs = requireNoRunningJobs;
+		if(requireNoRunningJobs != null){
+			putQueryParameter("RequireNoRunningJobs", requireNoRunningJobs.toString());
+		}
+	}
+
+	public String getPlanId() {
+		return this.planId;
+	}
+
+	public void setPlanId(String planId) {
+		this.planId = planId;
+		if(planId != null){
+			putQueryParameter("PlanId", planId);
+		}
+	}
+
+	public String getSourceType() {
+		return this.sourceType;
+	}
+
+	public void setSourceType(String sourceType) {
+		this.sourceType = sourceType;
+		if(sourceType != null){
+			putQueryParameter("SourceType", sourceType);
+		}
+	}
+
+	@Override
+	public Class<DeleteBackupPlanResponse> getResponseClass() {
+		return DeleteBackupPlanResponse.class;
+	}
+
+}

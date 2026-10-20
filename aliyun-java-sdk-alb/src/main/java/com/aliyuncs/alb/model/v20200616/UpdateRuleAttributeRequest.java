@@ -1,0 +1,1108 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.alb.model.v20200616;
+
+import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.alb.Endpoint;
+
+/**
+ * @author auto create
+ * @version 
+ */
+public class UpdateRuleAttributeRequest extends RpcAcsRequest<UpdateRuleAttributeResponse> {
+	   
+
+	private String clientToken;
+
+	private String ruleName;
+
+	private List<RuleActions> ruleActions;
+
+	private List<RuleConditions> ruleConditions;
+
+	private Boolean dryRun;
+
+	private Integer priority;
+
+	private String ruleId;
+	public UpdateRuleAttributeRequest() {
+		super("Alb", "2020-06-16", "UpdateRuleAttribute", "alb");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
+
+	public String getClientToken() {
+		return this.clientToken;
+	}
+
+	public void setClientToken(String clientToken) {
+		this.clientToken = clientToken;
+		if(clientToken != null){
+			putQueryParameter("ClientToken", clientToken);
+		}
+	}
+
+	public String getRuleName() {
+		return this.ruleName;
+	}
+
+	public void setRuleName(String ruleName) {
+		this.ruleName = ruleName;
+		if(ruleName != null){
+			putQueryParameter("RuleName", ruleName);
+		}
+	}
+
+	public List<RuleActions> getRuleActions() {
+		return this.ruleActions;
+	}
+
+	public void setRuleActions(List<RuleActions> ruleActions) {
+		this.ruleActions = ruleActions;	
+		if (ruleActions != null) {
+			for (int depth1 = 0; depth1 < ruleActions.size(); depth1++) {
+				if (ruleActions.get(depth1) != null) {
+					
+						if (ruleActions.get(depth1).getFixedResponseConfig() != null) {
+							
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".FixedResponseConfig.HttpCode" , ruleActions.get(depth1).getFixedResponseConfig().getHttpCode());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".FixedResponseConfig.Content" , ruleActions.get(depth1).getFixedResponseConfig().getContent());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".FixedResponseConfig.ContentType" , ruleActions.get(depth1).getFixedResponseConfig().getContentType());
+						}
+						if (ruleActions.get(depth1).getTrafficMirrorConfig() != null) {
+							
+								if (ruleActions.get(depth1).getTrafficMirrorConfig().getMirrorGroupConfig() != null) {
+									
+										if (ruleActions.get(depth1).getTrafficMirrorConfig().getMirrorGroupConfig().getServerGroupTuples() != null) {
+											for (int depth2 = 0; depth2 < ruleActions.get(depth1).getTrafficMirrorConfig().getMirrorGroupConfig().getServerGroupTuples().size(); depth2++) {
+												if (ruleActions.get(depth1).getTrafficMirrorConfig().getMirrorGroupConfig().getServerGroupTuples().get(depth2) != null) {
+													
+														putQueryParameter("RuleActions." + (depth1 + 1) + ".TrafficMirrorConfig.MirrorGroupConfig.ServerGroupTuples." + (depth2 + 1) + ".ServerGroupId" , ruleActions.get(depth1).getTrafficMirrorConfig().getMirrorGroupConfig().getServerGroupTuples().get(depth2).getServerGroupId());
+												}
+											}
+										}
+								}
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".TrafficMirrorConfig.TargetType" , ruleActions.get(depth1).getTrafficMirrorConfig().getTargetType());
+						}
+						if (ruleActions.get(depth1).getForwardGroupConfig() != null) {
+							
+								if (ruleActions.get(depth1).getForwardGroupConfig().getServerGroupStickySession() != null) {
+									
+										putQueryParameter("RuleActions." + (depth1 + 1) + ".ForwardGroupConfig.ServerGroupStickySession.Enabled" , ruleActions.get(depth1).getForwardGroupConfig().getServerGroupStickySession().getEnabled());
+										putQueryParameter("RuleActions." + (depth1 + 1) + ".ForwardGroupConfig.ServerGroupStickySession.Timeout" , ruleActions.get(depth1).getForwardGroupConfig().getServerGroupStickySession().getTimeout());
+								}
+								if (ruleActions.get(depth1).getForwardGroupConfig().getServerGroupTuples() != null) {
+									for (int depth2 = 0; depth2 < ruleActions.get(depth1).getForwardGroupConfig().getServerGroupTuples().size(); depth2++) {
+										if (ruleActions.get(depth1).getForwardGroupConfig().getServerGroupTuples().get(depth2) != null) {
+											
+												putQueryParameter("RuleActions." + (depth1 + 1) + ".ForwardGroupConfig.ServerGroupTuples." + (depth2 + 1) + ".ServerGroupId" , ruleActions.get(depth1).getForwardGroupConfig().getServerGroupTuples().get(depth2).getServerGroupId());
+												putQueryParameter("RuleActions." + (depth1 + 1) + ".ForwardGroupConfig.ServerGroupTuples." + (depth2 + 1) + ".Weight" , ruleActions.get(depth1).getForwardGroupConfig().getServerGroupTuples().get(depth2).getWeight());
+										}
+									}
+								}
+						}
+						if (ruleActions.get(depth1).getRemoveHeaderConfig() != null) {
+							
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RemoveHeaderConfig.Key" , ruleActions.get(depth1).getRemoveHeaderConfig().getKey());
+						}
+						if (ruleActions.get(depth1).getInsertHeaderConfig() != null) {
+							
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".InsertHeaderConfig.ValueType" , ruleActions.get(depth1).getInsertHeaderConfig().getValueType());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".InsertHeaderConfig.CoverEnabled" , ruleActions.get(depth1).getInsertHeaderConfig().getCoverEnabled());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".InsertHeaderConfig.Value" , ruleActions.get(depth1).getInsertHeaderConfig().getValue());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".InsertHeaderConfig.Key" , ruleActions.get(depth1).getInsertHeaderConfig().getKey());
+						}
+						if (ruleActions.get(depth1).getTrafficLimitConfig() != null) {
+							
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".TrafficLimitConfig.QPS" , ruleActions.get(depth1).getTrafficLimitConfig().getQPS());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".TrafficLimitConfig.PerIpQps" , ruleActions.get(depth1).getTrafficLimitConfig().getPerIpQps());
+						}
+						if (ruleActions.get(depth1).getCorsConfig() != null) {
+							
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".CorsConfig.AllowCredentials" , ruleActions.get(depth1).getCorsConfig().getAllowCredentials());
+								if (ruleActions.get(depth1).getCorsConfig().getAllowOrigin() != null) {
+									for (int depth2 = 0; depth2 < ruleActions.get(depth1).getCorsConfig().getAllowOrigin().size(); depth2++) {
+										putQueryParameter("RuleActions." + (depth1 + 1) + ".CorsConfig.AllowOrigin." + (depth2 + 1) , ruleActions.get(depth1).getCorsConfig().getAllowOrigin().get(depth2));
+									}
+								}
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".CorsConfig.MaxAge" , ruleActions.get(depth1).getCorsConfig().getMaxAge());
+								if (ruleActions.get(depth1).getCorsConfig().getAllowMethods() != null) {
+									for (int depth2 = 0; depth2 < ruleActions.get(depth1).getCorsConfig().getAllowMethods().size(); depth2++) {
+										putQueryParameter("RuleActions." + (depth1 + 1) + ".CorsConfig.AllowMethods." + (depth2 + 1) , ruleActions.get(depth1).getCorsConfig().getAllowMethods().get(depth2));
+									}
+								}
+								if (ruleActions.get(depth1).getCorsConfig().getAllowHeaders() != null) {
+									for (int depth2 = 0; depth2 < ruleActions.get(depth1).getCorsConfig().getAllowHeaders().size(); depth2++) {
+										putQueryParameter("RuleActions." + (depth1 + 1) + ".CorsConfig.AllowHeaders." + (depth2 + 1) , ruleActions.get(depth1).getCorsConfig().getAllowHeaders().get(depth2));
+									}
+								}
+								if (ruleActions.get(depth1).getCorsConfig().getExposeHeaders() != null) {
+									for (int depth2 = 0; depth2 < ruleActions.get(depth1).getCorsConfig().getExposeHeaders().size(); depth2++) {
+										putQueryParameter("RuleActions." + (depth1 + 1) + ".CorsConfig.ExposeHeaders." + (depth2 + 1) , ruleActions.get(depth1).getCorsConfig().getExposeHeaders().get(depth2));
+									}
+								}
+						}
+						if (ruleActions.get(depth1).getRedirectConfig() != null) {
+							
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RedirectConfig.Path" , ruleActions.get(depth1).getRedirectConfig().getPath());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RedirectConfig.Protocol" , ruleActions.get(depth1).getRedirectConfig().getBizProtocol());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RedirectConfig.Port" , ruleActions.get(depth1).getRedirectConfig().getPort());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RedirectConfig.Query" , ruleActions.get(depth1).getRedirectConfig().getQuery());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RedirectConfig.Host" , ruleActions.get(depth1).getRedirectConfig().getHost());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RedirectConfig.HttpCode" , ruleActions.get(depth1).getRedirectConfig().getHttpCode());
+						}
+						putQueryParameter("RuleActions." + (depth1 + 1) + ".Type" , ruleActions.get(depth1).getType());
+						putQueryParameter("RuleActions." + (depth1 + 1) + ".Order" , ruleActions.get(depth1).getOrder());
+						if (ruleActions.get(depth1).getRewriteConfig() != null) {
+							
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RewriteConfig.Path" , ruleActions.get(depth1).getRewriteConfig().getPath());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RewriteConfig.Query" , ruleActions.get(depth1).getRewriteConfig().getQuery());
+								putQueryParameter("RuleActions." + (depth1 + 1) + ".RewriteConfig.Host" , ruleActions.get(depth1).getRewriteConfig().getHost());
+						}
+				}
+			}
+		}	
+	}
+
+	public List<RuleConditions> getRuleConditions() {
+		return this.ruleConditions;
+	}
+
+	public void setRuleConditions(List<RuleConditions> ruleConditions) {
+		this.ruleConditions = ruleConditions;	
+		if (ruleConditions != null) {
+			for (int depth1 = 0; depth1 < ruleConditions.size(); depth1++) {
+				if (ruleConditions.get(depth1) != null) {
+					
+						if (ruleConditions.get(depth1).getMethodConfig() != null) {
+							
+								if (ruleConditions.get(depth1).getMethodConfig().getValues() != null) {
+									for (int depth2 = 0; depth2 < ruleConditions.get(depth1).getMethodConfig().getValues().size(); depth2++) {
+										putQueryParameter("RuleConditions." + (depth1 + 1) + ".MethodConfig.Values." + (depth2 + 1) , ruleConditions.get(depth1).getMethodConfig().getValues().get(depth2));
+									}
+								}
+						}
+						if (ruleConditions.get(depth1).getSourceIpConfig() != null) {
+							
+								if (ruleConditions.get(depth1).getSourceIpConfig().getValues() != null) {
+									for (int depth2 = 0; depth2 < ruleConditions.get(depth1).getSourceIpConfig().getValues().size(); depth2++) {
+										putQueryParameter("RuleConditions." + (depth1 + 1) + ".SourceIpConfig.Values." + (depth2 + 1) , ruleConditions.get(depth1).getSourceIpConfig().getValues().get(depth2));
+									}
+								}
+						}
+						if (ruleConditions.get(depth1).getHostConfig() != null) {
+							
+								if (ruleConditions.get(depth1).getHostConfig().getValues() != null) {
+									for (int depth2 = 0; depth2 < ruleConditions.get(depth1).getHostConfig().getValues().size(); depth2++) {
+										putQueryParameter("RuleConditions." + (depth1 + 1) + ".HostConfig.Values." + (depth2 + 1) , ruleConditions.get(depth1).getHostConfig().getValues().get(depth2));
+									}
+								}
+						}
+						if (ruleConditions.get(depth1).getQueryStringConfig() != null) {
+							
+								if (ruleConditions.get(depth1).getQueryStringConfig().getValues() != null) {
+									for (int depth2 = 0; depth2 < ruleConditions.get(depth1).getQueryStringConfig().getValues().size(); depth2++) {
+										if (ruleConditions.get(depth1).getQueryStringConfig().getValues().get(depth2) != null) {
+											
+												putQueryParameter("RuleConditions." + (depth1 + 1) + ".QueryStringConfig.Values." + (depth2 + 1) + ".Value" , ruleConditions.get(depth1).getQueryStringConfig().getValues().get(depth2).getValue());
+												putQueryParameter("RuleConditions." + (depth1 + 1) + ".QueryStringConfig.Values." + (depth2 + 1) + ".Key" , ruleConditions.get(depth1).getQueryStringConfig().getValues().get(depth2).getKey());
+										}
+									}
+								}
+						}
+						if (ruleConditions.get(depth1).getResponseStatusCodeConfig() != null) {
+							
+								if (ruleConditions.get(depth1).getResponseStatusCodeConfig().getValues() != null) {
+									for (int depth2 = 0; depth2 < ruleConditions.get(depth1).getResponseStatusCodeConfig().getValues().size(); depth2++) {
+										putQueryParameter("RuleConditions." + (depth1 + 1) + ".ResponseStatusCodeConfig.Values." + (depth2 + 1) , ruleConditions.get(depth1).getResponseStatusCodeConfig().getValues().get(depth2));
+									}
+								}
+						}
+						if (ruleConditions.get(depth1).getPathConfig() != null) {
+							
+								if (ruleConditions.get(depth1).getPathConfig().getValues() != null) {
+									for (int depth2 = 0; depth2 < ruleConditions.get(depth1).getPathConfig().getValues().size(); depth2++) {
+										putQueryParameter("RuleConditions." + (depth1 + 1) + ".PathConfig.Values." + (depth2 + 1) , ruleConditions.get(depth1).getPathConfig().getValues().get(depth2));
+									}
+								}
+						}
+						if (ruleConditions.get(depth1).getCookieConfig() != null) {
+							
+								if (ruleConditions.get(depth1).getCookieConfig().getValues() != null) {
+									for (int depth2 = 0; depth2 < ruleConditions.get(depth1).getCookieConfig().getValues().size(); depth2++) {
+										if (ruleConditions.get(depth1).getCookieConfig().getValues().get(depth2) != null) {
+											
+												putQueryParameter("RuleConditions." + (depth1 + 1) + ".CookieConfig.Values." + (depth2 + 1) + ".Value" , ruleConditions.get(depth1).getCookieConfig().getValues().get(depth2).getValue());
+												putQueryParameter("RuleConditions." + (depth1 + 1) + ".CookieConfig.Values." + (depth2 + 1) + ".Key" , ruleConditions.get(depth1).getCookieConfig().getValues().get(depth2).getKey());
+										}
+									}
+								}
+						}
+						putQueryParameter("RuleConditions." + (depth1 + 1) + ".Type" , ruleConditions.get(depth1).getType());
+						if (ruleConditions.get(depth1).getHeaderConfig() != null) {
+							
+								if (ruleConditions.get(depth1).getHeaderConfig().getValues() != null) {
+									for (int depth2 = 0; depth2 < ruleConditions.get(depth1).getHeaderConfig().getValues().size(); depth2++) {
+										putQueryParameter("RuleConditions." + (depth1 + 1) + ".HeaderConfig.Values." + (depth2 + 1) , ruleConditions.get(depth1).getHeaderConfig().getValues().get(depth2));
+									}
+								}
+								putQueryParameter("RuleConditions." + (depth1 + 1) + ".HeaderConfig.Key" , ruleConditions.get(depth1).getHeaderConfig().getKey());
+						}
+						if (ruleConditions.get(depth1).getResponseHeaderConfig() != null) {
+							
+								if (ruleConditions.get(depth1).getResponseHeaderConfig().getValues() != null) {
+									for (int depth2 = 0; depth2 < ruleConditions.get(depth1).getResponseHeaderConfig().getValues().size(); depth2++) {
+										putQueryParameter("RuleConditions." + (depth1 + 1) + ".ResponseHeaderConfig.Values." + (depth2 + 1) , ruleConditions.get(depth1).getResponseHeaderConfig().getValues().get(depth2));
+									}
+								}
+								putQueryParameter("RuleConditions." + (depth1 + 1) + ".ResponseHeaderConfig.Key" , ruleConditions.get(depth1).getResponseHeaderConfig().getKey());
+						}
+				}
+			}
+		}	
+	}
+
+	public Boolean getDryRun() {
+		return this.dryRun;
+	}
+
+	public void setDryRun(Boolean dryRun) {
+		this.dryRun = dryRun;
+		if(dryRun != null){
+			putQueryParameter("DryRun", dryRun.toString());
+		}
+	}
+
+	public Integer getPriority() {
+		return this.priority;
+	}
+
+	public void setPriority(Integer priority) {
+		this.priority = priority;
+		if(priority != null){
+			putQueryParameter("Priority", priority.toString());
+		}
+	}
+
+	public String getRuleId() {
+		return this.ruleId;
+	}
+
+	public void setRuleId(String ruleId) {
+		this.ruleId = ruleId;
+		if(ruleId != null){
+			putQueryParameter("RuleId", ruleId);
+		}
+	}
+
+	public static class RuleActions {
+
+		private FixedResponseConfig fixedResponseConfig;
+
+		private TrafficMirrorConfig trafficMirrorConfig;
+
+		private ForwardGroupConfig forwardGroupConfig;
+
+		private RemoveHeaderConfig removeHeaderConfig;
+
+		private InsertHeaderConfig insertHeaderConfig;
+
+		private TrafficLimitConfig trafficLimitConfig;
+
+		private CorsConfig corsConfig;
+
+		private RedirectConfig redirectConfig;
+
+		private String type;
+
+		private Integer order;
+
+		private RewriteConfig rewriteConfig;
+
+		public FixedResponseConfig getFixedResponseConfig() {
+			return this.fixedResponseConfig;
+		}
+
+		public void setFixedResponseConfig(FixedResponseConfig fixedResponseConfig) {
+			this.fixedResponseConfig = fixedResponseConfig;
+		}
+
+		public TrafficMirrorConfig getTrafficMirrorConfig() {
+			return this.trafficMirrorConfig;
+		}
+
+		public void setTrafficMirrorConfig(TrafficMirrorConfig trafficMirrorConfig) {
+			this.trafficMirrorConfig = trafficMirrorConfig;
+		}
+
+		public ForwardGroupConfig getForwardGroupConfig() {
+			return this.forwardGroupConfig;
+		}
+
+		public void setForwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
+			this.forwardGroupConfig = forwardGroupConfig;
+		}
+
+		public RemoveHeaderConfig getRemoveHeaderConfig() {
+			return this.removeHeaderConfig;
+		}
+
+		public void setRemoveHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
+			this.removeHeaderConfig = removeHeaderConfig;
+		}
+
+		public InsertHeaderConfig getInsertHeaderConfig() {
+			return this.insertHeaderConfig;
+		}
+
+		public void setInsertHeaderConfig(InsertHeaderConfig insertHeaderConfig) {
+			this.insertHeaderConfig = insertHeaderConfig;
+		}
+
+		public TrafficLimitConfig getTrafficLimitConfig() {
+			return this.trafficLimitConfig;
+		}
+
+		public void setTrafficLimitConfig(TrafficLimitConfig trafficLimitConfig) {
+			this.trafficLimitConfig = trafficLimitConfig;
+		}
+
+		public CorsConfig getCorsConfig() {
+			return this.corsConfig;
+		}
+
+		public void setCorsConfig(CorsConfig corsConfig) {
+			this.corsConfig = corsConfig;
+		}
+
+		public RedirectConfig getRedirectConfig() {
+			return this.redirectConfig;
+		}
+
+		public void setRedirectConfig(RedirectConfig redirectConfig) {
+			this.redirectConfig = redirectConfig;
+		}
+
+		public String getType() {
+			return this.type;
+		}
+
+		public void setType(String type) {
+			this.type = type;
+		}
+
+		public Integer getOrder() {
+			return this.order;
+		}
+
+		public void setOrder(Integer order) {
+			this.order = order;
+		}
+
+		public RewriteConfig getRewriteConfig() {
+			return this.rewriteConfig;
+		}
+
+		public void setRewriteConfig(RewriteConfig rewriteConfig) {
+			this.rewriteConfig = rewriteConfig;
+		}
+
+		public static class FixedResponseConfig {
+
+			private String httpCode;
+
+			private String content;
+
+			private String contentType;
+
+			public String getHttpCode() {
+				return this.httpCode;
+			}
+
+			public void setHttpCode(String httpCode) {
+				this.httpCode = httpCode;
+			}
+
+			public String getContent() {
+				return this.content;
+			}
+
+			public void setContent(String content) {
+				this.content = content;
+			}
+
+			public String getContentType() {
+				return this.contentType;
+			}
+
+			public void setContentType(String contentType) {
+				this.contentType = contentType;
+			}
+		}
+
+		public static class TrafficMirrorConfig {
+
+			private MirrorGroupConfig mirrorGroupConfig;
+
+			private String targetType;
+
+			public MirrorGroupConfig getMirrorGroupConfig() {
+				return this.mirrorGroupConfig;
+			}
+
+			public void setMirrorGroupConfig(MirrorGroupConfig mirrorGroupConfig) {
+				this.mirrorGroupConfig = mirrorGroupConfig;
+			}
+
+			public String getTargetType() {
+				return this.targetType;
+			}
+
+			public void setTargetType(String targetType) {
+				this.targetType = targetType;
+			}
+
+			public static class MirrorGroupConfig {
+
+				private List<ServerGroupTuplesItem> serverGroupTuples;
+
+				public List<ServerGroupTuplesItem> getServerGroupTuples() {
+					return this.serverGroupTuples;
+				}
+
+				public void setServerGroupTuples(List<ServerGroupTuplesItem> serverGroupTuples) {
+					this.serverGroupTuples = serverGroupTuples;
+				}
+
+				public static class ServerGroupTuplesItem {
+
+					private String serverGroupId;
+
+					public String getServerGroupId() {
+						return this.serverGroupId;
+					}
+
+					public void setServerGroupId(String serverGroupId) {
+						this.serverGroupId = serverGroupId;
+					}
+				}
+			}
+		}
+
+		public static class ForwardGroupConfig {
+
+			private ServerGroupStickySession serverGroupStickySession;
+
+			private List<ServerGroupTuplesItem> serverGroupTuples;
+
+			public ServerGroupStickySession getServerGroupStickySession() {
+				return this.serverGroupStickySession;
+			}
+
+			public void setServerGroupStickySession(ServerGroupStickySession serverGroupStickySession) {
+				this.serverGroupStickySession = serverGroupStickySession;
+			}
+
+			public List<ServerGroupTuplesItem> getServerGroupTuples() {
+				return this.serverGroupTuples;
+			}
+
+			public void setServerGroupTuples(List<ServerGroupTuplesItem> serverGroupTuples) {
+				this.serverGroupTuples = serverGroupTuples;
+			}
+
+			public static class ServerGroupStickySession {
+
+				private Boolean enabled;
+
+				private Integer timeout;
+
+				public Boolean getEnabled() {
+					return this.enabled;
+				}
+
+				public void setEnabled(Boolean enabled) {
+					this.enabled = enabled;
+				}
+
+				public Integer getTimeout() {
+					return this.timeout;
+				}
+
+				public void setTimeout(Integer timeout) {
+					this.timeout = timeout;
+				}
+			}
+
+			public static class ServerGroupTuplesItem {
+
+				private String serverGroupId;
+
+				private Integer weight;
+
+				public String getServerGroupId() {
+					return this.serverGroupId;
+				}
+
+				public void setServerGroupId(String serverGroupId) {
+					this.serverGroupId = serverGroupId;
+				}
+
+				public Integer getWeight() {
+					return this.weight;
+				}
+
+				public void setWeight(Integer weight) {
+					this.weight = weight;
+				}
+			}
+		}
+
+		public static class RemoveHeaderConfig {
+
+			private String key;
+
+			public String getKey() {
+				return this.key;
+			}
+
+			public void setKey(String key) {
+				this.key = key;
+			}
+		}
+
+		public static class InsertHeaderConfig {
+
+			private String valueType;
+
+			private Boolean coverEnabled;
+
+			private String value;
+
+			private String key;
+
+			public String getValueType() {
+				return this.valueType;
+			}
+
+			public void setValueType(String valueType) {
+				this.valueType = valueType;
+			}
+
+			public Boolean getCoverEnabled() {
+				return this.coverEnabled;
+			}
+
+			public void setCoverEnabled(Boolean coverEnabled) {
+				this.coverEnabled = coverEnabled;
+			}
+
+			public String getValue() {
+				return this.value;
+			}
+
+			public void setValue(String value) {
+				this.value = value;
+			}
+
+			public String getKey() {
+				return this.key;
+			}
+
+			public void setKey(String key) {
+				this.key = key;
+			}
+		}
+
+		public static class TrafficLimitConfig {
+
+			private Integer qPS;
+
+			private Integer perIpQps;
+
+			public Integer getQPS() {
+				return this.qPS;
+			}
+
+			public void setQPS(Integer qPS) {
+				this.qPS = qPS;
+			}
+
+			public Integer getPerIpQps() {
+				return this.perIpQps;
+			}
+
+			public void setPerIpQps(Integer perIpQps) {
+				this.perIpQps = perIpQps;
+			}
+		}
+
+		public static class CorsConfig {
+
+			private String allowCredentials;
+
+			private List<String> allowOrigin;
+
+			private Long maxAge;
+
+			private List<String> allowMethods;
+
+			private List<String> allowHeaders;
+
+			private List<String> exposeHeaders;
+
+			public String getAllowCredentials() {
+				return this.allowCredentials;
+			}
+
+			public void setAllowCredentials(String allowCredentials) {
+				this.allowCredentials = allowCredentials;
+			}
+
+			public List<String> getAllowOrigin() {
+				return this.allowOrigin;
+			}
+
+			public void setAllowOrigin(List<String> allowOrigin) {
+				this.allowOrigin = allowOrigin;
+			}
+
+			public Long getMaxAge() {
+				return this.maxAge;
+			}
+
+			public void setMaxAge(Long maxAge) {
+				this.maxAge = maxAge;
+			}
+
+			public List<String> getAllowMethods() {
+				return this.allowMethods;
+			}
+
+			public void setAllowMethods(List<String> allowMethods) {
+				this.allowMethods = allowMethods;
+			}
+
+			public List<String> getAllowHeaders() {
+				return this.allowHeaders;
+			}
+
+			public void setAllowHeaders(List<String> allowHeaders) {
+				this.allowHeaders = allowHeaders;
+			}
+
+			public List<String> getExposeHeaders() {
+				return this.exposeHeaders;
+			}
+
+			public void setExposeHeaders(List<String> exposeHeaders) {
+				this.exposeHeaders = exposeHeaders;
+			}
+		}
+
+		public static class RedirectConfig {
+
+			private String path;
+
+			private String protocol;
+
+			private String port;
+
+			private String query;
+
+			private String host;
+
+			private String httpCode;
+
+			public String getPath() {
+				return this.path;
+			}
+
+			public void setPath(String path) {
+				this.path = path;
+			}
+
+			public String getBizProtocol() {
+				return this.protocol;
+			}
+
+			public void setBizProtocol(String protocol) {
+				this.protocol = protocol;
+			}
+
+			public String getPort() {
+				return this.port;
+			}
+
+			public void setPort(String port) {
+				this.port = port;
+			}
+
+			public String getQuery() {
+				return this.query;
+			}
+
+			public void setQuery(String query) {
+				this.query = query;
+			}
+
+			public String getHost() {
+				return this.host;
+			}
+
+			public void setHost(String host) {
+				this.host = host;
+			}
+
+			public String getHttpCode() {
+				return this.httpCode;
+			}
+
+			public void setHttpCode(String httpCode) {
+				this.httpCode = httpCode;
+			}
+		}
+
+		public static class RewriteConfig {
+
+			private String path;
+
+			private String query;
+
+			private String host;
+
+			public String getPath() {
+				return this.path;
+			}
+
+			public void setPath(String path) {
+				this.path = path;
+			}
+
+			public String getQuery() {
+				return this.query;
+			}
+
+			public void setQuery(String query) {
+				this.query = query;
+			}
+
+			public String getHost() {
+				return this.host;
+			}
+
+			public void setHost(String host) {
+				this.host = host;
+			}
+		}
+	}
+
+	public static class RuleConditions {
+
+		private MethodConfig methodConfig;
+
+		private SourceIpConfig sourceIpConfig;
+
+		private HostConfig hostConfig;
+
+		private QueryStringConfig queryStringConfig;
+
+		private ResponseStatusCodeConfig responseStatusCodeConfig;
+
+		private PathConfig pathConfig;
+
+		private CookieConfig cookieConfig;
+
+		private String type;
+
+		private HeaderConfig headerConfig;
+
+		private ResponseHeaderConfig responseHeaderConfig;
+
+		public MethodConfig getMethodConfig() {
+			return this.methodConfig;
+		}
+
+		public void setMethodConfig(MethodConfig methodConfig) {
+			this.methodConfig = methodConfig;
+		}
+
+		public SourceIpConfig getSourceIpConfig() {
+			return this.sourceIpConfig;
+		}
+
+		public void setSourceIpConfig(SourceIpConfig sourceIpConfig) {
+			this.sourceIpConfig = sourceIpConfig;
+		}
+
+		public HostConfig getHostConfig() {
+			return this.hostConfig;
+		}
+
+		public void setHostConfig(HostConfig hostConfig) {
+			this.hostConfig = hostConfig;
+		}
+
+		public QueryStringConfig getQueryStringConfig() {
+			return this.queryStringConfig;
+		}
+
+		public void setQueryStringConfig(QueryStringConfig queryStringConfig) {
+			this.queryStringConfig = queryStringConfig;
+		}
+
+		public ResponseStatusCodeConfig getResponseStatusCodeConfig() {
+			return this.responseStatusCodeConfig;
+		}
+
+		public void setResponseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
+			this.responseStatusCodeConfig = responseStatusCodeConfig;
+		}
+
+		public PathConfig getPathConfig() {
+			return this.pathConfig;
+		}
+
+		public void setPathConfig(PathConfig pathConfig) {
+			this.pathConfig = pathConfig;
+		}
+
+		public CookieConfig getCookieConfig() {
+			return this.cookieConfig;
+		}
+
+		public void setCookieConfig(CookieConfig cookieConfig) {
+			this.cookieConfig = cookieConfig;
+		}
+
+		public String getType() {
+			return this.type;
+		}
+
+		public void setType(String type) {
+			this.type = type;
+		}
+
+		public HeaderConfig getHeaderConfig() {
+			return this.headerConfig;
+		}
+
+		public void setHeaderConfig(HeaderConfig headerConfig) {
+			this.headerConfig = headerConfig;
+		}
+
+		public ResponseHeaderConfig getResponseHeaderConfig() {
+			return this.responseHeaderConfig;
+		}
+
+		public void setResponseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
+			this.responseHeaderConfig = responseHeaderConfig;
+		}
+
+		public static class MethodConfig {
+
+			private List<String> values;
+
+			public List<String> getValues() {
+				return this.values;
+			}
+
+			public void setValues(List<String> values) {
+				this.values = values;
+			}
+		}
+
+		public static class SourceIpConfig {
+
+			private List<String> values;
+
+			public List<String> getValues() {
+				return this.values;
+			}
+
+			public void setValues(List<String> values) {
+				this.values = values;
+			}
+		}
+
+		public static class HostConfig {
+
+			private List<String> values;
+
+			public List<String> getValues() {
+				return this.values;
+			}
+
+			public void setValues(List<String> values) {
+				this.values = values;
+			}
+		}
+
+		public static class QueryStringConfig {
+
+			private List<ValuesItem> values;
+
+			public List<ValuesItem> getValues() {
+				return this.values;
+			}
+
+			public void setValues(List<ValuesItem> values) {
+				this.values = values;
+			}
+
+			public static class ValuesItem {
+
+				private String value;
+
+				private String key;
+
+				public String getValue() {
+					return this.value;
+				}
+
+				public void setValue(String value) {
+					this.value = value;
+				}
+
+				public String getKey() {
+					return this.key;
+				}
+
+				public void setKey(String key) {
+					this.key = key;
+				}
+			}
+		}
+
+		public static class ResponseStatusCodeConfig {
+
+			private List<String> values;
+
+			public List<String> getValues() {
+				return this.values;
+			}
+
+			public void setValues(List<String> values) {
+				this.values = values;
+			}
+		}
+
+		public static class PathConfig {
+
+			private List<String> values;
+
+			public List<String> getValues() {
+				return this.values;
+			}
+
+			public void setValues(List<String> values) {
+				this.values = values;
+			}
+		}
+
+		public static class CookieConfig {
+
+			private List<ValuesItem> values;
+
+			public List<ValuesItem> getValues() {
+				return this.values;
+			}
+
+			public void setValues(List<ValuesItem> values) {
+				this.values = values;
+			}
+
+			public static class ValuesItem {
+
+				private String value;
+
+				private String key;
+
+				public String getValue() {
+					return this.value;
+				}
+
+				public void setValue(String value) {
+					this.value = value;
+				}
+
+				public String getKey() {
+					return this.key;
+				}
+
+				public void setKey(String key) {
+					this.key = key;
+				}
+			}
+		}
+
+		public static class HeaderConfig {
+
+			private List<String> values;
+
+			private String key;
+
+			public List<String> getValues() {
+				return this.values;
+			}
+
+			public void setValues(List<String> values) {
+				this.values = values;
+			}
+
+			public String getKey() {
+				return this.key;
+			}
+
+			public void setKey(String key) {
+				this.key = key;
+			}
+		}
+
+		public static class ResponseHeaderConfig {
+
+			private List<String> values;
+
+			private String key;
+
+			public List<String> getValues() {
+				return this.values;
+			}
+
+			public void setValues(List<String> values) {
+				this.values = values;
+			}
+
+			public String getKey() {
+				return this.key;
+			}
+
+			public void setKey(String key) {
+				this.key = key;
+			}
+		}
+	}
+
+	@Override
+	public Class<UpdateRuleAttributeResponse> getResponseClass() {
+		return UpdateRuleAttributeResponse.class;
+	}
+
+}

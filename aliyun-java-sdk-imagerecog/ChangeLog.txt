@@ -1,0 +1,57 @@
+2023-03-15 Version: 1.0.18
+- Update sdk.
+
+2022-10-17 Version: 1.0.17
+- Update TaggingAdImage.
+
+2021-08-10 Version: 1.0.16
+- Update TaggingAdImage.
+
+2021-08-06 Version: 1.0.15
+- Update TaggingAdImage.
+
+2021-08-04 Version: 1.0.14
+- Release TaggingAdImage.
+
+2021-08-02 Version: 1.0.13
+- Update TaggingImage.
+
+2021-02-04 Version: 1.0.12
+- Update TaggingImage.
+
+2021-02-01 Version: 1.0.11
+- Release RecognizeFood.
+
+2020-12-18 Version: 1.0.10
+- Release EvaluateCertificateQuality.
+
+2020-11-16 Version: 1.0.9
+- Update imagerecog.
+
+2020-07-10 Version: 1.0.9
+- Sdk for 109.
+
+2020-07-01 Version: 1.0.8
+- SDK version 108.
+
+2020-03-23 Version: 1.0.7
+- SDK version 107.
+
+2020-03-23 Version: 1.0.7
+- SDK version 107.
+
+2020-02-27 Version: 1.0.6
+- Sixth version.
+
+2020-02-27 Version: 1.0.6
+- Sixth version.
+
+2019-12-30 Version: 1.0.2
+- Disable Base64 string data support.
+
+2019-12-29 Version: 1.0.1
+- Add new api.
+
+2019-11-22 Version: 1.0.0
+- First version.
+

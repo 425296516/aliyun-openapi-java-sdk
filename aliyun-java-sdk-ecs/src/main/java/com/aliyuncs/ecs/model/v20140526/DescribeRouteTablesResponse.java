@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -29,23 +25,15 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeRouteTablesResponse extends AcsResponse {
 
-	private String requestId;
-
 	private Integer totalCount;
-
-	private Integer pageNumber;
 
 	private Integer pageSize;
 
+	private String requestId;
+
+	private Integer pageNumber;
+
 	private List<RouteTable> routeTables;
-
-	public String getRequestId() {
-		return this.requestId;
-	}
-
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
 
 	public Integer getTotalCount() {
 		return this.totalCount;
@@ -55,20 +43,28 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 		this.totalCount = totalCount;
 	}
 
-	public Integer getPageNumber() {
-		return this.pageNumber;
-	}
-
-	public void setPageNumber(Integer pageNumber) {
-		this.pageNumber = pageNumber;
-	}
-
 	public Integer getPageSize() {
 		return this.pageSize;
 	}
 
 	public void setPageSize(Integer pageSize) {
 		this.pageSize = pageSize;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
 	}
 
 	public List<RouteTable> getRouteTables() {
@@ -85,9 +81,11 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 
 		private String routeTableId;
 
-		private String routeTableType;
+		private String resourceGroupId;
 
 		private String creationTime;
+
+		private String routeTableType;
 
 		private List<RouteEntry> routeEntrys;
 
@@ -107,12 +105,12 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 			this.routeTableId = routeTableId;
 		}
 
-		public String getRouteTableType() {
-			return this.routeTableType;
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
 		}
 
-		public void setRouteTableType(String routeTableType) {
-			this.routeTableType = routeTableType;
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
 		}
 
 		public String getCreationTime() {
@@ -121,6 +119,14 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 
 		public void setCreationTime(String creationTime) {
 			this.creationTime = creationTime;
+		}
+
+		public String getRouteTableType() {
+			return this.routeTableType;
+		}
+
+		public void setRouteTableType(String routeTableType) {
+			this.routeTableType = routeTableType;
 		}
 
 		public List<RouteEntry> getRouteEntrys() {
@@ -133,30 +139,34 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 
 		public static class RouteEntry {
 
-			private String routeTableId;
+			private String status;
 
-			private String destinationCidrBlock;
+			private String nextHopType;
 
 			private String type;
 
-			private String status;
+			private String routeTableId;
 
 			private String instanceId;
 
-			public String getRouteTableId() {
-				return this.routeTableId;
+			private String destinationCidrBlock;
+
+			private List<NextHop> nextHops;
+
+			public String getStatus() {
+				return this.status;
 			}
 
-			public void setRouteTableId(String routeTableId) {
-				this.routeTableId = routeTableId;
+			public void setStatus(String status) {
+				this.status = status;
 			}
 
-			public String getDestinationCidrBlock() {
-				return this.destinationCidrBlock;
+			public String getNextHopType() {
+				return this.nextHopType;
 			}
 
-			public void setDestinationCidrBlock(String destinationCidrBlock) {
-				this.destinationCidrBlock = destinationCidrBlock;
+			public void setNextHopType(String nextHopType) {
+				this.nextHopType = nextHopType;
 			}
 
 			public String getType() {
@@ -167,12 +177,12 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 				this.type = type;
 			}
 
-			public String getStatus() {
-				return this.status;
+			public String getRouteTableId() {
+				return this.routeTableId;
 			}
 
-			public void setStatus(String status) {
-				this.status = status;
+			public void setRouteTableId(String routeTableId) {
+				this.routeTableId = routeTableId;
 			}
 
 			public String getInstanceId() {
@@ -181,6 +191,65 @@ public class DescribeRouteTablesResponse extends AcsResponse {
 
 			public void setInstanceId(String instanceId) {
 				this.instanceId = instanceId;
+			}
+
+			public String getDestinationCidrBlock() {
+				return this.destinationCidrBlock;
+			}
+
+			public void setDestinationCidrBlock(String destinationCidrBlock) {
+				this.destinationCidrBlock = destinationCidrBlock;
+			}
+
+			public List<NextHop> getNextHops() {
+				return this.nextHops;
+			}
+
+			public void setNextHops(List<NextHop> nextHops) {
+				this.nextHops = nextHops;
+			}
+
+			public static class NextHop {
+
+				private String nextHopType;
+
+				private String nextHopId;
+
+				private Integer enabled;
+
+				private Integer weight;
+
+				public String getNextHopType() {
+					return this.nextHopType;
+				}
+
+				public void setNextHopType(String nextHopType) {
+					this.nextHopType = nextHopType;
+				}
+
+				public String getNextHopId() {
+					return this.nextHopId;
+				}
+
+				public void setNextHopId(String nextHopId) {
+					this.nextHopId = nextHopId;
+				}
+
+				public Integer getEnabled() {
+					return this.enabled;
+				}
+
+				public void setEnabled(Integer enabled) {
+					this.enabled = enabled;
+				}
+
+				public Integer getWeight() {
+					return this.weight;
+				}
+
+				public void setWeight(Integer weight) {
+					this.weight = weight;
+				}
 			}
 		}
 	}

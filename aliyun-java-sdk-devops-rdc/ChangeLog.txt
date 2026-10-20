@@ -1,0 +1,85 @@
+2021-07-09 Version: 2.0.2
+- Fix ListPIpelineTemplates.
+
+2021-06-29 Version: 2222.9.9
+- Add ListDevopsProjects.
+
+2021-06-15 Version: 1.9.9
+- Add ListDevopsProjects.
+
+2021-06-03 Version: 1.9.7
+- Add name.
+
+2021-06-03 Version: 1.9.6
+- Support name.
+
+2021-04-27 Version: 1.9.5
+- GetProjectMember support pageSize.
+
+2021-04-16 Version: 1.9.3
+- Support devops organization deletion.
+
+2021-02-02 Version: 1.9.0
+- Add.
+
+2021-02-01 Version: 1.1.0
+- Add.
+
+2021-01-21 Version: 1.0.9
+- Add.
+
+2020-12-16 Version: 1.0.8.2-release
+- Support show pipeline history.
+- Support show log details.
+
+2020-12-14 Version: 1.8.0.1-RELEASE
+- Add update task api.
+
+2020-12-14 Version: 1.8.0.1
+- Add update task api.
+
+2020-12-14 Version: 1.8.0.1
+- Add update task api.
+
+2020-12-01 Version: 1.0.8.RELEASE
+- Add task api.
+
+2020-12-01 Version: 1.0.8
+- Add task api.
+
+2020-12-01 Version: 1.0.8
+- Add task api.
+
+2020-11-27 Version: 1.0.7.1
+- Support taskList.
+
+2020-10-22 Version: 1.0.7
+- Add Pipeline Member api.
+
+2020-10-12 Version: 1.0.7.1
+- Add list Organizations.
+
+2020-08-28 Version: 1.0.7
+- Add name.
+
+2020-08-24 Version: 1.0.6
+- Add project api.
+
+2020-08-17 Version: 1.0.5
+- Add pipeline status api.
+
+2020-07-20 Version: 1.0.3
+- Add actions.
+
+2020-07-17 Version: 1.0.3
+- Add actions.
+
+2020-07-16 Version: 1.0.3
+- Add actions.
+
+2020-07-08 Version: 1.0.2
+- Support create serviceConnection.
+
+2020-07-01 Version: 1.0.1
+- Support create Pipeline.
+

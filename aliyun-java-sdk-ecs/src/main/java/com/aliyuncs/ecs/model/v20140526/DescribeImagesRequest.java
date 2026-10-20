@@ -1,83 +1,102 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class DescribeImagesRequest extends RpcAcsRequest<DescribeImagesResponse> {
-	
-	public DescribeImagesRequest() {
-		super("Ecs", "2014-05-26", "DescribeImages");
-	}
+	   
 
-	private Long ownerId;
-
-	private String resourceOwnerAccount;
+	private String actionType;
 
 	private Long resourceOwnerId;
 
+	private String usage;
+
+	private String imageOwnerAlias;
+
+	private String resourceGroupId;
+
+	private Boolean isSupportCloudinit;
+
+	private Boolean isPublic;
+
+	private List<Tag> tags;
+
+	private Boolean dryRun;
+
+	private Long ownerId;
+
 	private String status;
+
+	private Long imageOwnerId;
 
 	private String imageId;
 
 	private String snapshotId;
 
-	private String imageName;
-
-	private String imageOwnerAlias;
-
 	private Integer pageNumber;
+
+	private Boolean usable;
+
+	private Boolean isSupportIoOptimized;
+
+	private String imageName;
 
 	private Integer pageSize;
 
+	private String instanceType;
+
+	private String architecture;
+
+	private String resourceOwnerAccount;
+
 	private String ownerAccount;
 
-	private String filter1Key;
+	private Boolean showExpired;
 
-	private String filter2Key;
+	private String oSType;
 
-	private String filter1Value;
+	private List<Filter> filters;
 
-	private String filter2Value;
-
-	private String usage;
-
-	public Long getOwnerId() {
-		return this.ownerId;
+	private String imageFamily;
+	public DescribeImagesRequest() {
+		super("Ecs", "2014-05-26", "DescribeImages", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
 	}
 
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		putQueryParameter("OwnerId", String.valueOf(ownerId));
+	public String getActionType() {
+		return this.actionType;
 	}
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+	public void setActionType(String actionType) {
+		this.actionType = actionType;
+		if(actionType != null){
+			putQueryParameter("ActionType", actionType);
+		}
 	}
 
 	public Long getResourceOwnerId() {
@@ -86,115 +105,9 @@ public class DescribeImagesRequest extends RpcAcsRequest<DescribeImagesResponse>
 
 	public void setResourceOwnerId(Long resourceOwnerId) {
 		this.resourceOwnerId = resourceOwnerId;
-		putQueryParameter("ResourceOwnerId", String.valueOf(resourceOwnerId));
-	}
-
-	public String getStatus() {
-		return this.status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-		putQueryParameter("Status", status);
-	}
-
-	public String getImageId() {
-		return this.imageId;
-	}
-
-	public void setImageId(String imageId) {
-		this.imageId = imageId;
-		putQueryParameter("ImageId", imageId);
-	}
-
-	public String getSnapshotId() {
-		return this.snapshotId;
-	}
-
-	public void setSnapshotId(String snapshotId) {
-		this.snapshotId = snapshotId;
-		putQueryParameter("SnapshotId", snapshotId);
-	}
-
-	public String getImageName() {
-		return this.imageName;
-	}
-
-	public void setImageName(String imageName) {
-		this.imageName = imageName;
-		putQueryParameter("ImageName", imageName);
-	}
-
-	public String getImageOwnerAlias() {
-		return this.imageOwnerAlias;
-	}
-
-	public void setImageOwnerAlias(String imageOwnerAlias) {
-		this.imageOwnerAlias = imageOwnerAlias;
-		putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
-	}
-
-	public Integer getPageNumber() {
-		return this.pageNumber;
-	}
-
-	public void setPageNumber(Integer pageNumber) {
-		this.pageNumber = pageNumber;
-		putQueryParameter("PageNumber", String.valueOf(pageNumber));
-	}
-
-	public Integer getPageSize() {
-		return this.pageSize;
-	}
-
-	public void setPageSize(Integer pageSize) {
-		this.pageSize = pageSize;
-		putQueryParameter("PageSize", String.valueOf(pageSize));
-	}
-
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		putQueryParameter("OwnerAccount", ownerAccount);
-	}
-
-	public String getFilter1Key() {
-		return this.filter1Key;
-	}
-
-	public void setFilter1Key(String filter1Key) {
-		this.filter1Key = filter1Key;
-		putQueryParameter("Filter.1.Key", filter1Key);
-	}
-
-	public String getFilter2Key() {
-		return this.filter2Key;
-	}
-
-	public void setFilter2Key(String filter2Key) {
-		this.filter2Key = filter2Key;
-		putQueryParameter("Filter.2.Key", filter2Key);
-	}
-
-	public String getFilter1Value() {
-		return this.filter1Value;
-	}
-
-	public void setFilter1Value(String filter1Value) {
-		this.filter1Value = filter1Value;
-		putQueryParameter("Filter.1.Value", filter1Value);
-	}
-
-	public String getFilter2Value() {
-		return this.filter2Value;
-	}
-
-	public void setFilter2Value(String filter2Value) {
-		this.filter2Value = filter2Value;
-		putQueryParameter("Filter.2.Value", filter2Value);
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
 	}
 
 	public String getUsage() {
@@ -203,7 +116,325 @@ public class DescribeImagesRequest extends RpcAcsRequest<DescribeImagesResponse>
 
 	public void setUsage(String usage) {
 		this.usage = usage;
-		putQueryParameter("Usage", usage);
+		if(usage != null){
+			putQueryParameter("Usage", usage);
+		}
+	}
+
+	public String getImageOwnerAlias() {
+		return this.imageOwnerAlias;
+	}
+
+	public void setImageOwnerAlias(String imageOwnerAlias) {
+		this.imageOwnerAlias = imageOwnerAlias;
+		if(imageOwnerAlias != null){
+			putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
+		}
+	}
+
+	public String getResourceGroupId() {
+		return this.resourceGroupId;
+	}
+
+	public void setResourceGroupId(String resourceGroupId) {
+		this.resourceGroupId = resourceGroupId;
+		if(resourceGroupId != null){
+			putQueryParameter("ResourceGroupId", resourceGroupId);
+		}
+	}
+
+	public Boolean getIsSupportCloudinit() {
+		return this.isSupportCloudinit;
+	}
+
+	public void setIsSupportCloudinit(Boolean isSupportCloudinit) {
+		this.isSupportCloudinit = isSupportCloudinit;
+		if(isSupportCloudinit != null){
+			putQueryParameter("IsSupportCloudinit", isSupportCloudinit.toString());
+		}
+	}
+
+	public Boolean getIsPublic() {
+		return this.isPublic;
+	}
+
+	public void setIsPublic(Boolean isPublic) {
+		this.isPublic = isPublic;
+		if(isPublic != null){
+			putQueryParameter("IsPublic", isPublic.toString());
+		}
+	}
+
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
+			}
+		}	
+	}
+
+	public Boolean getDryRun() {
+		return this.dryRun;
+	}
+
+	public void setDryRun(Boolean dryRun) {
+		this.dryRun = dryRun;
+		if(dryRun != null){
+			putQueryParameter("DryRun", dryRun.toString());
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+		if(status != null){
+			putQueryParameter("Status", status);
+		}
+	}
+
+	public Long getImageOwnerId() {
+		return this.imageOwnerId;
+	}
+
+	public void setImageOwnerId(Long imageOwnerId) {
+		this.imageOwnerId = imageOwnerId;
+		if(imageOwnerId != null){
+			putQueryParameter("ImageOwnerId", imageOwnerId.toString());
+		}
+	}
+
+	public String getImageId() {
+		return this.imageId;
+	}
+
+	public void setImageId(String imageId) {
+		this.imageId = imageId;
+		if(imageId != null){
+			putQueryParameter("ImageId", imageId);
+		}
+	}
+
+	public String getSnapshotId() {
+		return this.snapshotId;
+	}
+
+	public void setSnapshotId(String snapshotId) {
+		this.snapshotId = snapshotId;
+		if(snapshotId != null){
+			putQueryParameter("SnapshotId", snapshotId);
+		}
+	}
+
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
+		if(pageNumber != null){
+			putQueryParameter("PageNumber", pageNumber.toString());
+		}
+	}
+
+	public Boolean getUsable() {
+		return this.usable;
+	}
+
+	public void setUsable(Boolean usable) {
+		this.usable = usable;
+		if(usable != null){
+			putQueryParameter("Usable", usable.toString());
+		}
+	}
+
+	public Boolean getIsSupportIoOptimized() {
+		return this.isSupportIoOptimized;
+	}
+
+	public void setIsSupportIoOptimized(Boolean isSupportIoOptimized) {
+		this.isSupportIoOptimized = isSupportIoOptimized;
+		if(isSupportIoOptimized != null){
+			putQueryParameter("IsSupportIoOptimized", isSupportIoOptimized.toString());
+		}
+	}
+
+	public String getImageName() {
+		return this.imageName;
+	}
+
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
+		if(imageName != null){
+			putQueryParameter("ImageName", imageName);
+		}
+	}
+
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
+		}
+	}
+
+	public String getInstanceType() {
+		return this.instanceType;
+	}
+
+	public void setInstanceType(String instanceType) {
+		this.instanceType = instanceType;
+		if(instanceType != null){
+			putQueryParameter("InstanceType", instanceType);
+		}
+	}
+
+	public String getArchitecture() {
+		return this.architecture;
+	}
+
+	public void setArchitecture(String architecture) {
+		this.architecture = architecture;
+		if(architecture != null){
+			putQueryParameter("Architecture", architecture);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Boolean getShowExpired() {
+		return this.showExpired;
+	}
+
+	public void setShowExpired(Boolean showExpired) {
+		this.showExpired = showExpired;
+		if(showExpired != null){
+			putQueryParameter("ShowExpired", showExpired.toString());
+		}
+	}
+
+	public String getOSType() {
+		return this.oSType;
+	}
+
+	public void setOSType(String oSType) {
+		this.oSType = oSType;
+		if(oSType != null){
+			putQueryParameter("OSType", oSType);
+		}
+	}
+
+	public List<Filter> getFilters() {
+		return this.filters;
+	}
+
+	public void setFilters(List<Filter> filters) {
+		this.filters = filters;	
+		if (filters != null) {
+			for (int depth1 = 0; depth1 < filters.size(); depth1++) {
+				putQueryParameter("Filter." + (depth1 + 1) + ".Value" , filters.get(depth1).getValue());
+				putQueryParameter("Filter." + (depth1 + 1) + ".Key" , filters.get(depth1).getKey());
+			}
+		}	
+	}
+
+	public String getImageFamily() {
+		return this.imageFamily;
+	}
+
+	public void setImageFamily(String imageFamily) {
+		this.imageFamily = imageFamily;
+		if(imageFamily != null){
+			putQueryParameter("ImageFamily", imageFamily);
+		}
+	}
+
+	public static class Tag {
+
+		private String value;
+
+		private String key;
+
+		public String getValue() {
+			return this.value;
+		}
+
+		public void setValue(String value) {
+			this.value = value;
+		}
+
+		public String getKey() {
+			return this.key;
+		}
+
+		public void setKey(String key) {
+			this.key = key;
+		}
+	}
+
+	public static class Filter {
+
+		private String value;
+
+		private String key;
+
+		public String getValue() {
+			return this.value;
+		}
+
+		public void setValue(String value) {
+			this.value = value;
+		}
+
+		public String getKey() {
+			return this.key;
+		}
+
+		public void setKey(String key) {
+			this.key = key;
+		}
 	}
 
 	@Override

@@ -1,0 +1,335 @@
+﻿2026-06-26 Version:4.7.10
+1.Support env to disable location request.
+
+2026-06-24 Version:4.7.9
+1.Support env for location service.
+
+2025-12-16 Version:4.7.8
+1.Update dependencies.
+
+2025-11-11 Version:4.7.7
+1.Resolve exception and remove ini4j.
+
+2025-06-10 Version:4.7.6
+1.Support IDToken.
+
+2025-04-18 Version:4.7.5
+1.Support StsToken mode in cli profile.
+
+2025-04-11 Version:4.7.4
+1.Improve credentials providers in profile.
+
+2024-12-04 Version:4.7.3
+1.Improve all credentials providers.
+2.Support CLI credentials provider.
+2.Support URI credentials provider.
+3.Support ALIBABA_CLOUD_IMDSV1_DISABLED for imds v1 disabled and ALIBABA_CLOUD_ECS_METADATA_DISABLED for imds disabled.
+
+2024-09-27 Version:4.7.2
+1.Remove ini4j && improve ini config file parsing.
+
+2024-07-22 Version:4.7.1
+1, Support custom location service.
+
+2024-07-08 Version:4.7.0
+1, Support OIDC credentials provider.
+2, Add OIDC credentials provider into default credentials provider chain.
+3, Cleanup some imports.
+
+2023-09-06 Version:4.6.4
+1, Improve the design of nonce
+
+2022-11-23 Version:4.6.3
+1, Support access denied detail in AcsError.
+2, Add header `x-sdk-throttling-control` when throttling control enable
+
+2022-09-13 Version:4.6.2
+1, Update endpoints.
+2, Fix CompatibleUrlConnClient npe
+
+2022-08-04 Version:4.6.1
+1, Fix v3 signature without path && update signer name
+2, Support patch(http method)
+3, Support payload for delete(http method)
+4, Remove useless system params
+5, Return response when http request failed
+
+2022-01-04 Version:4.6.0
+1, Support retry policy
+2, Enable throttling control
+3, Return raw content when parse failed in readError
+
+2021-11-08 Version:4.5.30
+1, Fix unmodifiableMap assignment
+
+2021-11-04 Version:4.5.29
+1, Fix get & set method names
+
+2021-11-03 Version:4.5.28
+1, Support signature v3.
+2, Add str to sign for debug.
+3, Add env for isIgnoreSSLCerts.
+4, Remove useless catch for location service.
+
+2021-08-05 Version:4.5.25
+1, Fix regionId conflict among different products in LocationServiceEndpointResolver.
+
+2021-07-23 Version:4.5.24
+1, fix bugs for anonymous credentials
+
+2021-06-28 Version:4.5.23
+1, add anonymous credentials
+
+2021-06-28 Version:4.5.22
+1, Fix the NPE bug of ApacheHttpClient
+2, Add more HTTP request log tests
+3, Add ApachHttpClient NPE bug test
+
+2021-06-22 Version:4.5.21
+1, Add more HTTP request logs
+
+2021-03-29 Version:4.5.20
+1, Fix signature error when RegionId null
+
+2021-03-23 Version:4.5.19
+1, The throw keyword is added to the catch method of the xmlReader class
+2, Fix opentracing when tracing exists
+
+2021-01-22 Version: 4.5.18
+1, Fix default content type while has bodyParameters
+
+2020-11-27 Version: 4.5.17
+1, Support for setting proxy certificates
+2, Improve parse method
+
+2020-11-09 Version: 4.5.16
+1, add region id when region id non-exist
+
+2020-11-09 Version: 4.5.15
+1, Remove region id in the http header
+
+2020-10-29 Version: 4.5.14
+1, Support national secret certificate
+2, Improve dependencies
+3, Delete endpoint for ons
+4, The maximum number of requests is upgraded to 128
+
+2020-10-13 Version: 4.5.13
+1, Turn off automatic retry
+
+2020-09-29 Version: 4.5.12
+1, Improve x-acs-action
+
+2020-09-24 Version: 4.5.11
+1, Improve endpoints.json
+
+2020-09-14 Version: 4.5.10
+1, Add x-acs-version and x-acs-action in header
+
+2020-09-10 Version: 4.5.9
+1, Add accept in commonRequest
+
+2020-08-26 Version: 4.5.8
+1, Add set/get method for the Location service
+
+2020-08-17 Version: 4.5.7
+1, Supports throwing the response header
+2, Improve serialization method
+
+2020-07-31 Version: 4.5.6
+1, Support for complex type serialization
+
+2020-07-22 Version: 4.5.5
+1, Null and enmpty strings are not validated
+
+2020-07-22 Version: 4.5.4
+1, Improve dependencies
+2, Added regionId, network and suffix validation
+
+2020-07-03 Version: 4.5.3
+1, Change DefaultAcsClient parameter to IAcsClient
+
+2020-06-05 Version: 4.5.2
+1, Add return to resolve no error message problem
+
+2020-04-01 Version: 4.5.1
+1, Support for basic types in list
+
+2020-02-07 Version: 4.5.0
+1, Add description in ClientException
+2, Add tracing
+
+2019-11-26 Version: 4.4.9
+1, Improve toMap method
+
+2019-11-25 Version: 4.4.8
+1, Improve filtrateMap method
+
+2019-11-12 Version: 4.4.7
+1, Support list and map loop nesting
+2, Change put mode default type to form
+
+2019-09-30 Version: 4.4.6
+1, Change setParameter: Add null check
+
+2019-09-16 Version: 4.4.5
+1, Modify getEndpoint logic
+
+2019-05-27 Version: 4.4.4
+1, Update dependency
+2, Change exception message
+3, Add new endpoint resolve and test
+
+2019-05-27 Version: 4.4.3
+1, Fix project name
+
+2019-05-27 Version: 4.4.2
+1, keep compatible with old gson version
+
+2019-04-19 Version: 4.4.1
+1, Add http debug info.
+2, Change logger.
+
+
+2019-04-04 Version: 4.4.0
+1. Support Logging Capabilities
+2. Support tokens specify permissions
+
+
+2019-03-29 Version: 4.3.9
+1. Optimize dependency
+2. Update the version of mock framework
+3. Fix bad words
+
+2019-03-25 Version: 4.3.8
+1. Support http proxy
+2. Update endpoint.json file
+
+2019-03-21 Version: 4.3.7
+1. Fix content has not bean provided
+2. Support https cert
+3. Add deprecated comments
+
+2019-03-18 Version: 4.3.6
+1. Add timeout setting and test
+2. Add the certificate provider chain and test
+3. Add region id in the http header
+
+2019-03-01 Version: 4.3.5
+1. Update endpoint data
+2. Modify the default client to apache client
+3. Multiple SDK clients share one connection pool
+
+2019-01-31 Version: 4.3.4
+1. Add User-Agent to the http/https protocol
+2. Add User-Agent test
+
+2019-01-31 Version: 4.3.3
+1. Compatible with commonRequest usage.
+2. Fixed an issue where the format was empty.
+3. Add more test cases.
+
+2019-01-16 Version: 4.3.2
+1. Add more test cases
+2. Improve coding style
+3. Add back setUsingInternalLocationService and mark it as deprecated.
+
+2019-01-16 Version: 4.3.1
+1. Add more test cases
+2. support VPC endPoint
+
+2019-01-07 Version: 4.3.0
+1, Separation of system and business parameters
+
+2018-12-27 Version: 4.2.5
+1, The actual data format defaults to a form.
+2, Signature adds timestamp and thread id.
+
+
+2018-11-19 Version: 4.2.2
+1,  remove buggy retry logic
+2,  add deprecated warning for request.setSecurityToken()
+3,  fixes 2 potential NPE
+
+2018-11-07 Version: 4.2.0
+1, add bssopenapi & fass endpoints
+
+2018-10-25 Version: 4.1.2
+1, fix bug for json reader
+
+2018-09-29 Version: 4.1.1
+1, endpoints data updated
+2, fixed global config location code normalization bug
+3, fixed no region hint bug
+
+2018-09-21 Version: 4.1.0
+1, Fix endpoint logic bug
+
+2018-08-17 Version: 4.0.8
+1, add proxy for urlconnection
+
+2018-08-10 Version: 4.0.8
+1, fix ecsRamRole
+
+2018-05-24 Version: 4.0.2
+1, add https for DescribeEndpoint
+
+2018-05-04 Version: 4.0.1
+1, fix signatrue when query param contains empty string
+2, set httpclient default Accept-Encoding to "identity"
+
+
+2018-04-18 Version: 4.0.0
+1, Use Apache httpclient as default instead of UrlConnection
+2, Support user custome http client
+3, Support keepalive and connection pool
+4, Support async invoking
+5, In addition to the depedency of Apache Httpclient that may cause problems with maven package conflicts, other parts are backwards compatible.
+
+2018-04-14 Version: 3.7.1
+1, Support bearer Token
+
+2018-04-13 Version: 3.7.0
+1, Support bearer Token
+
+2018-03-13 Version: 3.6.0
+1, Supports specifying the https certificate path
+2, Optimize the logic for resolving Endpoint
+3, Bug fixes
+
+2018-01-31 Version: 3.5.1
+1, Adding the setEndpoint method to the Request.
+
+2017-11-01 Version: 3.5.0
+1, 支持common调用
+
+2017-10-15 Version: 3.4.0
+1, 加入了KeyPairCredentials 和 STSGetSessionAccessKeyCredentialsProvider，支持 PublicKey (即AK2.0)功能。
+
+2017-09-22 Version: 3.3.1
+1,  修正在网络连接发生重置时抛出 NullPointerException的问题。在连接重置时SDK执行默认重试策略。
+
+2017-09-22 Version: 3.3.0
+1,  支持使用STS Token调用SDK访问API。
+2,  支持使用RoleArn调用SDK，SDK进行AssumeRole获取授权信息并自动Rotate。
+3,  支持在ECS上利用Metadata Service进行“无AK”访问。
+
+2017-09-06 Version: 3.2.10
+1, 修改IoT套件美西和新加坡节点的endpoint
+
+2017-08-25 Version: 3.2.9
+1,  EMR增加德国和张北region的SDK endpoint
+
+2017-08-14 Version: 3.2.8
+1, 修复了在某些场景下会导致NoSuchMethod的bug
+
+2017-08-11 Version: 3.2.7
+1, 解决不支持body参数的bug
+
+2017-07-27 Version: 3.2.6
+1, 支持自动寻址，自动寻址endpoint缓存失效时间为1小时
+2, 手工调用addEndpoint方法添加endpoint优先级高于自动寻址
+
+2017-07-25 Version: 3.2.5
+1, 修改IoT套件在华东2个Region上的endpoint。
+

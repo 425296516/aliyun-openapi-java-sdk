@@ -1,0 +1,372 @@
+2024-02-02 Version: 7.60.0
+- Add UnsubscribeTopic.
+
+2024-01-15 Version: 7.59.0
+- BatchPub Support MQTT5.
+
+2023-09-25 Version: 7.58.0
+- Add Api ResetDeviceTimeline.
+
+2023-09-19 Version: 7.57.0
+- Iot_20180120 TeaDSL SDK.
+
+2023-09-07 Version: 7.56.0
+- Generated 2018-01-20 for `Iot`.
+
+2023-07-13 Version: 7.55.0
+- Iot_20180120 old version sdk.
+
+2023-07-12 Version: 7.54.0
+- Iot_20180120 TeaDSL SDK.
+
+2023-05-11 Version: 7.53.0
+- Pub Support MessageExpiryInterval and Retained.
+
+2023-05-09 Version: 7.52.1
+- Support new api for iot.
+
+2023-03-06 Version: 7.52.0
+- Iot_20180120 TeaDSL SDK.
+
+2023-03-02 Version: 7.51.0
+- Add a API QueryDeviceProvisioning to support query provisioning info for device.
+
+2023-02-10 Version: 7.50.0
+- Support broadcast for FengTian.
+
+2023-01-13 Version: 7.49.0
+- ClearDeviceDesiredProperty open Api.
+
+2023-01-03 Version: 7.48.0
+- Pub Support MessageExpiryInterval and Retained.
+- Rrpc Support ContentType.
+- BatchImportVehicleDevice batch create device by jt808 protocol.
+- BatchCheckVehicleDevice batch check device by jt808 protocol.
+- QueryVehicleDevice query jt808 device information.
+
+2022-12-02 Version: 7.47.0
+- Pub Support PayloadFormatIndicator and ContentType.
+
+2022-12-01 Version: 7.46.0
+- Storage open Api.
+
+2022-10-27 Version: 7.45.0
+- Iot_20180120 Old sdk.
+
+2022-09-16 Version: 7.44.0
+- Iot_20180120 old version sdk.
+
+2022-09-06 Version: 7.43.0
+- Iot_20180120 old version sdk.
+
+2022-08-25 Version: 7.42.0
+- Iot_20180120 Old sdk.
+
+2022-07-11 Version: 7.41.0
+- Add new api for rule.
+
+2022-06-20 Version: 7.40.0
+- Support Easy Connect New API.
+
+2022-04-22 Version: 7.39.0
+- Iot_20180120 old version sdk.
+
+2022-03-31 Version: 7.38.0
+- CreateDataSourceItem.
+- ListDataSourceItem.
+
+2022-03-25 Version: 7.37.0
+- Iot_20180120 old version sdk.
+
+2022-03-14 Version: 7.36.0
+- Iot_20180120 old version sdk.
+
+2022-02-18 Version: 7.35.0
+- Iot_20180120 build sdk.
+
+2022-02-18 Version: 7.34.0
+- Add Gis open service add data api.
+
+2022-02-11 Version: 7.33.0
+- Add OTA API, including ReupgradeOTATask.
+
+2022-02-08 Version: 7.32.0
+- Iot_20180120 oldversion sdk.
+
+2021-12-16 Version: 7.31.0
+- Update OTA API, including CreateOTADynamicUpgradeJob,CreateOTAStaticUpgradeJob,QueryOTAJob.
+
+2021-11-05 Version: 7.30.0
+- Update OTA API, including CreateOTAVerifyJob.
+
+2021-10-20 Version: 7.29.0
+- Add DeviceCenter API, including CreateDeviceDynamicGroup, DeleteDeviceDynamicGroup, QueryDynamicGroupDevices.
+- Update DeviceCenter API, including SetDeviceGroupTags, QueryDeviceGroupByFuzzyName, QueryDeviceGroupByDevice, QueryDeviceGroupTagList, UpdateDeviceGroup, QueryDeviceGroupList, QueryDeviceGroupInfo.
+- Update OTA API, including CreateOTADynamicUpgradeJob, CreateOTAStaticUpgradeJob, QueryOTAJob.
+
+2021-09-06 Version: 7.28.0
+- Update LinkSpeech API, including SpeechByCombination, SyncSpeechByCombination.
+
+2021-07-06 Version: 7.27.0
+- Add SubscribeTopic.
+
+2021-06-30 Version: 7.26.0
+- Add RerunJob.
+- Add Message API, QueryMessageInfo.
+- Update OTA API, including CreateOTAFirmware, QueryOTAFirmware.
+
+2021-06-09 Version: 7.25.0
+- Update TMP API, including QueryDevice, CreateThingModel, UpdateThingModel, ImportThingModelTsl, BatchPickThingModel, ListDeviceDistributeJob.
+- Add TMP API, including QueryDeviceInfo.
+- Update OTA API, including CreateOTAVerifyJob, CreateOTAStaticUpgradeJob, CreateOTADynamicUpgradeJob, CancelOTATaskByJob, QueryOTAJob.
+- Add OTA API, including ListOTAUnfinishedTaskByDevice,ConfirmOTATask.
+
+2021-05-18 Version: 7.24.0
+- Add IoT Studio SetStudioProjectCooperation API.
+- Add IoT Studio QueryStudioProjectList API.
+- Add IoT Studio QueryStudioAppList API.
+- Add IoT Studio QueryStudioAppPageListOpen API.
+- Add IoT Studio QueryStudioAppDomainListOpen API.
+- Add IoT Studio DeleteStudioAppDomainOpen API.
+- Add IoT Studio CreateStudioAppDomainOpen API.
+- Add IoT Studio GetStudioAppTokenOpen API.
+- Add IoT Studio SetupStudioAppAuthModeOpen API.
+- Add IoT Studio RefreshStudioAppTokenOpen API.
+- Add IoT Studio PublishStudioApp API.
+
+2021-05-08 Version: 7.23.0
+- Generated 2018-01-20 for `Iot`.
+
+2021-04-01 Version: 7.22.0
+- Add data service api, including ListAnalyticsData.
+- Update file uploading api, including GenerateFileUploadURL.
+
+2021-02-08 Version: 7.21.1
+- Fix IoT Studio BatchBindDevicesIntoProject API return datatype.
+- Fix IoT Studio BatchBindProductsIntoProject API return datatype.
+- Fix IoT Studio BatchUnbindProjectDevices API return datatype.
+- Fix IoT Studio BatchUnbindProjectProducts API return datatype.
+
+2021-02-07 Version: 7.21.0
+- Add IoT Studio BatchBindDevicesIntoProject API.
+- Add IoT Studio BatchBindProductsIntoProject API.
+- Add IoT Studio BatchUnbindProjectDevices API.
+- Add IoT Studio BatchUnbindProjectProducts API.
+
+2021-01-18 Version: 7.20.0
+- Add a set of API to support device distribution management, including CreateProductDistributeJob, CreateDeviceDistributeJob, QueryDeviceDistributeJob, ListDeviceDistributeJob, QueryDeviceDistributeDetail, DeleteDeviceDistributeJob, ListDistributedDevice, ListDistributedProduct etc.
+
+2021-01-18 Version: 7.19.1
+- Add a set of api to support device distribution management, including CreateProductDistributeJob, CreateDeviceDistributeJob, QueryDeviceDistributeJob, ListDeviceDistributeJob, QueryDeviceDistributeDetail, DeleteDeviceDistributeJob, ListDistributedDevice, ListDistributedProduct etc.
+
+2021-01-12 Version: 7.19.0
+- Add support for IoT jobs, including job management and query APIs like CreateJob, UpdateJob, QueryJob, CancelJob, ListTask, QueryTask, QueryJobStatistics etc.
+
+2020-12-31 Version: 7.18.0
+- Add support for thing model function block features, including thing model APIs like CreateThingModel,UpdateThingModel,SetDeviceProperty,InvokeThingService etc.
+
+2020-12-03 Version: 7.17.0
+- Support data retrieval of Ota module.
+- Added script management API,including CreateThingScript,UpdateThingScript,GetThingScript.
+- Update OTA API, including DeleteOTAModule,UpdateOTAModule,ListOTATaskByJob.
+- Add OTA API, ListOTAModuleVersionsByDevice.
+
+2020-11-16 Version: 7.16.1
+- Update BatchPub.
+
+2020-11-16 Version: 7.16.1
+- Update BatchPub.
+
+2020-10-26 Version: 7.16.0
+- Add Message API,including BatchPub.
+
+2020-10-16 Version: 7.15.0
+- Update OTA API, including ListOTAModuleByProduct, DeleteOTAModule.
+
+2020-10-13 Version: 7.14.0
+- Add DeviceCenter API, including QueryDeviceBySQL.
+- Add OTA API, including ListOTAModuleByProduct, DeleteOTAModule.
+- Update error message in response with InvokeThingService, SetDeviceProperty.
+- Update OTA API, including CreateOTAModule, QueryDeviceVersionCountByPkFromOTA, QueryFirmwareByUid.
+- Update thing model API, ImportThingModelTsl.
+
+2020-09-15 Version: 7.13.0
+- Fix java sdk version.
+
+2020-09-15 Version: 1.8
+- Add OTA API, including GenerateDeviceNameListURL, CreateOTAModule and UpdateOTAModule.
+- Update OTA API, including CreateOTAStaticUpgradeJob,CreateOTADynamicUpgradeJob, QueryOTAJob, ListOTAJobByFirmware, ListOTAJobByDevice, CreateOTAFirmware and Generat.
+- Update server subscribe API, including CreateSubscribeRelation, UpdateSubscribeRelation and QuerySubscribeRelation.
+- Add LinkIoTEdge API BindRoleToEdgeInstance.
+- Add LinkIoTEdge API UnBindRoleToEdgeInstance.
+
+2020-08-06 Version: 7.12.0
+- Update OTA API, including CreateOTAStaticUpgradeJob,CreateOTADynamicUpgradeJob and QueryOTAJob.
+
+2020-07-23 Version: 7.11.0
+- Update OTA API, including GenerateOTAUploadURL.
+
+2020-07-14 Version: 7.10.0
+- Add Dynamic Registration APIs, including TransformClientId, DeleteClientIds, QueryClientIds, etc.
+- Update OTA API, including CreateOTAStaticUpgradeJob and QueryOTAJob.
+- Update Device Shadow API UpdateDeviceShadow.
+
+2020-06-12 Version: 7.9.0
+- Add CreateProduct API ProductSecret in Response.
+- Add AMQP APIs, including CreateSubscribeRelation, CreateConsumerGroup, etc.
+- Add LinkIoTEdge CreateSceneRule API.
+- Add LinkIoTEdge DeleteSceneRule API.
+- Add LinkIoTEdge UpdateSceneRule API.
+- Add LinkIoTEdge GetSceneRule API.
+- Add LinkIoTEdge QuerySceneRule API.
+- Add LinkIoTEdge EnableSceneRule API.
+- Add LinkIoTEdge DisableSceneRule API.
+- Add LinkIoTEdge TriggerSceneRule API.
+- Add LinkIoTEdge QuerySummarySceneRuleLog API.
+- Add LinkIoTEdge QueryDetailSceneRuleLog API.
+- Add LinkIoTEdge BindSceneRuleToEdgeInstance API.
+- Add LinkIoTEdge UnbindSceneRuleFromEdgeInstance API.
+- Add LinkIoTEdge QueryEdgeInstanceSceneRule API.
+
+2020-05-15 Version: 7.8.0
+- Add LinkIoTEdge CreateEdgeInstanceChannel, BatchDeleteEdgeInstanceChannel, UpdateEdgeInstanceChannel, BatchGetEdgeInstanceChannel, QueryEdgeInstanceChannel, QueryEdgeInstanceDeviceByDriver, BatchGetEdgeInstanceDeviceDriver, BatchSetEdgeInstanceDeviceChannel, BatchGetEdgeInstanceDeviceChannel API.
+- Add LinkIoTEdge BindApplicationToEdgeInstance, UnbindApplicationFromEdgeInstance API.
+- Add LinkIoTEdge ReplaceEdgeInstanceGateway, ReleaseEdgeDriverVersion, BatchGetDeviceBindStatus API.
+
+2020-03-06 Version: 7.7.0
+- Add LinkIoTEdge CreateEdgeOssPreSignedAddress API.
+
+2020-03-05 Version: 7.6.0
+- Add CreateEdgeDriver, DeleteEdgeDriver, BatchGetEdgeDriver, QueryEdgeDriver, CreateEdgeDriverVersion, DeleteEdgeDriverVersion, UpdateEdgeDriverVersion, GetEdgeDriverVersion, QueryEdgeDriverVersion API.
+- Add ResetThing API, support reset thing topo and 
+
+2020-02-11 Version: 7.5.0
+- Add Thing Model APIs, including CreateThingModel, UpdateThingModel, etc.
+- Add OTA API ListOTATaskByJob.
+- Update OTA API ListOTAJobByFirmware.
+- Update Thing Core Model API InvokeThingsService.
+
+2020-01-20 Version: 7.4.0
+- Add Thing Model APIs, including QueryThingModel, PublishThingModel, etc.
+
+2019-12-31 Version: 7.3.0
+- Add OTA APIs, including GenerateOTAUploadURL, CreateOTAFirmware, etc.
+- Add UpdateProductFilterConfig interface, support setting product filter config.
+
+2019-12-11 Version: 7.2.0
+- Add api `BatchAddThingTopo`, support add multiple sub-devices for a gateway.
+- Add api `QueryDeviceByStatus`, support query device list by device status.
+- Support grouping products and rules.
+- Support using RAM to authorize resouces, including products, devices, rules, groups and instances, to RAM users.
+
+2019-12-03 Version: 1.8
+- Generated 2018-01-20 for `Iot`.
+
+2019-10-17 Version: 7.1.0
+- Add X509 API, including queryDeviceCert, queryCertUrlByApplyId, createDeviceCert.
+- Add authType parameter of APIs, including createProduct, queryProduct, queryProductList, CreateProductPop, QueryProductAllInfo, QueryProductListPop, ListProductConsole, QueryAllProductListPop, QueryDeviceBatchList.
+
+2019-08-27 Version: 7.0.1
+- Fixed endpoint data init.
+
+2019-08-16 Version: 7.0.0
+- Add LinkIoTEdge API.
+
+2019-07-04 Version: 6.11.0
+- Supported batch querying for device detail.
+
+2019-06-12 Version: 6.10.0
+1, Add InvokeDataAPIService interface, support invoke service of data api to get sql query result.
+2, Add GetDataAPIServiceDetail interface, support get data api's detail information.
+3, Add CreateDataAPIService interface, support create data api with sql statement.
+
+2019-05-09 Version: 6.9.0
+1, Add LoRa's API GetNodesAddingTask, QueryLoRaJoinPermissions, GetLoraNodesTask, CreateLoRaNodesTask
+
+2019-04-08 Version: 6.8.0
+1, Add api, BatchUpdateDeviceNickname.
+2, Add both api, QueryDeviceFileList, QueryDeviceFile and DeleteDeviceFile.
+3, Add api ListRule’s name searching feature.
+4, Modify Tag format, support for special character like '.','-'.
+
+2019-03-08 Version: 6.7.0
+1, add API QueryDeviceDesiredProperty and SetDeviceDesiredProperty.
+2, add iotId support of APIs.
+
+
+2019-02-20 Version: 6.6.2
+1, fix aliyun-net-sdk-iot service code issue.
+
+2019-02-14 Version: 6.6.1
+1, fix SDK.InvalidRegionId exception in aliyun-net-sdk-core.
+
+2019-01-15 Version: 6.6.0
+1, add API of product tags.
+2, add API QueryDeviceGroupByTags.
+3, update response data of API BatchCheckDeviceNames.
+
+2019-01-15 Version: 6.6.0
+1, add API of product tags.
+2, add API QueryDeviceGroupByTags.
+3, update response data of API BatchCheckDeviceNames.
+
+2018-12-09 Version: 6.5.0
+1, Add Open API QuerySuperDeviceGroup.
+2, Add Open API QueryDeviceProperties.
+3, Add Open API QueryDeviceListByDeviceGroup.
+
+2018-11-28 Version: 6.4.0
+1, Add APIs InvokeThingsService, SetDevicesProperty and QueryDeviceByTags .
+
+2018-11-27 Version: 6.3.2
+1, Add APIs InvokeThingsService, SetDevicesProperty and QueryDeviceByTags .
+
+2018-10-16 Version: 6.3.1
+1, remove set group tags API.
+
+2018-10-13 Version: 6.3.0
+1, Add device group related APIs.
+
+2018-10-13 Version: 6.3.0
+1, Add device group related APIs.
+
+2018-10-13 Version: 6.3.0
+1, Add device group related APIs.
+
+2018-09-28 Version: 6.2.0
+1, Add one api, QueryAppDeviceList.
+
+2018-09-27 Version: 6.1.0
+1, Add one api, QueryAppDeviceList.
+
+2018-09-06 Version: 6.0.0
+1, Add API deleteProduct.
+2, Move all API to version 20180120.
+
+2018-08-27 Version: 5.1.0
+1, Add api GetGatewayBySubDevice.
+2, Modified the time related response parameters.
+3, Add messageId in response with InvokeThingService，SetDeviceProperty and NotifyAddThingTopo.
+
+2018-08-15 Version: 1.0.0
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2018-08-07 Version: 5.1.0
+1, Add api GetGatewayBySubDevice.
+2, Modified the time related response parameters.
+3, Add messageId in response with InvokeThingService，SetDeviceProperty and NotifyAddThingTopo.
+
+2018-04-17 Version: 5.0.0
+1, Add plenty of product management interfaces and device management interfaces
+2, Support for thing model and data storage
+
+2017-12-01 Version: 4.0.0
+1, Add apis, including QueryDeviceProp, UpdateDeviceProp, DeleteDeviceProp
+2, remove apis of v20170620 and v20170820 version
+
+2017-07-27 Version: 3.0.0
+1, 新增基于MQTT协议的RRPC接口，可以发消息给设备并同步返回响应。
+2, 新的3.0.0版本开始删除杭州节点的2016-05-30和2016-01-04两个版本。
+

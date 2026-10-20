@@ -1,0 +1,27 @@
+2021-10-26 Version: 2.0.5
+- App config list fix.
+
+2021-07-19 Version: 2.0.4
+- Aligenie.
+
+2021-06-30 Version: 2.0.3
+- Update pop.
+
+2021-06-01 Version: 2.0.2
+- Add env support.
+
+2021-03-08 Version: 1.0.2
+- Add account sign api.
+
+2021-02-26 Version: 2.0.1
+- New version.
+
+2021-02-26 Version: 2.0.0
+- Init-sdk.
+
+2021-02-26 Version: 1.0.0
+- Init-sdk.
+
+2020-08-19 Version: 1.0.0
+- Fix bug.
+

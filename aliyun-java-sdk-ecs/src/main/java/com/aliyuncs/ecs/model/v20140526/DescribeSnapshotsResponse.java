@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import java.util.List;
@@ -29,23 +25,17 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeSnapshotsResponse extends AcsResponse {
 
-	private String requestId;
-
 	private Integer totalCount;
 
-	private Integer pageNumber;
+	private String nextToken;
 
 	private Integer pageSize;
 
+	private String requestId;
+
+	private Integer pageNumber;
+
 	private List<Snapshot> snapshots;
-
-	public String getRequestId() {
-		return this.requestId;
-	}
-
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
 
 	public Integer getTotalCount() {
 		return this.totalCount;
@@ -55,12 +45,12 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 		this.totalCount = totalCount;
 	}
 
-	public Integer getPageNumber() {
-		return this.pageNumber;
+	public String getNextToken() {
+		return this.nextToken;
 	}
 
-	public void setPageNumber(Integer pageNumber) {
-		this.pageNumber = pageNumber;
+	public void setNextToken(String nextToken) {
+		this.nextToken = nextToken;
 	}
 
 	public Integer getPageSize() {
@@ -69,6 +59,22 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 
 	public void setPageSize(Integer pageSize) {
 		this.pageSize = pageSize;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
 	}
 
 	public List<Snapshot> getSnapshots() {
@@ -81,82 +87,72 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 
 	public static class Snapshot {
 
-		private String snapshotId;
-
-		private String snapshotName;
-
-		private String progress;
-
-		private String productCode;
-
-		private String sourceDiskId;
-
-		private SourceDiskType sourceDiskType;
-
-		private String sourceDiskSize;
+		private Boolean instantAccess;
 
 		private String description;
 
-		private String creationTime;
+		private String category;
+
+		private String kMSKeyId;
+
+		private String resourceGroupId;
+
+		private Boolean encrypted;
+
+		private String snapshotLinkId;
+
+		private String snapshotName;
+
+		private Integer instantAccessRetentionDays;
+
+		private String sourceDiskId;
+
+		private String snapshotSN;
+
+		private String sourceRegionId;
+
+		private Boolean available;
 
 		private String status;
 
+		private String progress;
+
 		private String usage;
 
-		public String getSnapshotId() {
-			return this.snapshotId;
+		private String productCode;
+
+		private String sourceSnapshotId;
+
+		private Integer retentionDays;
+
+		private String sourceStorageType;
+
+		private String snapshotId;
+
+		private Long fullSnapshotSizeInBytes;
+
+		private String sourceDiskSize;
+
+		private String creationTime;
+
+		private String lastModifiedTime;
+
+		private String snapshotType;
+
+		private String regionId;
+
+		private Integer remainTime;
+
+		private String sourceDiskType;
+
+		private List<Tag> tags;
+
+		public Boolean getInstantAccess() {
+			return this.instantAccess;
 		}
 
-		public void setSnapshotId(String snapshotId) {
-			this.snapshotId = snapshotId;
-		}
-
-		public String getSnapshotName() {
-			return this.snapshotName;
-		}
-
-		public void setSnapshotName(String snapshotName) {
-			this.snapshotName = snapshotName;
-		}
-
-		public String getProgress() {
-			return this.progress;
-		}
-
-		public void setProgress(String progress) {
-			this.progress = progress;
-		}
-
-		public String getProductCode() {
-			return this.productCode;
-		}
-
-		public void setProductCode(String productCode) {
-			this.productCode = productCode;
-		}
-
-		public String getSourceDiskId() {
-			return this.sourceDiskId;
-		}
-
-		public void setSourceDiskId(String sourceDiskId) {
-			this.sourceDiskId = sourceDiskId;
-		}
-
-		public SourceDiskType getSourceDiskType() {
-			return this.sourceDiskType;
-		}
-
-		public void setSourceDiskType(SourceDiskType sourceDiskType) {
-			this.sourceDiskType = sourceDiskType;
-		}
-
-		public String getSourceDiskSize() {
-			return this.sourceDiskSize;
-		}
-
-		public void setSourceDiskSize(String sourceDiskSize) {
-			this.sourceDiskSize = sourceDiskSize;
+		public void setInstantAccess(Boolean instantAccess) {
+			this.instantAccess = instantAccess;
 		}
 
 		public String getDescription() {
@@ -167,12 +163,92 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 			this.description = description;
 		}
 
-		public String getCreationTime() {
-			return this.creationTime;
+		public String getCategory() {
+			return this.category;
 		}
 
-		public void setCreationTime(String creationTime) {
-			this.creationTime = creationTime;
+		public void setCategory(String category) {
+			this.category = category;
+		}
+
+		public String getKMSKeyId() {
+			return this.kMSKeyId;
+		}
+
+		public void setKMSKeyId(String kMSKeyId) {
+			this.kMSKeyId = kMSKeyId;
+		}
+
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
+		public Boolean getEncrypted() {
+			return this.encrypted;
+		}
+
+		public void setEncrypted(Boolean encrypted) {
+			this.encrypted = encrypted;
+		}
+
+		public String getSnapshotLinkId() {
+			return this.snapshotLinkId;
+		}
+
+		public void setSnapshotLinkId(String snapshotLinkId) {
+			this.snapshotLinkId = snapshotLinkId;
+		}
+
+		public String getSnapshotName() {
+			return this.snapshotName;
+		}
+
+		public void setSnapshotName(String snapshotName) {
+			this.snapshotName = snapshotName;
+		}
+
+		public Integer getInstantAccessRetentionDays() {
+			return this.instantAccessRetentionDays;
+		}
+
+		public void setInstantAccessRetentionDays(Integer instantAccessRetentionDays) {
+			this.instantAccessRetentionDays = instantAccessRetentionDays;
+		}
+
+		public String getSourceDiskId() {
+			return this.sourceDiskId;
+		}
+
+		public void setSourceDiskId(String sourceDiskId) {
+			this.sourceDiskId = sourceDiskId;
+		}
+
+		public String getSnapshotSN() {
+			return this.snapshotSN;
+		}
+
+		public void setSnapshotSN(String snapshotSN) {
+			this.snapshotSN = snapshotSN;
+		}
+
+		public String getSourceRegionId() {
+			return this.sourceRegionId;
+		}
+
+		public void setSourceRegionId(String sourceRegionId) {
+			this.sourceRegionId = sourceRegionId;
+		}
+
+		public Boolean getAvailable() {
+			return this.available;
+		}
+
+		public void setAvailable(Boolean available) {
+			this.available = available;
 		}
 
 		public String getStatus() {
@@ -183,6 +259,14 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 			this.status = status;
 		}
 
+		public String getProgress() {
+			return this.progress;
+		}
+
+		public void setProgress(String progress) {
+			this.progress = progress;
+		}
+
 		public String getUsage() {
 			return this.usage;
 		}
@@ -191,37 +275,139 @@ public class DescribeSnapshotsResponse extends AcsResponse {
 			this.usage = usage;
 		}
 
-		public enum SourceDiskType {
-		
-			SYSTEM("system"),
-			DATA("data"),;
-			
-		    private String stringValue;
-		
-			SourceDiskType(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static SourceDiskType getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (SourceDiskType sourceDiskType : SourceDiskType.values()) {
-					if(sourceDiskType.getStringValue().equals(stringValue)){
-						return sourceDiskType;
-					}
-				}
-		    	return null;
-		    }
+		public String getProductCode() {
+			return this.productCode;
+		}
+
+		public void setProductCode(String productCode) {
+			this.productCode = productCode;
+		}
+
+		public String getSourceSnapshotId() {
+			return this.sourceSnapshotId;
+		}
+
+		public void setSourceSnapshotId(String sourceSnapshotId) {
+			this.sourceSnapshotId = sourceSnapshotId;
+		}
+
+		public Integer getRetentionDays() {
+			return this.retentionDays;
+		}
+
+		public void setRetentionDays(Integer retentionDays) {
+			this.retentionDays = retentionDays;
+		}
+
+		public String getSourceStorageType() {
+			return this.sourceStorageType;
+		}
+
+		public void setSourceStorageType(String sourceStorageType) {
+			this.sourceStorageType = sourceStorageType;
+		}
+
+		public String getSnapshotId() {
+			return this.snapshotId;
+		}
+
+		public void setSnapshotId(String snapshotId) {
+			this.snapshotId = snapshotId;
+		}
+
+		public Long getFullSnapshotSizeInBytes() {
+			return this.fullSnapshotSizeInBytes;
+		}
+
+		public void setFullSnapshotSizeInBytes(Long fullSnapshotSizeInBytes) {
+			this.fullSnapshotSizeInBytes = fullSnapshotSizeInBytes;
+		}
+
+		public String getSourceDiskSize() {
+			return this.sourceDiskSize;
+		}
+
+		public void setSourceDiskSize(String sourceDiskSize) {
+			this.sourceDiskSize = sourceDiskSize;
+		}
+
+		public String getCreationTime() {
+			return this.creationTime;
+		}
+
+		public void setCreationTime(String creationTime) {
+			this.creationTime = creationTime;
+		}
+
+		public String getLastModifiedTime() {
+			return this.lastModifiedTime;
+		}
+
+		public void setLastModifiedTime(String lastModifiedTime) {
+			this.lastModifiedTime = lastModifiedTime;
+		}
+
+		public String getSnapshotType() {
+			return this.snapshotType;
+		}
+
+		public void setSnapshotType(String snapshotType) {
+			this.snapshotType = snapshotType;
+		}
+
+		public String getRegionId() {
+			return this.regionId;
+		}
+
+		public void setRegionId(String regionId) {
+			this.regionId = regionId;
+		}
+
+		public Integer getRemainTime() {
+			return this.remainTime;
+		}
+
+		public void setRemainTime(Integer remainTime) {
+			this.remainTime = remainTime;
+		}
+
+		public String getSourceDiskType() {
+			return this.sourceDiskType;
+		}
+
+		public void setSourceDiskType(String sourceDiskType) {
+			this.sourceDiskType = sourceDiskType;
+		}
+
+		public List<Tag> getTags() {
+			return this.tags;
+		}
+
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
+		}
+
+		public static class Tag {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
+			}
 		}
 	}
 

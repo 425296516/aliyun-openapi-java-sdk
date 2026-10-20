@@ -1,0 +1,52 @@
+2024-03-25 Version: 1.0.15
+- Fix API
+
+2024-02-29 Version: 1.0.14
+- Generated 2019-01-03 for `Sddp`.
+
+2024-02-27 Version: 1.0.13
+- Add DescribeParentInstance open api.
+
+2023-08-30 Version: 1.0.12
+- Add some open api.
+
+2023-07-07 Version: 1.0.11
+- Add some api version2.
+
+2023-06-30 Version: 1.0.10
+- Add DescribeCategoryTemplateList api.
+- Modify some api directory.
+
+2023-06-29 Version: 1.0.9
+- Add some public api.
+
+2022-05-25 Version: 1.0.8
+- SampleSize add.
+
+2022-04-27 Version: 1.0.7
+- CreateDataLimit add enable filed.
+
+2022-04-18 Version: 1.0.6
+- Change DescribeEventDetail Data.
+
+2021-09-26 Version: 1.0.3
+- Fix bugs for create config.
+
+2020-03-13 Version: 1.0.2
+- Support datamask api.
+
+2020-03-12 Version: 1.0.2
+- Support datamask api.
+
+2020-03-12 Version: 1.0.2
+- Support datamask api.
+
+2020-03-12 Version: 1.0.1
+- Support datamask api.
+
+2019-06-05 Version: 1.0.1
+1, Update DescribeDataLimitDetail interface, add password for response
+
+2019-05-27 Version: 1.0.0
+1, Initial release of api, including data management api, rule configuration api and system configuration api.
+

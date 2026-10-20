@@ -1,0 +1,91 @@
+2022-05-26 Version: 1.11.12
+- Add PodIp for DescribeRenderingDevices and DescribeClusterDevices.
+
+2022-04-21 Version: 1.11.11
+- Add ImageId for UpgradeRenderingDevicesHostOSRequest.
+
+2022-02-25 Version: 1.11.10
+- Add SNAT info for DescribeRenderingDevices DescribeClusterDevices.
+
+2021-12-14 Version: 1.11.9
+- Change up FlowControl for OperateRenderigDevices,ResetRenderingDevices and DeleteRenderingDevices.
+
+2021-12-01 Version: 1.11.7
+- Add UpgradeRenderingDevicesImage and UpgradeRenderingDevicesHostOS.
+
+2021-11-26 Version: 1.11.6
+- Add PodInfos for DescribeClusterDevices and DescribeRenderingDevices.
+
+2021-11-23 Version: 1.11.5
+- Add password and instanceName for VM.
+- Reset interface support pod.
+
+2021-11-03 Version: 1.11.4
+- Add password and instanceName for VM.
+
+2021-09-26 Version: 1.11.3
+- Support odcap device.
+
+2021-09-26 Version: 1.11.2
+- Support odcap device.
+
+2021-08-05 Version: 1.11.1
+- Add cloud-rendering-service API.
+- Fix bugs.
+
+2021-08-04 Version: 1.11.0
+- Add cloud-rendering-service API.
+
+2020-10-13 Version: 1.10.2
+- Generated 2018-12-12 for `vs`.
+
+2020-09-22 Version: 1.10.1
+- Generated 2018-12-12 for `vs`.
+
+2020-06-29 Version: 1.10.0
+- Supported gb28181 parent platform.
+
+2020-05-25 Version: 1.9.0
+- Supported auvsp protocol changes.
+- Supported start vod streams.
+- Supported stop vod streams.
+- Supported gb28281 alarm on device.
+
+2020-03-11 Version: 1.8.0
+- Supported ondemand record.
+- Supported ivision template binding.
+
+2020-02-18 Version: 1.7.0
+- Supported customized params in device apis.
+
+2020-01-13 Version: 1.6.1
+- Supported ondemand start transfer stream.
+
+2020-01-09 Version: 1.6.0
+- Supported ondemand transfer stream.
+- Supported device position.
+
+2019-11-22 Version: 1.5.0
+- Supported ondemand snapshot.
+
+2019-11-19 Version: 1.4.0
+- Supported transcode template.
+
+2019-11-01 Version: 1.3.0
+- Supported directory APIs.
+
+2019-10-14 Version: 1.2.0
+- Supported callback for groups APIs.
+- Supported NVR historical stream for DescribeStreamURL.
+
+2019-08-29 Version: 1.1.0
+- Add PTZ APIs.
+
+2019-07-29 Version: 1.0.0
+- Supported group API.
+- Supported device APIs.
+- Supported stream APIs.
+- Supported template APIs.
+- Supported record APIs.
+- Supported domain APIs.
+

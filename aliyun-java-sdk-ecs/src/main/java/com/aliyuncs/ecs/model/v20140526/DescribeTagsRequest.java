@@ -1,85 +1,55 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.model.v20140526;
 
 import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
-	
-	public DescribeTagsRequest() {
-		super("Ecs", "2014-05-26", "DescribeTags");
-	}
-
-	private Long ownerId;
-
-	private String resourceOwnerAccount;
+	   
 
 	private Long resourceOwnerId;
 
+	private Integer pageNumber;
+
 	private Integer pageSize;
 
-	private String nextToken;
-
-	private String resourceType;
+	private List<Tag> tags;
 
 	private String resourceId;
 
-	private String tag1Key;
+	private String resourceOwnerAccount;
 
-	private String tag2Key;
+	private Long ownerId;
 
-	private String tag3Key;
+	private String resourceType;
 
-	private String tag4Key;
-
-	private String tag5Key;
-
-	private String tag1Value;
-
-	private String tag2Value;
-
-	private String tag3Value;
-
-	private String tag4Value;
-
-	private String tag5Value;
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		putQueryParameter("OwnerId", String.valueOf(ownerId));
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+	private String category;
+	public DescribeTagsRequest() {
+		super("Ecs", "2014-05-26", "DescribeTags", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
 	}
 
 	public Long getResourceOwnerId() {
@@ -88,7 +58,20 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 
 	public void setResourceOwnerId(Long resourceOwnerId) {
 		this.resourceOwnerId = resourceOwnerId;
-		putQueryParameter("ResourceOwnerId", String.valueOf(resourceOwnerId));
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
+		if(pageNumber != null){
+			putQueryParameter("PageNumber", pageNumber.toString());
+		}
 	}
 
 	public Integer getPageSize() {
@@ -97,25 +80,23 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 
 	public void setPageSize(Integer pageSize) {
 		this.pageSize = pageSize;
-		putQueryParameter("PageSize", String.valueOf(pageSize));
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
+		}
 	}
 
-	public String getNextToken() {
-		return this.nextToken;
+	public List<Tag> getTags() {
+		return this.tags;
 	}
 
-	public void setNextToken(String nextToken) {
-		this.nextToken = nextToken;
-		putQueryParameter("NextToken", nextToken);
-	}
-
-	public String getResourceType() {
-		return this.resourceType;
-	}
-
-	public void setResourceType(String resourceType) {
-		this.resourceType = resourceType;
-		putQueryParameter("ResourceType", resourceType);
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
+			}
+		}	
 	}
 
 	public String getResourceId() {
@@ -124,97 +105,76 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 
 	public void setResourceId(String resourceId) {
 		this.resourceId = resourceId;
-		putQueryParameter("ResourceId", resourceId);
+		if(resourceId != null){
+			putQueryParameter("ResourceId", resourceId);
+		}
 	}
 
-	public String getTag1Key() {
-		return this.tag1Key;
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
 	}
 
-	public void setTag1Key(String tag1Key) {
-		this.tag1Key = tag1Key;
-		putQueryParameter("Tag.1.Key", tag1Key);
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
 	}
 
-	public String getTag2Key() {
-		return this.tag2Key;
+	public Long getOwnerId() {
+		return this.ownerId;
 	}
 
-	public void setTag2Key(String tag2Key) {
-		this.tag2Key = tag2Key;
-		putQueryParameter("Tag.2.Key", tag2Key);
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
 	}
 
-	public String getTag3Key() {
-		return this.tag3Key;
+	public String getResourceType() {
+		return this.resourceType;
 	}
 
-	public void setTag3Key(String tag3Key) {
-		this.tag3Key = tag3Key;
-		putQueryParameter("Tag.3.Key", tag3Key);
+	public void setResourceType(String resourceType) {
+		this.resourceType = resourceType;
+		if(resourceType != null){
+			putQueryParameter("ResourceType", resourceType);
+		}
 	}
 
-	public String getTag4Key() {
-		return this.tag4Key;
+	public String getCategory() {
+		return this.category;
 	}
 
-	public void setTag4Key(String tag4Key) {
-		this.tag4Key = tag4Key;
-		putQueryParameter("Tag.4.Key", tag4Key);
+	public void setCategory(String category) {
+		this.category = category;
+		if(category != null){
+			putQueryParameter("Category", category);
+		}
 	}
 
-	public String getTag5Key() {
-		return this.tag5Key;
-	}
+	public static class Tag {
 
-	public void setTag5Key(String tag5Key) {
-		this.tag5Key = tag5Key;
-		putQueryParameter("Tag.5.Key", tag5Key);
-	}
+		private String value;
 
-	public String getTag1Value() {
-		return this.tag1Value;
-	}
+		private String key;
 
-	public void setTag1Value(String tag1Value) {
-		this.tag1Value = tag1Value;
-		putQueryParameter("Tag.1.Value", tag1Value);
-	}
+		public String getValue() {
+			return this.value;
+		}
 
-	public String getTag2Value() {
-		return this.tag2Value;
-	}
+		public void setValue(String value) {
+			this.value = value;
+		}
 
-	public void setTag2Value(String tag2Value) {
-		this.tag2Value = tag2Value;
-		putQueryParameter("Tag.2.Value", tag2Value);
-	}
+		public String getKey() {
+			return this.key;
+		}
 
-	public String getTag3Value() {
-		return this.tag3Value;
-	}
-
-	public void setTag3Value(String tag3Value) {
-		this.tag3Value = tag3Value;
-		putQueryParameter("Tag.3.Value", tag3Value);
-	}
-
-	public String getTag4Value() {
-		return this.tag4Value;
-	}
-
-	public void setTag4Value(String tag4Value) {
-		this.tag4Value = tag4Value;
-		putQueryParameter("Tag.4.Value", tag4Value);
-	}
-
-	public String getTag5Value() {
-		return this.tag5Value;
-	}
-
-	public void setTag5Value(String tag5Value) {
-		this.tag5Value = tag5Value;
-		putQueryParameter("Tag.5.Value", tag5Value);
+		public void setKey(String key) {
+			this.key = key;
+		}
 	}
 
 	@Override

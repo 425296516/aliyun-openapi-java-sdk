@@ -1,0 +1,457 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.ecs.model.v20140526;
+
+import java.util.List;
+import com.aliyuncs.AcsResponse;
+import com.aliyuncs.ecs.transform.v20140526.DescribeElasticityAssurancesResponseUnmarshaller;
+import com.aliyuncs.transform.UnmarshallerContext;
+
+/**
+ * @author auto create
+ * @version 
+ */
+public class DescribeElasticityAssurancesResponse extends AcsResponse {
+
+	private Integer totalCount;
+
+	private String nextToken;
+
+	private String requestId;
+
+	private Integer maxResults;
+
+	private List<ElasticityAssuranceItem> elasticityAssuranceSet;
+
+	public Integer getTotalCount() {
+		return this.totalCount;
+	}
+
+	public void setTotalCount(Integer totalCount) {
+		this.totalCount = totalCount;
+	}
+
+	public String getNextToken() {
+		return this.nextToken;
+	}
+
+	public void setNextToken(String nextToken) {
+		this.nextToken = nextToken;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public Integer getMaxResults() {
+		return this.maxResults;
+	}
+
+	public void setMaxResults(Integer maxResults) {
+		this.maxResults = maxResults;
+	}
+
+	public List<ElasticityAssuranceItem> getElasticityAssuranceSet() {
+		return this.elasticityAssuranceSet;
+	}
+
+	public void setElasticityAssuranceSet(List<ElasticityAssuranceItem> elasticityAssuranceSet) {
+		this.elasticityAssuranceSet = elasticityAssuranceSet;
+	}
+
+	public static class ElasticityAssuranceItem {
+
+		private String status;
+
+		private Integer usedAssuranceTimes;
+
+		private String description;
+
+		private String endTime;
+
+		private String resourceGroupId;
+
+		private String latestStartTime;
+
+		private String privatePoolOptionsName;
+
+		private String instanceChargeType;
+
+		private String elasticityAssuranceOwnerId;
+
+		private String startTime;
+
+		private String startTimeType;
+
+		private String privatePoolOptionsMatchCriteria;
+
+		private String privatePoolOptionsId;
+
+		private String totalAssuranceTimes;
+
+		private String packageType;
+
+		private String regionId;
+
+		private List<RecurrenceRule> recurrenceRules;
+
+		private List<AllocatedResource> allocatedResources;
+
+		private List<Tag> tags;
+
+		public String getStatus() {
+			return this.status;
+		}
+
+		public void setStatus(String status) {
+			this.status = status;
+		}
+
+		public Integer getUsedAssuranceTimes() {
+			return this.usedAssuranceTimes;
+		}
+
+		public void setUsedAssuranceTimes(Integer usedAssuranceTimes) {
+			this.usedAssuranceTimes = usedAssuranceTimes;
+		}
+
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		public String getEndTime() {
+			return this.endTime;
+		}
+
+		public void setEndTime(String endTime) {
+			this.endTime = endTime;
+		}
+
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
+		public String getLatestStartTime() {
+			return this.latestStartTime;
+		}
+
+		public void setLatestStartTime(String latestStartTime) {
+			this.latestStartTime = latestStartTime;
+		}
+
+		public String getPrivatePoolOptionsName() {
+			return this.privatePoolOptionsName;
+		}
+
+		public void setPrivatePoolOptionsName(String privatePoolOptionsName) {
+			this.privatePoolOptionsName = privatePoolOptionsName;
+		}
+
+		public String getInstanceChargeType() {
+			return this.instanceChargeType;
+		}
+
+		public void setInstanceChargeType(String instanceChargeType) {
+			this.instanceChargeType = instanceChargeType;
+		}
+
+		public String getElasticityAssuranceOwnerId() {
+			return this.elasticityAssuranceOwnerId;
+		}
+
+		public void setElasticityAssuranceOwnerId(String elasticityAssuranceOwnerId) {
+			this.elasticityAssuranceOwnerId = elasticityAssuranceOwnerId;
+		}
+
+		public String getStartTime() {
+			return this.startTime;
+		}
+
+		public void setStartTime(String startTime) {
+			this.startTime = startTime;
+		}
+
+		public String getStartTimeType() {
+			return this.startTimeType;
+		}
+
+		public void setStartTimeType(String startTimeType) {
+			this.startTimeType = startTimeType;
+		}
+
+		public String getPrivatePoolOptionsMatchCriteria() {
+			return this.privatePoolOptionsMatchCriteria;
+		}
+
+		public void setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
+			this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
+		}
+
+		public String getPrivatePoolOptionsId() {
+			return this.privatePoolOptionsId;
+		}
+
+		public void setPrivatePoolOptionsId(String privatePoolOptionsId) {
+			this.privatePoolOptionsId = privatePoolOptionsId;
+		}
+
+		public String getTotalAssuranceTimes() {
+			return this.totalAssuranceTimes;
+		}
+
+		public void setTotalAssuranceTimes(String totalAssuranceTimes) {
+			this.totalAssuranceTimes = totalAssuranceTimes;
+		}
+
+		public String getPackageType() {
+			return this.packageType;
+		}
+
+		public void setPackageType(String packageType) {
+			this.packageType = packageType;
+		}
+
+		public String getRegionId() {
+			return this.regionId;
+		}
+
+		public void setRegionId(String regionId) {
+			this.regionId = regionId;
+		}
+
+		public List<RecurrenceRule> getRecurrenceRules() {
+			return this.recurrenceRules;
+		}
+
+		public void setRecurrenceRules(List<RecurrenceRule> recurrenceRules) {
+			this.recurrenceRules = recurrenceRules;
+		}
+
+		public List<AllocatedResource> getAllocatedResources() {
+			return this.allocatedResources;
+		}
+
+		public void setAllocatedResources(List<AllocatedResource> allocatedResources) {
+			this.allocatedResources = allocatedResources;
+		}
+
+		public List<Tag> getTags() {
+			return this.tags;
+		}
+
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
+		}
+
+		public static class RecurrenceRule {
+
+			private Integer startHour;
+
+			private String recurrenceType;
+
+			private Integer endHour;
+
+			private String recurrenceValue;
+
+			public Integer getStartHour() {
+				return this.startHour;
+			}
+
+			public void setStartHour(Integer startHour) {
+				this.startHour = startHour;
+			}
+
+			public String getRecurrenceType() {
+				return this.recurrenceType;
+			}
+
+			public void setRecurrenceType(String recurrenceType) {
+				this.recurrenceType = recurrenceType;
+			}
+
+			public Integer getEndHour() {
+				return this.endHour;
+			}
+
+			public void setEndHour(Integer endHour) {
+				this.endHour = endHour;
+			}
+
+			public String getRecurrenceValue() {
+				return this.recurrenceValue;
+			}
+
+			public void setRecurrenceValue(String recurrenceValue) {
+				this.recurrenceValue = recurrenceValue;
+			}
+		}
+
+		public static class AllocatedResource {
+
+			private Integer usedAmount;
+
+			private Integer availableAmount;
+
+			private String zoneId;
+
+			private Integer totalAmount;
+
+			private Integer failedAmount;
+
+			private String instanceType;
+
+			private Integer lockedAmount;
+
+			private List<ElasticityAssuranceUsage> elasticityAssuranceUsages;
+
+			public Integer getUsedAmount() {
+				return this.usedAmount;
+			}
+
+			public void setUsedAmount(Integer usedAmount) {
+				this.usedAmount = usedAmount;
+			}
+
+			public Integer getAvailableAmount() {
+				return this.availableAmount;
+			}
+
+			public void setAvailableAmount(Integer availableAmount) {
+				this.availableAmount = availableAmount;
+			}
+
+			public String getZoneId() {
+				return this.zoneId;
+			}
+
+			public void setZoneId(String zoneId) {
+				this.zoneId = zoneId;
+			}
+
+			public Integer getTotalAmount() {
+				return this.totalAmount;
+			}
+
+			public void setTotalAmount(Integer totalAmount) {
+				this.totalAmount = totalAmount;
+			}
+
+			public Integer getFailedAmount() {
+				return this.failedAmount;
+			}
+
+			public void setFailedAmount(Integer failedAmount) {
+				this.failedAmount = failedAmount;
+			}
+
+			public String getInstanceType() {
+				return this.instanceType;
+			}
+
+			public void setInstanceType(String instanceType) {
+				this.instanceType = instanceType;
+			}
+
+			public Integer getLockedAmount() {
+				return this.lockedAmount;
+			}
+
+			public void setLockedAmount(Integer lockedAmount) {
+				this.lockedAmount = lockedAmount;
+			}
+
+			public List<ElasticityAssuranceUsage> getElasticityAssuranceUsages() {
+				return this.elasticityAssuranceUsages;
+			}
+
+			public void setElasticityAssuranceUsages(List<ElasticityAssuranceUsage> elasticityAssuranceUsages) {
+				this.elasticityAssuranceUsages = elasticityAssuranceUsages;
+			}
+
+			public static class ElasticityAssuranceUsage {
+
+				private Integer usedAmount;
+
+				private String accountId;
+
+				private String serviceName;
+
+				public Integer getUsedAmount() {
+					return this.usedAmount;
+				}
+
+				public void setUsedAmount(Integer usedAmount) {
+					this.usedAmount = usedAmount;
+				}
+
+				public String getAccountId() {
+					return this.accountId;
+				}
+
+				public void setAccountId(String accountId) {
+					this.accountId = accountId;
+				}
+
+				public String getServiceName() {
+					return this.serviceName;
+				}
+
+				public void setServiceName(String serviceName) {
+					this.serviceName = serviceName;
+				}
+			}
+		}
+
+		public static class Tag {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
+			}
+		}
+	}
+
+	@Override
+	public DescribeElasticityAssurancesResponse getInstance(UnmarshallerContext context) {
+		return	DescribeElasticityAssurancesResponseUnmarshaller.unmarshall(this, context);
+	}
+}

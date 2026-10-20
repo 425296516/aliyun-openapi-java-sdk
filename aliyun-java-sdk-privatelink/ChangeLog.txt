@@ -1,0 +1,38 @@
+2023-07-05 Version: 1.0.9
+- Add latest update.
+
+2022-12-20 Version: 1.0.8
+- Support resource scheduler.
+
+2022-01-07 Version: 1.0.7
+- Support resource scheduler.
+
+2021-12-17 Version: 1.0.6
+- Support Endpoint Protect.
+
+2021-12-03 Version: 1.0.5
+- Support EndpointType and ServiceType.
+
+2021-11-04 Version: 1.0.4
+- Adjust some param.
+
+2021-04-16 Version: 1.0.3
+- Add CheckProductOpen.
+- Add az routing policy.
+
+2021-01-21 Version: 1.0.2
+- Modify some field types.
+
+2021-01-21 Version: 1.0.2
+- Modify some field types.
+
+2021-01-21 Version: 1.0.2
+- Modify some field types.
+
+2020-11-12 Version: 1.0.1
+- Add type of payment for endpoint service.
+- Add api for opening endpoint.
+
+2020-09-24 Version: 1.0.0
+- Generated 2020-04-15 for `Privatelink`.
+

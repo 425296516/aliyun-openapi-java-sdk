@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -29,28 +25,28 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeModifyParameterLogResponse extends AcsResponse {
 
-	private String requestId;
+	private String dBInstanceId;
 
 	private String engine;
 
-	private String dBInstanceId;
-
 	private String engineVersion;
-
-	private Integer totalRecordCount;
 
 	private Integer pageNumber;
 
 	private Integer pageRecordCount;
 
+	private String requestId;
+
+	private Integer totalRecordCount;
+
 	private List<ParameterChangeLog> items;
 
-	public String getRequestId() {
-		return this.requestId;
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
 	}
 
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
 	}
 
 	public String getEngine() {
@@ -61,28 +57,12 @@ public class DescribeModifyParameterLogResponse extends AcsResponse {
 		this.engine = engine;
 	}
 
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-	}
-
 	public String getEngineVersion() {
 		return this.engineVersion;
 	}
 
 	public void setEngineVersion(String engineVersion) {
 		this.engineVersion = engineVersion;
-	}
-
-	public Integer getTotalRecordCount() {
-		return this.totalRecordCount;
-	}
-
-	public void setTotalRecordCount(Integer totalRecordCount) {
-		this.totalRecordCount = totalRecordCount;
 	}
 
 	public Integer getPageNumber() {
@@ -101,6 +81,22 @@ public class DescribeModifyParameterLogResponse extends AcsResponse {
 		this.pageRecordCount = pageRecordCount;
 	}
 
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public Integer getTotalRecordCount() {
+		return this.totalRecordCount;
+	}
+
+	public void setTotalRecordCount(Integer totalRecordCount) {
+		this.totalRecordCount = totalRecordCount;
+	}
+
 	public List<ParameterChangeLog> getItems() {
 		return this.items;
 	}
@@ -113,13 +109,13 @@ public class DescribeModifyParameterLogResponse extends AcsResponse {
 
 		private String modifyTime;
 
-		private String oldParameterValue;
-
 		private String newParameterValue;
+
+		private String oldParameterValue;
 
 		private String parameterName;
 
-		private Status status;
+		private String status;
 
 		public String getModifyTime() {
 			return this.modifyTime;
@@ -127,14 +123,6 @@ public class DescribeModifyParameterLogResponse extends AcsResponse {
 
 		public void setModifyTime(String modifyTime) {
 			this.modifyTime = modifyTime;
-		}
-
-		public String getOldParameterValue() {
-			return this.oldParameterValue;
-		}
-
-		public void setOldParameterValue(String oldParameterValue) {
-			this.oldParameterValue = oldParameterValue;
 		}
 
 		public String getNewParameterValue() {
@@ -145,6 +133,14 @@ public class DescribeModifyParameterLogResponse extends AcsResponse {
 			this.newParameterValue = newParameterValue;
 		}
 
+		public String getOldParameterValue() {
+			return this.oldParameterValue;
+		}
+
+		public void setOldParameterValue(String oldParameterValue) {
+			this.oldParameterValue = oldParameterValue;
+		}
+
 		public String getParameterName() {
 			return this.parameterName;
 		}
@@ -153,45 +149,12 @@ public class DescribeModifyParameterLogResponse extends AcsResponse {
 			this.parameterName = parameterName;
 		}
 
-		public Status getStatus() {
+		public String getStatus() {
 			return this.status;
 		}
 
-		public void setStatus(Status status) {
+		public void setStatus(String status) {
 			this.status = status;
-		}
-
-		public enum Status {
-		
-			APPLIED("Applied"),
-			SYNCING("Syncing"),;
-			
-		    private String stringValue;
-		
-			Status(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static Status getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (Status status : Status.values()) {
-					if(status.getStringValue().equals(stringValue)){
-						return status;
-					}
-				}
-		    	return null;
-		    }
 		}
 	}
 

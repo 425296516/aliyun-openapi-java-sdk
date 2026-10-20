@@ -1,0 +1,181 @@
+2025-03-24 Version 1.5.7
+1、CreateContainerGroup api support parameter plainHttpRegistry and insecureRegistry.
+
+2024-11-20 Version 1.5.6
+1、BatchCreateContainerGroups support gpuDriverVersion
+
+2024-09-11 Version 1.5.5
+1、Api support: TagResources、UntagResources、ListTagResources
+
+2024-06-05 Version 1.5.4
+1、CreateContainerGroup support gpuDriverVersion
+
+2024-03-26 Version 1.5.3
+1、Add api: ResizeContainerGroupEphemeralStorage
+2、Fix SecurityContextSysctls parameters
+
+2024-01-31 Version: 1.5.2
+1、BatchCreateContainerGroups support EipISP
+
+
+2024-01-24 Version: 1.5.1
+1、support eipPublicIpAddressPoolId、computeCategory、acr.arn
+
+2024-01-22 Version: 1.5.0
+1、LifecyclePreStopHandlerHttpGetHttpHeader fixup name
+
+2024-01-12 Version: 1.4.9
+1、describeStatusApi change
+
+2023-11-16 Version: 1.4.8
+1、DescribeContainerGroupMetricResponse add filesystem disk
+
+2023-10-08 Version: 1.4.7
+1、DescribeAvailableResource spotResource fixup
+
+2023-10-08 Version: 1.4.6
+1、BatchCreateContainerGroups
+
+2023-09-14 Version: 1.4.5
+1、Container env support hide
+
+2023-08-02 Version: 1.4.4
+1、CreateContainerGroup Api add parameters
+
+2023-07-21 Version: 1.4.3
+1、dataCache support copy api
+
+2023-07-20 Version: 1.4.2
+1、hotfix describeStatusApi system.out
+
+2023-07-12 Version: 1.4.1
+1、hotfix describeStatusApi Boolean type
+2、add parameter emptyDirVolumeSizeLimit response
+
+2023-06-05 Version: 1.4.0
+1、Support DataCache Api
+2、Support volume EmptyDirVolumeSizeLimit parameter
+
+2023-05-05 Version: 1.3.9
+1、Support Api DeleteContainerGroups
+
+2023-04-19 Version: 1.3.8
+1、DescribeContainerGroup Api add VolumeMount.SubPath
+
+2023-04-12 Version: 1.3.7
+1、Api add VolumeMount.MountPropagation and  VolumeMount.SubPath
+
+2023-03-10 Version: 1.3.6
+1、Support API: CommitContainer、DescribeCommitContainerTask
+
+2023-02-28 Version: 1.3.5
+1、DescribePrice Api add parameter spotDuration
+
+2023-01-10 Version: 1.3.4
+1、FixUp DescribeMultiContainerGroupMetric Api Response
+
+2022-07-13 Version: 1.3.3
+1、CreateContainerGroup Api add params: Ipv6GatewayBandwidthEnable、Ipv6GatewayBandwidth
+
+2022-07-13 Version: 1.3.2
+1、support api DescribeAvailableResource
+
+2022-03-18 Vesion: 1.3.1
+1、imc support flashCopyCount/standardCopyCount
+
+2022-02-21 Version: 1.3.0
+1、support describeContainerGroupStatus Api
+
+2022-01-13 Version: 1.2.9
+1、add describeImageCaches response
+
+2021-08-19 Version: 1.2.8
+1、ExecCommand Api update syncResponse
+2、fixup terminationGracePeriodSeconds type Long
+3、support hostPathVolume
+
+2021-08-10 Version: 1.2.7
+1、support BatchCreateContainerGroups API
+2、imageCache support acrRegistryInfos
+
+2021-06-09 Version: 1.2.6
+1, support spot duration
+2, support flash cache
+
+2021-05-20 Version: 1.2.5
+1, create support flexVolume
+
+2021-05-17 Version: 1.2.4
+1, fixup RamRoleName request && describeRegions response
+
+2021-03-31 Version: 1.2.3
+1, completion create request args
+
+2021-03-24 Version: 1.2.2
+1, fixup acrRegistryInfos
+
+2021-03-24 Version: 1.2.1
+1, completion describe response
+
+2021-03-11 Version: 1.2.0
+1, support acrRegistryInfo
+
+2021-02-25 Version: 1.1.19
+1, exec reponse add HttpUrl
+
+2021-01-14 Version: 1.1.18
+1、support anpassen systemfestplatte
+
+2020-12-24 Version: 1.1.17
+1、support specity resourcegroupid describe
+
+2020-12-05 Version: 1.1.16
+1, not support template api
+2, describePrice support spotInstanceType
+
+2020-11-25 Version: 1.0.15
+1, support ListUsage
+
+2020-11-19 Version: 1.0.14
+1, support automatchimagecache cache reuse
+
+2019-04-25 Version: 1.0.7
+1, support mode of configFileVolume
+
+2019-04-23 Version: 1.0.6
+1, support mode of configFileVolume
+
+2019-04-10 Version: 1.0.6
+1, support metric
+2, support emptyDirVolume memory medium
+
+2019-03-20 Version: 1.0.5
+1, support template api.
+2, support hostAliases/clientToken
+
+2019-03-13 Version: 1.0.4
+1, Add application name support for config center APIs.
+2, Add GetCluster API.
+3, Support debug switch in user region APIs.
+
+2019-03-13 Version: 1.0.4
+1, Add application name support for config center APIs.
+2, Add GetCluster API.
+3, Support debug switch in user region APIs.
+
+2019-03-13 Version: 1.0.4
+1, support restart/update for eci.
+2, support describePrice and exec api.
+3, support subpath for volumemount
+
+2018-12-29 Version: 1.0.3
+1, Add probe for container.
+2, Add securityContext for container.
+3, Add dnsConfig for pod.
+3, Add unmarshall tool for ECI
+
+2018-11-07 Version: 1.0.0
+1, The beta version SDK of ECI.
+2, Only supports Java and Python.
+3, Go will be supported soon
+

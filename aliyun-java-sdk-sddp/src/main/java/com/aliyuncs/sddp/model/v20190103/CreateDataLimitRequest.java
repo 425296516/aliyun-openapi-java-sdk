@@ -1,0 +1,275 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.sddp.model.v20190103;
+
+import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.sddp.Endpoint;
+
+/**
+ * @author auto create
+ * @version 
+ */
+public class CreateDataLimitRequest extends RpcAcsRequest<CreateDataLimitResponse> {
+	   
+
+	private Integer ocrStatus;
+
+	private Integer samplingSize;
+
+	private String parentId;
+
+	private String password;
+
+	private String sourceIp;
+
+	private Integer enable;
+
+	private String lang;
+
+	private String serviceRegionId;
+
+	private String engineType;
+
+	private Integer auditStatus;
+
+	private Integer autoScan;
+
+	private Integer featureType;
+
+	private Integer logStoreDay;
+
+	private String certificatePermission;
+
+	private Integer resourceType;
+
+	private Integer port;
+
+	private Integer eventStatus;
+
+	private String userName;
+	public CreateDataLimitRequest() {
+		super("Sddp", "2019-01-03", "CreateDataLimit", "sddp");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
+
+	public Integer getOcrStatus() {
+		return this.ocrStatus;
+	}
+
+	public void setOcrStatus(Integer ocrStatus) {
+		this.ocrStatus = ocrStatus;
+		if(ocrStatus != null){
+			putQueryParameter("OcrStatus", ocrStatus.toString());
+		}
+	}
+
+	public Integer getSamplingSize() {
+		return this.samplingSize;
+	}
+
+	public void setSamplingSize(Integer samplingSize) {
+		this.samplingSize = samplingSize;
+		if(samplingSize != null){
+			putQueryParameter("SamplingSize", samplingSize.toString());
+		}
+	}
+
+	public String getParentId() {
+		return this.parentId;
+	}
+
+	public void setParentId(String parentId) {
+		this.parentId = parentId;
+		if(parentId != null){
+			putQueryParameter("ParentId", parentId);
+		}
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+		if(password != null){
+			putQueryParameter("Password", password);
+		}
+	}
+
+	public String getSourceIp() {
+		return this.sourceIp;
+	}
+
+	public void setSourceIp(String sourceIp) {
+		this.sourceIp = sourceIp;
+		if(sourceIp != null){
+			putQueryParameter("SourceIp", sourceIp);
+		}
+	}
+
+	public Integer getEnable() {
+		return this.enable;
+	}
+
+	public void setEnable(Integer enable) {
+		this.enable = enable;
+		if(enable != null){
+			putQueryParameter("Enable", enable.toString());
+		}
+	}
+
+	public String getLang() {
+		return this.lang;
+	}
+
+	public void setLang(String lang) {
+		this.lang = lang;
+		if(lang != null){
+			putQueryParameter("Lang", lang);
+		}
+	}
+
+	public String getServiceRegionId() {
+		return this.serviceRegionId;
+	}
+
+	public void setServiceRegionId(String serviceRegionId) {
+		this.serviceRegionId = serviceRegionId;
+		if(serviceRegionId != null){
+			putQueryParameter("ServiceRegionId", serviceRegionId);
+		}
+	}
+
+	public String getEngineType() {
+		return this.engineType;
+	}
+
+	public void setEngineType(String engineType) {
+		this.engineType = engineType;
+		if(engineType != null){
+			putQueryParameter("EngineType", engineType);
+		}
+	}
+
+	public Integer getAuditStatus() {
+		return this.auditStatus;
+	}
+
+	public void setAuditStatus(Integer auditStatus) {
+		this.auditStatus = auditStatus;
+		if(auditStatus != null){
+			putQueryParameter("AuditStatus", auditStatus.toString());
+		}
+	}
+
+	public Integer getAutoScan() {
+		return this.autoScan;
+	}
+
+	public void setAutoScan(Integer autoScan) {
+		this.autoScan = autoScan;
+		if(autoScan != null){
+			putQueryParameter("AutoScan", autoScan.toString());
+		}
+	}
+
+	public Integer getFeatureType() {
+		return this.featureType;
+	}
+
+	public void setFeatureType(Integer featureType) {
+		this.featureType = featureType;
+		if(featureType != null){
+			putQueryParameter("FeatureType", featureType.toString());
+		}
+	}
+
+	public Integer getLogStoreDay() {
+		return this.logStoreDay;
+	}
+
+	public void setLogStoreDay(Integer logStoreDay) {
+		this.logStoreDay = logStoreDay;
+		if(logStoreDay != null){
+			putQueryParameter("LogStoreDay", logStoreDay.toString());
+		}
+	}
+
+	public String getCertificatePermission() {
+		return this.certificatePermission;
+	}
+
+	public void setCertificatePermission(String certificatePermission) {
+		this.certificatePermission = certificatePermission;
+		if(certificatePermission != null){
+			putQueryParameter("CertificatePermission", certificatePermission);
+		}
+	}
+
+	public Integer getResourceType() {
+		return this.resourceType;
+	}
+
+	public void setResourceType(Integer resourceType) {
+		this.resourceType = resourceType;
+		if(resourceType != null){
+			putQueryParameter("ResourceType", resourceType.toString());
+		}
+	}
+
+	public Integer getPort() {
+		return this.port;
+	}
+
+	public void setPort(Integer port) {
+		this.port = port;
+		if(port != null){
+			putQueryParameter("Port", port.toString());
+		}
+	}
+
+	public Integer getEventStatus() {
+		return this.eventStatus;
+	}
+
+	public void setEventStatus(Integer eventStatus) {
+		this.eventStatus = eventStatus;
+		if(eventStatus != null){
+			putQueryParameter("EventStatus", eventStatus.toString());
+		}
+	}
+
+	public String getUserName() {
+		return this.userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+		if(userName != null){
+			putQueryParameter("UserName", userName);
+		}
+	}
+
+	@Override
+	public Class<CreateDataLimitResponse> getResponseClass() {
+		return CreateDataLimitResponse.class;
+	}
+
+}

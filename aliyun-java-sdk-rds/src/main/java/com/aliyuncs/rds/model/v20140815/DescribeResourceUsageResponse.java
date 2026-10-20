@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import com.aliyuncs.AcsResponse;
@@ -28,26 +24,92 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeResourceUsageResponse extends AcsResponse {
 
-	private String requestId;
+	private Long archiveBackupSize;
 
-	private String dBInstanceId;
+	private Long backupDataSize;
 
-	private String engine;
+	private Long backupLogSize;
 
-	private Long diskUsed;
+	private Long backupOssDataSize;
 
-	private Long dataSize;
-
-	private Long logSize;
+	private Long backupOssLogSize;
 
 	private Long backupSize;
 
-	public String getRequestId() {
-		return this.requestId;
+	private Long coldBackupSize;
+
+	private String dBInstanceId;
+
+	private Long dataSize;
+
+	private Long diskUsed;
+
+	private String engine;
+
+	private Long logSize;
+
+	private Long paidBackupSize;
+
+	private String requestId;
+
+	private Long sQLSize;
+
+	private String backupEcsSnapshotSize;
+
+	public Long getArchiveBackupSize() {
+		return this.archiveBackupSize;
 	}
 
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
+	public void setArchiveBackupSize(Long archiveBackupSize) {
+		this.archiveBackupSize = archiveBackupSize;
+	}
+
+	public Long getBackupDataSize() {
+		return this.backupDataSize;
+	}
+
+	public void setBackupDataSize(Long backupDataSize) {
+		this.backupDataSize = backupDataSize;
+	}
+
+	public Long getBackupLogSize() {
+		return this.backupLogSize;
+	}
+
+	public void setBackupLogSize(Long backupLogSize) {
+		this.backupLogSize = backupLogSize;
+	}
+
+	public Long getBackupOssDataSize() {
+		return this.backupOssDataSize;
+	}
+
+	public void setBackupOssDataSize(Long backupOssDataSize) {
+		this.backupOssDataSize = backupOssDataSize;
+	}
+
+	public Long getBackupOssLogSize() {
+		return this.backupOssLogSize;
+	}
+
+	public void setBackupOssLogSize(Long backupOssLogSize) {
+		this.backupOssLogSize = backupOssLogSize;
+	}
+
+	public Long getBackupSize() {
+		return this.backupSize;
+	}
+
+	public void setBackupSize(Long backupSize) {
+		this.backupSize = backupSize;
+	}
+
+	public Long getColdBackupSize() {
+		return this.coldBackupSize;
+	}
+
+	public void setColdBackupSize(Long coldBackupSize) {
+		this.coldBackupSize = coldBackupSize;
 	}
 
 	public String getDBInstanceId() {
@@ -58,12 +120,12 @@ public class DescribeResourceUsageResponse extends AcsResponse {
 		this.dBInstanceId = dBInstanceId;
 	}
 
-	public String getEngine() {
-		return this.engine;
+	public Long getDataSize() {
+		return this.dataSize;
 	}
 
-	public void setEngine(String engine) {
-		this.engine = engine;
+	public void setDataSize(Long dataSize) {
+		this.dataSize = dataSize;
 	}
 
 	public Long getDiskUsed() {
@@ -74,12 +136,12 @@ public class DescribeResourceUsageResponse extends AcsResponse {
 		this.diskUsed = diskUsed;
 	}
 
-	public Long getDataSize() {
-		return this.dataSize;
+	public String getEngine() {
+		return this.engine;
 	}
 
-	public void setDataSize(Long dataSize) {
-		this.dataSize = dataSize;
+	public void setEngine(String engine) {
+		this.engine = engine;
 	}
 
 	public Long getLogSize() {
@@ -90,12 +152,36 @@ public class DescribeResourceUsageResponse extends AcsResponse {
 		this.logSize = logSize;
 	}
 
-	public Long getBackupSize() {
-		return this.backupSize;
+	public Long getPaidBackupSize() {
+		return this.paidBackupSize;
 	}
 
-	public void setBackupSize(Long backupSize) {
-		this.backupSize = backupSize;
+	public void setPaidBackupSize(Long paidBackupSize) {
+		this.paidBackupSize = paidBackupSize;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public Long getSQLSize() {
+		return this.sQLSize;
+	}
+
+	public void setSQLSize(Long sQLSize) {
+		this.sQLSize = sQLSize;
+	}
+
+	public String getBackupEcsSnapshotSize() {
+		return this.backupEcsSnapshotSize;
+	}
+
+	public void setBackupEcsSnapshotSize(String backupEcsSnapshotSize) {
+		this.backupEcsSnapshotSize = backupEcsSnapshotSize;
 	}
 
 	@Override

@@ -1,0 +1,197 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.dds.model.v20151201;
+
+import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.dds.Endpoint;
+
+/**
+ * @author auto create
+ * @version 
+ */
+public class ModifyDBInstanceConnectionStringRequest extends RpcAcsRequest<ModifyDBInstanceConnectionStringResponse> {
+	   
+
+	private Long resourceOwnerId;
+
+	private String networkType;
+
+	private String dBInstanceId;
+
+	private String nodeId;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
+
+	private Integer newPort;
+
+	private String newConnectionString;
+
+	private Long ownerId;
+
+	private String currentConnectionString;
+
+	private Boolean portModifyOnly;
+
+	private Boolean forceModifySuffix;
+	public ModifyDBInstanceConnectionStringRequest() {
+		super("Dds", "2015-12-01", "ModifyDBInstanceConnectionString", "dds");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
+
+	public Long getResourceOwnerId() {
+		return this.resourceOwnerId;
+	}
+
+	public void setResourceOwnerId(Long resourceOwnerId) {
+		this.resourceOwnerId = resourceOwnerId;
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getNetworkType() {
+		return this.networkType;
+	}
+
+	public void setNetworkType(String networkType) {
+		this.networkType = networkType;
+		if(networkType != null){
+			putQueryParameter("NetworkType", networkType);
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
+		}
+	}
+
+	public String getNodeId() {
+		return this.nodeId;
+	}
+
+	public void setNodeId(String nodeId) {
+		this.nodeId = nodeId;
+		if(nodeId != null){
+			putQueryParameter("NodeId", nodeId);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Integer getNewPort() {
+		return this.newPort;
+	}
+
+	public void setNewPort(Integer newPort) {
+		this.newPort = newPort;
+		if(newPort != null){
+			putQueryParameter("NewPort", newPort.toString());
+		}
+	}
+
+	public String getNewConnectionString() {
+		return this.newConnectionString;
+	}
+
+	public void setNewConnectionString(String newConnectionString) {
+		this.newConnectionString = newConnectionString;
+		if(newConnectionString != null){
+			putQueryParameter("NewConnectionString", newConnectionString);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getCurrentConnectionString() {
+		return this.currentConnectionString;
+	}
+
+	public void setCurrentConnectionString(String currentConnectionString) {
+		this.currentConnectionString = currentConnectionString;
+		if(currentConnectionString != null){
+			putQueryParameter("CurrentConnectionString", currentConnectionString);
+		}
+	}
+
+	public Boolean getPortModifyOnly() {
+		return this.portModifyOnly;
+	}
+
+	public void setPortModifyOnly(Boolean portModifyOnly) {
+		this.portModifyOnly = portModifyOnly;
+		if(portModifyOnly != null){
+			putQueryParameter("PortModifyOnly", portModifyOnly.toString());
+		}
+	}
+
+	public Boolean getForceModifySuffix() {
+		return this.forceModifySuffix;
+	}
+
+	public void setForceModifySuffix(Boolean forceModifySuffix) {
+		this.forceModifySuffix = forceModifySuffix;
+		if(forceModifySuffix != null){
+			putQueryParameter("ForceModifySuffix", forceModifySuffix.toString());
+		}
+	}
+
+	@Override
+	public Class<ModifyDBInstanceConnectionStringResponse> getResponseClass() {
+		return ModifyDBInstanceConnectionStringResponse.class;
+	}
+
+}

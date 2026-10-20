@@ -1,0 +1,81 @@
+2024-09-24 Version: 1.22.17
+- Generated 2019-05-06 for `sae`.
+
+2024-09-24 Version: 1.22.16
+- Generated 2019-05-06 for `sae`.
+
+2024-04-22 Version: 1.22.15
+- Generated 2019-05-06 for `sae`.
+
+2023-03-10 Version: 1.22.14
+- Support Create Namespace Without Micro Service Registration.
+
+2023-03-01 Version: 1.22.13
+- Fix getMetric api.
+
+2023-02-15 Version: 1.22.10
+- Add execjob api.
+
+2023-02-08 Version: 1.22.9
+- Add metric api.
+
+2023-01-04 Version: 1.22.7
+- Update deployApplication request parameters.
+
+2022-12-19 Version: 1.22.6
+- Fixed ApplicationScalingRule related api response struct.
+
+2022-12-05 Version: 1.22.5
+- Add support for secret.
+
+2022-12-05 Version: 1.22.4
+- Add support for secret.
+
+2022-11-29 Version: 1.22.0
+- Add python zip.
+
+2022-05-16 Version: 1.20.1
+- Support UpdateApplicationVswitches and DescribeComponents.
+
+2022-03-15 Version: 1.19.0
+- Support collect logs to kafka.
+
+2022-01-18 Version: 1.18.16
+- Support describe price.
+
+2022-01-07 Version: 1.18.15
+- Supported minReadyInstanceRatio parameter for deploy.
+
+2021-12-27 Version: 1.18.1
+- Support ACR EE, OSS, EIP for deploy.
+
+2021-12-09 Version: 1.18.0
+- Support ACR EE, OSS, EIP for deploy.
+
+2021-03-25 Version: 1.15.0
+- Release autoscaling apis for timer features.
+
+2020-12-03 Version: 1.4.1
+- Fix DeployApplication nas config ignored.
+
+2020-12-01 Version: 1.4.0
+- DeployApplication support nas config.
+
+2020-10-21 Version: 1.3.0
+- Release latest features.
+
+2020-08-05 Version: 1.2.0
+- Generated 2019-05-06 for `sae`.
+
+2019-12-12 Version: 1.1.0
+- Supported new features in public cloud.
+
+2019-08-28 Version: 1.0.1
+- Add NamespaceId for listApplication.
+
+2019-07-31 Version: 1.0.0
+- Initial release.
+
+2019-06-03 Version: 2.48.0-SNAPSHOT
+发布单接口规范化
+

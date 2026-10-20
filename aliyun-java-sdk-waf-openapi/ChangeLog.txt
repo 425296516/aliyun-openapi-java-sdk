@@ -1,0 +1,54 @@
+2024-05-14 Version: 1.1.10
+- Upgrade SDK.
+
+2023-08-22 Version: 1.1.9
+- Upgrade SDK.
+
+2022-01-18 Version: 1.1.8
+- Upgrade SDK.
+
+2021-12-14 Version: 1.1.7
+- Generated 2019-09-10 for `waf-openapi`.
+
+2021-10-18 Version: 1.1.6
+- Generated 2019-09-10, 2018-01-17 for `waf-openapi`.
+
+2021-05-27 Version: 1.1.5
+- Generated 2019-09-10 for `waf-openapi`.
+
+2021-01-07 Version: 1.1.3
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-12-16 Version: 1.1.2
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-11-19 Version: 1.1.1
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-11-19 Version: 1.1.0
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-11-18 Version: 1.1.0
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-11-12 Version: 1.0.3
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-06-15 Version: 1.0.2
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-06-15 Version: 1.0.2
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-05-20 Version: 1.0.2
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-05-13 Version: 1.0.1
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-04-13 Version: 1.0.0
+- Generated 2019-09-10 for `waf-openapi`.
+
+2020-04-09 Version: 1.0.0
+- WAF OpenApi SDK Release.
+

@@ -1,0 +1,21 @@
+2022-06-20 Version: 1.0.8
+- Public release.
+
+2022-05-25 Version: 1.0.7
+- Test.
+
+2022-04-28 Version: 1.0.6
+- Publish sdk ververica.
+
+2022-04-08 Version: 1.0.5
+- Publish sdk ververica.
+
+2021-04-21 Version: 1.0.2
+- Publish ververica.
+
+2021-03-24 Version: 1.0.1
+- Dataphin OpenApi.
+
+2020-11-16 Version: 1.0.0
+- The first version of ververica open api.
+

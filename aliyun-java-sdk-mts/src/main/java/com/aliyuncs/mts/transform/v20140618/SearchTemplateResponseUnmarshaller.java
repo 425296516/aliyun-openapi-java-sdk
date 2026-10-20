@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.mts.transform.v20140618;
 
 import java.util.ArrayList;
@@ -25,84 +21,116 @@ import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse;
 import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template;
 import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.Audio;
 import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.Container;
+import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.FrontendHint;
 import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.MuxConfig;
 import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.MuxConfig.Gif;
 import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.MuxConfig.Segment;
 import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.TransConfig;
 import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.Video;
 import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.Video.BitrateBnd;
+import com.aliyuncs.mts.model.v20140618.SearchTemplateResponse.Template.Video.NarrowBand;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
 public class SearchTemplateResponseUnmarshaller {
 
-	public static SearchTemplateResponse unmarshall(SearchTemplateResponse searchTemplateResponse, UnmarshallerContext context) {
+	public static SearchTemplateResponse unmarshall(SearchTemplateResponse searchTemplateResponse, UnmarshallerContext _ctx) {
 		
-		searchTemplateResponse.setRequestId(context.stringValue("SearchTemplateResponse.RequestId"));
-		searchTemplateResponse.setTotalCount(context.longValue("SearchTemplateResponse.TotalCount"));
-		searchTemplateResponse.setPageNumber(context.longValue("SearchTemplateResponse.PageNumber"));
-		searchTemplateResponse.setPageSize(context.longValue("SearchTemplateResponse.PageSize"));
+		searchTemplateResponse.setRequestId(_ctx.stringValue("SearchTemplateResponse.RequestId"));
+		searchTemplateResponse.setTotalCount(_ctx.longValue("SearchTemplateResponse.TotalCount"));
+		searchTemplateResponse.setPageSize(_ctx.longValue("SearchTemplateResponse.PageSize"));
+		searchTemplateResponse.setPageNumber(_ctx.longValue("SearchTemplateResponse.PageNumber"));
 
 		List<Template> templateList = new ArrayList<Template>();
-		for (int i = 0; i < context.lengthValue("SearchTemplateResponse.TemplateList.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("SearchTemplateResponse.TemplateList.Length"); i++) {
 			Template template = new Template();
-			template.setId(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Id"));
-			template.setName(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Name"));
-			template.setState(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].State"));
-
-			Container container = new Container();
-			container.setFormat(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Container.Format"));
-			template.setContainer(container);
+			template.setState(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].State"));
+			template.setName(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Name"));
+			template.setId(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Id"));
+			template.setCreationTime(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].CreationTime"));
 
 			Video video = new Video();
-			video.setCodec(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Codec"));
-			video.setProfile(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Profile"));
-			video.setBitrate(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Bitrate"));
-			video.setCrf(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Crf"));
-			video.setWidth(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Width"));
-			video.setHeight(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Height"));
-			video.setFps(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Fps"));
-			video.setGop(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Gop"));
-			video.setPreset(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Preset"));
-			video.setScanMode(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.ScanMode"));
-			video.setBufsize(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Bufsize"));
-			video.setMaxrate(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Maxrate"));
-			video.setPixFmt(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.PixFmt"));
-			video.setDegrain(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Degrain"));
-			video.setQscale(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Qscale"));
-			video.setRemove(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Remove"));
+			video.setBufsize(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Bufsize"));
+			video.setLongShortMode(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.LongShortMode"));
+			video.setDegrain(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Degrain"));
+			video.setPixFmt(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.PixFmt"));
+			video.setPad(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Pad"));
+			video.setCodec(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Codec"));
+			video.setHeight(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Height"));
+			video.setQscale(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Qscale"));
+			video.setCrop(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Crop"));
+			video.setBitrate(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Bitrate"));
+			video.setMaxrate(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Maxrate"));
+			video.setMaxFps(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.MaxFps"));
+			video.setProfile(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Profile"));
+			video.setCrf(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Crf"));
+			video.setRemove(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Remove"));
+			video.setGop(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Gop"));
+			video.setWidth(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Width"));
+			video.setFps(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Fps"));
+			video.setPreset(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Preset"));
+			video.setScanMode(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.ScanMode"));
+			video.setResoPriority(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.ResoPriority"));
+			video.setHdr2sdr(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.Hdr2sdr"));
 
 			BitrateBnd bitrateBnd = new BitrateBnd();
-			bitrateBnd.setMax(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.BitrateBnd.Max"));
-			bitrateBnd.setMin(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.BitrateBnd.Min"));
+			bitrateBnd.setMax(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.BitrateBnd.Max"));
+			bitrateBnd.setMin(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.BitrateBnd.Min"));
 			video.setBitrateBnd(bitrateBnd);
+
+			NarrowBand narrowBand = new NarrowBand();
+			narrowBand.setAbrmax(_ctx.floatValue("SearchTemplateResponse.TemplateList["+ i +"].Video.NarrowBand.Abrmax"));
+			narrowBand.setMaxAbrRatio(_ctx.floatValue("SearchTemplateResponse.TemplateList["+ i +"].Video.NarrowBand.MaxAbrRatio"));
+			narrowBand.setVersion(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Video.NarrowBand.Version"));
+			video.setNarrowBand(narrowBand);
 			template.setVideo(video);
 
-			Audio audio = new Audio();
-			audio.setCodec(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Codec"));
-			audio.setProfile(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Profile"));
-			audio.setSamplerate(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Samplerate"));
-			audio.setBitrate(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Bitrate"));
-			audio.setChannels(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Channels"));
-			audio.setQscale(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Qscale"));
-			audio.setRemove(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Remove"));
-			template.setAudio(audio);
-
 			TransConfig transConfig = new TransConfig();
-			transConfig.setTransMode(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].TransConfig.TransMode"));
+			transConfig.setIsCheckAudioBitrate(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].TransConfig.IsCheckAudioBitrate"));
+			transConfig.setTransMode(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].TransConfig.TransMode"));
+			transConfig.setIsCheckReso(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].TransConfig.IsCheckReso"));
+			transConfig.setIsCheckVideoBitrateFail(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].TransConfig.IsCheckVideoBitrateFail"));
+			transConfig.setAdjDarMethod(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].TransConfig.AdjDarMethod"));
+			transConfig.setIsCheckVideoBitrate(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].TransConfig.IsCheckVideoBitrate"));
+			transConfig.setIsCheckResoFail(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].TransConfig.IsCheckResoFail"));
+			transConfig.setIsCheckAudioBitrateFail(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].TransConfig.IsCheckAudioBitrateFail"));
 			template.setTransConfig(transConfig);
 
 			MuxConfig muxConfig = new MuxConfig();
 
-			Segment segment = new Segment();
-			segment.setDuration(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].MuxConfig.Segment.Duration"));
-			muxConfig.setSegment(segment);
-
 			Gif gif = new Gif();
-			gif.setLoop(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].MuxConfig.Gif.Loop"));
-			gif.setFinalDelay(context.stringValue("SearchTemplateResponse.TemplateList["+ i +"].MuxConfig.Gif.FinalDelay"));
+			gif.setFinalDelay(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].MuxConfig.Gif.FinalDelay"));
+			gif.setDitherMode(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].MuxConfig.Gif.DitherMode"));
+			gif.setLoop(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].MuxConfig.Gif.Loop"));
+			gif.setIsCustomPalette(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].MuxConfig.Gif.IsCustomPalette"));
 			muxConfig.setGif(gif);
+
+			Segment segment = new Segment();
+			segment.setDuration(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].MuxConfig.Segment.Duration"));
+			muxConfig.setSegment(segment);
 			template.setMuxConfig(muxConfig);
+
+			Audio audio = new Audio();
+			audio.setProfile(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Profile"));
+			audio.setRemove(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Remove"));
+			audio.setCodec(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Codec"));
+			audio.setSamplerate(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Samplerate"));
+			audio.setQscale(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Qscale"));
+			audio.setChannels(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Channels"));
+			audio.setBitrate(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Audio.Bitrate"));
+			template.setAudio(audio);
+
+			Container container = new Container();
+			container.setFormat(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].Container.Format"));
+			template.setContainer(container);
+
+			FrontendHint frontendHint = new FrontendHint();
+			frontendHint.setTranscodeType(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].FrontendHint.TranscodeType"));
+			frontendHint.setBitrateControlType(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].FrontendHint.BitrateControlType"));
+			frontendHint.setSource(_ctx.stringValue("SearchTemplateResponse.TemplateList["+ i +"].FrontendHint.Source"));
+			frontendHint.setIsDynamic(_ctx.booleanValue("SearchTemplateResponse.TemplateList["+ i +"].FrontendHint.IsDynamic"));
+			frontendHint.setHasOldHdr2Sdr(_ctx.booleanValue("SearchTemplateResponse.TemplateList["+ i +"].FrontendHint.HasOldHdr2Sdr"));
+			template.setFrontendHint(frontendHint);
 
 			templateList.add(template);
 		}

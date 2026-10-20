@@ -1,0 +1,141 @@
+2023-07-13 Version: 3.0.41
+- Public API ListAppBySwimmingLaneGroupTags.
+- Update APIs.
+- Support Pod distributed flag.
+- Support expected zone list.
+- Optimize UpdateXXXRulesStatus.
+- Fix QueryAppRPCMacMetrics result.
+- Add dataids param for config export.
+- Support get current client ip.
+- Change GetGateway timeout to 20s.
+- Update APIs for 2023-07-10.
+- Supported VPC and SecurityGroup params for service test.
+- API Type Tag.
+- Add API Type Tag.
+- Open Response Log.
+- Fixed url.
+
+2023-05-23 Version: 3.0.40
+- Rebuild.
+
+2023-04-18 Version: 3.0.39
+- Rebuild.
+
+2023-03-13 Version: 3.0.38
+- Rebuild.
+
+2023-02-09 Version: 3.0.37
+- Rebuild.
+
+2023-02-03 Version: 3.0.36
+- For all api.
+
+2023-02-03 Version: 3.0.35
+- Suport mse nologin.
+- Support mse nologin.
+- Fixed bugs timeout for ListEngineNamespaces.
+- Fixed api description.
+- Support change mseVersion.
+- Support listNamespace source type.
+- Support for checking Lua.
+
+2022-09-22 Version: 3.0.34
+- Add normandy api.
+
+2022-09-22 Version: 3.0.31
+- UpdatePluginConfig.
+- GetPlugins.
+- GetPluginConfig.
+
+2022-09-14 Version: 3.0.30
+- UpdatePluginConfig.
+- GetPlugins.
+- GetPluginConfig.
+
+2022-06-22 Version: 3.0.25
+- Add Old Version SDK.
+
+2022-06-14 Version: 3.0.21
+- Fix updateServiceSource open.
+
+2022-06-09 Version: 3.0.20
+- Fix listApplicationsWithTagRules response error.
+
+2022-05-13 Version: 3.0.19
+- Add ListDashboardUrl api.
+
+2022-04-30 Version: 3.0.18
+- Add GrtApplicationList.
+
+2022-04-07 Version: 3.0.16
+- Add Message Queue Route API.
+
+2022-02-21 Version: 3.0.12
+- Bugfix QueryMoniter.
+
+2022-02-21 Version: 3.0.11
+- Add DleteNacosInstance.
+- Change CreateCluster parameter.
+- Change UpdateNacosInstance errorCode.
+
+2022-02-16 Version: 3.0.7
+- Fix normandy query api.
+
+2022-02-10 Version: 3.0.6
+- Add deleteNacosInstance.
+
+2022-01-18 Version: 3.0.4
+- ReportOneAgentInfo.
+
+
+2021-12-28 Version: 3.0.3
+- Report data.
+
+
+2021-12-08 Version: 3.0.2
+- HeterogeInterworking.
+
+
+2021-11-25 Version: 3.0.1
+- HeterogeInterworking.
+
+
+2021-11-24 Version: 3.0.0
+- HeterogeInterworking.
+
+2021-09-24 Version: 2.7.33-SNAPSHOT
+- Add Gateway ListGateway api.
+
+2021-03-24 Version: 2.7.0
+- Support Nacos Config.
+
+2020-08-03 Version: 2.6.0
+- Generated 2019-05-31 for `mse`.
+
+2020-05-27 Version: 2.4.3
+- Generated 2019-05-31 for `mse`.
+
+2020-05-18 Version: 2.4.2
+- Generated 2019-05-31 for `mse`.
+
+2020-03-11 Version: 2.2.1
+- Generated 2019-05-31 for `mse`.
+
+2019-12-02 Version: 1.4.0
+- Generated 2019-05-31 for `mse`.
+
+2019-09-20 Version: 1.3.0
+- Generated 2019-05-31 for `mse`.
+
+2019-08-23 Version: 1.1.0
+- Generated 2019-05-31 for `mse`.
+
+2019-08-07 Version: 1.0.0
+- Generated 2019-05-31 for `mse`.
+
+2019-08-07 Version: 1.0.0
+- Generated 2019-05-31 for `mse`.
+
+2019-08-07 Version: 1.0.0
+- Generated 2019-05-31 for `mse`.
+

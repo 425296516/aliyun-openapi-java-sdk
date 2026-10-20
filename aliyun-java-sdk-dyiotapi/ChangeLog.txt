@@ -1,0 +1,18 @@
+2020-12-21 Version: 2.1.1
+- Add QueryCardsInfo.
+
+2020-12-21 Version: 2.1.1-SNAPSHOT
+- Add QueryCardsInfo.
+
+2020-12-04 Version: 2.1.1
+- Add absolute remind config.
+
+2020-12-04 Version: 2.1.0
+- Add absolute remind config.
+
+2020-09-02 Version: 2.0.1
+- Generated 2017-11-11 for `Dyiotapi`.
+
+2020-06-18 Version: 2.0.0
+- Generated 2017-11-11 for `Dyiotapi`.
+

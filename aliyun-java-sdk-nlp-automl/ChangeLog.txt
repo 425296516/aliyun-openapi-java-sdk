@@ -1,0 +1,48 @@
+2023-07-04 Version: 0.0.15
+- 新增模型预测高性能版本
+
+2023-07-03 Version: 0.0.14
+- Add The billingCount return value to the RunPreTrainService Api.
+
+2023-05-06 Version: 0.0.13
+- Add The billingCount return value to the RunPreTrainService Api.
+
+2023-03-23 Version: 0.0.12
+- Add FindUserReport4Alinlp Api.
+
+2023-03-09 Version: 0.0.11
+- add FindUserReport4Alinlp Api.
+
+2023-01-31 Version: 0.0.10
+- Supported parameter nepochs and lr for CreateModel Api.
+
+2020-12-28 Version: 0.0.9
+- Add some console API operations.
+
+2020-09-08 Version: 0.0.8
+- Modify CreateAsyncPredict add new parameters.
+
+2020-05-26 Version: 0.0.7
+- Add smartcall service api.
+
+2020-05-26 Version: 0.0.6
+- Add smartcall service api.
+
+2020-04-15 Version: 0.0.5
+- Add pre train service api.
+
+2020-03-09 Version: 0.0.4
+- NlpAutoml update contract api.
+
+2019-12-26 Version: 0.0.3
+- NlpAutoml add async api.
+
+2019-11-21 Version: 0.0.2
+- Update Nlp Automl SDK.
+
+2019-11-15 Version: 0.0.1
+- Nlp Automl SDK.
+
+2019-11-15 Version: 0.0.1
+- Nlp Automl SDK.
+

@@ -1,0 +1,153 @@
+2023-07-20 Version: 1.1.37
+- Support rd sdk.
+
+2023-07-08 Version: 1.1.36
+- Supported tag.
+- Support RAM action.
+- Support NextToken.
+- Fixed bugs for os statistics.
+- Support api for vul auth.
+- Add GetCheckSale.
+- Add Vul,CSPM,RASP.
+
+2023-07-01 Version: 1.1.35
+- Supported API For ECS.
+- Service online.
+- Fixed bugs for Container.
+- Supported Global Param.
+- Support lable.
+- Fixed bugs for tags.
+- Support security score rule.
+
+2023-06-24 Version: 1.1.34
+- Supported ListInstanceRiskNum For Ecs.
+- Supported ListInstanceRiskLevels For ECS.
+- Supported ListInstanceRiskNum For ECS.
+- Change rate limiter for FileDetect API.
+- Fixed bugs for filed CycleDays  not show.
+- Fixed bugs for TimeOut.
+- Add Global Param.
+- Support container exposed analysis.
+- Supported Global Param.
+
+2023-06-17 Version: 1.1.33
+- Supported backup record.
+
+2023-06-10 Version: 1.1.32
+- Support remark for suspicious deal.
+- Supported GetClientRatioStatistic.
+- Support mistakReport for suspicious.
+- Support TimeStamp for AntiBruteRules.
+
+2023-06-06 Version: 1.1.31
+- Change ListAssetSelectionTarget Request.
+
+2023-02-22 Version: 1.1.30
+- Change DescribeLogstoreStorage Response.
+
+2022-09-28 Version: 1.1.29
+- Change RefreshAssets Public.
+
+2022-09-19 Version: 1.1.28
+- Change RefreshAssets Public.
+
+2022-09-08 Version: 1.1.27
+- Change RefreshAssets Public.
+
+2022-09-08 Version: 1.1.26
+- Change RefreshAssets Public.
+
+2022-08-31 Version: 1.1.25
+- Change GetFileDetectResult Public.
+
+2022-07-29 Version: 1.1.24
+- Change ListCheckInstanceResult Public.
+
+2022-07-26 Version: 1.1.23
+- Change ListCheckInstanceResult Public.
+
+2022-07-26 Version: 1.1.22
+- Change ListCheckInstanceResult Public.
+
+2022-07-25 Version: 1.1.21
+- Change ListCheckInstanceResult GetCheckDetail Public.
+
+2022-07-25 Version: 1.1.20
+- Change ListCheckInstanceResult GetCheckDetail Public.
+
+2022-07-22 Version: 1.1.19
+- Change ListCheckInstanceResult GetCheckDetail Public.
+
+2022-07-20 Version: 1.1.18
+- Change getFileDetectResult.
+
+2022-07-18 Version: 1.1.17
+- Change cspm ListCheckResult api.
+
+2022-07-15 Version: 1.1.16
+- Add cspm ListCheckResult api.
+
+2022-07-15 Version: 1.1.15
+- Add open file detect api.
+
+2022-07-11 Version: 1.1.14
+- Add open file detect api.
+
+2022-06-20 Version: 1.1.13
+- Add EventId when listQuery EventInfo.
+
+2022-04-21 Version: 1.1.12
+- Generated 2018-12-03 for `Sas`.
+
+2022-04-19 Version: 1.1.11
+- Generated 2018-12-03 for `Sas`.
+
+2021-06-18 Version: 1.1.10
+- Support DescribeInstallCaptcha API.
+
+2021-05-17 Version: 1.1.9
+- Support DescribeInstallCaptcha API.
+
+2021-04-27 Version: 1.1.8
+- Support GetVulStatistics API.
+- Support GetSuspiciousStatistics API.
+
+2021-04-16 Version: 1.1.7
+- Support HandleSecurityEvents API.
+
+2021-03-24 Version: 1.1.5
+- Support DescribeUuidsByVulNames API.
+
+2021-03-16 Version: 1.1.4
+- Support DescribeGroupedInstances API.
+
+2021-01-06 Version: 1.1.3
+- Support DescribeVulList API.
+
+2020-09-25 Version: 1.1.2
+- Support DescribeSuspEventQuaraFiles API.
+- Support RefreshContainerAsserts API.
+
+2020-05-27 Version: 1.1.1
+- Support DescribeAllEntity API.
+
+2020-05-26 Version: 1.1.1
+- Support DescribeAllEntity API.
+
+2020-04-16 Version: 1.1.0
+- Support DescribeSecurityStatInfo API.
+
+2019-11-21 Version: 1.0.3
+- Supported SDK for python.
+- Supported api for alerts.
+- Fixed bugs for endpoints.
+
+2019-04-16 Version: 1.0.2
+1, Add api about pushing security check commands
+
+2019-04-03 Version: 1.0.1
+1, Add interfaces related to vulnerability whitelist
+2, Add interfaces related to vulnerability auto-del configuration
+3, Add interfaces related to vulnerability fix advise
+4, Add interfaces searching and operating vulnerability
+

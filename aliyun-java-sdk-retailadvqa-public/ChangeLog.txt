@@ -1,0 +1,18 @@
+2021-11-10 Version: 3.3.30
+- UserConfigQuery.
+
+2021-09-16 Version: 3.3.27
+- ListAudience.
+
+2021-09-03 Version: 3.3.26
+- ListAudience.
+
+2021-07-04 Version: 3.3.16
+- AutoMarketing.
+
+2021-07-04 Version: 1.8.131
+- Test.
+
+2020-09-09 Version: 1.8
+- Update sdk.
+

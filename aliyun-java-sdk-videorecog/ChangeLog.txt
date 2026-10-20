@@ -1,0 +1,30 @@
+2023-03-14 Version: 1.0.9
+- Update SplitVideoParts.
+
+2023-03-03 Version: 1.0.8
+- Update EvaluateVideoQuality.
+
+2023-02-22 Version: 1.0.7
+- Update EvaluateVideoQuality.
+
+2023-02-21 Version: 1.0.6
+- Update EvaluateVideoQuality.
+
+2022-10-17 Version: 1.0.5
+- Update RecognizeVideoCastCrewList.
+
+2022-09-29 Version: 1.0.4
+- Update RecognizeVideoCastCrewList.
+
+2022-06-28 Version: 1.0.3
+- Update RecognizeVideoCastCrewList.
+
+2021-02-01 Version: 1.0.2
+- Release UnderstandVideoContent.
+
+2020-11-16 Version: 1.0.1
+- Update videorecog.
+
+2020-03-23 Version: 1.0.0
+- SDK version 100.
+

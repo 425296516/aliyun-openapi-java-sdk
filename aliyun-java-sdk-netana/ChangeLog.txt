@@ -1,0 +1,27 @@
+2022-09-19 Version: 1.0.4
+- Supportn quotas for DescribeNetworkQuotas.
+
+2020-12-04 Version: 1.0.3
+- Supported ListIpGeolocations for user.
+
+2020-12-03 Version: 1.0.3
+- Supported ListIpGeolocations for user.
+
+2020-12-03 Version: 1.0.2
+- Supported ListIpGeolocations for user.
+
+2020-12-03 Version: 1.0.1
+- Supported ListIpGeolocations for user.
+
+2020-12-03 Version: 1.0.0
+- Supported ListIpGeolocations for user.
+
+2020-12-03 Version: 1.0.0
+- Supported ListIpGeolocations for user.
+
+2020-12-03 Version: 1.0.0
+- Supported ListIpGeolocations for user.
+
+2019-06-13 Version: 1.0.0
+Add Network Assistant openapi sdk
+

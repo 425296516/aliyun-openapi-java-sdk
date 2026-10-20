@@ -1,0 +1,78 @@
+2023-03-09 Version: 1.0.27
+- Public GetMySQLAllSessionAsync.
+
+2023-03-06 Version: 1.0.26
+- Change CreateKillInstanceSessionTask parameter type.
+
+2023-03-02 Version: 1.0.25
+- Public CreateKillInstanceSessionTask and GetKillInstanceSessionTaskResult API.
+
+2023-01-12 Version: 1.0.24
+- Public GetEventSubscription API.
+
+2023-01-10 Version: 1.0.23
+- Public SetEventSubscription API.
+
+2022-05-25 Version: 1.0.19
+- Kill Redis instance all sessions api.
+
+2022-05-20 Version: 1.0.18
+- Dbgateway support delete api.
+
+
+2022-04-01 Version: 1.0.16
+- FIX GetAsyncErrorRequestStatResult PARAM TYPE.
+
+
+2022-02-25 Version: 1.0.12
+- FIX GetRequestDiagnosisPage PARAM TYPE.
+
+
+2022-02-09 Version: 1.0.10
+- Supported query optimize open API.
+- Optimize GetInstanceInspections.
+
+2022-01-27 Version: 1.0.9
+- Supported query optimize open api.
+
+2021-09-17 Version: 1.0.8
+- Fix Bugs for GetSqlOptimizeAdvice.
+
+2021-09-16 Version: 1.0.7
+- Supported GetSqlOptimizeAdvice.
+
+2021-08-16 Version: 1.0.6
+- Add SQL throttle APIs for MySQL and PolarDB MySQL.
+
+2021-03-03 Version: 1.0.3
+- Support Redis CacheAnalysis using backupset.
+- Support Instance Inspection API.
+
+2021-03-02 Version: 1.0.3
+- Support Redis CacheAnalysis using backupset.
+- Support Instance Inspection API.
+
+2020-12-01 Version: 1.0.5
+- Support new API GetAutonomousNotifyEventsInRange and GetAutonomousNotifyEventContent.
+
+2020-11-30 Version: 1.0.4
+- Supported GetAutonomousNotifyEvents and GetAutonomousNotifyEventDetails.
+
+2020-11-19 Version: 1.0.3
+- Supported GetEventOverview for Events.
+
+2020-11-19 Version: 1.0.3
+- Supported GetEventOverview for Events.
+
+2020-11-18 Version: 1.0.2
+- Supported Hotkey For Redis.
+
+2020-11-18 Version: 1.0.2
+- Supported CacheAnalysis For Redis.
+
+2020-10-15 Version: 1.0.1
+- Supported CacheAnalysis For Redis.
+
+2020-07-13 Version: 1.0.0
+- Supported Open API for Instance Report.
+

@@ -1,0 +1,19 @@
+2023-10-11 Version: 3.1.2
+- Publish AssumeRoleWithOIDC API by adding more detail in response.
+
+2023-03-02 Version: 3.1.1
+- Publish AssumeRole API With ExternalId Parameter.
+
+2021-09-29 Version: 3.1.0
+- Supported AssumeRoleWithOIDC.
+
+2020-06-19 Version: 3.0.2
+- Generated 2015-04-01 for `Sts`.
+
+2019-03-14 Version: 3.0.1
+1, Update Dependency
+
+2017-10-09 Version: 3.0.0
+1, 添加GetCallerIdentity接口
+2, 添加GetSessionAccessKey接口
+

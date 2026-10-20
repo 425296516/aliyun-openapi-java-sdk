@@ -1,0 +1,18 @@
+2019-05-09 Version: 1.3.0
+1, Add accesslog feature
+
+2019-04-03 Version: 1.2.0
+1, Support DNAT/ENI/Online user count features.
+
+
+2018-12-28 Version: 1.1.0
+1, Support Add/Delete Node IP
+2, Support Describe Uis block ip list.
+
+
+2018-11-29 Version: 1.0.0
+1, This is the first version of Uis service.
+
+2018-11-29 Version: 1.0.0
+1, This is the first SDK version of Uis service.
+

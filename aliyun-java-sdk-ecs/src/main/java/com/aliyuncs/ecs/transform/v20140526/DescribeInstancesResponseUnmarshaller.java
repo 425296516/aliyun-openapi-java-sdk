@@ -1,108 +1,284 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.ecs.transform.v20140526;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse;
 import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance;
-import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.VpcAttributes;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.AdditionalInfo;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.ClockOptions;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.CpuOptions;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.DedicatedHostAttribute;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.DedicatedInstanceAttribute;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.EcsCapacityReservationAttr;
 import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.EipAddress;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.HibernationOptions;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.ImageOptions;
 import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.LockReason;
-import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.Status;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.MetadataOptions;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.NetworkInterface;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.NetworkInterface.Ipv4PrefixSet;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.NetworkInterface.Ipv6PrefixSet;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.NetworkInterface.Ipv6Set;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.NetworkInterface.PrivateIpSet;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.PrivateDnsNameOptions;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.SecurityOptions;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.Tag;
+import com.aliyuncs.ecs.model.v20140526.DescribeInstancesResponse.Instance.VpcAttributes;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
 public class DescribeInstancesResponseUnmarshaller {
 
-	public static DescribeInstancesResponse unmarshall(DescribeInstancesResponse describeInstancesResponse, UnmarshallerContext context) {
+	public static DescribeInstancesResponse unmarshall(DescribeInstancesResponse describeInstancesResponse, UnmarshallerContext _ctx) {
 		
-		describeInstancesResponse.setRequestId(context.stringValue("DescribeInstancesResponse.RequestId"));
-		describeInstancesResponse.setTotalCount(context.integerValue("DescribeInstancesResponse.TotalCount"));
-		describeInstancesResponse.setPageNumber(context.integerValue("DescribeInstancesResponse.PageNumber"));
-		describeInstancesResponse.setPageSize(context.integerValue("DescribeInstancesResponse.PageSize"));
+		describeInstancesResponse.setRequestId(_ctx.stringValue("DescribeInstancesResponse.RequestId"));
+		describeInstancesResponse.setTotalCount(_ctx.integerValue("DescribeInstancesResponse.TotalCount"));
+		describeInstancesResponse.setNextToken(_ctx.stringValue("DescribeInstancesResponse.NextToken"));
+		describeInstancesResponse.setPageSize(_ctx.integerValue("DescribeInstancesResponse.PageSize"));
+		describeInstancesResponse.setPageNumber(_ctx.integerValue("DescribeInstancesResponse.PageNumber"));
 
 		List<Instance> instances = new ArrayList<Instance>();
-		for (int i = 0; i < context.lengthValue("DescribeInstancesResponse.Instances.Length"); i++) {
-			Instance  instance = new Instance();
-			instance.setInstanceId(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceId"));
-			instance.setInstanceName(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceName"));
-			instance.setDescription(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].Description"));
-			instance.setImageId(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].ImageId"));
-			instance.setRegionId(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].RegionId"));
-			instance.setZoneId(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].ZoneId"));
-			instance.setClusterId(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].ClusterId"));
-			instance.setInstanceType(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceType"));
-			instance.setHostName(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].HostName"));
-			instance.setStatus(Status.getEnum(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].Status")));
-			instance.setInternetChargeType(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].InternetChargeType"));
-			instance.setInternetMaxBandwidthIn(context.integerValue("DescribeInstancesResponse.Instances["+ i +"].InternetMaxBandwidthIn"));
-			instance.setInternetMaxBandwidthOut(context.integerValue("DescribeInstancesResponse.Instances["+ i +"].InternetMaxBandwidthOut"));
-			instance.setVlanId(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].VlanId"));
-			instance.setCreationTime(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].CreationTime"));
-			instance.setInstanceNetworkType(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceNetworkType"));
-			instance.setInstanceChargeType(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceChargeType"));
-			instance.setExpiredTime(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].ExpiredTime"));
-			instance.setIoOptimized(context.booleanValue("DescribeInstancesResponse.Instances["+ i +"].IoOptimized"));
-			instance.setDeviceAvailable(context.booleanValue("DescribeInstancesResponse.Instances["+ i +"].DeviceAvailable"));
+		for (int i = 0; i < _ctx.lengthValue("DescribeInstancesResponse.Instances.Length"); i++) {
+			Instance instance = new Instance();
+			instance.setResourceGroupId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].ResourceGroupId"));
+			instance.setMemory(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].Memory"));
+			instance.setInstanceChargeType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceChargeType"));
+			instance.setCpu(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].Cpu"));
+			instance.setOSName(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].OSName"));
+			instance.setInstanceNetworkType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceNetworkType"));
+			instance.setExpiredTime(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].ExpiredTime"));
+			instance.setImageId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].ImageId"));
+			instance.setVlanId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].VlanId"));
+			instance.setHostName(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].HostName"));
+			instance.setStatus(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].Status"));
+			instance.setInstanceId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceId"));
+			instance.setStoppedMode(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].StoppedMode"));
+			instance.setStartTime(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].StartTime"));
+			instance.setDeletionProtection(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].DeletionProtection"));
+			instance.setInternetChargeType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InternetChargeType"));
+			instance.setDeploymentSetId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].DeploymentSetId"));
+			instance.setInstanceName(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceName"));
+			instance.setSpotInterruptionBehavior(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].SpotInterruptionBehavior"));
+			instance.setInternetMaxBandwidthOut(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].InternetMaxBandwidthOut"));
+			instance.setSerialNumber(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].SerialNumber"));
+			instance.setOSType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].OSType"));
+			instance.setCreationTime(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].CreationTime"));
+			instance.setAutoReleaseTime(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].AutoReleaseTime"));
+			instance.setDescription(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].Description"));
+			instance.setEnableNVS(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].EnableNVS"));
+			instance.setLocalStorageCapacity(_ctx.longValue("DescribeInstancesResponse.Instances["+ i +"].LocalStorageCapacity"));
+			instance.setInstanceTypeFamily(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceTypeFamily"));
+			instance.setSpotDuration(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].SpotDuration"));
+			instance.setLocalStorageAmount(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].LocalStorageAmount"));
+			instance.setGPUSpec(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].GPUSpec"));
+			instance.setSpotPriceLimit(_ctx.floatValue("DescribeInstancesResponse.Instances["+ i +"].SpotPriceLimit"));
+			instance.setSaleCycle(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].SaleCycle"));
+			instance.setDeviceAvailable(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].DeviceAvailable"));
+			instance.setInstanceType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceType"));
+			instance.setSpotStrategy(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].SpotStrategy"));
+			instance.setOSNameEn(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].OSNameEn"));
+			instance.setKeyPairName(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].KeyPairName"));
+			instance.setIoOptimized(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].IoOptimized"));
+			instance.setZoneId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].ZoneId"));
+			instance.setClusterId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].ClusterId"));
+			instance.setHpcClusterId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].HpcClusterId"));
+			instance.setISP(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].ISP"));
+			instance.setDeploymentSetGroupNo(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].DeploymentSetGroupNo"));
+			instance.setGPUAmount(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].GPUAmount"));
+			instance.setInternetMaxBandwidthIn(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].InternetMaxBandwidthIn"));
+			instance.setRecyclable(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].Recyclable"));
+			instance.setRegionId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].RegionId"));
+			instance.setCreditSpecification(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].CreditSpecification"));
+
+			List<String> innerIpAddress = new ArrayList<String>();
+			for (int j = 0; j < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].InnerIpAddress.Length"); j++) {
+				innerIpAddress.add(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InnerIpAddress["+ j +"]"));
+			}
+			instance.setInnerIpAddress(innerIpAddress);
 
 			List<String> securityGroupIds = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("DescribeInstancesResponse.Instances["+ i +"].SecurityGroupIds.Length"); j++) {
-				securityGroupIds.add(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].SecurityGroupIds["+ j +"]"));
+			for (int j = 0; j < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].SecurityGroupIds.Length"); j++) {
+				securityGroupIds.add(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].SecurityGroupIds["+ j +"]"));
 			}
 			instance.setSecurityGroupIds(securityGroupIds);
 
 			List<String> publicIpAddress = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("DescribeInstancesResponse.Instances["+ i +"].PublicIpAddress.Length"); j++) {
-				publicIpAddress.add(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].PublicIpAddress["+ j +"]"));
+			for (int j = 0; j < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].PublicIpAddress.Length"); j++) {
+				publicIpAddress.add(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].PublicIpAddress["+ j +"]"));
 			}
 			instance.setPublicIpAddress(publicIpAddress);
 
-			List<String> innerIpAddress = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("DescribeInstancesResponse.Instances["+ i +"].InnerIpAddress.Length"); j++) {
-				innerIpAddress.add(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].InnerIpAddress["+ j +"]"));
+			List<String> rdmaIpAddress = new ArrayList<String>();
+			for (int j = 0; j < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].RdmaIpAddress.Length"); j++) {
+				rdmaIpAddress.add(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].RdmaIpAddress["+ j +"]"));
 			}
-			instance.setInnerIpAddress(innerIpAddress);
+			instance.setRdmaIpAddress(rdmaIpAddress);
 
-			VpcAttributes  vpcAttributes = new VpcAttributes();
-			vpcAttributes.setVpcId(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.VpcId"));
-			vpcAttributes.setVSwitchId(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.VSwitchId"));
-			vpcAttributes.setNatIpAddress(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.NatIpAddress"));
+			EipAddress eipAddress = new EipAddress();
+			eipAddress.setBandwidth(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].EipAddress.Bandwidth"));
+			eipAddress.setAllocationId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].EipAddress.AllocationId"));
+			eipAddress.setIpAddress(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].EipAddress.IpAddress"));
+			eipAddress.setIsSupportUnassociate(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].EipAddress.IsSupportUnassociate"));
+			eipAddress.setInternetChargeType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].EipAddress.InternetChargeType"));
+			instance.setEipAddress(eipAddress);
+
+			ImageOptions imageOptions = new ImageOptions();
+			imageOptions.setLoginAsNonRoot(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].ImageOptions.LoginAsNonRoot"));
+			imageOptions.setCurrentOSNVMeSupported(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].ImageOptions.CurrentOSNVMeSupported"));
+			instance.setImageOptions(imageOptions);
+
+			HibernationOptions hibernationOptions = new HibernationOptions();
+			hibernationOptions.setConfigured(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].HibernationOptions.Configured"));
+			instance.setHibernationOptions(hibernationOptions);
+
+			AdditionalInfo additionalInfo = new AdditionalInfo();
+			additionalInfo.setNodeSerialNumber(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].AdditionalInfo.NodeSerialNumber"));
+			additionalInfo.setEnableHighDensityMode(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].AdditionalInfo.EnableHighDensityMode"));
+			instance.setAdditionalInfo(additionalInfo);
+
+			MetadataOptions metadataOptions = new MetadataOptions();
+			metadataOptions.setHttpPutResponseHopLimit(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].MetadataOptions.HttpPutResponseHopLimit"));
+			metadataOptions.setHttpTokens(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].MetadataOptions.HttpTokens"));
+			metadataOptions.setInstanceMetadataTags(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].MetadataOptions.InstanceMetadataTags"));
+			metadataOptions.setHttpEndpoint(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].MetadataOptions.HttpEndpoint"));
+			instance.setMetadataOptions(metadataOptions);
+
+			CpuOptions cpuOptions = new CpuOptions();
+			cpuOptions.setTopologyType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].CpuOptions.TopologyType"));
+			cpuOptions.setTurboMode(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].CpuOptions.TurboMode"));
+			cpuOptions.setEnableVISST(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].CpuOptions.EnableVISST"));
+			cpuOptions.setEnableVRDT(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].CpuOptions.EnableVRDT"));
+			cpuOptions.setThreadsPerCore(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].CpuOptions.ThreadsPerCore"));
+			cpuOptions.setNuma(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].CpuOptions.Numa"));
+			cpuOptions.setCoreCount(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].CpuOptions.CoreCount"));
+			cpuOptions.setNestedVirtualization(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].CpuOptions.NestedVirtualization"));
+			instance.setCpuOptions(cpuOptions);
+
+			PrivateDnsNameOptions privateDnsNameOptions = new PrivateDnsNameOptions();
+			privateDnsNameOptions.setEnableInstanceIdDnsARecord(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].PrivateDnsNameOptions.EnableInstanceIdDnsARecord"));
+			privateDnsNameOptions.setHostnameType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].PrivateDnsNameOptions.HostnameType"));
+			privateDnsNameOptions.setEnableIpDnsPtrRecord(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].PrivateDnsNameOptions.EnableIpDnsPtrRecord"));
+			privateDnsNameOptions.setEnableIpDnsARecord(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].PrivateDnsNameOptions.EnableIpDnsARecord"));
+			privateDnsNameOptions.setEnableInstanceIdDnsAAAARecord(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].PrivateDnsNameOptions.EnableInstanceIdDnsAAAARecord"));
+			instance.setPrivateDnsNameOptions(privateDnsNameOptions);
+
+			VpcAttributes vpcAttributes = new VpcAttributes();
+			vpcAttributes.setVpcId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.VpcId"));
+			vpcAttributes.setVSwitchId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.VSwitchId"));
+			vpcAttributes.setNatIpAddress(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.NatIpAddress"));
 
 			List<String> privateIpAddress = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.PrivateIpAddress.Length"); j++) {
-				privateIpAddress.add(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.PrivateIpAddress["+ j +"]"));
+			for (int j = 0; j < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.PrivateIpAddress.Length"); j++) {
+				privateIpAddress.add(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].VpcAttributes.PrivateIpAddress["+ j +"]"));
 			}
 			vpcAttributes.setPrivateIpAddress(privateIpAddress);
 			instance.setVpcAttributes(vpcAttributes);
 
-			EipAddress  eipAddress = new EipAddress();
-			eipAddress.setAllocationId(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].EipAddress.AllocationId"));
-			eipAddress.setIpAddress(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].EipAddress.IpAddress"));
-			eipAddress.setBandwidth(context.integerValue("DescribeInstancesResponse.Instances["+ i +"].EipAddress.Bandwidth"));
-			eipAddress.setInternetChargeType(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].EipAddress.InternetChargeType"));
-			instance.setEipAddress(eipAddress);
+			SecurityOptions securityOptions = new SecurityOptions();
+			securityOptions.setEnableSecureBoot(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].SecurityOptions.EnableSecureBoot"));
+			instance.setSecurityOptions(securityOptions);
+
+			DedicatedInstanceAttribute dedicatedInstanceAttribute = new DedicatedInstanceAttribute();
+			dedicatedInstanceAttribute.setTenancy(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].DedicatedInstanceAttribute.Tenancy"));
+			dedicatedInstanceAttribute.setAffinity(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].DedicatedInstanceAttribute.Affinity"));
+			instance.setDedicatedInstanceAttribute(dedicatedInstanceAttribute);
+
+			EcsCapacityReservationAttr ecsCapacityReservationAttr = new EcsCapacityReservationAttr();
+			ecsCapacityReservationAttr.setCapacityReservationPreference(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].EcsCapacityReservationAttr.CapacityReservationPreference"));
+			ecsCapacityReservationAttr.setCapacityReservationId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].EcsCapacityReservationAttr.CapacityReservationId"));
+			instance.setEcsCapacityReservationAttr(ecsCapacityReservationAttr);
+
+			DedicatedHostAttribute dedicatedHostAttribute = new DedicatedHostAttribute();
+			dedicatedHostAttribute.setDedicatedHostId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].DedicatedHostAttribute.DedicatedHostId"));
+			dedicatedHostAttribute.setDedicatedHostName(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].DedicatedHostAttribute.DedicatedHostName"));
+			dedicatedHostAttribute.setDedicatedHostClusterId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].DedicatedHostAttribute.DedicatedHostClusterId"));
+			instance.setDedicatedHostAttribute(dedicatedHostAttribute);
+
+			ClockOptions clockOptions = new ClockOptions();
+			clockOptions.setPtpStatus(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].ClockOptions.PtpStatus"));
+			instance.setClockOptions(clockOptions);
+
+			List<Tag> tags = new ArrayList<Tag>();
+			for (int j = 0; j < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].Tags.Length"); j++) {
+				Tag tag = new Tag();
+				tag.setTagKey(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].Tags["+ j +"].TagKey"));
+				tag.setTagValue(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].Tags["+ j +"].TagValue"));
+
+				tags.add(tag);
+			}
+			instance.setTags(tags);
+
+			List<NetworkInterface> networkInterfaces = new ArrayList<NetworkInterface>();
+			for (int j = 0; j < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces.Length"); j++) {
+				NetworkInterface networkInterface = new NetworkInterface();
+				networkInterface.setType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].Type"));
+				networkInterface.setPrimaryIpAddress(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].PrimaryIpAddress"));
+				networkInterface.setMacAddress(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].MacAddress"));
+				networkInterface.setNetworkInterfaceId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].NetworkInterfaceId"));
+
+				List<Ipv6Set> ipv6Sets = new ArrayList<Ipv6Set>();
+				for (int k = 0; k < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].Ipv6Sets.Length"); k++) {
+					Ipv6Set ipv6Set = new Ipv6Set();
+					ipv6Set.setPrimary(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].Ipv6Sets["+ k +"].Primary"));
+					ipv6Set.setIpv6Address(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].Ipv6Sets["+ k +"].Ipv6Address"));
+
+					ipv6Sets.add(ipv6Set);
+				}
+				networkInterface.setIpv6Sets(ipv6Sets);
+
+				List<Ipv6PrefixSet> ipv6PrefixSets = new ArrayList<Ipv6PrefixSet>();
+				for (int k = 0; k < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].Ipv6PrefixSets.Length"); k++) {
+					Ipv6PrefixSet ipv6PrefixSet = new Ipv6PrefixSet();
+					ipv6PrefixSet.setIpv6Prefix(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].Ipv6PrefixSets["+ k +"].Ipv6Prefix"));
+
+					ipv6PrefixSets.add(ipv6PrefixSet);
+				}
+				networkInterface.setIpv6PrefixSets(ipv6PrefixSets);
+
+				List<Ipv4PrefixSet> ipv4PrefixSets = new ArrayList<Ipv4PrefixSet>();
+				for (int k = 0; k < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].Ipv4PrefixSets.Length"); k++) {
+					Ipv4PrefixSet ipv4PrefixSet = new Ipv4PrefixSet();
+					ipv4PrefixSet.setIpv4Prefix(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].Ipv4PrefixSets["+ k +"].Ipv4Prefix"));
+
+					ipv4PrefixSets.add(ipv4PrefixSet);
+				}
+				networkInterface.setIpv4PrefixSets(ipv4PrefixSets);
+
+				List<PrivateIpSet> privateIpSets = new ArrayList<PrivateIpSet>();
+				for (int k = 0; k < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].PrivateIpSets.Length"); k++) {
+					PrivateIpSet privateIpSet = new PrivateIpSet();
+					privateIpSet.setPrivateIpAddress(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].PrivateIpSets["+ k +"].PrivateIpAddress"));
+					privateIpSet.setPrivateDnsName(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].PrivateIpSets["+ k +"].PrivateDnsName"));
+					privateIpSet.setPrimary(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].NetworkInterfaces["+ j +"].PrivateIpSets["+ k +"].Primary"));
+
+					privateIpSets.add(privateIpSet);
+				}
+				networkInterface.setPrivateIpSets(privateIpSets);
+
+				networkInterfaces.add(networkInterface);
+			}
+			instance.setNetworkInterfaces(networkInterfaces);
 
 			List<LockReason> operationLocks = new ArrayList<LockReason>();
-			for (int j = 0; j < context.lengthValue("DescribeInstancesResponse.Instances["+ i +"].OperationLocks.Length"); j++) {
-				LockReason  lockReason = new LockReason();
-				lockReason.setLockReason(context.stringValue("DescribeInstancesResponse.Instances["+ i +"].OperationLocks["+ j +"].LockReason"));
+			for (int j = 0; j < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].OperationLocks.Length"); j++) {
+				LockReason lockReason = new LockReason();
+				lockReason.setLockReason(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].OperationLocks["+ j +"].LockReason"));
+				lockReason.setLockMsg(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].OperationLocks["+ j +"].LockMsg"));
 
 				operationLocks.add(lockReason);
 			}

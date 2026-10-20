@@ -1,0 +1,61 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.pvtz.transform.v20180101;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.aliyuncs.pvtz.model.v20180101.DescribeZoneRecordsResponse;
+import com.aliyuncs.pvtz.model.v20180101.DescribeZoneRecordsResponse.Record;
+import com.aliyuncs.transform.UnmarshallerContext;
+
+
+public class DescribeZoneRecordsResponseUnmarshaller {
+
+	public static DescribeZoneRecordsResponse unmarshall(DescribeZoneRecordsResponse describeZoneRecordsResponse, UnmarshallerContext _ctx) {
+		
+		describeZoneRecordsResponse.setRequestId(_ctx.stringValue("DescribeZoneRecordsResponse.RequestId"));
+		describeZoneRecordsResponse.setPageSize(_ctx.integerValue("DescribeZoneRecordsResponse.PageSize"));
+		describeZoneRecordsResponse.setPageNumber(_ctx.integerValue("DescribeZoneRecordsResponse.PageNumber"));
+		describeZoneRecordsResponse.setTotalPages(_ctx.integerValue("DescribeZoneRecordsResponse.TotalPages"));
+		describeZoneRecordsResponse.setTotalItems(_ctx.integerValue("DescribeZoneRecordsResponse.TotalItems"));
+
+		List<Record> records = new ArrayList<Record>();
+		for (int i = 0; i < _ctx.lengthValue("DescribeZoneRecordsResponse.Records.Length"); i++) {
+			Record record = new Record();
+			record.setStatus(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].Status"));
+			record.setType(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].Type"));
+			record.setValue(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].Value"));
+			record.setTtl(_ctx.integerValue("DescribeZoneRecordsResponse.Records["+ i +"].Ttl"));
+			record.setRemark(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].Remark"));
+			record.setRecordId(_ctx.longValue("DescribeZoneRecordsResponse.Records["+ i +"].RecordId"));
+			record.setRr(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].Rr"));
+			record.setPriority(_ctx.integerValue("DescribeZoneRecordsResponse.Records["+ i +"].Priority"));
+			record.setRegionId(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].RegionId"));
+			record.setLine(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].Line"));
+			record.setWeight(_ctx.integerValue("DescribeZoneRecordsResponse.Records["+ i +"].Weight"));
+			record.setCreateTime(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].CreateTime"));
+			record.setUpdateTime(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].UpdateTime"));
+			record.setCreateTimestamp(_ctx.longValue("DescribeZoneRecordsResponse.Records["+ i +"].CreateTimestamp"));
+			record.setUpdateTimestamp(_ctx.longValue("DescribeZoneRecordsResponse.Records["+ i +"].UpdateTimestamp"));
+			record.setZoneId(_ctx.stringValue("DescribeZoneRecordsResponse.Records["+ i +"].ZoneId"));
+
+			records.add(record);
+		}
+		describeZoneRecordsResponse.setRecords(records);
+	 
+	 	return describeZoneRecordsResponse;
+	}
+}

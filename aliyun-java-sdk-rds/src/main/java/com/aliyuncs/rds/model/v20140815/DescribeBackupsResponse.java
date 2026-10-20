@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -29,31 +25,19 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeBackupsResponse extends AcsResponse {
 
-	private String requestId;
-
-	private String totalRecordCount;
-
 	private String pageNumber;
 
 	private String pageRecordCount;
 
+	private String requestId;
+
+	private Long totalBackupSize;
+
+	private Long totalEcsSnapshotSize;
+
+	private String totalRecordCount;
+
 	private List<Backup> items;
-
-	public String getRequestId() {
-		return this.requestId;
-	}
-
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
-
-	public String getTotalRecordCount() {
-		return this.totalRecordCount;
-	}
-
-	public void setTotalRecordCount(String totalRecordCount) {
-		this.totalRecordCount = totalRecordCount;
-	}
 
 	public String getPageNumber() {
 		return this.pageNumber;
@@ -71,6 +55,38 @@ public class DescribeBackupsResponse extends AcsResponse {
 		this.pageRecordCount = pageRecordCount;
 	}
 
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public Long getTotalBackupSize() {
+		return this.totalBackupSize;
+	}
+
+	public void setTotalBackupSize(Long totalBackupSize) {
+		this.totalBackupSize = totalBackupSize;
+	}
+
+	public Long getTotalEcsSnapshotSize() {
+		return this.totalEcsSnapshotSize;
+	}
+
+	public void setTotalEcsSnapshotSize(Long totalEcsSnapshotSize) {
+		this.totalEcsSnapshotSize = totalEcsSnapshotSize;
+	}
+
+	public String getTotalRecordCount() {
+		return this.totalRecordCount;
+	}
+
+	public void setTotalRecordCount(String totalRecordCount) {
+		this.totalRecordCount = totalRecordCount;
+	}
+
 	public List<Backup> getItems() {
 		return this.items;
 	}
@@ -81,96 +97,76 @@ public class DescribeBackupsResponse extends AcsResponse {
 
 	public static class Backup {
 
-		private String backupId;
-
-		private String dBInstanceId;
-
-		private BackupStatus backupStatus;
-
-		private String backupStartTime;
-
-		private String backupEndTime;
-
-		private BackupType backupType;
-
-		private BackupMode backupMode;
-
-		private BackupMethod backupMethod;
+		private String backupDBNames;
 
 		private String backupDownloadURL;
 
+		private String backupEndTime;
+
+		private String backupExtractionStatus;
+
+		private String backupId;
+
+		private String backupInitiator;
+
+		private String backupIntranetDownloadURL;
+
 		private String backupLocation;
 
-		private BackupExtractionStatus backupExtractionStatus;
+		private String backupMethod;
 
-		private BackupScale backupScale;
+		private String backupMode;
 
-		private String backupDBNames;
+		private String backupScale;
 
 		private Long backupSize;
 
-		public String getBackupId() {
-			return this.backupId;
+		private String backupStartTime;
+
+		private String backupStatus;
+
+		private String backupType;
+
+		private String checksum;
+
+		private Long consistentTime;
+
+		private String copyOnlyBackup;
+
+		private String dBInstanceId;
+
+		private String encryption;
+
+		private String engine;
+
+		private String engineVersion;
+
+		private String hostInstanceID;
+
+		private Integer isAvail;
+
+		private String metaStatus;
+
+		private String resourceGroupId;
+
+		private String slaveStatus;
+
+		private String storageClass;
+
+		private String storeStatus;
+
+		private Long totalBackupSize;
+
+		private String expectExpireTime;
+
+		private List<BackupDownloadLinkByDBItem> backupDownloadLinkByDB;
+
+		public String getBackupDBNames() {
+			return this.backupDBNames;
 		}
 
-		public void setBackupId(String backupId) {
-			this.backupId = backupId;
-		}
-
-		public String getDBInstanceId() {
-			return this.dBInstanceId;
-		}
-
-		public void setDBInstanceId(String dBInstanceId) {
-			this.dBInstanceId = dBInstanceId;
-		}
-
-		public BackupStatus getBackupStatus() {
-			return this.backupStatus;
-		}
-
-		public void setBackupStatus(BackupStatus backupStatus) {
-			this.backupStatus = backupStatus;
-		}
-
-		public String getBackupStartTime() {
-			return this.backupStartTime;
-		}
-
-		public void setBackupStartTime(String backupStartTime) {
-			this.backupStartTime = backupStartTime;
-		}
-
-		public String getBackupEndTime() {
-			return this.backupEndTime;
-		}
-
-		public void setBackupEndTime(String backupEndTime) {
-			this.backupEndTime = backupEndTime;
-		}
-
-		public BackupType getBackupType() {
-			return this.backupType;
-		}
-
-		public void setBackupType(BackupType backupType) {
-			this.backupType = backupType;
-		}
-
-		public BackupMode getBackupMode() {
-			return this.backupMode;
-		}
-
-		public void setBackupMode(BackupMode backupMode) {
-			this.backupMode = backupMode;
-		}
-
-		public BackupMethod getBackupMethod() {
-			return this.backupMethod;
-		}
-
-		public void setBackupMethod(BackupMethod backupMethod) {
-			this.backupMethod = backupMethod;
+		public void setBackupDBNames(String backupDBNames) {
+			this.backupDBNames = backupDBNames;
 		}
 
 		public String getBackupDownloadURL() {
@@ -181,6 +177,46 @@ public class DescribeBackupsResponse extends AcsResponse {
 			this.backupDownloadURL = backupDownloadURL;
 		}
 
+		public String getBackupEndTime() {
+			return this.backupEndTime;
+		}
+
+		public void setBackupEndTime(String backupEndTime) {
+			this.backupEndTime = backupEndTime;
+		}
+
+		public String getBackupExtractionStatus() {
+			return this.backupExtractionStatus;
+		}
+
+		public void setBackupExtractionStatus(String backupExtractionStatus) {
+			this.backupExtractionStatus = backupExtractionStatus;
+		}
+
+		public String getBackupId() {
+			return this.backupId;
+		}
+
+		public void setBackupId(String backupId) {
+			this.backupId = backupId;
+		}
+
+		public String getBackupInitiator() {
+			return this.backupInitiator;
+		}
+
+		public void setBackupInitiator(String backupInitiator) {
+			this.backupInitiator = backupInitiator;
+		}
+
+		public String getBackupIntranetDownloadURL() {
+			return this.backupIntranetDownloadURL;
+		}
+
+		public void setBackupIntranetDownloadURL(String backupIntranetDownloadURL) {
+			this.backupIntranetDownloadURL = backupIntranetDownloadURL;
+		}
+
 		public String getBackupLocation() {
 			return this.backupLocation;
 		}
@@ -189,28 +225,28 @@ public class DescribeBackupsResponse extends AcsResponse {
 			this.backupLocation = backupLocation;
 		}
 
-		public BackupExtractionStatus getBackupExtractionStatus() {
-			return this.backupExtractionStatus;
+		public String getBackupMethod() {
+			return this.backupMethod;
 		}
 
-		public void setBackupExtractionStatus(BackupExtractionStatus backupExtractionStatus) {
-			this.backupExtractionStatus = backupExtractionStatus;
+		public void setBackupMethod(String backupMethod) {
+			this.backupMethod = backupMethod;
 		}
 
-		public BackupScale getBackupScale() {
+		public String getBackupMode() {
+			return this.backupMode;
+		}
+
+		public void setBackupMode(String backupMode) {
+			this.backupMode = backupMode;
+		}
+
+		public String getBackupScale() {
 			return this.backupScale;
 		}
 
-		public void setBackupScale(BackupScale backupScale) {
+		public void setBackupScale(String backupScale) {
 			this.backupScale = backupScale;
-		}
-
-		public String getBackupDBNames() {
-			return this.backupDBNames;
-		}
-
-		public void setBackupDBNames(String backupDBNames) {
-			this.backupDBNames = backupDBNames;
 		}
 
 		public Long getBackupSize() {
@@ -221,204 +257,197 @@ public class DescribeBackupsResponse extends AcsResponse {
 			this.backupSize = backupSize;
 		}
 
-		public enum BackupStatus {
-		
-			FAILED("Failed"),
-			SUCCESS("Success"),;
-			
-		    private String stringValue;
-		
-			BackupStatus(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static BackupStatus getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (BackupStatus backupStatus : BackupStatus.values()) {
-					if(backupStatus.getStringValue().equals(stringValue)){
-						return backupStatus;
-					}
-				}
-		    	return null;
-		    }
+		public String getBackupStartTime() {
+			return this.backupStartTime;
 		}
 
-		public enum BackupType {
-		
-			INCREMENTAL_BACKUP("IncrementalBackup"),
-			FULL_BACKUP("FullBackup"),;
-			
-		    private String stringValue;
-		
-			BackupType(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static BackupType getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (BackupType backupType : BackupType.values()) {
-					if(backupType.getStringValue().equals(stringValue)){
-						return backupType;
-					}
-				}
-		    	return null;
-		    }
+		public void setBackupStartTime(String backupStartTime) {
+			this.backupStartTime = backupStartTime;
 		}
 
-		public enum BackupMode {
-		
-			MANUAL("Manual"),
-			AUTOMATED("Automated"),;
-			
-		    private String stringValue;
-		
-			BackupMode(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static BackupMode getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (BackupMode backupMode : BackupMode.values()) {
-					if(backupMode.getStringValue().equals(stringValue)){
-						return backupMode;
-					}
-				}
-		    	return null;
-		    }
+		public String getBackupStatus() {
+			return this.backupStatus;
 		}
 
-		public enum BackupMethod {
-		
-			PHYSICAL("Physical"),
-			LOGICAL("Logical"),;
-			
-		    private String stringValue;
-		
-			BackupMethod(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static BackupMethod getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (BackupMethod backupMethod : BackupMethod.values()) {
-					if(backupMethod.getStringValue().equals(stringValue)){
-						return backupMethod;
-					}
-				}
-		    	return null;
-		    }
+		public void setBackupStatus(String backupStatus) {
+			this.backupStatus = backupStatus;
 		}
 
-		public enum BackupExtractionStatus {
-		
-			NOSTART("Nostart"),
-			EXTRACING("Extracing"),
-			FAILED("Failed"),
-			SUCCESS("Success"),;
-			
-		    private String stringValue;
-		
-			BackupExtractionStatus(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static BackupExtractionStatus getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (BackupExtractionStatus backupExtractionStatus : BackupExtractionStatus.values()) {
-					if(backupExtractionStatus.getStringValue().equals(stringValue)){
-						return backupExtractionStatus;
-					}
-				}
-		    	return null;
-		    }
+		public String getBackupType() {
+			return this.backupType;
 		}
 
-		public enum BackupScale {
-		
-			D_B_INSTANCE("DBInstance"),
-			DATABASE("Database"),;
-			
-		    private String stringValue;
-		
-			BackupScale(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static BackupScale getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (BackupScale backupScale : BackupScale.values()) {
-					if(backupScale.getStringValue().equals(stringValue)){
-						return backupScale;
-					}
-				}
-		    	return null;
-		    }
+		public void setBackupType(String backupType) {
+			this.backupType = backupType;
+		}
+
+		public String getChecksum() {
+			return this.checksum;
+		}
+
+		public void setChecksum(String checksum) {
+			this.checksum = checksum;
+		}
+
+		public Long getConsistentTime() {
+			return this.consistentTime;
+		}
+
+		public void setConsistentTime(Long consistentTime) {
+			this.consistentTime = consistentTime;
+		}
+
+		public String getCopyOnlyBackup() {
+			return this.copyOnlyBackup;
+		}
+
+		public void setCopyOnlyBackup(String copyOnlyBackup) {
+			this.copyOnlyBackup = copyOnlyBackup;
+		}
+
+		public String getDBInstanceId() {
+			return this.dBInstanceId;
+		}
+
+		public void setDBInstanceId(String dBInstanceId) {
+			this.dBInstanceId = dBInstanceId;
+		}
+
+		public String getEncryption() {
+			return this.encryption;
+		}
+
+		public void setEncryption(String encryption) {
+			this.encryption = encryption;
+		}
+
+		public String getEngine() {
+			return this.engine;
+		}
+
+		public void setEngine(String engine) {
+			this.engine = engine;
+		}
+
+		public String getEngineVersion() {
+			return this.engineVersion;
+		}
+
+		public void setEngineVersion(String engineVersion) {
+			this.engineVersion = engineVersion;
+		}
+
+		public String getHostInstanceID() {
+			return this.hostInstanceID;
+		}
+
+		public void setHostInstanceID(String hostInstanceID) {
+			this.hostInstanceID = hostInstanceID;
+		}
+
+		public Integer getIsAvail() {
+			return this.isAvail;
+		}
+
+		public void setIsAvail(Integer isAvail) {
+			this.isAvail = isAvail;
+		}
+
+		public String getMetaStatus() {
+			return this.metaStatus;
+		}
+
+		public void setMetaStatus(String metaStatus) {
+			this.metaStatus = metaStatus;
+		}
+
+		public String getResourceGroupId() {
+			return this.resourceGroupId;
+		}
+
+		public void setResourceGroupId(String resourceGroupId) {
+			this.resourceGroupId = resourceGroupId;
+		}
+
+		public String getSlaveStatus() {
+			return this.slaveStatus;
+		}
+
+		public void setSlaveStatus(String slaveStatus) {
+			this.slaveStatus = slaveStatus;
+		}
+
+		public String getStorageClass() {
+			return this.storageClass;
+		}
+
+		public void setStorageClass(String storageClass) {
+			this.storageClass = storageClass;
+		}
+
+		public String getStoreStatus() {
+			return this.storeStatus;
+		}
+
+		public void setStoreStatus(String storeStatus) {
+			this.storeStatus = storeStatus;
+		}
+
+		public Long getTotalBackupSize() {
+			return this.totalBackupSize;
+		}
+
+		public void setTotalBackupSize(Long totalBackupSize) {
+			this.totalBackupSize = totalBackupSize;
+		}
+
+		public String getExpectExpireTime() {
+			return this.expectExpireTime;
+		}
+
+		public void setExpectExpireTime(String expectExpireTime) {
+			this.expectExpireTime = expectExpireTime;
+		}
+
+		public List<BackupDownloadLinkByDBItem> getBackupDownloadLinkByDB() {
+			return this.backupDownloadLinkByDB;
+		}
+
+		public void setBackupDownloadLinkByDB(List<BackupDownloadLinkByDBItem> backupDownloadLinkByDB) {
+			this.backupDownloadLinkByDB = backupDownloadLinkByDB;
+		}
+
+		public static class BackupDownloadLinkByDBItem {
+
+			private String dataBase;
+
+			private String downloadLink;
+
+			private String intranetDownloadLink;
+
+			public String getDataBase() {
+				return this.dataBase;
+			}
+
+			public void setDataBase(String dataBase) {
+				this.dataBase = dataBase;
+			}
+
+			public String getDownloadLink() {
+				return this.downloadLink;
+			}
+
+			public void setDownloadLink(String downloadLink) {
+				this.downloadLink = downloadLink;
+			}
+
+			public String getIntranetDownloadLink() {
+				return this.intranetDownloadLink;
+			}
+
+			public void setIntranetDownloadLink(String intranetDownloadLink) {
+				this.intranetDownloadLink = intranetDownloadLink;
+			}
 		}
 	}
 

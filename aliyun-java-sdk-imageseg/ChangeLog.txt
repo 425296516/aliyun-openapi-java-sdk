@@ -1,0 +1,93 @@
+2024-07-30 Version: 1.1.15
+- Update SegmentCloth.
+
+2023-12-06 Version: 1.1.14
+- Update SegmentCloth.
+
+2022-11-18 Version: 1.1.13
+- Update RefineMask.
+
+2022-11-01 Version: 1.1.12
+- Update RefineMask.
+
+2022-10-17 Version: 1.1.11
+- Update RefineMask.
+
+2022-09-29 Version: 1.1.10
+- Update RefineMask.
+
+2020-12-22 Version: 1.1.9
+- Update SegmentAnimal SegmentCommonImage.
+
+2020-12-17 Version: 1.1.8
+- Update SegmentFood.
+
+2020-12-09 Version: 1.1.7
+- Update SegmentCommodity.
+
+2020-12-02 Version: 1.1.6
+- Update SegmentHead.
+
+2020-11-19 Version: 1.1.5
+- Update SegmentBody.
+
+2020-11-13 Version: 1.1.4
+- Release SegmentHDSky SegmentHDCommonImage.
+
+2020-11-13 Version: 1.1.3
+- Release SegmentHDSky SegmentHDCommonImage.
+
+2020-11-13 Version: 1.1.3
+- Release SegmentHDSky SegmentHDCommonImage.
+
+2020-10-13 Version: 1.1.2
+- Release SegmentSkin.
+
+2020-09-10 Version: 1.1.1
+- Release ChangeSky.
+
+2020-09-09 Version: 1.1.1
+- Release ChangeSky.
+
+2020-09-09 Version: 1.1.1
+- Release ChangeSky.
+
+2020-09-09 Version: 1.1.1
+- Release ChangeSky.
+
+2020-07-30 Version: 1.1.0
+- Add SegmentLogo SegmentScene.
+
+2020-07-30 Version: 1.1.0
+- Add SegmentLogo SegmentScene.
+
+2020-07-30 Version: 1.1.0
+- Add SegmentLogo SegmentScene.
+
+2020-07-01 Version: 1.0.9
+- SDK version 109.
+
+2020-05-29 Version: 1.0.8
+- SDK version 108.
+
+2020-03-23 Version: 1.0.7
+- SDK version 107.
+
+2020-03-23 Version: 1.0.7
+- SDK version 107.
+
+2020-02-27 Version: 1.0.6
+- Sixth sdk version.
+
+2020-01-20 Version: 1.0.2
+- Onezerotwo sdk version.
+
+2020-01-20 Version: 1.0.1
+- Onezeroone sdk version.
+
+2019-12-29 Version: 1.0.1
+- Add new api.
+
+2019-12-18 Version: 1.0.0
+- First sdk version.
+

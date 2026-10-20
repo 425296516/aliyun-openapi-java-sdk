@@ -1,0 +1,234 @@
+2025-12-17 Version: 2.20.25
+更改上海金融云和深圳的域名
+
+2025-08-28 Version: 2.20.24
+- Generated 2015-01-01 for `R-kvstore`.
+
+2025-07-30 Version: 2.20.23
+- Backup OpenAPI update.
+
+2025-07-25 Version: 2.20.22
+- Backup OpenAPI update.
+
+2024-08-28 Version: 2.20.21
+- DescibePrice add ShardCount parameters.
+
+2024-08-05 Version: 2.20.20
+- DescibePrice add ShardCount parameters.
+
+2024-05-06 Version: 2.20.19
+- Update OpenAPI DescribeBackups BackupId and BackupJobID from int32 to int64.
+
+2024-04-07 Version: 2.20.18
+- Generated 2015-01-01 for `R-kvstore`.
+
+2024-01-18 Version: 2.20.17
+- Add DescribeClusterBackupList OpenAPI.
+
+2023-09-15 Version: 2.20.16
+- Update us-east-1 us-west-1 endpoint.
+
+2023-09-15 Version: 2.20.15
+- Update Sdk.
+
+2023-09-12 Version: 2.20.14
+- Update Sdk.
+
+2023-09-05 Version: 2.20.13
+- Update Sdk.
+
+2023-07-06 Version: 2.20.12
+- Update Sdk.
+- Add ForceTrans parameters to ModifyInstanceSpec, ModifyInstanceCapacity, DeleteShardingNode,AddShardingNode.
+
+2023-06-29 Version: 2.20.11
+- Update Sdk.
+
+2023-06-26 Version: 2.20.10
+- Update Sdk.
+
+2023-03-17 Version: 2.20.9
+- DescribeIntranetAttribute add HasPrePaidBandWidthOrderRunning return.
+
+2023-02-01 Version: 2.20.8
+- CreateTairInstance support dryrun.
+
+2022-11-18 Version: 2.20.7
+- Update python sdk.
+
+2022-05-11 Version: 2.20.6
+- Update by sdk platform.
+
+2022-04-07 Version: 2.20.5
+- Update by sdk platform.
+
+2022-03-23 Version: 2.20.4
+- Update by sdk platform.
+
+2022-03-15 Version: 2.20.3
+- Update by sdk platform.
+
+2021-12-30 Version: 2.20.2
+- Update by sdk platform.
+
+2021-08-12 Version: 2.20.1
+- DescirbeAvailableResource add NodeId input parameter.
+- CreateTairInstance add GlobalInstanceId input paramter.
+
+2021-07-27 Version: 2.20.0
+- Add DescribeAuditLogConfig API.
+
+2021-07-07 Version: 2.19.0
+- Support FilterKey for RestoreInstance.
+- DescribeInstanceAttribute add return argument BackupLogStartTime.
+- Add RemoveSubInstance for Global Distributed Cache.
+
+2021-05-14 Version: 2.18.1
+- EnableAdditionalBandwidth add AutoRenew,AutoRenewPeriod parameter.
+
+2021-05-11 Version: 2.18.0
+- CreateInstance API add Port, Tags, DryRun.
+
+2021-04-29 Version: 2.17.0
+- Add DescribeInstances API.
+
+2021-03-26 Version: 2.16.0
+- Add RenewAdditionalBandwidth API.
+
+2021-03-17 Version: 2.15.0
+- EnableAdditionalBandwidth API add SourceBiz.
+- DescribeAvailableResource add ProductType to support buy OnECS instance.
+
+2021-03-12 Version: 2.14.0
+- Add EnableAdditionalBandwidth API.
+- Add CreateTairInstance API.
+
+2021-02-03 Version: 2.13.0
+- Add ModifyAuditLogConfig API.
+
+2021-01-13 Version: 2.12.0
+- Add SwitchInstanceHA API.
+- ModifyInstanceSpec add SourceBiz param.
+
+2021-01-05 Version: 2.11.0
+- Add DescribeBackupTasks API.
+
+2020-12-30 Version: 2.10.0
+- Add DescribeActiveOperationTask API.
+- Add ModifyActiveOperationTask API.
+
+2020-11-13 Version: 2.9.0
+- Add DeccribeEngineVersion DescribeTasks DescribeInstanceConfig and more APIs.
+
+2020-11-03 Version: 2.8.1
+- Minor update for r-kvstore.
+
+2020-10-21 Version: 2.8.0
+- DescribeAvailableResource support AcceptLanguage.
+
+2020-09-27 Version: 2.7.0
+- DescribeAvailableResource support list available resource for modify instance.
+
+2020-09-22 Version: 2.6.2
+- DescribePrice update amount type to string.
+
+2020-09-10 Version: 2.6.1
+- Update HasRenewChangeOrder type to Boolean in DescribeInstances.
+
+2020-08-20 Version: 2.6.0
+- Added Global Distribute Cache OpenAPIs.
+- Added direct connection OpenAPIs.
+
+2020-08-12 Version: 2.5.1
+- Generated 2015-01-01 for `R-kvstore`.
+- SyncDtsStatus API add TaskId parameter.
+
+2020-07-22 Version: 2.5.0
+- Generated 2015-01-01 for `R-kvstore`.
+- Add SyncDtsStatus API.
+
+2020-05-23 Version: 2.4.0
+- Generated 2015-01-01 for `R-kvstore`.
+- Add ModifyResourceGroup API.
+- DescribeInstanceAttribute return ResourceGroupId.
+
+2020-05-14 Version: 2.3.2
+- Generated 2015-01-01 for `R-kvstore`.
+- Fix DescribeCacheAnalysisReport return empty BigKeys because of wrong type defination.
+
+2020-04-25 Version: 2.3.1
+- Generated 2015-01-01 for `R-kvstore`.
+- Add RestoreTime for CreateInstance API.
+
+2020-04-09 Version: 2.3.0
+- Generated 2015-01-01 for `R-kvstore`.
+- Add DescribePrice API.
+
+2020-03-23 Version: 2.2.0
+- Generated 2015-01-01 for `R-kvstore`.
+- Add DescribeSecurityGroupConfiguration API.
+- Add ModifySecurityGroupConfiguration API.
+
+2020-02-26 Version: 2.1.5
+- Generated 2015-01-01 for `R-kvstore`.
+- Add VpcCloudInstanceId for DescribeInstanceAttribute.
+
+2020-01-16 Version: 2.1.4
+- Generated 2015-01-01 for `R-kvstore`.
+- Update DescribeAvailableResource.
+
+2019-12-14 Version: 2.1.3
+- Generated 2015-01-01 for `R-kvstore`.
+
+2019-12-14 Version: 2.0.9
+- Update DescribeAvailableResource.
+
+2019-12-14 Version: 2.0.8
+- Update DescribeAvailableResource.
+
+2019-09-23 Version: 2.1.2
+- Generated 2015-01-01 for `R-kvstore`.
+
+2019-09-23 Version: 2.0.8
+- Generated 2015-01-01 for `R-kvstore`.
+
+2019-06-13 Version: 2.1.1
+- Generated 2015-01-01 for `R-kvstore`
+
+2019-04-29 Version: 2.0.8
+1, publish DescribeAvailableResource
+
+2019-04-28 Version: 2.0.8
+1, Publish DescribeAvailableResource.
+
+2019-04-18 Version: 2.0.7
+1, CreateCacheAnalysisTask prop modify
+
+2019-04-16 Version: 2.0.6
+1, Fixed DescribeAccounts response type error.
+
+2019-04-16 Version: 2.0.6
+1, Fixed describeAccounts response type error
+
+2018-12-27 Version: 2.0.5
+1, Add DescribeZones Api.
+
+2018-12-11 Version: 2.0.4
+1, Add ModifyInstanceVpcAuthMode OpenApi.
+2, Upgrade SDK Version to 2.0.4.
+
+2018-09-06 Version: 2.0.3
+1, fixed DescirbeRegions zoneId date type.
+
+2018-08-31 Version: 2.0.3
+1, The CreateInstance supported VPC IpAddress.
+
+2018-08-27 Version: 2.0.3
+1, createInstance supported IpAddress param.
+
+2018-05-28 Version: 2.0.2
+1, add new openapi .
+
+2017-10-17 Version: 1.0.0
+1, KvStore open api 开放， sdk 发布
+

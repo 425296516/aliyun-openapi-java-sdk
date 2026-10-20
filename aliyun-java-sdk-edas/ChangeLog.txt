@@ -1,0 +1,260 @@
+2023-11-13 Version: 3.26.17
+- Add response parameters in GetK8sApplication.
+- Add request parameters in InsertK8sApplication.
+
+2023-03-27 Version: 3.26.16
+- Add UserBaseImageUrl parameter for InsertK8sApplication API.
+- Add UserBaseImageUrl parameter for DeployK8sApplication API.
+
+2023-01-09 Version: 3.26.15
+- Add Behaviour parameter for CreateApplicationScalingRule API.
+
+2023-01-03 Version: 3.26.14
+- Update UpdateApplicationScalingRule API.
+
+2023-01-03 Version: 3.26.13
+- Update UpdateApplicationScalingRule API.
+
+2022-11-17 Version: 3.26.12
+- Modify InsertK8sApplication API.
+
+2022-08-17 Version: 3.26.11
+- DeleteK8sApplication add params force.
+
+2022-08-12 Version: 3.26.10
+- Support swimming lane sdk.
+
+2022-07-29 Version: 3.26.9
+- Removed Region From StartK8sAppPrecheck.
+
+2022-07-28 Version: 3.26.8
+- Supported SlbInfo in GetK8sApplication.
+
+2022-07-14 Version: 3.26.7
+- Supported SubClusterType in GetK8sCluster.
+
+2022-07-08 Version: 3.26.6
+- Supported StartK8sAppPrecheck
+- Supported GetK8sAppPrecheckResult
+
+2022-06-16 Version: 3.26.5
+- Supported ExternalTrafficPolicy for CreateK8sService.
+- Supported ExternalTrafficPolicy for UpdateK8sService.
+
+2022-06-02 Version: 3.26.4
+- Add ListK8sNamespaces.
+
+2022-05-18 Version: 3.26.3
+- Supported EnableEmptyPushReject for InsertK8sApplication.
+- Supported EnableLosslessRule for InsertK8sApplication.
+- Supported LosslessRuleWarmupTime for InsertK8sApplication.
+- Supported LosslessRuleDelayTime for InsertK8sApplication.
+- Supported LosslessRuleFuncType for InsertK8sApplication.
+- Supported LosslessRuleAligned for InsertK8sApplication.
+- Supported LosslessRuleRelated for InsertK8sApplication.
+- Supported EnableEmptyPushReject for DeployK8sApplication.
+- Supported EnableLosslessRule for DeployK8sApplication.
+- Supported LosslessRuleWarmupTime for DeployK8sApplication.
+- Supported LosslessRuleDelayTime for DeployK8sApplication.
+- Supported LosslessRuleFuncType for DeployK8sApplication.
+- Supported LosslessRuleAligned for DeployK8sApplication.
+- Supported LosslessRuleRelated for DeployK8sApplication.
+
+2022-04-25 Version: 3.26.2
+- Supported ResourceGroupId for InsertApplication.
+- Supported ResourceGroupId for InsertK8sApplication.
+
+2022-04-14 Version: 3.26.1
+- Supported BuildPackId configurations for K8s Applications.
+
+2022-03-14 Version: 3.26.0
+- Add developType in GetK8sApplication.
+
+2022-03-14 Version: 3.25.1
+- Modify API ListConfigTemplates.
+- Modify API CreateConfigTemplate.
+- Modify API UpdateConfigTemplate.
+- Modify API DeleteConfigTemplate.
+
+2022-01-27 Version: 3.25.0
+- Update params for k8s application custom affinity and tolerations.
+
+2021-10-18 Version: 3.23.1
+- Fixed ListApplicationEcu.
+
+2021-09-22 Version: 3.23.0
+- Modify CreateK8sSecret.
+
+2021-09-09 Version: 3.22.0
+- Modify API InsertK8sApplication.
+- Modify API DeployK8sApplication.
+
+2021-06-10 Version: 3.21.0
+- Modify API ListK8sIngressRules.
+- Modify API CreateK8sIngressRule.
+- Modify API UpdateK8sIngressRule.
+- Modify API DeleteK8sIngressRule.
+
+2021-05-06 Version: 3.20.1
+- Modify API GetAppDeployment.
+
+2021-04-27 Version: 3.20.0
+- Add API GetAppDeployment.
+- Modify API DescribeAppInstanceList.
+
+2021-03-29 Version: 3.18.0
+- Modify API CreateGrayEnviroment.
+
+2021-01-16 Version: 3.15.2
+- Generated 2017-08-01 for `Edas`.
+
+2021-01-16 Version: 3.15.2
+- Generated 2017-08-01 for `Edas`.
+
+2021-01-16 Version: 3.15.2
+- Generated 2017-08-01 for `Edas`.
+
+2021-01-15 Version: 3.15.2
+- Generated 2017-08-01 for `Edas`.
+
+2021-01-14 Version: 3.15.1
+- Modify API InsertApplication.
+
+2021-01-12 Version: 3.15.0
+- Modify API InsertApplication.
+- Modify API SynchronizeResource.
+- New API UpdateHookConfiguration.
+- New API ListApplicationEcc.
+
+2020-11-30 Version: 3.14.0
+- Modify API ScaleoutApplicationWithNewInstances.
+
+2020-09-17 Version: 3.12.3
+- Fixed bugs for ListComponents.
+- Supported more search condition for ListApplication.
+
+2020-09-14 Version: 3.12.2
+- Fixed bugs for ListComponents.
+- Supported more search condition for ListApplication.
+
+2020-09-14 Version: 3.12.1
+- Fixed bugs for ListComponents.
+- Supported more search condition for ListApplication.
+
+2020-09-07 Version: 3.12.0
+- Add API ScaleoutApplicationWithNewInstances.
+
+2020-08-13 Version: 3.8.1
+- Fix GetServiceListPage bug.
+
+2020-08-13 Version: 3.8.1
+- Fix GetServiceListPage bug.
+
+2020-08-07 Version: 3.5.0
+- Add new Api CreateIDCImportCommand.
+
+2020-07-28 Version: 3.4.1
+- Generated 2017-08-01 for `Edas`.
+
+2020-07-28 Version: 3.4.1
+- Generated 2017-08-01 for `Edas`.
+
+2020-07-28 Version: 3.4.1
+- Generated 2017-08-01 for `Edas`.
+
+2020-07-28 Version: 3.4.1
+- Generated 2017-08-01 for `Edas`.
+
+2020-05-20 Version: 3.4.0
+- Add supportting for deploy K8s application across zones.
+- Add supportting for choosing K8s application runtime class.
+
+2020-04-28 Version: 3.0.5
+- Generated 2017-08-01 for `Edas`.
+
+2020-04-09 Version: 3.0.4
+- Generated 2017-08-01 for `Edas`.
+
+2020-03-04 Version: 3.0.3
+- Add UpdateK8sResource API.
+
+2020-03-04 Version: 2.57.3
+- Generated 2017-08-01 for `Edas`.
+
+2019-12-24 Version: 2.57.2
+- Generated 2017-08-01 for `Edas`.
+
+2019-12-24 Version: 2.57.1
+- Generated 2017-08-01 for `Edas`.
+
+2019-12-17 Version: 2.57.0
+- Support for OAM Application.
+
+2019-11-25 Version: 2.53.4
+- Generated 2017-08-01 for `Edas`.
+
+2019-10-25 Version: 2.53.3
+- Generated 2017-08-01 for `Edas`.
+
+2019-10-23 Version: 2.53.2
+- Generated 2017-08-01 for `Edas`.
+
+2019-09-23 Version: 2.53.1
+- Generated 2017-08-01 for `Edas`.
+
+2019-09-23 Version: 2.53.0
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-27 Version: 2.52.1
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-27 Version: 2.53.0
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-27 Version: 2.53.0
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-27 Version: 2.52.0
+- Generated 2017-08-01 for `Edas`.
+
+2019-08-14 Version: 2.51.0
+- Support kubernetes application using war and jar package.
+
+2019-08-14 Version: 2.46.7
+- Increase the elastic expansion pop interface.
+- Increase the service method list pop interface.
+
+2019-07-11 Version: 2.46.6
+- Generated 2017-08-01 for `Edas`.
+
+2019-05-13 Version: 2.46.4
+1, Add 'ReleaseType' field into DeployApplication API
+
+2019-05-13 Version: 2.46.4
+1, Add 'ReleaseType' field into DeployApplication API
+
+2019-05-13 Version: 2.46.2
+1, Release ContinuePipeline API.
+
+2019-05-08 Version: 2.46.1
+1, Add ChangeDeployGroup API
+
+2019-03-28 Version: 2.43.0
+1, EDAS serverless support Pandora application deployment in war/jar mode
+
+2019-03-12 Version: 2.42.1
+1, Add application name support for config center APIs.
+2, Add GetCluster API.
+3, Support debug switch in user region APIs.
+
+2019-03-01 Version: 2.41.7
+1, Add API QueryRegionConfig
+2, Add API SynchronizeResource
+
+2019-01-31 Version: 2.41.0
+1, support jdk/webContainer/packageType parameters  for InsertApplicationRequest
+
+2018-12-19 Version: 2.37.0
+1, Add api: InstallAgent.
+2, Add parameter debugEnable of ListUserDefineRegion.
+

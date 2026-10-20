@@ -1,0 +1,57 @@
+2026-05-26 Version: 1.0.17
+- Generated 2020-04-20 for `OnsMqtt`.
+
+2025-02-26 Version: 1.0.16
+- Generated 2020-04-20 for `OnsMqtt`.
+
+2025-02-25 Version: 1.0.15
+- Generated 2020-04-20 for `OnsMqtt`.
+
+2024-08-27 Version: 1.0.14
+- Generated 2020-04-20 for `OnsMqtt`.
+
+2024-03-25 Version: 1.0.13
+- Generated 2020-04-20 for `OnsMqtt`.
+
+2022-08-24 Version: 1.0.12
+- Generated 2020-04-20 for `OnsMqtt`.
+
+2022-08-24 Version: 1.0.11
+- Generated 2020-04-20 for `OnsMqtt`.
+
+2022-07-18 Version: 1.0.10
+- Generated 2020-04-20 for `OnsMqtt`.
+
+2022-07-07 Version: 1.0.9
+- Generated 2020-04-20 for `OnsMqtt`.
+
+2021-05-27 Version: 1.0.8
+- Supported mqtt trace for lastest.
+
+2021-05-19 Version: 1.0.7
+- Supported the trace.
+
+2021-05-17 Version: 1.0.6
+- Supported the mqtt trace query.
+
+2021-02-01 Version: 1.0.5
+- Support device credential for mqtt.
+
+2021-02-01 Version: 1.0.5
+- Support device credential for mqtt.
+
+2020-08-18 Version: 1.0.4
+- Support session query operations.
+
+2020-04-29 Version: 1.0.3
+- Support groupId operations.
+
+2020-04-23 Version: 1.0.2
+- Support groupId operations.
+
+2020-03-05 Version: 1.0.1
+- Update send message noPresistFlag param.
+
+2020-02-13 Version: 1.0.0
+- Init MQTT SDK .
+

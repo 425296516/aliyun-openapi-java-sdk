@@ -18,58 +18,60 @@
  */
 package com.aliyuncs.ecs.v20140526.model;
 
-import java.util.List;
-
 import com.aliyuncs.AcsResponse;
 import com.aliyuncs.ecs.v20140526.transform.DescribeRegionsResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
-public class DescribeRegionsResponse extends AcsResponse{
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
 
-	private List<Region> regions;
-	private String requestId;
+@XmlRootElement(name = "DescribeRegionsResponse")
+public class DescribeRegionsResponse extends AcsResponse {
 
-	public List<Region> getRegions() {
-		return this.regions;
-	}
+    private List<Region> regions;
+    private String requestId;
 
-	public void setRegions(List<Region> regions) {
-		this.regions = regions;
-	}
+    public List<Region> getRegions() {
+        return this.regions;
+    }
 
-	public static class Region {
+    public void setRegions(List<Region> regions) {
+        this.regions = regions;
+    }
 
-		private String regionId;
+    @Override
+    public DescribeRegionsResponse getInstance(UnmarshallerContext context) {
+        return DescribeRegionsResponseUnmarshaller.unmarshall(this, context);
+    }
 
-		private String localName;
+    public String getRequestId() {
+        return requestId;
+    }
 
-		public String getRegionId() {
-			return this.regionId;
-		}
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
+    }
 
-		public void setRegionId(String regionId) {
-			this.regionId = regionId;
-		}
+    public static class Region {
 
-		public String getLocalName() {
-			return this.localName;
-		}
+        private String regionId;
 
-		public void setLocalName(String localName) {
-			this.localName = localName;
-		}
-	}
+        private String localName;
 
-	@Override
-	public DescribeRegionsResponse getInstance(UnmarshallerContext context) {
-		return	DescribeRegionsResponseUnmarshaller.unmarshall(this, context);
-	}
+        public String getRegionId() {
+            return this.regionId;
+        }
 
-	public String getRequestId() {
-		return requestId;
-	}
+        public void setRegionId(String regionId) {
+            this.regionId = regionId;
+        }
 
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        public void setLocalName(String localName) {
+            this.localName = localName;
+        }
+    }
 }

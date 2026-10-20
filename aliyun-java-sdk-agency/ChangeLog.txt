@@ -1,0 +1,48 @@
+2024-03-18 Version: 2.0.3
+- Add new Method.
+
+2024-03-12 Version: 2.0.2
+- Add new Method.
+
+2023-05-16 Version: 1.0.22
+- AddNewBugStatus.
+
+2023-03-09 Version: 2.0.1
+- Add new Method.
+
+2022-07-06 Version: 2.0.0
+- Add new Method.
+
+2022-07-06 Version: 1.0.30
+- Add new Method.
+
+2022-02-23 Version: 1.0.23
+- UidByPartner.
+
+2022-02-23 Version: 1.0.22
+- UidByPartner.
+
+2022-02-22 Version: 1.0.21
+- Add UidByPartner.
+
+2021-06-11 Version: 1.0.20
+- QueryFusionOrderList.
+
+2021-06-10 Version: 1.0.18
+- QueryFusionOrderList.
+
+2021-06-10 Version: 1.0.17
+- QueryFusionOrderList.
+
+2020-04-07 Version: 1.0.16
+- Add new method.
+
+2020-04-04 Version: 1.0.15
+- Add new method.
+
+2020-04-01 Version: 1.0.14
+- Transfer.
+
+2020-04-01 Version: 1.0.9-transfer-SNAPSHOT
+- Transfer.
+

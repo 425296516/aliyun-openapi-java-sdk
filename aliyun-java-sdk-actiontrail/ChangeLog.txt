@@ -1,0 +1,33 @@
+2022-07-20 Version: 1.2.0
+- Support AK Audit API.
+
+2022-07-08 Version: 1.1.0
+- Support AK Audit API.
+
+2021-06-15 Version: 1.0.6
+- Support API for Trail.
+
+2020-11-26 Version: 1.0.5
+- Generated 2020-07-06, 2017-12-04 for `Actiontrail`.
+
+2020-11-26 Version: 1.0.0
+- Generated 2020-07-06 for `Actiontrail`.
+
+2020-11-12 Version: 1.0.4
+- Update DescribeTrails Response.
+
+2019-12-27 Version: 1.0.3
+- Update DescribeTrails Response.
+
+2019-04-11 Version: 1.0.2
+1, Fix ClassCastException
+
+2019-03-06 Version: 1.0.0
+1, Release ActionTrail API
+
+2019-03-06 Version: 1.0.0
+1, Release Actiontrail OpenApi.
+
+2019-03-06 Version: 1.1.5
+1, Release ActionTrail OpenApi
+

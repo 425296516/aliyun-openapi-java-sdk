@@ -1,0 +1,135 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.aliyuncs.eds_user.model.v20210308;
+
+import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.eds_user.Endpoint;
+
+/**
+ * @author auto create
+ * @version 
+ */
+public class DescribeOrgsRequest extends RpcAcsRequest<DescribeOrgsResponse> {
+	   
+
+	private String businessChannel;
+
+	private List<String> includeOrgIds;
+
+	private String orgName;
+
+	private String nextToken;
+
+	private String parentOrgId;
+
+	private Long maxResults;
+
+	private String showExtras;
+	public DescribeOrgsRequest() {
+		super("eds-user", "2021-03-08", "DescribeOrgs", "eds-user");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
+
+	public String getBusinessChannel() {
+		return this.businessChannel;
+	}
+
+	public void setBusinessChannel(String businessChannel) {
+		this.businessChannel = businessChannel;
+		if(businessChannel != null){
+			putQueryParameter("BusinessChannel", businessChannel);
+		}
+	}
+
+	public List<String> getIncludeOrgIds() {
+		return this.includeOrgIds;
+	}
+
+	public void setIncludeOrgIds(List<String> includeOrgIds) {
+		this.includeOrgIds = includeOrgIds;	
+		if (includeOrgIds != null) {
+			for (int depth1 = 0; depth1 < includeOrgIds.size(); depth1++) {
+				putQueryParameter("IncludeOrgIds." + (depth1 + 1) , includeOrgIds.get(depth1));
+			}
+		}	
+	}
+
+	public String getOrgName() {
+		return this.orgName;
+	}
+
+	public void setOrgName(String orgName) {
+		this.orgName = orgName;
+		if(orgName != null){
+			putQueryParameter("OrgName", orgName);
+		}
+	}
+
+	public String getNextToken() {
+		return this.nextToken;
+	}
+
+	public void setNextToken(String nextToken) {
+		this.nextToken = nextToken;
+		if(nextToken != null){
+			putQueryParameter("NextToken", nextToken);
+		}
+	}
+
+	public String getParentOrgId() {
+		return this.parentOrgId;
+	}
+
+	public void setParentOrgId(String parentOrgId) {
+		this.parentOrgId = parentOrgId;
+		if(parentOrgId != null){
+			putQueryParameter("ParentOrgId", parentOrgId);
+		}
+	}
+
+	public Long getMaxResults() {
+		return this.maxResults;
+	}
+
+	public void setMaxResults(Long maxResults) {
+		this.maxResults = maxResults;
+		if(maxResults != null){
+			putQueryParameter("MaxResults", maxResults.toString());
+		}
+	}
+
+	public String getShowExtras() {
+		return this.showExtras;
+	}
+
+	public void setShowExtras(String showExtras) {
+		this.showExtras = showExtras;
+		if(showExtras != null){
+			putQueryParameter("ShowExtras", showExtras);
+		}
+	}
+
+	@Override
+	public Class<DescribeOrgsResponse> getResponseClass() {
+		return DescribeOrgsResponse.class;
+	}
+
+}

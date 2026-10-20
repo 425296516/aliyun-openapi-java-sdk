@@ -1,0 +1,273 @@
+2024-08-14 Version: 2.10.6
+- Add CallIds field for ListCallDetailRecord.
+
+2024-05-23 Version: 2.10.5
+- Generated 2017-07-05, 2020-07-01 for `CCC`.
+
+2023-06-06 Version: 2.10.4
+- Supported ListHistoricalAgentSkillGroupReport, ListIntervalAgentSkillGroupReport.
+
+2023-05-23 Version: 2.10.3
+- Supported BreakCodeDetails,FirstCheckInTime, LastCheckoutTime .
+
+2023-05-09 Version: 2.10.2
+- Supported GetVideo Api.
+
+2023-05-08 Version: 2.10.1
+- Supported GetVideo Api.
+
+2023-04-25 Version: 2.10.0
+- Iteration v2-10-0.
+
+2023-03-08 Version: 2.9.2
+- Support get early media recording.
+
+2023-03-08 Version: 2.9.1
+- Support get early media recording.
+
+2023-02-27 Version: 2.9.0
+- Support modify user displayName.
+
+2023-02-22 Version: 2.8.6
+- Supported Legacy id.
+
+2023-02-21 Version: 2.8.5
+- Supported MonoRecording Duration.
+
+2023-01-30 Version: 2.8.4
+- Supported IVR features.
+
+2022-12-08 Version: 2.8.3
+- Supported ListCallDetailRecords DialingTime.
+
+2022-11-25 Version: 2.8.0
+- Supported v2.8 .
+
+2022-10-14 Version: 2.6.8
+- Supported releaseReason for GetCallDetailRecord and ListCallDetailRecords.
+
+2022-08-24 Version: 2.6.6
+- Supported legacy api.
+
+2022-06-30 Version: 2.6.1
+- Supported ListAgentStates params query.
+
+2022-06-15 Version: 2.6.0
+- Supported GetConversationByContactId apis.
+
+2022-06-14 Version: 1.0.36
+- Modify the return field of the GetRoutePoint api.
+
+2022-04-29 Version: 1.0.35
+- Modify SkillGroup basic information for ModifySkillGroupBasicInfo.
+
+2022-04-26 Version: 2.4.3
+- Support to pass variables to authentication IVR.
+
+2022-04-22 Version: 2.4.2
+- Supported EndConference.
+- Supported StartConference.
+- Supported SignInGroup.
+- Supported RemovePhoneNumbers.
+
+2022-04-20 Version: 2.4.1
+- Supported ListMultiChannelRecordings.
+
+2022-04-11 Version: 1.0.34
+- Add user info for AssignUsersResponse.
+
+2022-03-28 Version: 2.3.6
+- Supported CallsServiceLevel30.
+
+2022-03-14 Version: 1.0.33
+- Add ListInstancesOfInternal api.
+
+2022-03-09 Version: 1.0.32
+- Supported filter for ListSkillGroups.
+
+2022-03-07 Version: 2.3.2
+- Supported RemovePhoneNumbers.
+
+2022-03-02 Version: 2.3.1
+- Support SIP phone management.
+
+2022-03-01 Version: 1.0.31
+- Supported ServiceLevel30s For ListSkillGroupSummaryReportsSinceMidnight.
+
+2022-02-10 Version: 2.2.3-SNAPSHOT
+- Supported GetCaseFileUploadUrl.
+
+2022-01-28 Version: 2.3.0
+- Support SIP phone management.
+
+2022-01-05 Version: 2.2.2
+- Add new interface.
+
+2021-12-30 Version: 1.0.30
+- Add new interface.
+
+2021-12-21 Version: 2.2.1
+- Add RAM ID in resonse of listUsers API.
+
+2021-12-16 Version: 2.2.0
+- Release for sprint 2_2_0.
+
+2021-11-29 Version: 2.1.0
+- Add API for unregister sip phone device, masked callee, etc.
+
+2021-10-14 Version: 2.0.18
+- Add API for predictive dialer.
+
+2021-09-28 Version: 1.0.29
+- Add new internal API.
+
+2021-09-13 Version: 2.0.17
+- Supported CallerLocation, CalleeLocation in CDR API.
+
+2021-08-10 Version: 2.0.15
+- Export instance relative API.
+
+2021-07-23 Version: 2.0.14
+- Export instance relative API.
+
+2021-06-08 Version: 2.0.13
+- Refine API response for GetCallDetailRecord.
+
+2021-05-25 Version: 2.0.12
+- Export new API for IVR tracking.
+
+2021-05-24 Version: 2.0.11
+- Export new API for report.
+
+2021-05-17 Version: 1.0.28
+- Export new API for predictive dialer.
+
+2021-04-28 Version: 2.0.10
+- Export new API.
+
+2021-04-20 Version: 1.0.27
+- Export predictive dialer API.
+
+2021-04-19 Version: 2.0.9
+- Export StartBack2BackCall API.
+
+2021-04-12 Version: 2.0.8
+- Export config api.
+
+2021-03-25 Version: 2.0.7
+- Change indicator date type of ListHistoriticalAgentReport.
+
+2021-03-24 Version: 2.0.6
+- Export new API.
+
+2021-03-19 Version: 2.0.5
+- Export new API.
+
+2021-03-19 Version: 1.0.26
+- Export new API for predictive dialer.
+
+2021-03-09 Version: 1.0.25
+- Export new API for predictive dialer.
+
+2021-01-12 Version: 2.0.4
+- Add new API for recording.
+
+2021-01-08 Version: 2.0.3
+- Add new API for configuration and report, generate SDK again.
+
+2021-01-07 Version: 2.0.1
+- Add new API for configuration and report.
+
+2021-01-06 Version: 2.0.0
+- Initial release.
+
+2020-12-01 Version: 1.0.24
+- Fixed bugs for CCC.
+
+2020-10-29 Version: 1.0.23
+- Add new open api.
+
+2020-08-11 Version: 1.0.23
+- Add features for open api.
+
+2020-06-30 Version: 1.0.22
+- Add new open api.
+
+2020-04-16 Version: 1.0.21
+- Add features for open api.
+
+2019-09-05 Version: 1.0.20
+- Add features for open api.
+
+2019-09-05 Version: 1.0.20
+- Add features for open api.
+
+2019-09-05 Version: 1.0.19
+- Generated 2017-07-05 for `CCC`.
+
+2019-05-28 Version: 1.0.18
+1, Add new API
+
+2019-05-14 Version: 1.0.17
+1, Change the implementation of some API
+ 
+
+2019-05-07 Version: 1.0.16
+1, Add new interface
+
+2019-05-07 Version: 1.0.15
+1, Add new interface
+
+2019-04-30 Version: 1.0.14
+1, Add new interface
+
+2019-04-19 Version: 1.0.13
+1, Add new API.
+
+2019-01-04 Version: 1.0.12
+1, Add new open API.
+
+2018-11-07 Version: 1.0.11
+1, Republish to maven repository
+
+2018-11-05 Version: 1.0.10
+1, Add new open API
+
+2018-10-15 Version: 1.0.9
+1, Add new API.
+
+2018-08-14 Version: 1.0.8
+1, Change parameter name of Dialogue
+
+2018-08-01 Version: 1.0.7
+1, Add new SPI GetConversationDetailByContactId
+
+2018-07-10 Version: 1.0.7
+1, Add new open API for outbound call service, etc.
+
+2018-06-05 Version: 1.0.6
+1, Add new API for Report and Back to Back call
+
+
+2018-04-24 Version: 1.0.5
+1, To support bearer token 
+
+
+2018-04-18 Version: 1.0.4
+1, Add new open API, GetNumberRegionInfo, etc
+
+2018-03-22 Version: 1.0.3
+1, add satisfaction to ListRecordings response
+
+2018-02-27 Version: 1.0.2
+1, Add new API: ListRecordingsByContactId.
+
+
+2017-12-29 Version: 1.0.1
+1, This is an example of release-log.
+2, Please strictly follow this format to edit in English.
+3, Format：Number + , + Space + Description
+
+2017-12-18 Version: 1.0.0
+1, This is the first release of CCC Open API.
+

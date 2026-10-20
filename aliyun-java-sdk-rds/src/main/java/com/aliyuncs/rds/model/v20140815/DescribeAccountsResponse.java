@@ -1,21 +1,17 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.aliyuncs.rds.model.v20140815;
 
 import java.util.List;
@@ -29,9 +25,27 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeAccountsResponse extends AcsResponse {
 
+	private Integer pageNumber;
+
 	private String requestId;
 
+	private String systemAdminAccountFirstActivationTime;
+
+	private String systemAdminAccountStatus;
+
+	private Integer totalRecordCount;
+
+	private String resourceGroupId;
+
 	private List<DBInstanceAccount> accounts;
+
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
+	}
 
 	public String getRequestId() {
 		return this.requestId;
@@ -39,6 +53,38 @@ public class DescribeAccountsResponse extends AcsResponse {
 
 	public void setRequestId(String requestId) {
 		this.requestId = requestId;
+	}
+
+	public String getSystemAdminAccountFirstActivationTime() {
+		return this.systemAdminAccountFirstActivationTime;
+	}
+
+	public void setSystemAdminAccountFirstActivationTime(String systemAdminAccountFirstActivationTime) {
+		this.systemAdminAccountFirstActivationTime = systemAdminAccountFirstActivationTime;
+	}
+
+	public String getSystemAdminAccountStatus() {
+		return this.systemAdminAccountStatus;
+	}
+
+	public void setSystemAdminAccountStatus(String systemAdminAccountStatus) {
+		this.systemAdminAccountStatus = systemAdminAccountStatus;
+	}
+
+	public Integer getTotalRecordCount() {
+		return this.totalRecordCount;
+	}
+
+	public void setTotalRecordCount(Integer totalRecordCount) {
+		this.totalRecordCount = totalRecordCount;
+	}
+
+	public String getResourceGroupId() {
+		return this.resourceGroupId;
+	}
+
+	public void setResourceGroupId(String resourceGroupId) {
+		this.resourceGroupId = resourceGroupId;
 	}
 
 	public List<DBInstanceAccount> getAccounts() {
@@ -51,22 +97,40 @@ public class DescribeAccountsResponse extends AcsResponse {
 
 	public static class DBInstanceAccount {
 
-		private String dBInstanceId;
+		private String accountDescription;
 
 		private String accountName;
 
-		private AccountStatus accountStatus;
+		private String accountStatus;
 
-		private String accountDescription;
+		private String accountType;
+
+		private String bypassRLS;
+
+		private Boolean checkPolicy;
+
+		private String createDB;
+
+		private String createRole;
+
+		private String dBInstanceId;
+
+		private String passwordExpireTime;
+
+		private String privExceeded;
+
+		private String replication;
+
+		private String validUntil;
 
 		private List<DatabasePrivilege> databasePrivileges;
 
-		public String getDBInstanceId() {
-			return this.dBInstanceId;
+		public String getAccountDescription() {
+			return this.accountDescription;
 		}
 
-		public void setDBInstanceId(String dBInstanceId) {
-			this.dBInstanceId = dBInstanceId;
+		public void setAccountDescription(String accountDescription) {
+			this.accountDescription = accountDescription;
 		}
 
 		public String getAccountName() {
@@ -77,20 +141,92 @@ public class DescribeAccountsResponse extends AcsResponse {
 			this.accountName = accountName;
 		}
 
-		public AccountStatus getAccountStatus() {
+		public String getAccountStatus() {
 			return this.accountStatus;
 		}
 
-		public void setAccountStatus(AccountStatus accountStatus) {
+		public void setAccountStatus(String accountStatus) {
 			this.accountStatus = accountStatus;
 		}
 
-		public String getAccountDescription() {
-			return this.accountDescription;
+		public String getAccountType() {
+			return this.accountType;
 		}
 
-		public void setAccountDescription(String accountDescription) {
-			this.accountDescription = accountDescription;
+		public void setAccountType(String accountType) {
+			this.accountType = accountType;
+		}
+
+		public String getBypassRLS() {
+			return this.bypassRLS;
+		}
+
+		public void setBypassRLS(String bypassRLS) {
+			this.bypassRLS = bypassRLS;
+		}
+
+		public Boolean getCheckPolicy() {
+			return this.checkPolicy;
+		}
+
+		public void setCheckPolicy(Boolean checkPolicy) {
+			this.checkPolicy = checkPolicy;
+		}
+
+		public String getCreateDB() {
+			return this.createDB;
+		}
+
+		public void setCreateDB(String createDB) {
+			this.createDB = createDB;
+		}
+
+		public String getCreateRole() {
+			return this.createRole;
+		}
+
+		public void setCreateRole(String createRole) {
+			this.createRole = createRole;
+		}
+
+		public String getDBInstanceId() {
+			return this.dBInstanceId;
+		}
+
+		public void setDBInstanceId(String dBInstanceId) {
+			this.dBInstanceId = dBInstanceId;
+		}
+
+		public String getPasswordExpireTime() {
+			return this.passwordExpireTime;
+		}
+
+		public void setPasswordExpireTime(String passwordExpireTime) {
+			this.passwordExpireTime = passwordExpireTime;
+		}
+
+		public String getPrivExceeded() {
+			return this.privExceeded;
+		}
+
+		public void setPrivExceeded(String privExceeded) {
+			this.privExceeded = privExceeded;
+		}
+
+		public String getReplication() {
+			return this.replication;
+		}
+
+		public void setReplication(String replication) {
+			this.replication = replication;
+		}
+
+		public String getValidUntil() {
+			return this.validUntil;
+		}
+
+		public void setValidUntil(String validUntil) {
+			this.validUntil = validUntil;
 		}
 
 		public List<DatabasePrivilege> getDatabasePrivileges() {
@@ -101,52 +237,13 @@ public class DescribeAccountsResponse extends AcsResponse {
 			this.databasePrivileges = databasePrivileges;
 		}
 
-		public enum AccountStatus {
-		
-			AVAILABLE("Available"),
-			UNAVAILABLE("Unavailable"),;
-			
-		    private String stringValue;
-		
-			AccountStatus(String stringValue) {
-		        setStringValue(stringValue);
-		    }
-		
-		    public String getStringValue() {
-		        return stringValue;
-		    }
-		
-		    public void setStringValue(String stringValue) {
-		        this.stringValue = stringValue;
-		    }
-		    
-		    public static AccountStatus getEnum(String stringValue){
-		    	if(null == stringValue){
-		    		return null;
-		    	}
-		    	
-		    	for (AccountStatus accountStatus : AccountStatus.values()) {
-					if(accountStatus.getStringValue().equals(stringValue)){
-						return accountStatus;
-					}
-				}
-		    	return null;
-		    }
-		}
-
 		public static class DatabasePrivilege {
-
-			private String dBName;
 
 			private String accountPrivilege;
 
-			public String getDBName() {
-				return this.dBName;
-			}
+			private String accountPrivilegeDetail;
 
-			public void setDBName(String dBName) {
-				this.dBName = dBName;
-			}
+			private String dBName;
 
 			public String getAccountPrivilege() {
 				return this.accountPrivilege;
@@ -154,6 +251,22 @@ public class DescribeAccountsResponse extends AcsResponse {
 
 			public void setAccountPrivilege(String accountPrivilege) {
 				this.accountPrivilege = accountPrivilege;
+			}
+
+			public String getAccountPrivilegeDetail() {
+				return this.accountPrivilegeDetail;
+			}
+
+			public void setAccountPrivilegeDetail(String accountPrivilegeDetail) {
+				this.accountPrivilegeDetail = accountPrivilegeDetail;
+			}
+
+			public String getDBName() {
+				return this.dBName;
+			}
+
+			public void setDBName(String dBName) {
+				this.dBName = dBName;
 			}
 		}
 	}
